@@ -1,0 +1,1694 @@
+[
+    {
+        "repo": "108-autosave-reactive-froms-firestore",
+        "description": "A project for syncing reactive form data with Firestore in an Angular application.",
+        "function": "Automatically synchronizes data from reactive forms in an Angular app to Firestore, a NoSQL database. Requires Firebase credentials and basic setup steps for integration.",
+        "files": [
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/main.ts",
+                "function": "This file initializes an Angular application by enabling production mode if applicable and bootstrapping the main `AppModule`."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/polyfills.ts",
+                "function": "This file provides polyfills required by Angular for compatibility with older browsers and specific features, ensuring the application runs smoothly across different environments."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/test.ts",
+                "function": "This file initializes the Angular testing environment and loads all test files matching the `.spec.ts` pattern for execution."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/app-routing.module.ts",
+                "function": "The file defines an Angular routing module that configures the application's root-level routes and exports the RouterModule for use in the main application module."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/app.component.ts",
+                "function": "The file defines an Angular component that integrates with AngularFirestore for Firestore database interactions."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/app.module.ts",
+                "function": "This file sets up an Angular application with Firebase integration, including Firestore, authentication, and storage, along with Angular Material components for UI and reactive forms."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/fire-form.directive.spec.ts",
+                "function": "The file tests the creation of an instance of the `FireFormDirective` and verifies that it is successfully instantiated."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/fire-form.directive.ts",
+                "function": "The `FireFormDirective` integrates Angular forms with Firestore, automatically loading initial data into the form and saving changes to Firestore with debounced autosave functionality. It also handles form state changes and error handling."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/app/form-demo/form-demo.component.ts",
+                "function": "The file defines an Angular component that creates a reactive form with fields for email, career, and bio, and listens for changes in a Firestore document."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/environments/environment.prod.ts",
+                "function": "The file defines an environment configuration for a production build, setting the `production` flag to `true`."
+            },
+            {
+                "file": "108-autosave-reactive-froms-firestore/src/environments/environment.ts",
+                "function": "This file defines the environment configuration for an Angular application, setting the `production` flag to `false` for development mode."
+            }
+        ],
+        "gt": "[['108-autosave-reactive-froms-firestore/src/test.ts'], ['108-autosave-reactive-froms-firestore/src/app/app-routing.module.ts', '108-autosave-reactive-froms-firestore/src/app/app.module.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/polyfills.ts'], ['108-autosave-reactive-froms-firestore/src/environments/environment.prod.ts'], ['108-autosave-reactive-froms-firestore/src/app/form-demo/form-demo.component.ts', '108-autosave-reactive-froms-firestore/src/app/app.module.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/app/app.module.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/app/fire-form.directive.ts', '108-autosave-reactive-froms-firestore/src/app/app.module.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/app/app.component.ts', '108-autosave-reactive-froms-firestore/src/app/app.module.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/environments/environment.ts', '108-autosave-reactive-froms-firestore/src/main.ts'], ['108-autosave-reactive-froms-firestore/src/app/fire-form.directive.spec.ts'], ['108-autosave-reactive-froms-firestore/src/app/fire-form.directive.ts', '108-autosave-reactive-froms-firestore/src/app/fire-form.directive.spec.ts']]"
+    },
+    {
+        "repo": "BookReader",
+        "description": "A web-based e-book reader built with Angular.",
+        "function": "Allows users to read e-books by switching pages with keyboard arrows or touchscreen gestures, and provides features like a menu, search functionality, and theme customization. It is deployed on GitHub Pages and utilizes the epub.js library for e-book rendering.",
+        "files": [
+            {
+                "file": "BookReader/e2e/src/app.e2e-spec.ts",
+                "function": "This file contains end-to-end tests for an Angular application, verifying that the welcome message is displayed and ensuring no severe browser errors occur during the test."
+            },
+            {
+                "file": "BookReader/e2e/src/app.po.ts",
+                "function": "The file defines a Protractor page object class `AppPage` with methods to navigate to the base URL and retrieve the title text from the application."
+            },
+            {
+                "file": "BookReader/src/app/app-routing.module.ts",
+                "function": "This file configures Angular routing for the application, defining an empty set of routes and exporting the RouterModule for use in the app."
+            },
+            {
+                "file": "BookReader/src/app/app.component.spec.ts",
+                "function": "This file contains unit tests for the `AppComponent` in an Angular application, verifying that the component is created, has the correct title, and renders the expected content."
+            },
+            {
+                "file": "BookReader/src/app/app.component.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['BookReader/src/app/app.component.spec.ts'], ['BookReader/src/app/app-routing.module.ts'], ['BookReader/src/app/app.component.ts', 'BookReader/src/app/app.component.spec.ts'], ['BookReader/e2e/src/app.e2e-spec.ts'], ['BookReader/e2e/src/app.po.ts', 'BookReader/e2e/src/app.e2e-spec.ts']]"
+    },
+    {
+        "repo": "React-Typescript-Vite",
+        "description": "A minimal setup for React projects using TypeScript and Vite.",
+        "function": "Provides fast development with HMR, supports ESLint for code quality, and includes official plugins for React with Babel or SWC for Fast Refresh.",
+        "files": [
+            {
+                "file": "React-Typescript-Vite/vite.config.ts",
+                "function": "This file configures a Vite project to use React as a plugin."
+            },
+            {
+                "file": "React-Typescript-Vite/src/App.tsx",
+                "function": "The file defines a React component `App` that renders a `Heading`, a `Section`, a `Counter`, and a `List` component, each with specific props and content."
+            },
+            {
+                "file": "React-Typescript-Vite/src/main.tsx",
+                "function": "This file sets up the React application by rendering the `App` component into the root DOM element using ReactDOM."
+            },
+            {
+                "file": "React-Typescript-Vite/src/vite-env.d.ts",
+                "function": "The file serves as a TypeScript declaration to reference Vite client types for development purposes."
+            },
+            {
+                "file": "React-Typescript-Vite/src/components/Counter.tsx",
+                "function": "The file defines a React component named `Counter` that displays a counter value and provides buttons to increment and decrement the value."
+            },
+            {
+                "file": "React-Typescript-Vite/src/components/Heading.tsx",
+                "function": "The file defines a React component named `Heading` that renders an `<h1>` element with a dynamic title passed as a prop."
+            },
+            {
+                "file": "React-Typescript-Vite/src/components/List.tsx",
+                "function": "The file defines a generic React component `List` that renders a list of items using a provided render function, allowing for flexible item rendering."
+            },
+            {
+                "file": "React-Typescript-Vite/src/components/Section.tsx",
+                "function": "The file defines a React component `Section` that renders a section element containing a title and children content passed as props."
+            }
+        ],
+        "gt": "[['React-Typescript-Vite/src/main.tsx'], ['React-Typescript-Vite/src/components/Section.tsx', 'React-Typescript-Vite/src/App.tsx'], ['React-Typescript-Vite/src/components/Heading.tsx', 'React-Typescript-Vite/src/App.tsx'], ['React-Typescript-Vite/vite.config.ts'], ['React-Typescript-Vite/src/vite-env.d.ts'], ['React-Typescript-Vite/src/components/Counter.tsx', 'React-Typescript-Vite/src/App.tsx'], ['React-Typescript-Vite/src/components/List.tsx', 'React-Typescript-Vite/src/App.tsx'], ['React-Typescript-Vite/src/App.tsx']]"
+    },
+    {
+        "repo": "angular-2-navbar",
+        "description": "An Angular 2 navbar component that integrates with the Angular router.",
+        "function": "Allows navbar link definitions to be kept in the components they link to, enabling dynamic navbar creation based on routing modules. Provides methods for both root and child module configurations.",
+        "files": [
+            {
+                "file": "angular-2-navbar/navbar.component.spec.ts",
+                "function": "The file contains a test suite for the `NavbarComponent` in an Angular application, verifying that an instance of the component can be created successfully."
+            },
+            {
+                "file": "angular-2-navbar/navbar.component.ts",
+                "function": "The NavbarComponent dynamically renders either a custom or default template for navigation items, fetched from a service, based on the presence of a custom template."
+            },
+            {
+                "file": "angular-2-navbar/navbar.module.ts",
+                "function": "The file defines an Angular module (`NavbarModule`) for managing a navigation bar, providing configuration options (`forRoot` and `forChild`) to initialize and extend the navbar with custom items, and uses a factory to aggregate and inject navbar items into the service."
+            },
+            {
+                "file": "angular-2-navbar/navbar.service.spec.ts",
+                "function": "This file is a unit test for the `NavbarService` in an Angular application, verifying that the service can be instantiated successfully."
+            },
+            {
+                "file": "angular-2-navbar/navbar.service.ts",
+                "function": "The `NavbarService` manages and retrieves a sorted list of navigation bar items, filtering them based on display conditions and sorting by weight."
+            }
+        ],
+        "gt": "[['angular-2-navbar/navbar.service.spec.ts'], ['angular-2-navbar/navbar.component.spec.ts'], ['angular-2-navbar/navbar.module.ts'], ['angular-2-navbar/navbar.service.ts', 'angular-2-navbar/navbar.component.ts', 'angular-2-navbar/navbar.component.spec.ts'], ['angular-2-navbar/navbar.component.ts', 'angular-2-navbar/navbar.component.spec.ts'], ['angular-2-navbar/navbar.component.ts', 'angular-2-navbar/navbar.module.ts'], ['angular-2-navbar/navbar.service.ts', 'angular-2-navbar/navbar.module.ts'], ['angular-2-navbar/navbar.service.ts', 'angular-2-navbar/navbar.service.spec.ts'], ['angular-2-navbar/navbar.service.ts', 'angular-2-navbar/navbar.component.ts', 'angular-2-navbar/navbar.module.ts'], ['angular-2-navbar/navbar.service.ts']]"
+    },
+    {
+        "repo": "angular-notice-board",
+        "description": "A web application project built using Angular CLI version 15.0.0.",
+        "function": "Provides tools for running a development server, generating code scaffolds, building the project, running unit and end-to-end tests, and accessing further Angular CLI help.",
+        "files": [
+            {
+                "file": "angular-notice-board/src/app/app.component.ts",
+                "function": "The file defines an Angular component that serves as the root component of the application, using the `RouterModule` to display routed components via the `<router-outlet>` directive."
+            },
+            {
+                "file": "angular-notice-board/src/app/create/create.component.ts",
+                "function": "The file defines a standalone Angular component for creating a new notice, which uses a form to collect notice data, adds it to a service, and navigates to the dashboard upon submission."
+            },
+            {
+                "file": "angular-notice-board/src/app/create/ui/add-notice-form.component.ts",
+                "function": "The file defines an Angular component for an \"Add Notice\" form, allowing users to input a title and message. Upon submission, the form emits the entered data as a `Notice` object."
+            },
+            {
+                "file": "angular-notice-board/src/app/dashboard/dashboard.component.ts",
+                "function": "The file defines an Angular component named `DashboardComponent` that displays a list of notices fetched from `NoticeService`. It uses `NoticeListComponent` to render the notices."
+            },
+            {
+                "file": "angular-notice-board/src/app/dashboard/ui/notice-list.component.ts",
+                "function": "The `NoticeListComponent` is an Angular component that displays a list of notices, each containing a title and content, styled with a responsive design."
+            },
+            {
+                "file": "angular-notice-board/src/app/layout/layout.component.ts",
+                "function": "The file defines a standalone Angular component, `LayoutComponent`, which serves as a layout wrapper containing a header, a router outlet for dynamic content, and a footer."
+            },
+            {
+                "file": "angular-notice-board/src/app/layout/layout.routes.ts",
+                "function": "This file defines Angular routing configuration, mapping paths like \"dashboard\" and \"create\" to their respective components and redirecting the root path to \"dashboard.\""
+            },
+            {
+                "file": "angular-notice-board/src/app/layout/ui/footer.component.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['angular-notice-board/src/app/create/create.component.ts', 'angular-notice-board/src/app/layout/layout.routes.ts'], ['angular-notice-board/src/app/layout/layout.component.ts'], ['angular-notice-board/src/app/create/ui/add-notice-form.component.ts', 'angular-notice-board/src/app/create/create.component.ts', 'angular-notice-board/src/app/layout/layout.routes.ts'], ['angular-notice-board/src/app/dashboard/dashboard.component.ts', 'angular-notice-board/src/app/layout/layout.routes.ts'], ['angular-notice-board/src/app/layout/layout.routes.ts'], ['angular-notice-board/src/app/app.component.ts'], ['angular-notice-board/src/app/layout/ui/footer.component.ts', 'angular-notice-board/src/app/layout/layout.component.ts'], ['angular-notice-board/src/app/dashboard/ui/notice-list.component.ts', 'angular-notice-board/src/app/dashboard/dashboard.component.ts', 'angular-notice-board/src/app/layout/layout.routes.ts'], ['angular-notice-board/src/app/layout/ui/footer.component.ts']]"
+    },
+    {
+        "repo": "angular2-2nd-project",
+        "description": "A simple Angular 2 Beta Boilerplate for quick Angular 2 development setup.",
+        "function": "Provides a basic structure and tools to start developing Angular 2 applications. Includes auto-refreshing server and gulp watcher for efficient development.",
+        "files": [
+            {
+                "file": "angular2-2nd-project/dev/app.component.ts",
+                "function": "The file defines an Angular component (`AppComponent`) that manages user input and confirmation. It integrates two child components (`InputComponent` and `ConfirmComponent`) to handle data submission and confirmation, updating the state accordingly."
+            },
+            {
+                "file": "angular2-2nd-project/dev/boot.ts",
+                "function": "This file bootstraps an Angular 2 application by initializing the `AppComponent` in a browser environment."
+            },
+            {
+                "file": "angular2-2nd-project/dev/bindings/confirm.component.ts",
+                "function": "The file defines an Angular component that allows users to input and confirm their name and age. It validates the inputs and enables a \"Confirm\" button only when both fields are filled and the age is numeric. Upon confirmation, it emits an event with the user's details."
+            },
+            {
+                "file": "angular2-2nd-project/dev/bindings/input.component.ts",
+                "function": "This Angular component provides a form for entering a name and age, validates the inputs, and emits a submission event with the entered data."
+            }
+        ],
+        "gt": "[['angular2-2nd-project/dev/bindings/confirm.component.ts', 'angular2-2nd-project/dev/app.component.ts', 'angular2-2nd-project/dev/boot.ts'], ['angular2-2nd-project/dev/boot.ts'], ['angular2-2nd-project/dev/bindings/input.component.ts', 'angular2-2nd-project/dev/app.component.ts', 'angular2-2nd-project/dev/boot.ts'], ['angular2-2nd-project/dev/app.component.ts', 'angular2-2nd-project/dev/boot.ts']]"
+    },
+    {
+        "repo": "angular2-master-class-jump-start-solutions",
+        "description": "A repository for Angular 2 Master Class exercises, designed to help users build Angular applications.",
+        "function": "Provides a structured environment for learning Angular 2 through hands-on exercises, including setting up the project, installing dependencies, and running the application locally.",
+        "files": [
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app.ts",
+                "function": "The file bootstraps an Angular 2 application by initializing the `ContactsApp` component in the browser."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/contacts-app.ts",
+                "function": "The file defines an Angular 2 component using the `Component` decorator from the Angular 2 core library."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/clone-service/clone-service.spec.ts",
+                "function": "The file sets up a test suite for the `CloneService` using Angular 2's testing utilities, including `describe`, `expect`, and `beforeEachProviders`."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/clone-service/clone-service.ts",
+                "function": "The `CloneService` is a generic service in Angular that manages cloning and managing changes to an object. It allows creating a clone, retrieving the current item, aborting changes by reverting to the original item, and committing changes to the original item."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.spec.ts",
+                "function": "This file contains unit tests for the `ContactHeaderComponent` in Angular 2, verifying its creation and rendering using `TestComponentBuilder`."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.ts",
+                "function": "The file defines an Angular component named `ContactHeaderComponent` that renders a contact header using an external HTML template and CSS styles."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/data/contact-data.ts",
+                "function": "The file defines a constant `CONTACT_DATA` containing an array of contact objects, each with details such as name, email, phone, birthday, website, image, and address."
+            },
+            {
+                "file": "angular2-master-class-jump-start-solutions/src/client/app/data/countries-data.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['angular2-master-class-jump-start-solutions/src/client/app/data/contact-data.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.spec.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/contacts-app.ts', 'angular2-master-class-jump-start-solutions/src/client/app.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/clone-service/clone-service.ts', 'angular2-master-class-jump-start-solutions/src/client/app/clone-service/clone-service.spec.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/clone-service/clone-service.spec.ts'], ['angular2-master-class-jump-start-solutions/src/client/app.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.ts', 'angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.spec.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/data/countries-data.ts'], ['angular2-master-class-jump-start-solutions/src/client/app/contact-header-component/contact-header-component.ts']]"
+    },
+    {
+        "repo": "atomicals-js",
+        "description": "The Atomicals Javascript Library is a tool for interacting with the Atomicals protocol, optimized for mining speed with multi-threading.",
+        "function": "Provides a CLI for creating and managing Atomicals, supports wallet setup for p2tr transactions, and integrates with ElectrumX servers for secure communication via wss.",
+        "files": [
+            {
+                "file": "atomicals-js/lib/cli.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "atomicals-js/lib/api/electrum-api-mock.ts",
+                "function": "The `ElectrumApiMock` class provides a mock implementation of the `ElectrumApiInterface`, simulating various blockchain-related operations such as transaction sending, UTXO retrieval, and Atomicals data querying, for testing purposes."
+            },
+            {
+                "file": "atomicals-js/lib/api/electrum-api.interface.ts",
+                "function": "The file defines interfaces for interacting with an Electrum-based API, including managing connections, querying unspent transaction outputs (UTXOs), broadcasting transactions, and accessing Atomicals-related data."
+            },
+            {
+                "file": "atomicals-js/lib/api/electrum-api.ts",
+                "function": "The `ElectrumApi` class provides a comprehensive interface for interacting with an Electrum-based blockchain API, offering methods to manage connections, retrieve transaction and UTXO data, broadcast transactions, and interact with Atomicals-specific functionalities."
+            }
+        ],
+        "gt": "[['atomicals-js/lib/api/electrum-api-mock.ts'], ['atomicals-js/lib/cli.ts'], ['atomicals-js/lib/api/electrum-api.interface.ts', 'atomicals-js/lib/api/electrum-api-mock.ts'], ['atomicals-js/lib/api/electrum-api.ts'], ['atomicals-js/lib/api/electrum-api.interface.ts', 'atomicals-js/lib/api/electrum-api.ts'], ['atomicals-js/lib/api/electrum-api.interface.ts']]"
+    },
+    {
+        "repo": "awesome-notion-site",
+        "description": "A website that integrates with Notion for displaying data.",
+        "function": "Fetches data from Notion using the notion-api-worker, retrieves categories and mock data, and serves the content on a local development server.",
+        "files": [
+            {
+                "file": "awesome-notion-site/next-env.d.ts",
+                "function": "This file is a TypeScript configuration file for a Next.js project, ensuring proper type definitions for Next.js features like image optimization."
+            },
+            {
+                "file": "awesome-notion-site/src/components/Badge.tsx",
+                "function": "The file defines a `Badge` component that displays text with customizable styling based on a `type` prop and can optionally link to a URL. It supports hover effects and dynamic cursor behavior."
+            },
+            {
+                "file": "awesome-notion-site/src/components/CategoriesTab.tsx",
+                "function": "The file defines a `CategoriesTab` component that dynamically generates navigation tabs based on categories fetched from a configuration store. Each tab links to a corresponding category page and changes appearance based on whether it is active or not."
+            },
+            {
+                "file": "awesome-notion-site/src/components/ContentBox.tsx",
+                "function": "The `ContentBox` component displays a searchable list of items with filtering by tags. It includes a search box, tag toggling, and animations for item and tag rendering."
+            },
+            {
+                "file": "awesome-notion-site/src/components/Favicon.tsx",
+                "function": "The file defines a React component that displays a favicon based on the provided link. It uses a default GitHub favicon for links containing 'github.com' and fetches a Google favicon for other domains."
+            },
+            {
+                "file": "awesome-notion-site/src/components/Footer.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['awesome-notion-site/src/components/CategoriesTab.tsx'], ['awesome-notion-site/src/components/ContentBox.tsx'], ['awesome-notion-site/next-env.d.ts'], ['awesome-notion-site/src/components/Badge.tsx', 'awesome-notion-site/src/components/ContentBox.tsx'], ['awesome-notion-site/src/components/Favicon.tsx'], ['awesome-notion-site/src/components/Footer.tsx']]"
+    },
+    {
+        "repo": "bun",
+        "description": "An experimental project to run Bun on Vercel Serverless Functions.",
+        "function": "Allows developers to deploy Bun-based serverless functions on Vercel using either GitHub integration or manual deployment via the Vercel CLI.",
+        "files": [
+            {
+                "file": "bun/bootstrap.ts",
+                "function": "This file implements a runtime for AWS Lambda using the Bun framework, handling request processing, error management, and response formatting, while integrating with AWS Lambda's runtime API."
+            },
+            {
+                "file": "bun/build.ts",
+                "function": "This script sets up and compiles a Vercel function by generating configuration files, creating a bootstrap script, and compiling it into a single executable, tailored for the specified architecture."
+            },
+            {
+                "file": "bun/example/main.ts",
+                "function": "This file defines a serverless function using Bun that responds to HTTP requests by returning a plain text message containing the request URL and specific Vercel-related headers."
+            }
+        ],
+        "gt": "[['bun/bootstrap.ts'], ['bun/build.ts'], ['bun/example/main.ts', 'bun/bootstrap.ts'], ['bun/example/main.ts', 'bun/build.ts'], ['bun/example/main.ts']]"
+    },
+    {
+        "repo": "comment-hider",
+        "description": "A GitHub Action to automatically hide bot comments on pull requests.",
+        "function": "Automatically hides comments from specified users (default: `github-actions[bot]`) on pull requests, useful for managing outdated CI/CD result posts.",
+        "files": [
+            {
+                "file": "comment-hider/__tests__/main.test.ts",
+                "function": "The file tests the functionality of hiding bot comments in a GitHub repository by mocking API responses and verifying that only the bot's comment IDs are selected."
+            },
+            {
+                "file": "comment-hider/src/client.ts",
+                "function": "The file defines a `Client` class that interacts with the GitHub API to list and hide comments on a specific issue. It uses the `@actions/github` library to manage GitHub tokens and context, allowing the selection of comments by a specific user and the ability to hide comments with a given reason."
+            },
+            {
+                "file": "comment-hider/src/main.ts",
+                "function": "This script uses a GitHub token to hide comments on an issue, filtering by username and reason, while leaving a specified number of visible comments."
+            }
+        ],
+        "gt": "[['comment-hider/src/main.ts'], ['comment-hider/__tests__/main.test.ts'], ['comment-hider/src/client.ts', 'comment-hider/__tests__/main.test.ts'], ['comment-hider/src/client.ts', 'comment-hider/src/main.ts'], ['comment-hider/src/client.ts']]"
+    },
+    {
+        "repo": "create-sidebase",
+        "description": "An interactive CLI tool to quickly set up a fullstack Nuxt 3 application.",
+        "function": "Automates the installation and setup of popular Nuxt 3 modules like TailwindCSS, Naive UI, Prisma ORM, tRPC, and sidebase-auth. Also includes premade CI pipeline templates for GitHub Actions and DroneCI.",
+        "files": [
+            {
+                "file": "create-sidebase/src/configs/droneCI.ts",
+                "function": "The file defines a Drone CI pipeline configuration for a Node.js project, including steps for linting, type checking, and building. It exports this configuration for use in a larger project setup."
+            },
+            {
+                "file": "create-sidebase/src/configs/eslint.ts",
+                "function": "The file defines an ESLint configuration and scripts for linting and fixing code, including custom rules and stylistic preferences, and specifies dependencies for linting tools."
+            },
+            {
+                "file": "create-sidebase/src/configs/github-actions.ts",
+                "function": "This file defines a GitHub Actions workflow template for continuous integration (CI), including linting and building tasks, and exports it as a configuration object for use in a project."
+            },
+            {
+                "file": "create-sidebase/src/configs/i18n.ts",
+                "function": "This file configures the Nuxt.js i18n module, setting up internationalization with locale detection, default locale settings, and a demo component for displaying translated content. It also includes the necessary dependencies and files for the i18n functionality."
+            },
+            {
+                "file": "create-sidebase/src/configs/index.ts",
+                "function": "This file imports and organizes various configurations and modules, categorizing them into `modules` and `configs` for easy access and management."
+            },
+            {
+                "file": "create-sidebase/src/configs/naiveui.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['create-sidebase/src/configs/eslint.ts', 'create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/i18n.ts', 'create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/github-actions.ts', 'create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/naiveui.ts', 'create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/droneCI.ts', 'create-sidebase/src/configs/index.ts'], ['create-sidebase/src/configs/naiveui.ts']]"
+    },
+    {
+        "repo": "crypto-prices-react",
+        "description": "A project for retrieving cryptocurrency data from Cryptocompare.",
+        "function": "Provides access to cryptocurrency data, enabling users to fetch real-time or historical information on various cryptocurrencies.",
+        "files": [
+            {
+                "file": "crypto-prices-react/src/Crypto.d.ts",
+                "function": "The file defines interfaces for cryptocurrency data, including details like price, supply, and 24-hour change, organized by currency and symbol."
+            },
+            {
+                "file": "crypto-prices-react/src/CryptoContent.tsx",
+                "function": "The file defines a React component `CryptoContent` that renders a table body containing a `CryptoList` component, passing cryptocurrency data as a prop."
+            },
+            {
+                "file": "crypto-prices-react/src/CryptoList.tsx",
+                "function": "The `CryptoList` component renders a list of cryptocurrency data by mapping over the provided data and rendering a `CryptoListItem` for each item. If no data is available, it displays a placeholder row."
+            },
+            {
+                "file": "crypto-prices-react/src/CryptoListItem.tsx",
+                "function": "The file defines a React component `CryptoListItem` that renders a table row displaying cryptocurrency data, including its symbol, price, supply, and 24-hour change, based on the provided `CryptoCurrencyDataType`."
+            },
+            {
+                "file": "crypto-prices-react/src/index.tsx",
+                "function": "This file defines a React component that fetches cryptocurrency data from an API, displays it in a table, and updates the UI with the fetched data."
+            }
+        ],
+        "gt": "[['crypto-prices-react/src/Crypto.d.ts'], ['crypto-prices-react/src/CryptoContent.tsx', 'crypto-prices-react/src/index.tsx'], ['crypto-prices-react/src/CryptoListItem.tsx', 'crypto-prices-react/src/CryptoList.tsx', 'crypto-prices-react/src/CryptoContent.tsx', 'crypto-prices-react/src/index.tsx'], ['crypto-prices-react/src/index.tsx'], ['crypto-prices-react/src/CryptoList.tsx', 'crypto-prices-react/src/CryptoContent.tsx', 'crypto-prices-react/src/index.tsx'], ['crypto-prices-react/src/CryptoList.tsx', 'crypto-prices-react/src/CryptoContent.tsx']]"
+    },
+    {
+        "repo": "dalle-2",
+        "description": "A web application that generates images from text prompts using OpenAI's Dall-E 2 AI model.",
+        "function": "Allows users to input text descriptions to generate corresponding images. Supports local development and one-click deployment via Vercel.",
+        "files": [
+            {
+                "file": "dalle-2/next-env.d.ts",
+                "function": "This file is a TypeScript configuration file for a Next.js project, ensuring proper type definitions for Next.js features like image handling."
+            },
+            {
+                "file": "dalle-2/pages/_app.tsx",
+                "function": "This file sets up a Next.js application with global styles and integrates Vercel Analytics for tracking."
+            },
+            {
+                "file": "dalle-2/pages/_document.tsx",
+                "function": "This file sets up the basic HTML structure for a Next.js application, including meta tags for SEO and social media, favicon, and custom fonts."
+            },
+            {
+                "file": "dalle-2/pages/index.tsx",
+                "function": "This file defines a React component for a DALL-E 2 AI image generator, allowing users to input a prompt, generate an image, and view the result with a loading state."
+            },
+            {
+                "file": "dalle-2/pages/api/callback.ts",
+                "function": "This API endpoint decodes a Base64-encoded message from the request body, stores it in Redis using a provided message ID, and returns the decoded message."
+            },
+            {
+                "file": "dalle-2/pages/api/image.ts",
+                "function": "This file defines a Next.js API route that sends a prompt to the DALL-E API via Upstash QStash, generating an image, and returns the response ID to the client."
+            },
+            {
+                "file": "dalle-2/pages/api/poll.ts",
+                "function": "This API handler retrieves data from a Redis database using a provided ID and returns it as a JSON response, or returns a 404 error if no data is found."
+            },
+            {
+                "file": "dalle-2/utils/rate-limit.ts",
+                "function": "This file implements a rate-limiting function using an LRU cache to track API usage per token, ensuring requests are limited within specified intervals. It sets rate-limit headers and rejects requests if the limit is exceeded."
+            },
+            {
+                "file": "dalle-2/utils/redis.ts",
+                "function": "The file initializes and exports a Redis client instance using environment variables for configuration."
+            },
+            {
+                "file": "dalle-2/utils/use-interval.tsx",
+                "function": "The file defines a custom React hook, `useInterval`, which allows for setting up and clearing an interval to repeatedly execute a callback function at specified intervals."
+            }
+        ],
+        "gt": "[['dalle-2/next-env.d.ts'], ['dalle-2/utils/rate-limit.ts'], ['dalle-2/utils/redis.ts', 'dalle-2/pages/api/poll.ts'], ['dalle-2/pages/api/poll.ts'], ['dalle-2/utils/use-interval.tsx', 'dalle-2/pages/index.tsx'], ['dalle-2/pages/api/callback.ts'], ['dalle-2/pages/index.tsx'], ['dalle-2/pages/_app.tsx'], ['dalle-2/pages/api/image.ts'], ['dalle-2/pages/_document.tsx'], ['dalle-2/utils/redis.ts', 'dalle-2/pages/api/callback.ts']]"
+    },
+    {
+        "repo": "deploy-trustframework-policy",
+        "description": "A GitHub Action for deploying Azure AD B2C custom policies.",
+        "function": "Automates the deployment of custom policies to an Azure AD B2C tenant using the Microsoft Graph API. It can create or update policies based on their existence.",
+        "files": [
+            {
+                "file": "deploy-trustframework-policy/__tests__/main.test.ts",
+                "function": "The file is a Jest test file that sets up a test environment for a JavaScript action, including importing necessary modules and configuring a test case."
+            },
+            {
+                "file": "deploy-trustframework-policy/src/auth.ts",
+                "function": "The `ClientCredentialsAuthProvider` class implements an authentication provider for Microsoft Graph API using client credentials flow, managing token acquisition and caching to ensure valid access tokens are available for API requests."
+            },
+            {
+                "file": "deploy-trustframework-policy/src/main.ts",
+                "function": "This script automates the deployment of custom policies to Azure AD B2C by reading configuration settings, processing XML policy files, and uploading them to the Microsoft Graph API. It supports various deployment types and includes options for modifying policy files before upload."
+            }
+        ],
+        "gt": "[['deploy-trustframework-policy/src/auth.ts', 'deploy-trustframework-policy/src/main.ts'], ['deploy-trustframework-policy/src/main.ts'], ['deploy-trustframework-policy/__tests__/main.test.ts']]"
+    },
+    {
+        "repo": "esbuild-plugin-import-glob",
+        "description": "An esbuild plugin for importing multiple files using glob syntax.",
+        "function": "Enables importing multiple files in a project by using glob patterns, allowing for dynamic and flexible file imports during the build process.",
+        "files": [
+            {
+                "file": "esbuild-plugin-import-glob/src/index.ts",
+                "function": "This plugin for esbuild enables glob-based imports by resolving wildcard paths, dynamically generating import statements for matched files, and exporting an array of imported modules and their filenames."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/index.test.ts",
+                "function": "This test file uses `esbuild` to bundle a TypeScript file with a plugin, evaluates the output, and verifies the bundled modules against snapshots."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/service/main.ts",
+                "function": "This file imports and logs all files from the `migrations` and `entities` directories, handling any errors that occur during the process."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/service/entities/server.ts",
+                "function": "The file exports a constant named `Server` with the value `'Server'`."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/service/entities/user.ts",
+                "function": "The file exports a constant string `'User'` as the default export."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/service/migrations/02.ts",
+                "function": "Exports a constant string `'2ts'` as the default module export."
+            },
+            {
+                "file": "esbuild-plugin-import-glob/tests/service/migrations/03.ts",
+                "function": "The file exports a default constant `c` with the value `'3ts'` and a named export `test` with the value `'test3ts'`."
+            }
+        ],
+        "gt": "[['esbuild-plugin-import-glob/tests/service/entities/user.ts'], ['esbuild-plugin-import-glob/tests/service/migrations/03.ts'], ['esbuild-plugin-import-glob/tests/service/entities/server.ts'], ['esbuild-plugin-import-glob/src/index.ts', 'esbuild-plugin-import-glob/tests/index.test.ts'], ['esbuild-plugin-import-glob/tests/index.test.ts'], ['esbuild-plugin-import-glob/tests/service/main.ts'], ['esbuild-plugin-import-glob/tests/service/migrations/02.ts']]"
+    },
+    {
+        "repo": "gitsub",
+        "description": "A web application for managing GitHub user subscriptions and followers.",
+        "function": "Allows users to follow GitHub users by inputting their username and API token. Provides functionality to track follower changes and save follower lists to a local database (IndexedDB).",
+        "files": [
+            {
+                "file": "gitsub/src/App.test.ts",
+                "function": "This file contains a test to verify that the \"learn react\" link is rendered in the App component."
+            },
+            {
+                "file": "gitsub/src/App.tsx",
+                "function": "The file defines a React application with routing for different components, including subscription management, follower tracking, and navigation. It uses React Router to handle navigation between pages like subscribe, unsubscribe, and followers."
+            },
+            {
+                "file": "gitsub/src/components/MenuButton/MenuButton.tsx",
+                "function": "The `MenuButton` component is a customizable button that toggles between an open and closed state, applying different styles based on the `open` prop and allowing additional custom classes and an `onClick` handler."
+            },
+            {
+                "file": "gitsub/src/components/Section/Section.tsx",
+                "function": "The `Section` component is a reusable React component that renders a styled container with an optional title and customizable class names, allowing for flexible styling and event handling."
+            },
+            {
+                "file": "gitsub/src/components/Spinner/Spinner.tsx",
+                "function": "The file defines a React component named `Spinner` that renders a loading spinner using CSS styling."
+            },
+            {
+                "file": "gitsub/src/components/UserItem/UserItem.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['gitsub/src/components/Spinner/Spinner.tsx'], ['gitsub/src/components/UserItem/UserItem.tsx'], ['gitsub/src/App.tsx', 'gitsub/src/App.test.ts'], ['gitsub/src/components/Section/Section.tsx'], ['gitsub/src/components/MenuButton/MenuButton.tsx'], ['gitsub/src/App.test.ts']]"
+    },
+    {
+        "repo": "grafana-percent-plus",
+        "description": "A Grafana plugin for computing and displaying percentages based on two metrics.",
+        "function": "Allows users to input two metrics, calculates the percentage, and displays it in a Grafana panel. Designed with availability rate in mind but adaptable for other percentage calculations.",
+        "files": [
+            {
+                "file": "grafana-percent-plus/src/PercentEditor.tsx",
+                "function": "The `PercentEditor` component is a React-based panel editor that allows users to configure options for displaying percentage values, including selecting fields, setting decimal precision, font sizes, maximum values, and thresholds."
+            },
+            {
+                "file": "grafana-percent-plus/src/PercentPanel.tsx",
+                "function": "The file defines a React component, `PercentPanel`, which calculates and displays a percentage based on selected data series and thresholds. It dynamically adjusts the font size and background color based on the calculated percentage and user-defined options."
+            },
+            {
+                "file": "grafana-percent-plus/src/module.test.ts",
+                "function": "The file contains a placeholder test that verifies the boolean value `true` is truthy."
+            },
+            {
+                "file": "grafana-percent-plus/src/module.tsx",
+                "function": "The file defines a Grafana panel plugin for displaying percentage data, including default options and an editor for customization."
+            },
+            {
+                "file": "grafana-percent-plus/src/types.ts",
+                "function": "The file defines a configuration interface for a percentage panel in Grafana, including options for thresholds, font sizes, and decimal precision, with default values provided."
+            }
+        ],
+        "gt": "[['grafana-percent-plus/src/PercentEditor.tsx', 'grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/module.test.ts'], ['grafana-percent-plus/src/PercentPanel.tsx', 'grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/types.ts', 'grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/types.ts', 'grafana-percent-plus/src/PercentPanel.tsx', 'grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/types.ts', 'grafana-percent-plus/src/PercentEditor.tsx', 'grafana-percent-plus/src/module.tsx'], ['grafana-percent-plus/src/PercentPanel.tsx']]"
+    },
+    {
+        "repo": "graphql-import-loader",
+        "description": "A Webpack loader for resolving GraphQL file imports as strings.",
+        "function": "Allows GraphQL files to import other GraphQL files using import statements, which are then resolved and loaded as strings in Webpack configurations.",
+        "files": [
+            {
+                "file": "graphql-import-loader/src/index.ts",
+                "function": "This file defines a function that imports a GraphQL schema from a source file and returns it as a JavaScript module, with special characters escaped for safe use in template literals."
+            },
+            {
+                "file": "graphql-import-loader/test/compiler.ts",
+                "function": "This file defines a function to create and run a Webpack compiler in development mode, using a custom GraphQL loader and an in-memory file system for output."
+            },
+            {
+                "file": "graphql-import-loader/test/loader.test.ts",
+                "function": "The file defines GraphQL schema fixtures and tests the compiler by comparing the output of the compiled schema with the expected fixtures."
+            }
+        ],
+        "gt": "[['graphql-import-loader/test/compiler.ts', 'graphql-import-loader/test/loader.test.ts'], ['graphql-import-loader/src/index.ts'], ['graphql-import-loader/test/loader.test.ts']]"
+    },
+    {
+        "repo": "hikka-features",
+        "description": "A browser extension built with modern web technologies.",
+        "function": "Integrates WXT, SolidJS, TailwindCSS, and SolidUI to provide a feature-rich browser extension. Supports development and deployment for both Chrome and Firefox.",
+        "files": [
+            {
+                "file": "hikka-features/components/ui/avatar.tsx",
+                "function": "The file defines a set of components (`Avatar`, `AvatarImage`, `AvatarFallback`) for creating avatar UI elements, leveraging the `@kobalte/core` library for image handling and polymorphic props."
+            },
+            {
+                "file": "hikka-features/components/ui/badge.tsx",
+                "function": "The file defines a customizable `Badge` component with variant styles using `class-variance-authority`. It supports different visual variants (default, secondary, destructive, outline) and an optional rounded style."
+            },
+            {
+                "file": "hikka-features/components/ui/button.tsx",
+                "function": "This file defines a customizable button component with various styles and sizes using the `class-variance-authority` library, integrating with the `@kobalte/core/button` library for polymorphic button functionality."
+            },
+            {
+                "file": "hikka-features/components/ui/drawer.tsx",
+                "function": "This file extends the functionality of a drawer component by adding custom styles and additional components like `DrawerOverlay`, `DrawerContent`, `DrawerHeader`, `DrawerFooter`, `DrawerTitle`, and `DrawerDescription`. It leverages the `@corvu/drawer` library and SolidJS to create a customizable and styled drawer UI."
+            },
+            {
+                "file": "hikka-features/components/ui/dropdown-menu.tsx",
+                "function": "This file defines a set of reusable components for creating a dropdown menu system, including triggers, content, items, labels, separators, and various sub-components like radio and checkbox items."
+            },
+            {
+                "file": "hikka-features/components/ui/select.tsx",
+                "function": "This file defines a customizable select component using SolidJS and Kobalte, including components for the trigger, content, and items, with styling and polymorphic props for flexibility."
+            },
+            {
+                "file": "hikka-features/components/ui/switch.tsx",
+                "function": "This file defines a set of components for creating a customizable switch UI element, including controls, labels, and descriptions, using the `@kobalte/core` library."
+            },
+            {
+                "file": "hikka-features/components/ui/tooltip.tsx",
+                "function": "This file defines a tooltip component using SolidJS and Kobalte, providing a `Tooltip`, `TooltipTrigger`, and `TooltipContent` for creating tooltips with customizable styles and behavior."
+            },
+            {
+                "file": "hikka-features/entrypoints/background.ts",
+                "function": "This file defines a background script for a browser extension that listens for page navigation events and sends messages to tabs. It also handles login via OAuth and manages user data, as well as checking for specific URLs to enable rich presence features."
+            },
+            {
+                "file": "hikka-features/entrypoints/content/index.tsx",
+                "function": "This script enhances the functionality of the Hikka.io website by dynamically adding features like watch buttons, background animations, and edit buttons based on the page type and content. It interacts with the Hikka API to fetch and display additional data, such as anime, manga, or character information, and integrates with Notion for fandub and localized poster features."
+            },
+            {
+                "file": "hikka-features/entrypoints/content/modules/ani-background.tsx",
+                "function": "This function fetches a banner image from AniList based on a given MAL ID and media type, and dynamically renders it as a background with a smooth transition effect."
+            },
+            {
+                "file": "hikka-features/entrypoints/content/modules/ani-buttons.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['hikka-features/components/ui/dropdown-menu.tsx'], ['hikka-features/components/ui/switch.tsx'], ['hikka-features/components/ui/avatar.tsx'], ['hikka-features/components/ui/tooltip.tsx'], ['hikka-features/entrypoints/content/index.tsx'], ['hikka-features/entrypoints/background.ts'], ['hikka-features/entrypoints/content/modules/ani-background.tsx', 'hikka-features/entrypoints/content/index.tsx'], ['hikka-features/components/ui/select.tsx'], ['hikka-features/components/ui/drawer.tsx'], ['hikka-features/components/ui/badge.tsx'], ['hikka-features/entrypoints/content/modules/ani-buttons.tsx', 'hikka-features/entrypoints/content/index.tsx'], ['hikka-features/components/ui/button.tsx']]"
+    },
+    {
+        "repo": "legendary-form",
+        "description": "A project focused on form creation and management.",
+        "function": "Provides functionality for creating and managing forms, with features for handling form data and integration with external services.",
+        "files": [
+            {
+                "file": "legendary-form/setupTests.ts",
+                "function": "The file configures Enzyme with the React 16 adapter for testing React components."
+            },
+            {
+                "file": "legendary-form/__tests__/components/Form.test.tsx",
+                "function": "The file tests a `<Form />` component that supports setting initial values and validation schemas, handles multiple forms in one component, and allows data retrieval via functional children."
+            },
+            {
+                "file": "legendary-form/src/index.tsx",
+                "function": "This file exports a Form component and related FormContext and FormContextProvider for managing form state and context."
+            },
+            {
+                "file": "legendary-form/src/components/Form.tsx",
+                "function": "The `Form` component serves as a parent wrapper that manages form values and validation schema, using a context provider to pass these values to child components. It supports custom context providers and dynamic rendering of children based on the provided props."
+            },
+            {
+                "file": "legendary-form/src/context/FormContext.tsx",
+                "function": "The file defines a React context (`FormContext`) to manage form data and an associated provider (`FormContextProvider`) for setting initial values. It also exports types and initial state for form context usage."
+            }
+        ],
+        "gt": "[['legendary-form/src/components/Form.tsx', 'legendary-form/src/index.tsx', 'legendary-form/__tests__/components/Form.test.tsx'], ['legendary-form/src/context/FormContext.tsx', 'legendary-form/src/components/Form.tsx', 'legendary-form/src/index.tsx', 'legendary-form/__tests__/components/Form.test.tsx'], ['legendary-form/setupTests.ts'], ['legendary-form/src/context/FormContext.tsx', 'legendary-form/src/index.tsx', 'legendary-form/__tests__/components/Form.test.tsx'], ['legendary-form/__tests__/components/Form.test.tsx'], ['legendary-form/src/index.tsx', 'legendary-form/__tests__/components/Form.test.tsx']]"
+    },
+    {
+        "repo": "map-clustering-rn-example",
+        "description": "A React Native project for efficiently displaying large numbers of markers on a map using clustering techniques.",
+        "function": "This project enables the clustering of map markers to improve performance and readability when displaying a high volume of data. It supports installation via Expo CLI and can run on iOS, Android, and web platforms.",
+        "files": [
+            {
+                "file": "map-clustering-rn-example/App.tsx",
+                "function": "The file defines a React Native app that displays a map with clustered markers and allows users to zoom in and out. It generates random markers around a specified region and updates the map view based on user interactions."
+            },
+            {
+                "file": "map-clustering-rn-example/components/ClusteredMapView.tsx",
+                "function": "The `ClusteredMapView` component integrates map clustering functionality using the `supercluster` library, allowing markers to be grouped into clusters based on their proximity. It dynamically updates clusters and markers as the map region changes, supports custom rendering of clusters, and handles interactions like cluster presses and region changes."
+            },
+            {
+                "file": "map-clustering-rn-example/components/ClusteredMapViewTypes.ts",
+                "function": "The file defines a React component for map clustering, allowing customization of clustering behavior, animations, and visual properties, with options for handling cluster and marker interactions."
+            },
+            {
+                "file": "map-clustering-rn-example/components/ClusteredMarker.tsx",
+                "function": "The file defines a React Native component `ClusteredMarker` that renders a customizable marker for map clustering, displaying the number of points in a cluster with configurable styles and onPress functionality."
+            },
+            {
+                "file": "map-clustering-rn-example/components/MapZoomPanel.tsx",
+                "function": "The file defines a `MapZoomPanel` component in React Native, which provides zoom-in and zoom-out buttons for a map interface, using the AntDesign icons."
+            },
+            {
+                "file": "map-clustering-rn-example/components/helpers.tsx",
+                "function": "This file provides utility functions for handling map-related operations, including determining marker properties, calculating bounding boxes, generating spiral layouts for clustered markers, and styling markers based on their point count."
+            }
+        ],
+        "gt": "[['map-clustering-rn-example/components/ClusteredMarker.tsx', 'map-clustering-rn-example/components/ClusteredMapView.tsx', 'map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/components/ClusteredMapViewTypes.ts', 'map-clustering-rn-example/components/ClusteredMapView.tsx', 'map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/components/helpers.tsx', 'map-clustering-rn-example/components/ClusteredMarker.tsx', 'map-clustering-rn-example/components/ClusteredMapView.tsx', 'map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/components/MapZoomPanel.tsx', 'map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/components/ClusteredMapView.tsx', 'map-clustering-rn-example/App.tsx'], ['map-clustering-rn-example/components/helpers.tsx', 'map-clustering-rn-example/components/ClusteredMarker.tsx', 'map-clustering-rn-example/components/ClusteredMapView.tsx']]"
+    },
+    {
+        "repo": "match-discriminated-union",
+        "description": "A TypeScript utility for pattern matching on discriminated unions.",
+        "function": "Provides a `match` function that takes a tagged union, a discriminating key, and handler functions for each union variant. Ensures exhaustive matching with TypeScript types, supporting both specific handlers and a default case.",
+        "files": [
+            {
+                "file": "match-discriminated-union/src/index.test.ts",
+                "function": "The file defines a `match` function for handling different types of a discriminated union and includes tests to verify its behavior, such as executing the correct handler, passing the value to the handler, returning the handler's result, falling back to a default handler, and throwing an error for unhandled cases."
+            },
+            {
+                "file": "match-discriminated-union/src/index.ts",
+                "function": "The `match` function provides a type-safe way to handle different variants of a union type, allowing for specific handlers for each variant and a default handler for unhandled cases."
+            },
+            {
+                "file": "match-discriminated-union/src/index.type-test.ts",
+                "function": "The file defines a `match` function that handles different variants of a discriminated union (`Something`) based on the `type` property, allowing for specific handlers for each variant and optional default handling. It ensures type safety through assertions."
+            }
+        ],
+        "gt": "[['match-discriminated-union/src/index.type-test.ts'], ['match-discriminated-union/src/index.ts', 'match-discriminated-union/src/index.test.ts'], ['match-discriminated-union/src/index.test.ts'], ['match-discriminated-union/src/index.ts', 'match-discriminated-union/src/index.type-test.ts']]"
+    },
+    {
+        "repo": "mininext",
+        "description": "A lightweight web development framework for building websites using Bun.",
+        "function": "Provides templating, HTML/CSS integration, and data usage within templates. Offers quickstart templates for barebones and full projects, with development, production, and build commands.",
+        "files": [
+            {
+                "file": "mininext/mininext/html.ts",
+                "function": "This file defines a system for handling and resolving HTML and JSON strings, including escaping values to prevent XSS attacks, and provides utilities for generating HTML and JSON responses. It includes classes and functions for managing unresolved HTML strings, resolving them asynchronously, and embedding JSON safely within HTML."
+            },
+            {
+                "file": "mininext/mininext/mininext.ts",
+                "function": "This file is a build and development server script for a Bun-based project, handling frontend and backend builds, live reloading during development, and WebSocket-based browser refresh on file changes."
+            },
+            {
+                "file": "mininext/mininext/url.ts",
+                "function": "This file defines a routing and handling system for a web server, providing tools to manage routes, handle form submissions, serve frontend files, and integrate WebSocket functionality. It includes utilities for generating HTML responses, handling data, and ensuring secure POST requests to prevent CSRF issues."
+            },
+            {
+                "file": "mininext/tests/html.test.ts",
+                "function": "The file tests the prevention of cross-site scripting (XSS) vulnerabilities in a web framework by mocking a request and verifying that injected script tags are properly escaped in the response."
+            },
+            {
+                "file": "mininext/tests/url.test.ts",
+                "function": "The file contains tests for URL handling and routing in a web framework. It verifies that URLs match correctly, can be set and removed, and ensures frontend script tags are processed as expected."
+            }
+        ],
+        "gt": "[['mininext/mininext/html.ts', 'mininext/mininext/url.ts', 'mininext/mininext/mininext.ts', 'mininext/tests/url.test.ts'], ['mininext/mininext/url.ts', 'mininext/mininext/mininext.ts', 'mininext/tests/html.test.ts'], ['mininext/tests/url.test.ts'], ['mininext/mininext/url.ts', 'mininext/mininext/mininext.ts', 'mininext/tests/url.test.ts'], ['mininext/tests/html.test.ts'], ['mininext/mininext/html.ts', 'mininext/mininext/url.ts', 'mininext/mininext/mininext.ts', 'mininext/tests/html.test.ts'], ['mininext/mininext/mininext.ts', 'mininext/tests/url.test.ts'], ['mininext/mininext/mininext.ts', 'mininext/tests/html.test.ts'], ['mininext/mininext/html.ts', 'mininext/mininext/url.ts']]"
+    },
+    {
+        "repo": "ngx-chat-ui",
+        "description": "A universal chat UI component library built with Angular.",
+        "function": "Provides customizable chat interface components, supports non-text responses like action payloads, and allows overriding of every template component via TemplateRef mechanism.",
+        "files": [
+            {
+                "file": "ngx-chat-ui/apps/ngx-chat-ui-demo/src/app/app.module.ts",
+                "function": "This file defines an Angular module that sets up a web application with routing, a chat UI, and a file upload configuration using Dropzone."
+            },
+            {
+                "file": "ngx-chat-ui/apps/ngx-chat-ui-demo/src/app/components/app/app.component.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['ngx-chat-ui/apps/ngx-chat-ui-demo/src/app/app.module.ts'], ['ngx-chat-ui/apps/ngx-chat-ui-demo/src/app/components/app/app.component.ts', 'ngx-chat-ui/apps/ngx-chat-ui-demo/src/app/app.module.ts']]"
+    },
+    {
+        "repo": "ngx-light-color-picker",
+        "description": "An Angular 7 color picker component with no external dependencies.",
+        "function": "Provides a customizable color picker for Angular applications, allowing users to select colors and trigger events when a color is chosen.",
+        "files": [
+            {
+                "file": "ngx-light-color-picker/src/public-api.ts",
+                "function": "The file exports the public API for the `ngx-light-color-picker` library, including its service, component, and module."
+            },
+            {
+                "file": "ngx-light-color-picker/src/test.ts",
+                "function": "This file initializes the Angular testing environment and loads all test files matching the `.spec.ts` pattern for execution."
+            },
+            {
+                "file": "ngx-light-color-picker/src/lib/ngx-light-color-picker.component.ts",
+                "function": "The file defines an Angular component for a color picker that allows users to select colors by interacting with a canvas. It emits the selected color in both RGB and HEX formats."
+            },
+            {
+                "file": "ngx-light-color-picker/src/lib/ngx-light-color-picker.module.ts",
+                "function": "The file defines an Angular module, `NgxLightColorPickerModule`, which declares and exports the `NgxLightColorPickerComponent` for use in other modules."
+            },
+            {
+                "file": "ngx-light-color-picker/src/lib/ngx-light-color-picker.service.ts",
+                "function": "The file defines a service named `NgxLightColorPickerService` in an Angular application, which is provided in the root injector."
+            }
+        ],
+        "gt": "[['ngx-light-color-picker/src/public-api.ts'], ['ngx-light-color-picker/src/lib/ngx-light-color-picker.component.ts', 'ngx-light-color-picker/src/lib/ngx-light-color-picker.module.ts'], ['ngx-light-color-picker/src/lib/ngx-light-color-picker.service.ts'], ['ngx-light-color-picker/src/lib/ngx-light-color-picker.module.ts'], ['ngx-light-color-picker/src/test.ts']]"
+    },
+    {
+        "repo": "onewheel-blog",
+        "description": "A full-stack web application template built with Remix, designed for quick deployment and development.",
+        "function": "Features include user authentication, note management, SQLite database, Prisma ORM, Tailwind styling, and automated deployment via GitHub Actions to Fly.io.",
+        "files": [
+            {
+                "file": "onewheel-blog/app/db.server.ts",
+                "function": "This file initializes and exports a PrismaClient instance, ensuring a single connection to the database in both production and development environments."
+            },
+            {
+                "file": "onewheel-blog/app/entry.client.tsx",
+                "function": "The file initializes a React application using Remix by hydrating the root DOM element with the `RemixBrowser` component."
+            },
+            {
+                "file": "onewheel-blog/app/entry.server.tsx",
+                "function": "This file handles server-side rendering for a Remix application, converting React components into HTML markup and returning it as an HTTP response."
+            },
+            {
+                "file": "onewheel-blog/app/env.server.ts",
+                "function": "The file defines a function `getEnv` to retrieve the `ADMIN_EMAIL` environment variable, ensuring it is defined, and makes it globally accessible in both Node.js and browser environments."
+            },
+            {
+                "file": "onewheel-blog/app/root.tsx",
+                "function": "This file sets up a Remix application with Tailwind CSS, user session management, and environment variable injection, providing a base layout with meta tags, styles, and scripts."
+            },
+            {
+                "file": "onewheel-blog/app/models/note.server.ts",
+                "function": "This file provides functions to interact with notes in a database, including retrieving, creating, and deleting notes, all tied to a specific user."
+            },
+            {
+                "file": "onewheel-blog/app/models/post.server.ts",
+                "function": "This file provides CRUD operations for managing blog posts, including fetching, creating, updating, and deleting posts using Prisma."
+            },
+            {
+                "file": "onewheel-blog/app/models/user.server.ts",
+                "function": "This file provides functions for managing user accounts, including creating, retrieving, deleting users, and verifying login credentials using Prisma and bcrypt for password hashing and verification."
+            },
+            {
+                "file": "onewheel-blog/app/routes/healthcheck.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['onewheel-blog/app/db.server.ts'], ['onewheel-blog/app/models/post.server.ts'], ['onewheel-blog/app/entry.client.tsx'], ['onewheel-blog/app/entry.server.tsx'], ['onewheel-blog/app/models/note.server.ts'], ['onewheel-blog/app/env.server.ts', 'onewheel-blog/app/entry.server.tsx'], ['onewheel-blog/app/models/user.server.ts'], ['onewheel-blog/app/env.server.ts', 'onewheel-blog/app/root.tsx'], ['onewheel-blog/app/root.tsx'], ['onewheel-blog/app/routes/healthcheck.tsx']]"
+    },
+    {
+        "repo": "pixabay-api",
+        "description": "A Node.js library for interacting with the Pixabay API to search and retrieve images and videos.",
+        "function": "Provides functions to search for images and videos using the Pixabay API, with options for validation and authentication. Allows retrieval of high-resolution images and supports error handling for invalid parameters.",
+        "files": [
+            {
+                "file": "pixabay-api/dist/Index.d.ts",
+                "function": "The file provides functions to authenticate with a Pixabay API key and perform image and video searches, with options to validate requests."
+            },
+            {
+                "file": "pixabay-api/dist/PixabayRequest.d.ts",
+                "function": "The file defines interfaces for making image and video search requests to Pixabay, including parameters for filtering, pagination, and specifying search criteria."
+            },
+            {
+                "file": "pixabay-api/dist/PixabayResponse.d.ts",
+                "function": "The file defines interfaces for handling image and video data from Pixabay API responses, including details like dimensions, URLs, metadata, and user information."
+            },
+            {
+                "file": "pixabay-api/dist/ValidateRequest.d.ts",
+                "function": "The file defines a function `validateRequest` that checks if an `ImageRequest` or `VideoRequest` object contains valid data, throwing an error if any invalid information is found."
+            },
+            {
+                "file": "pixabay-api/lib/Index.ts",
+                "function": "This file provides functions to search for images and videos on Pixabay using their API, with options for authentication and request validation. It also includes an authentication wrapper to simplify subsequent search requests."
+            },
+            {
+                "file": "pixabay-api/lib/PixabayRequest.ts",
+                "function": "The file defines interfaces for making image and video search requests to Pixabay, specifying parameters such as search terms, language, filters, pagination, and response types."
+            },
+            {
+                "file": "pixabay-api/lib/PixabayResponse.ts",
+                "function": "The file defines interfaces for handling image and video data from Pixabay API responses, including details like dimensions, URLs, metadata, and user information. It also provides response structures for image and video searches."
+            },
+            {
+                "file": "pixabay-api/lib/ValidateRequest.ts",
+                "function": "The file defines a function `validateRequest` that checks if an `ImageRequest` or `VideoRequest` object contains valid data, such as ensuring the query length does not exceed 100 characters, the number of items per page is between 3 and 200, and the page number is at least 1. It throws an error if any validation fails."
+            }
+        ],
+        "gt": "[['pixabay-api/dist/ValidateRequest.d.ts'], ['pixabay-api/lib/PixabayResponse.ts', 'pixabay-api/lib/Index.ts'], ['pixabay-api/dist/Index.d.ts'], ['pixabay-api/lib/ValidateRequest.ts', 'pixabay-api/lib/Index.ts'], ['pixabay-api/lib/Index.ts'], ['pixabay-api/dist/PixabayRequest.d.ts'], ['pixabay-api/dist/PixabayResponse.d.ts'], ['pixabay-api/lib/PixabayRequest.ts', 'pixabay-api/lib/ValidateRequest.ts', 'pixabay-api/lib/Index.ts'], ['pixabay-api/lib/PixabayRequest.ts', 'pixabay-api/lib/Index.ts']]"
+    },
+    {
+        "repo": "polymedia-spam",
+        "description": "A 'Proof of Spam' system on the Sui blockchain where users earn SPAM tokens by sending transactions.",
+        "function": "Users send Sui transactions to earn SPAM tokens, with rewards proportional to the number of transactions sent. The system includes an onchain mechanism to track and calculate rewards, and a web miner for easy transaction sending and SPAM minting.",
+        "files": [
+            {
+                "file": "polymedia-spam/src/sdk/src/SpamClient.ts",
+                "function": "The `SpamClient` class provides functionality to interact with a Sui blockchain network, managing user counters, fetching data, and executing transactions related to spam operations. It includes methods for creating, incrementing, registering, claiming, and destroying user counters, as well as fetching gas costs and managing gas settings."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/SpamClientRotator.ts",
+                "function": "The `SpamClientRotator` class manages a rotation of `SpamClient` instances, allowing dynamic switching between active clients for spam operations. It initializes with multiple RPC URLs and ensures that only active clients are used, reusing gas and protocol configurations to optimize performance."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/Spammer.ts",
+                "function": "The `Spammer` class manages a spamming process on a blockchain network, handling tasks like counter registration, claiming, deletion, and incrementing. It rotates RPC clients periodically, handles errors gracefully, and supports event-based logging for debugging and monitoring."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/config.ts",
+                "function": "This file defines network-specific configurations for a spam module, including package IDs and director IDs for different networks, and constants related to the spam module and SUI token decimals."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/errors.ts",
+                "function": "The file defines an enumeration `SpamError` for specific error codes and a function `parseSpamError` that extracts and maps error codes from a string to the corresponding `SpamError` enum value."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/index.ts",
+                "function": "The file exports various modules related to spamming functionality, including clients, rotators, configuration, errors, and types."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/package.ts",
+                "function": "This file provides functions to interact with a user counter module in a blockchain environment, enabling operations like creating, incrementing, destroying, registering, and claiming user counters, as well as retrieving statistics for specific or recent epochs."
+            },
+            {
+                "file": "polymedia-spam/src/sdk/src/types.ts",
+                "function": "This file defines various types and structures related to Sui blockchain, including `Director`, `EpochCounter`, `UserCounter`, and `Stats`, and provides an empty initialization function for `UserCounters`."
+            },
+            {
+                "file": "polymedia-spam/src/web/src/App.tsx",
+                "function": "The file defines a React application with a router for navigation, managing network configurations, and handling spam-related functionality. It includes components for displaying balances, spam events, and network settings, with periodic updates and storage management for user data."
+            },
+            {
+                "file": "polymedia-spam/src/web/src/PageAbout.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['polymedia-spam/src/web/src/PageAbout.tsx', 'polymedia-spam/src/web/src/App.tsx'], ['polymedia-spam/src/sdk/src/types.ts'], ['polymedia-spam/src/sdk/src/errors.ts'], ['polymedia-spam/src/sdk/src/index.ts'], ['polymedia-spam/src/sdk/src/SpamClientRotator.ts'], ['polymedia-spam/src/sdk/src/config.ts'], ['polymedia-spam/src/sdk/src/Spammer.ts'], ['polymedia-spam/src/sdk/src/SpamClient.ts'], ['polymedia-spam/src/sdk/src/package.ts'], ['polymedia-spam/src/web/src/App.tsx']]"
+    },
+    {
+        "repo": "presentation-refactoring-ast",
+        "description": "A project demonstrating the use of AST and TypeScript compiler for refactoring code.",
+        "function": "Provides tools for refactoring a sample project using `@angular-devkit/schematics` and `ts-morph` scripts, enabling automated code transformations and migrations.",
+        "files": [
+            {
+                "file": "presentation-refactoring-ast/my-org-refactor-lib/src/use-parse-float/index.ts",
+                "function": "The file defines a schematic rule to automatically refactor TypeScript and TypeScriptX files by replacing unary prefix expressions starting with '+' with `parseFloat()` calls, excluding files in `node_modules` and a specific library."
+            },
+            {
+                "file": "presentation-refactoring-ast/my-org-refactor-lib/src/use-parse-float/index_spec.ts",
+                "function": "This file is a test script for an Angular Schematic named \"use-parse-float,\" verifying that it runs without generating any files."
+            },
+            {
+                "file": "presentation-refactoring-ast/refactor-scripts/src/extract-helpers.ts",
+                "function": "The script automates the refactoring of exported named functions from a TypeScript file into individual files, updates their references, and removes the original functions."
+            },
+            {
+                "file": "presentation-refactoring-ast/sample-project/src/index.tsx",
+                "function": "The file imports and demonstrates the functionality of two helper functions: `sanitizeNumbersArray` for converting an array of mixed number types to numbers, and `parseStringToNumber` for converting a string to a number."
+            },
+            {
+                "file": "presentation-refactoring-ast/sample-project/src/helpers/helpers.ts",
+                "function": "The file provides functions to sanitize an array of numbers and strings by converting them to numbers, and to parse a string into a number."
+            }
+        ],
+        "gt": "[['presentation-refactoring-ast/sample-project/src/helpers/helpers.ts', 'presentation-refactoring-ast/sample-project/src/index.tsx'], ['presentation-refactoring-ast/my-org-refactor-lib/src/use-parse-float/index_spec.ts'], ['presentation-refactoring-ast/refactor-scripts/src/extract-helpers.ts'], ['presentation-refactoring-ast/my-org-refactor-lib/src/use-parse-float/index.ts'], ['presentation-refactoring-ast/sample-project/src/index.tsx']]"
+    },
+    {
+        "repo": "quick-js-ocr",
+        "description": "A lightweight JavaScript library for Optical Character Recognition (OCR).",
+        "function": "Enables text extraction from images using pre-trained models, supporting various image formats and providing a simple API for integration.",
+        "files": [
+            {
+                "file": "quick-js-ocr/example/example.ts",
+                "function": "This file sets up a Vue.js application that integrates OCR functionality using JsOCR, allowing users to upload images or paste URLs to extract text. It also includes features for copying text, managing tokens, and handling drag-and-drop interactions."
+            },
+            {
+                "file": "quick-js-ocr/src/jsocr.ts",
+                "function": "The file defines a `JsOCR` class that facilitates Optical Character Recognition (OCR) by processing image files or URLs, converting them to base64, and sending them to an OCR API for text extraction. It supports event-driven callbacks for handling OCR results and validates input formats and sizes."
+            }
+        ],
+        "gt": "[['quick-js-ocr/example/example.ts'], ['quick-js-ocr/src/jsocr.ts', 'quick-js-ocr/example/example.ts']]"
+    },
+    {
+        "repo": "react-audio-visualize",
+        "description": "A React library for audio visualization.",
+        "function": "Provides components to visualize both static audio blobs and live audio streams. Offers customizable visualizer settings such as bar width, gap, colors, and FFT analysis parameters.",
+        "files": [
+            {
+                "file": "react-audio-visualize/vite.config.ts",
+                "function": "The file configures a Vite project to build a library named \"AudioVisualize\" with TypeScript definitions, specifying React and ReactDOM as external dependencies."
+            },
+            {
+                "file": "react-audio-visualize/src/index.ts",
+                "function": "The file exports two components: `LiveAudioVisualizer` and `AudioVisualizer`, which are likely used for visualizing audio data in real-time and static contexts, respectively."
+            },
+            {
+                "file": "react-audio-visualize/src/vite-env.d.ts",
+                "function": "The file serves as a TypeScript declaration to reference Vite client types for development purposes."
+            },
+            {
+                "file": "react-audio-visualize/src/AudioVisualizer/AudioVisualizer.tsx",
+                "function": "The file defines an `AudioVisualizer` React component that visualizes an audio blob as a series of bars on a canvas, with customizable colors, dimensions, and styles. It dynamically updates the visualization based on the current playback time."
+            },
+            {
+                "file": "react-audio-visualize/src/AudioVisualizer/index.ts",
+                "function": "The file exports an `AudioVisualizer` component, likely used for visualizing audio data."
+            },
+            {
+                "file": "react-audio-visualize/src/AudioVisualizer/types.ts",
+                "function": "The file defines an interface `dataPoint` with two properties: `max` and `min`, representing maximum and minimum values, respectively."
+            },
+            {
+                "file": "react-audio-visualize/src/AudioVisualizer/utils.ts",
+                "function": "The file provides functions to calculate and visualize audio waveform data on a canvas. `calculateBarData` processes audio buffer data into a structured format, while `draw` renders the waveform bars on a canvas, supporting rounded corners and customizable colors."
+            },
+            {
+                "file": "react-audio-visualize/src/LiveAudioVisualizer/LiveAudioVisualizer.tsx",
+                "function": "The file defines a React component, `LiveAudioVisualizer`, that visualizes audio data from a `MediaRecorder` stream in real-time using a canvas. It processes audio frequency data, applies FFT analysis, and dynamically draws bar-based visualizations based on the audio stream's amplitude."
+            },
+            {
+                "file": "react-audio-visualize/src/LiveAudioVisualizer/index.ts",
+                "function": "The file exports a `LiveAudioVisualizer` component, likely used for visualizing live audio data."
+            },
+            {
+                "file": "react-audio-visualize/src/LiveAudioVisualizer/utils.ts",
+                "function": "The file defines a custom canvas rendering context with a `roundRect` method and provides functions to calculate bar data from frequency data and draw visual bars on a canvas, with support for rounded corners where available."
+            }
+        ],
+        "gt": "[['react-audio-visualize/src/LiveAudioVisualizer/utils.ts', 'react-audio-visualize/src/LiveAudioVisualizer/LiveAudioVisualizer.tsx'], ['react-audio-visualize/vite.config.ts'], ['react-audio-visualize/src/vite-env.d.ts'], ['react-audio-visualize/src/LiveAudioVisualizer/LiveAudioVisualizer.tsx'], ['react-audio-visualize/src/AudioVisualizer/AudioVisualizer.tsx'], ['react-audio-visualize/src/AudioVisualizer/utils.ts', 'react-audio-visualize/src/AudioVisualizer/AudioVisualizer.tsx'], ['react-audio-visualize/src/AudioVisualizer/index.ts'], ['react-audio-visualize/src/LiveAudioVisualizer/index.ts'], ['react-audio-visualize/src/AudioVisualizer/types.ts', 'react-audio-visualize/src/AudioVisualizer/utils.ts', 'react-audio-visualize/src/AudioVisualizer/AudioVisualizer.tsx'], ['react-audio-visualize/src/index.ts'], ['react-audio-visualize/src/AudioVisualizer/types.ts', 'react-audio-visualize/src/AudioVisualizer/AudioVisualizer.tsx']]"
+    },
+    {
+        "repo": "react-signature-pad-wrapper",
+        "description": "A React wrapper for the signature pad library, enabling digital signature capture.",
+        "function": "Provides a responsive canvas for drawing signatures, supports runtime configuration of options, and includes features for handling canvas resizing while preserving content.",
+        "files": [
+            {
+                "file": "react-signature-pad-wrapper/rollup.config.ts",
+                "function": "This file configures a Rollup build process to bundle a TypeScript project, generating CommonJS and ES module outputs, with optional source maps and minification based on the environment."
+            },
+            {
+                "file": "react-signature-pad-wrapper/__tests__/SignaturePad.test.tsx",
+                "function": "This file contains unit tests for a `SignaturePad` React component, verifying its rendering, signature handling, canvas manipulation, event binding, and resizing behavior."
+            },
+            {
+                "file": "react-signature-pad-wrapper/__tests__/helpers/signature.ts",
+                "function": "The file exports a base64-encoded PNG image string."
+            },
+            {
+                "file": "react-signature-pad-wrapper/example/Layout.tsx",
+                "function": "The file defines a React component named `Layout` that integrates a signature pad for capturing and managing user signatures. It provides functionality to clear the signature pad and save the signature as a data URL."
+            },
+            {
+                "file": "react-signature-pad-wrapper/example/app.tsx",
+                "function": "The file initializes a React application by rendering the `Layout` component into the DOM element with the ID `root`."
+            },
+            {
+                "file": "react-signature-pad-wrapper/src/SignaturePad.tsx",
+                "function": "This file defines a React component that wraps a signature pad functionality, allowing users to draw signatures on a canvas, export them as data URLs or SVG, and handle resizing dynamically."
+            },
+            {
+                "file": "react-signature-pad-wrapper/src/index.ts",
+                "function": "The file exports a `SignaturePad` component, likely used for capturing and displaying signatures."
+            }
+        ],
+        "gt": "[['react-signature-pad-wrapper/src/SignaturePad.tsx', 'react-signature-pad-wrapper/example/Layout.tsx', 'react-signature-pad-wrapper/example/app.tsx'], ['react-signature-pad-wrapper/example/Layout.tsx', 'react-signature-pad-wrapper/example/app.tsx'], ['react-signature-pad-wrapper/__tests__/helpers/signature.ts', 'react-signature-pad-wrapper/__tests__/SignaturePad.test.tsx'], ['react-signature-pad-wrapper/example/app.tsx'], ['react-signature-pad-wrapper/__tests__/SignaturePad.test.tsx'], ['react-signature-pad-wrapper/src/index.ts'], ['react-signature-pad-wrapper/src/SignaturePad.tsx', 'react-signature-pad-wrapper/src/index.ts'], ['react-signature-pad-wrapper/src/SignaturePad.tsx', 'react-signature-pad-wrapper/__tests__/SignaturePad.test.tsx'], ['react-signature-pad-wrapper/rollup.config.ts']]"
+    },
+    {
+        "repo": "react-typescript-boilerplate",
+        "description": "A boilerplate for setting up a frontend application using Typescript and React.",
+        "function": "Provides a ready-to-use setup for developing React applications with Typescript, including a development server and production build process.",
+        "files": [
+            {
+                "file": "react-typescript-boilerplate/app/actions.ts",
+                "function": "This file defines actions for managing a counter system, including incrementing, decrementing, and adding counters, using an enum and action creator functions."
+            },
+            {
+                "file": "react-typescript-boilerplate/app/index.tsx",
+                "function": "This file sets up a React application with Redux, configuring a store and enabling hot module replacement for reducers, and renders the main application component wrapped in a Redux Provider."
+            },
+            {
+                "file": "react-typescript-boilerplate/app/reducers.ts",
+                "function": "This file defines a Redux reducer for managing an array of counters, handling actions to increment, decrement, and add counters."
+            },
+            {
+                "file": "react-typescript-boilerplate/app/components/app.tsx",
+                "function": "The file defines a React component `App` that manages a list of counters, allowing users to increment, decrement, and add counters. It connects to a Redux store to dispatch actions for these operations."
+            },
+            {
+                "file": "react-typescript-boilerplate/app/components/counter.tsx",
+                "function": "The file defines a React component `Counter` that displays a counter with a value and index, styled with a color based on the index. It provides buttons to increment and decrement the counter value."
+            },
+            {
+                "file": "react-typescript-boilerplate/app/components/counter_list.tsx",
+                "function": "The `CounterList` component renders a list of counters, each with increment and decrement functionality, based on the provided array of counter values and corresponding actions."
+            }
+        ],
+        "gt": "[['react-typescript-boilerplate/app/components/counter_list.tsx', 'react-typescript-boilerplate/app/components/app.tsx', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/components/counter.tsx', 'react-typescript-boilerplate/app/components/counter_list.tsx', 'react-typescript-boilerplate/app/components/app.tsx', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/actions.ts', 'react-typescript-boilerplate/app/components/app.tsx', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/reducers.ts', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/components/app.tsx', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/actions.ts', 'react-typescript-boilerplate/app/reducers.ts', 'react-typescript-boilerplate/app/index.tsx'], ['react-typescript-boilerplate/app/components/app.tsx']]"
+    },
+    {
+        "repo": "react-xray",
+        "description": "A React component that reveals images on user interaction, enhancing accessibility and customization.",
+        "function": "Provides a fully customizable image reveal experience with features like touch support, zoom mode, custom transitions, and responsive design. Includes built-in accessibility and TypeScript support.",
+        "files": [
+            {
+                "file": "react-xray/src/ConditionalWrapper.tsx",
+                "function": "This file defines a React component that conditionally wraps its children with a provided wrapper function based on a boolean condition."
+            },
+            {
+                "file": "react-xray/src/Effects.tsx",
+                "function": "The file defines a React component that renders an SVG filter element with multiple `feColorMatrix` effects based on an array of effect values. If no effects are provided, the component returns null."
+            },
+            {
+                "file": "react-xray/src/XRay.styles.tsx",
+                "function": "Defines CSS styles for a wrapper, image, and SVG elements, positioning the SVG absolutely over the image and setting visibility and display properties."
+            },
+            {
+                "file": "react-xray/src/XRay.tsx",
+                "function": "The `XRay` component is a React component that creates an interactive image reveal effect. It allows users to reveal or hide parts of an image by hovering, touching, or pressing a key, with customizable blur, zoom, and transition effects."
+            },
+            {
+                "file": "react-xray/src/hooks/useImageLoad.ts",
+                "function": "This file defines a custom React hook that loads an image and executes a callback function once the image has been successfully loaded."
+            },
+            {
+                "file": "react-xray/src/hooks/useTween.ts",
+                "function": "This file exports a custom React hook that manages a numeric state value, allowing it to be updated directly or animated over time using the GreenSock Animation Platform (GSAP)."
+            },
+            {
+                "file": "react-xray/src/stories/XRay.stories.tsx",
+                "function": "This file demonstrates various configurations and use cases of the `XRay` component, showcasing different props and styles to customize its behavior and appearance."
+            },
+            {
+                "file": "react-xray/src/stories/images.d.ts",
+                "function": "This file defines a TypeScript module declaration for JPEG image files, allowing them to be imported as any type."
+            }
+        ],
+        "gt": "[['react-xray/src/Effects.tsx', 'react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/XRay.styles.tsx', 'react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/hooks/useTween.ts', 'react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/hooks/useImageLoad.ts', 'react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/ConditionalWrapper.tsx', 'react-xray/src/XRay.tsx', 'react-xray/src/stories/XRay.stories.tsx'], ['react-xray/src/stories/images.d.ts']]"
+    },
+    {
+        "repo": "reaict",
+        "description": "An AI-powered optimization plugin for React components in Next.js, Vite, and Webpack.",
+        "function": "Automatically analyzes and optimizes React components during build time using OpenAI's GPT-3.5 model to enhance performance. Supports integration with frameworks like Next.js, Vite, and Webpack.",
+        "files": [
+            {
+                "file": "reaict/tsup.config.ts",
+                "function": "This file configures the `tsup` build tool to bundle the TypeScript project, including source maps, clean builds, and TypeScript declaration files."
+            },
+            {
+                "file": "reaict/src/index.ts",
+                "function": "This file exports integrations for various build tools (Vite, Webpack, Rollup, Rspack, Esbuild, and Next.js) using the `unplugin` framework, allowing customization of build configurations."
+            },
+            {
+                "file": "reaict/src/plugin.ts",
+                "function": "This file defines a Babel plugin that optimizes React components by leveraging OpenAI's GPT-3.5-turbo to apply `React.useMemo` and `React.useCallback` hooks. It processes `.jsx` and `.tsx` files, identifies functions returning JSX, and replaces them with optimized versions."
+            },
+            {
+                "file": "reaict/src/utils.ts",
+                "function": "The function checks if the first character of a given string is capitalized and returns `true` if it is, otherwise `false`."
+            }
+        ],
+        "gt": "[['reaict/src/utils.ts', 'reaict/src/plugin.ts', 'reaict/src/index.ts'], ['reaict/src/plugin.ts', 'reaict/src/index.ts'], ['reaict/tsup.config.ts'], ['reaict/src/index.ts']]"
+    },
+    {
+        "repo": "rest-api-typescript",
+        "description": "A REST API built with Typescript.",
+        "function": "Utilizes MongoDB and Mongoose for database management, and Express with Node.js for creating and managing RESTful endpoints.",
+        "files": [
+            {
+                "file": "rest-api-typescript/src/index.ts",
+                "function": "The file initializes a server instance, connects to a MongoDB database using Mongoose, and starts the server."
+            },
+            {
+                "file": "rest-api-typescript/src/server.ts",
+                "function": "This file sets up an Express server with middleware for logging, security, compression, and CORS, and defines routes for handling posts and users."
+            },
+            {
+                "file": "rest-api-typescript/src/config/mongoose.ts",
+                "function": "This file establishes a connection to a MongoDB database using Mongoose, configuring options for URL parsing, index creation, and topology management."
+            },
+            {
+                "file": "rest-api-typescript/src/controllers/PostController.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "rest-api-typescript/src/controllers/UserController.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "rest-api-typescript/src/models/Post.ts",
+                "function": "Defines a Mongoose schema for a blog post, including fields for title, URL, content, image, and timestamps for creation and updates. Exports a model named \"Post\" for interacting with the database."
+            },
+            {
+                "file": "rest-api-typescript/src/models/User.ts",
+                "function": "Defines a Mongoose schema for a User model, including fields for name, email, password, username, creation date, and references to associated posts."
+            },
+            {
+                "file": "rest-api-typescript/src/routes/PostRoutes.ts",
+                "function": "This file defines an Express router for managing blog posts, including creating, reading, updating, and deleting posts. It interacts with a MongoDB model to handle post data."
+            },
+            {
+                "file": "rest-api-typescript/src/routes/UserRoutes.ts",
+                "function": "This file defines an Express router for handling CRUD operations on user data, including retrieving, creating, updating, and deleting users, with support for populating related posts."
+            },
+            {
+                "file": "rest-api-typescript/src/routes/indexRoutes.ts",
+                "function": "This file defines an Express router that handles a GET request to the root endpoint ('/') and responds with a JSON message directing users to the '/api/posts' API endpoint."
+            }
+        ],
+        "gt": "[['rest-api-typescript/src/routes/UserRoutes.ts', 'rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/controllers/UserController.ts'], ['rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/config/mongoose.ts'], ['rest-api-typescript/src/routes/PostRoutes.ts', 'rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/models/Post.ts', 'rest-api-typescript/src/routes/PostRoutes.ts', 'rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/routes/indexRoutes.ts', 'rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/controllers/PostController.ts'], ['rest-api-typescript/src/index.ts'], ['rest-api-typescript/src/models/User.ts', 'rest-api-typescript/src/routes/UserRoutes.ts', 'rest-api-typescript/src/server.ts', 'rest-api-typescript/src/index.ts']]"
+    },
+    {
+        "repo": "scratchable",
+        "description": "A scratch card renderer using HTML Canvas.",
+        "function": "Renders a scratchable canvas element on top of user-defined content, supports various background types (single color, gradient, image), and provides real-time scratched area percentage and scratch event handling.",
+        "files": [
+            {
+                "file": "scratchable/src/events.ts",
+                "function": "The file defines a generic event handling class `Events` that allows registering, unregistering, and triggering event handlers, as well as purging handlers for specific events or all events."
+            },
+            {
+                "file": "scratchable/src/index.ts",
+                "function": "The `Scratchable` class provides functionality to create a scratcher interface that adapts to touch or mouse input, allowing rendering, event handling, and destruction of the scratcher instance."
+            },
+            {
+                "file": "scratchable/src/renderer.ts",
+                "function": "The `Renderer` class provides functionality to render and manipulate graphics on an HTML canvas within a specified container, supporting various background types (single color, linear gradient, or image) and offering methods to draw circles, lines, and calculate scratched pixel percentages."
+            },
+            {
+                "file": "scratchable/src/scratcher.ts",
+                "function": "The file defines a `Scratcher` class that enables users to \"scratch\" over a container element, revealing content underneath. It supports touch (`TouchScratcher`) and mouse (`MouseScratcher`) interactions, tracks scratch progress, and emits events with the scratch percentage."
+            }
+        ],
+        "gt": "[['scratchable/src/renderer.ts', 'scratchable/src/index.ts'], ['scratchable/src/events.ts', 'scratchable/src/scratcher.ts'], ['scratchable/src/renderer.ts', 'scratchable/src/scratcher.ts'], ['scratchable/src/scratcher.ts'], ['scratchable/src/index.ts'], ['scratchable/src/events.ts']]"
+    },
+    {
+        "repo": "sequelize-adapter",
+        "description": "A Sequelize adapter for Node-Casbin, enabling policy management in Sequelize-supported databases.",
+        "function": "Allows Node-Casbin to load and save policies from/to databases like PostgreSQL, MySQL, SQLite, and MSSQL. Provides automatic table creation for the 'casbin_rule' table.",
+        "files": [
+            {
+                "file": "sequelize-adapter/src/adapter.ts",
+                "function": "The `SequelizeAdapter` class provides an adapter for Casbin to store and manage policy rules using a Sequelize-based database. It supports loading, saving, adding, and removing policy rules, as well as filtering and managing the underlying database table."
+            },
+            {
+                "file": "sequelize-adapter/src/casbinRule.ts",
+                "function": "The file defines a `CasbinRule` model for managing access control rules in a database using Sequelize, and provides a function to customize the table name and schema for the model."
+            },
+            {
+                "file": "sequelize-adapter/test/adapter.test.ts",
+                "function": "This file tests the functionality of a Sequelize-based adapter for Casbin, focusing on loading, saving, and manipulating policies and grouping policies in a database."
+            }
+        ],
+        "gt": "[['sequelize-adapter/test/adapter.test.ts'], ['sequelize-adapter/src/adapter.ts', 'sequelize-adapter/test/adapter.test.ts'], ['sequelize-adapter/src/casbinRule.ts', 'sequelize-adapter/src/adapter.ts', 'sequelize-adapter/test/adapter.test.ts'], ['sequelize-adapter/src/casbinRule.ts']]"
+    },
+    {
+        "repo": "simplex-noise-demo-synthwave",
+        "description": "A canvas 2D demo showcasing the capabilities of simplex-noise.js.",
+        "function": "Utilizes simplex noise to generate dynamic and visually appealing effects on a canvas. Provides a demo for exploration and understanding of the library's functionality.",
+        "files": [
+            {
+                "file": "simplex-noise-demo-synthwave/Grid2D.ts",
+                "function": "The `Grid2D` class represents a 2D grid of points with a specified width, height, and number of components per point. The `iterateGrid2D` function iterates over each point in the grid, invoking a callback with the point's data, coordinates, and index."
+            },
+            {
+                "file": "simplex-noise-demo-synthwave/fbm2d.ts",
+                "function": "The file defines a function `fbm2d` that generates fractal Brownian motion (FBM) noise by combining multiple octaves of 2D simplex noise, with decreasing amplitude and frequency for each octave."
+            },
+            {
+                "file": "simplex-noise-demo-synthwave/main.ts",
+                "function": "This file sets up a main loop for rendering graphics on a canvas, handles window resizing, and manages a freeze time feature via URL hash parameters. It also initializes volume controls for an audio element."
+            },
+            {
+                "file": "simplex-noise-demo-synthwave/renderer.ts",
+                "function": "The file defines a renderer function that generates a dynamic 3D-like terrain visualization on a 2D canvas, including a sky gradient and procedurally generated terrain with mountains, roads, and hills, updated over time."
+            },
+            {
+                "file": "simplex-noise-demo-synthwave/volumeControls.ts",
+                "function": "The function `volumeControls` manages audio playback and control visibility by toggling the play/pause state of an audio element and updating the control's class based on the audio's state."
+            }
+        ],
+        "gt": "[['simplex-noise-demo-synthwave/renderer.ts', 'simplex-noise-demo-synthwave/main.ts'], ['simplex-noise-demo-synthwave/fbm2d.ts', 'simplex-noise-demo-synthwave/renderer.ts', 'simplex-noise-demo-synthwave/main.ts'], ['simplex-noise-demo-synthwave/Grid2D.ts', 'simplex-noise-demo-synthwave/renderer.ts', 'simplex-noise-demo-synthwave/main.ts'], ['simplex-noise-demo-synthwave/main.ts'], ['simplex-noise-demo-synthwave/volumeControls.ts', 'simplex-noise-demo-synthwave/main.ts']]"
+    },
+    {
+        "repo": "space-monad",
+        "description": "A TypeScript library providing Option and Result monads for functional programming.",
+        "function": "Implements Option and Result monads, enabling safe handling of nullable values and error-prone computations. Provides methods for mapping, filtering, transforming, and handling both success and error cases.",
+        "files": [
+            {
+                "file": "space-monad/src/index.ts",
+                "function": "The file exports `Option` and `Result` types, including their variants (`None`, `Some`, `Err`, `Ok`), from corresponding modules."
+            },
+            {
+                "file": "space-monad/src/iterator.ts",
+                "function": "The file defines a utility for creating single-value iterators, allowing objects to return a single value upon iteration. It also includes a fallback for the iterator symbol if `Symbol.iterator` is not available."
+            },
+            {
+                "file": "space-monad/src/option.ts",
+                "function": "This file defines an `Option` type, which represents a value that can either be `Some` (containing a value) or `None` (containing no value). It provides methods for safely handling and transforming these values, such as `map`, `filter`, `flatMap`, and `getOrElse`, ensuring null or undefined values are gracefully managed."
+            },
+            {
+                "file": "space-monad/src/result.ts",
+                "function": "The file defines a `Result` type and its operations, allowing for handling of success (`Ok`) and failure (`Err`) cases. It provides methods to map, transform, and combine results, ensuring safe error propagation and transformation into options."
+            },
+            {
+                "file": "space-monad/test/option.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['space-monad/src/option.ts', 'space-monad/src/result.ts'], ['space-monad/src/result.ts', 'space-monad/src/option.ts'], ['space-monad/src/iterator.ts', 'space-monad/src/option.ts', 'space-monad/src/result.ts'], ['space-monad/src/index.ts'], ['space-monad/test/option.ts']]"
+    },
+    {
+        "repo": "tfjs-npy",
+        "description": "A library for parsing and serializing NumPy files to and from TensorFlow.js tensors.",
+        "function": "Provides functions to parse NumPy file format into TensorFlow.js tensors and serialize TensorFlow.js tensors back into the NumPy file format.",
+        "files": [
+            {
+                "file": "tfjs-npy/npy.ts",
+                "function": "This module provides functions to serialize and parse TensorFlow.js tensors into and from the NumPy `.npy` file format, enabling interoperability between TensorFlow.js and NumPy."
+            },
+            {
+                "file": "tfjs-npy/npy_test.ts",
+                "function": "This file provides functionality to parse and serialize `.npy` files, converting them into TensorFlow tensors and vice versa, while also including tests to verify the correctness of these operations."
+            }
+        ],
+        "gt": "[['tfjs-npy/npy_test.ts'], ['tfjs-npy/npy.ts', 'tfjs-npy/npy_test.ts']]"
+    },
+    {
+        "repo": "toy-bundler",
+        "description": "A simple JavaScript module bundler for educational purposes.",
+        "function": "Takes JavaScript modules and dependencies, resolves them, and bundles them into a single file for use in web applications.",
+        "files": [
+            {
+                "file": "toy-bundler/.fatherrc.ts",
+                "function": "The file configures the `father` build tool to output CommonJS modules into the `dist` directory."
+            },
+            {
+                "file": "toy-bundler/example/foo.ts",
+                "function": "The file exports a constant string `foo` with the value `'foo'`."
+            },
+            {
+                "file": "toy-bundler/example/index.tsx",
+                "function": "The file defines a React component `App` that displays \"Hello\" followed by the value of `foo`, and renders it into the DOM element with the ID 'root'."
+            },
+            {
+                "file": "toy-bundler/src/cli.ts",
+                "function": "The file configures and executes a build process using the `build` function, specifying external dependencies (`react` and `react-dom/client`) and setting the working directory to `example`."
+            },
+            {
+                "file": "toy-bundler/src/dependency.ts",
+                "function": "The function `analyzeDependencies` takes a file path, a list of dependencies, and a configuration, resolves each dependency's path using the `resolve` function, and returns a map of dependencies to their resolved paths."
+            },
+            {
+                "file": "toy-bundler/src/generate.ts",
+                "function": "The function `generate` processes a map of modules, replaces dependency references in their code with module IDs, wraps each module's code, and combines them with a runtime script to produce a final output."
+            },
+            {
+                "file": "toy-bundler/src/index.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "toy-bundler/src/fixtures/resolve/bar.tsx",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "toy-bundler/src/fixtures/resolve/foo.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['toy-bundler/src/fixtures/resolve/foo.tsx'], ['toy-bundler/example/foo.ts', 'toy-bundler/example/index.tsx'], ['toy-bundler/src/generate.ts'], ['toy-bundler/src/cli.ts'], ['toy-bundler/src/index.ts', 'toy-bundler/src/cli.ts'], ['toy-bundler/src/fixtures/resolve/bar.tsx'], ['toy-bundler/src/dependency.ts'], ['toy-bundler/.fatherrc.ts'], ['toy-bundler/example/index.tsx']]"
+    },
+    {
+        "repo": "truth-or-dare",
+        "description": "A Discord bot designed to enhance conversations with fun and interactive prompts.",
+        "function": "Provides a variety of prompts including Truth or Dare, Never Have I Ever, and Would You Rather, with over 1,500 questions to engage users in Discord servers.",
+        "files": [
+            {
+                "file": "truth-or-dare/src/classes/ButtonContext.ts",
+                "function": "The `ButtonContext` class handles interactions with Discord buttons, providing methods to reply, edit responses, defer actions, and manage premium features. It also fetches channel settings and validates button interactions."
+            },
+            {
+                "file": "truth-or-dare/src/classes/ButtonHandler.ts",
+                "function": "The file defines a `ButtonHandler` class that manages button interactions in a Discord bot, handling various game-related buttons (e.g., Truth, Dare, Paranoia) and their corresponding actions, including fetching questions, managing cooldowns, and sending responses with appropriate buttons or DMs."
+            },
+            {
+                "file": "truth-or-dare/src/classes/Client.ts",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['truth-or-dare/src/classes/ButtonHandler.ts'], ['truth-or-dare/src/classes/Client.ts', 'truth-or-dare/src/classes/ButtonHandler.ts'], ['truth-or-dare/src/classes/ButtonContext.ts', 'truth-or-dare/src/classes/ButtonHandler.ts'], ['truth-or-dare/src/classes/Client.ts', 'truth-or-dare/src/classes/ButtonContext.ts', 'truth-or-dare/src/classes/ButtonHandler.ts'], ['truth-or-dare/src/classes/ButtonContext.ts']]"
+    },
+    {
+        "repo": "tsee",
+        "description": "A Typed EventEmitter library for TypeScript, extending Node.js EventEmitter with typed arguments.",
+        "function": "Provides a fully typed interface for event handling, allowing type-safe event definitions and emissions. Supports casting of custom EventEmitter implementations to typed emitters.",
+        "files": [
+            {
+                "file": "tsee/lib/ee.d.ts",
+                "function": "The file defines an `EventEmitter` class that implements an event handling system, allowing for the registration, triggering, and management of event listeners with support for various event-related operations."
+            },
+            {
+                "file": "tsee/lib/example.d.ts",
+                "function": "The file is empty and does not contain any functionality."
+            },
+            {
+                "file": "tsee/lib/index.d.ts",
+                "function": "The file exports all modules from `./types` and `./ee`."
+            },
+            {
+                "file": "tsee/lib/types.d.ts",
+                "function": "This file defines an interface for a typed event emitter, allowing for the management of event listeners with specific types, and provides a function to cast any event emitter to this typed interface."
+            },
+            {
+                "file": "tsee/src/ee.ts",
+                "function": "The file defines an `EventEmitter` class that implements an event handling system, allowing for the registration, triggering, and removal of event listeners, with support for limiting the number of listeners and managing one-time listeners."
+            },
+            {
+                "file": "tsee/src/example.ts",
+                "function": "The file defines an event emitter that listens for and handles custom events 'foo' and 'boo', logging their respective arguments to the console."
+            },
+            {
+                "file": "tsee/src/index.ts",
+                "function": "The file exports all functionalities from `types` and `ee` modules."
+            },
+            {
+                "file": "tsee/src/types.ts",
+                "function": "This file defines an interface for an event emitter that supports typed events and listeners, and provides a utility function to cast any event emitter to a typed event emitter."
+            }
+        ],
+        "gt": "[['tsee/lib/ee.d.ts'], ['tsee/src/types.ts'], ['tsee/lib/example.d.ts'], ['tsee/lib/types.d.ts'], ['tsee/src/index.ts', 'tsee/src/ee.ts'], ['tsee/src/index.ts', 'tsee/src/example.ts'], ['tsee/src/example.ts'], ['tsee/src/ee.ts'], ['tsee/lib/index.d.ts']]"
+    },
+    {
+        "repo": "use-supabase",
+        "description": "A React package that simplifies the integration and usage of Supabase in consumer apps.",
+        "function": "Provides hooks like useSupabase, useTable, and useQuery to interact with Supabase, enabling automatic SWR revalidation for tables and queries, and easy access to the Supabase client.",
+        "files": [
+            {
+                "file": "use-supabase/src/index.tsx",
+                "function": "The file exports all functionalities from `context` and `hooks` modules."
+            },
+            {
+                "file": "use-supabase/src/types.ts",
+                "function": "The file defines a context type for Supabase, including a Supabase client and user, and a type for query selection arguments with optional parameters for query execution."
+            },
+            {
+                "file": "use-supabase/src/context/SupabaseContext.tsx",
+                "function": "The file defines a React context provider, `SupabaseContextProvider`, that provides access to a Supabase client and authenticated user information to child components. It listens for authentication state changes and updates the user state accordingly."
+            },
+            {
+                "file": "use-supabase/src/context/index.ts",
+                "function": "The file exports all functionalities from the `SupabaseContext` module."
+            },
+            {
+                "file": "use-supabase/src/hooks/index.ts",
+                "function": "Exports utility hooks for interacting with Supabase, managing user data, handling table operations, and executing queries."
+            },
+            {
+                "file": "use-supabase/src/hooks/useQuery.tsx",
+                "function": "The `useQuery` hook fetches data from a Supabase query using the SWR library, providing the fetched data, error, and validation status. It requires the query to be used within a `SupabaseContext.Provider`."
+            },
+            {
+                "file": "use-supabase/src/hooks/useSupabase.tsx",
+                "function": "The file defines a custom React hook, `useSupabase`, that retrieves the Supabase client instance from the Supabase context. It ensures the hook is used within a valid Supabase context provider, throwing an error otherwise."
+            },
+            {
+                "file": "use-supabase/src/hooks/useTable.tsx",
+                "function": "The `useTable` hook fetches data from a specified Supabase table using the SWR strategy, allowing selection of specific fields and optional query options like returning only the first row or estimating row counts. It returns the fetched data, any errors, and a validation status."
+            },
+            {
+                "file": "use-supabase/src/hooks/useUser.tsx",
+                "function": "The file defines a React hook, `useUser`, that retrieves the current user from the Supabase context. It ensures the hook is used within a valid Supabase context provider, throwing an error otherwise."
+            }
+        ],
+        "gt": "[['use-supabase/src/hooks/useTable.tsx'], ['use-supabase/src/context/index.ts'], ['use-supabase/src/context/SupabaseContext.tsx'], ['use-supabase/src/types.ts', 'use-supabase/src/context/SupabaseContext.tsx'], ['use-supabase/src/types.ts', 'use-supabase/src/hooks/useTable.tsx'], ['use-supabase/src/index.tsx'], ['use-supabase/src/hooks/useUser.tsx'], ['use-supabase/src/hooks/index.ts'], ['use-supabase/src/hooks/useQuery.tsx'], ['use-supabase/src/hooks/useSupabase.tsx']]"
+    },
+    {
+        "repo": "vite-components",
+        "description": "A minimal setup for React projects using Vite with TypeScript and ESLint.",
+        "function": "Provides fast development with HMR, supports React with Babel or SWC for Fast Refresh, and includes customizable ESLint configurations for type-aware linting and React-specific rules.",
+        "files": [
+            {
+                "file": "vite-components/vite.config.ts",
+                "function": "This file configures a Vite project to use the React SWC plugin for faster React application development."
+            },
+            {
+                "file": "vite-components/src/application.tsx",
+                "function": "This file defines a React component for a simple to-do application, allowing users to add, toggle completion status, and delete tasks."
+            },
+            {
+                "file": "vite-components/src/main.tsx",
+                "function": "This file initializes a React application by rendering the `Application` component within a `React.StrictMode` wrapper into the DOM element with the ID 'root'."
+            },
+            {
+                "file": "vite-components/src/todos.d.ts",
+                "function": "Defines a `Todo` interface with properties for an ID, text, and completion status."
+            },
+            {
+                "file": "vite-components/src/use-todos.tsx",
+                "function": "This file defines a custom React hook, `useTodos`, that manages fetching, creating, updating, and deleting todo items from a server, while handling loading and error states."
+            },
+            {
+                "file": "vite-components/src/vite-env.d.ts",
+                "function": "The file serves as a TypeScript declaration to reference Vite client types for development purposes."
+            },
+            {
+                "file": "vite-components/src/components/button.tsx",
+                "function": "This file defines a reusable `Button` component in React, allowing for optional \"dangerous\" styling and merging custom class names with predefined styles."
+            },
+            {
+                "file": "vite-components/src/components/index.ts",
+                "function": "The file exports all components from `button` and `input` modules."
+            },
+            {
+                "file": "vite-components/src/components/input.tsx",
+                "function": "The file defines a reusable `Input` component in React, which extends the native HTML input element with custom styling and additional props."
+            }
+        ],
+        "gt": "[['vite-components/vite.config.ts'], ['vite-components/src/main.tsx'], ['vite-components/src/components/input.tsx', 'vite-components/src/application.tsx'], ['vite-components/src/todos.d.ts'], ['vite-components/src/application.tsx'], ['vite-components/src/components/button.tsx', 'vite-components/src/application.tsx'], ['vite-components/src/use-todos.tsx'], ['vite-components/src/vite-env.d.ts'], ['vite-components/src/components/index.ts']]"
+    },
+    {
+        "repo": "vscode-wgsl",
+        "description": "A Visual Studio Code extension for syntax highlighting and validation of WGSL (WebGPU Shading Language) code.",
+        "function": "Provides syntax highlighting, autocompletion for global variables, and real-time validation using the cargo-wgsl crate. Also supports CLI usage for shader validation.",
+        "files": [
+            {
+                "file": "vscode-wgsl/src/extension.ts",
+                "function": "This file implements a VS Code extension for WebGPU Shading Language (WGSL) that provides code completion, validation, and linting features, enhancing the development experience for WGSL files."
+            },
+            {
+                "file": "vscode-wgsl/src/rpc.ts",
+                "function": "This file defines interfaces for RPC communication, including request and response structures for validating files and retrieving file tree information."
+            },
+            {
+                "file": "vscode-wgsl/src/symbol_provider.ts",
+                "function": "The file defines a `WgslDocumentSymbolProvider` class that implements a VS Code Document Symbol Provider for WGSL (WebGPU Shading Language) files, extracting and providing function symbols for the editor's symbol navigation."
+            },
+            {
+                "file": "vscode-wgsl/src/validator.ts",
+                "function": "The file defines a `Validator` class that manages a child process for a server, handling RPC requests to validate files and retrieve file trees. It communicates with the server using JSON-RPC, processes responses, and displays error messages in the VSCode interface if needed."
+            }
+        ],
+        "gt": "[['vscode-wgsl/src/validator.ts', 'vscode-wgsl/src/extension.ts'], ['vscode-wgsl/src/rpc.ts'], ['vscode-wgsl/src/symbol_provider.ts', 'vscode-wgsl/src/extension.ts'], ['vscode-wgsl/src/extension.ts']]"
+    },
+    {
+        "repo": "vuejs-forge-boilerplate",
+        "description": "A boilerplate template for Vue 3 projects using Vite.",
+        "function": "Provides a ready-to-use setup for Vue 3 development with Vite, including TypeScript support, hot-reload for development, production build, unit testing with Vitest, end-to-end testing with Cypress, and linting with ESLint.",
+        "files": [
+            {
+                "file": "vuejs-forge-boilerplate/components.d.ts",
+                "function": "This file extends the Vue runtime core to declare global components such as `AppButton`, `RouterLink`, and `RouterView`."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/cypress.config.ts",
+                "function": "This file configures Cypress for end-to-end testing, specifying the test file pattern and the base URL for the application under test."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/env.d.ts",
+                "function": "The file sets up TypeScript type references for Vite client and Vite plugin Pages in a client-side environment."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/vite.config.ts",
+                "function": "This file configures a Vite project with Vue.js, enabling plugins for routing (Pages) and component auto-importing (Components), and sets up an alias for the `src` directory."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/cypress/e2e/example.cy.ts",
+                "function": "This file contains a Cypress test that verifies visiting the app's root URL and checking for the presence of an \"h1\" element with the text \"You did it!\"."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/cypress/support/commands.ts",
+                "function": "This file defines custom Cypress commands, including `login`, `drag`, `dismiss`, and overwrites the `visit` command, extending Cypress functionality for testing."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/cypress/support/e2e.ts",
+                "function": "This file sets up global configuration and behavior for Cypress tests by importing custom commands and modifying Cypress behavior."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/src/main.ts",
+                "function": "This file sets up a Vue.js application, initializes routing, and mounts the app to the DOM element with the ID \"app\"."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/src/composables/use8baseStorage.ts",
+                "function": "This file provides a function to upload assets to a storage service using GraphQL queries and mutations, fetching upload credentials and creating a file entry in a database."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/src/router/index.ts",
+                "function": "The file sets up a Vue Router instance with file-based routing using the `vue-router` library and the `~pages` plugin, enabling navigation based on the project's file structure."
+            },
+            {
+                "file": "vuejs-forge-boilerplate/src/types/index.ts",
+                "function": "This file defines a set of TypeScript interfaces representing various entities such as User, Board, Task, Comment, Label, and File, with relationships between them, and includes common properties like `id`, `createdAt`, `updatedAt`, and `deletedAt` for each resource."
+            }
+        ],
+        "gt": "[['vuejs-forge-boilerplate/cypress.config.ts'], ['vuejs-forge-boilerplate/vite.config.ts'], ['vuejs-forge-boilerplate/src/composables/use8baseStorage.ts'], ['vuejs-forge-boilerplate/cypress/support/e2e.ts'], ['vuejs-forge-boilerplate/src/types/index.ts'], ['vuejs-forge-boilerplate/cypress/e2e/example.cy.ts'], ['vuejs-forge-boilerplate/cypress/support/commands.ts', 'vuejs-forge-boilerplate/cypress/support/e2e.ts'], ['vuejs-forge-boilerplate/src/main.ts'], ['vuejs-forge-boilerplate/src/router/index.ts'], ['vuejs-forge-boilerplate/env.d.ts'], ['vuejs-forge-boilerplate/components.d.ts']]"
+    },
+    {
+        "repo": "youtube-front",
+        "description": "A web app that generates a personalized YouTube Annual Report based on user's watch history.",
+        "function": "Allows users to retrieve their YouTube watch history from Google Takeout, analyze it, and generate a detailed report including statistics such as most watched videos, favorite channels, and watch time breakdowns by month and time period.",
+        "files": [
+            {
+                "file": "youtube-front/src/App.tsx",
+                "function": "This file defines a React application with routing for displaying an annual report and a guide. It uses state to manage and pass annual history data between components."
+            },
+            {
+                "file": "youtube-front/src/components/AnnualReport.tsx",
+                "function": "The file defines a React component, `AnnualReport`, that displays an annual report with multiple sections. It dynamically updates the displayed section based on the user's scroll position and renders different report sections depending on the current section and available data."
+            },
+            {
+                "file": "youtube-front/src/components/AnnualReportSection.tsx",
+                "function": "The `AnnualReportSection` component is a React functional component that renders a section with customizable background color and content, designed for use in an annual report layout."
+            },
+            {
+                "file": "youtube-front/src/components/Button.tsx",
+                "function": "The file defines a reusable `Button` component in React that accepts `text` and `link` as props, rendering an anchor element styled with CSS classes for appearance and hover effects."
+            },
+            {
+                "file": "youtube-front/src/components/ChannelOverview.tsx",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['youtube-front/src/components/ChannelOverview.tsx', 'youtube-front/src/components/AnnualReport.tsx', 'youtube-front/src/App.tsx'], ['youtube-front/src/components/AnnualReport.tsx', 'youtube-front/src/App.tsx'], ['youtube-front/src/components/Button.tsx'], ['youtube-front/src/components/AnnualReportSection.tsx', 'youtube-front/src/components/AnnualReport.tsx', 'youtube-front/src/App.tsx'], ['youtube-front/src/App.tsx'], ['youtube-front/src/components/AnnualReportSection.tsx']]"
+    },
+    {
+        "repo": "zero",
+        "description": "GraphQL Zero is a zero-config tool for mocking GraphQL APIs with generative AI-generated fake data.",
+        "function": "It allows developers to prototype and test frontend applications without implementing a backend or manually entering data. It supports proxying existing GraphQL APIs, running as a local server, and generating static consistent data.",
+        "files": [
+            {
+                "file": "zero/src/cli.ts",
+                "function": "This file defines a command-line interface (CLI) for configuring and running a GraphQL server, allowing users to specify options such as the schema file, port, CORS settings, and headers, and optionally extend an existing GraphQL server."
+            },
+            {
+                "file": "zero/src/fake_definition.ts",
+                "function": "The file provides a function `buildWithFakeDefinitions` to extend a GraphQL schema with additional SDL definitions, validating the extension and marking new types and fields for identification. It also includes a custom `ValidationErrors` class to handle schema validation errors."
+            },
+            {
+                "file": "zero/src/index.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "zero/src/__tests__/resolvers.test.ts",
+                "function": "The file contains tests for GraphQL queries, focusing on schema validation, query execution, and response handling. It tests various scenarios, including pagination, nested connections, and error handling, using mock data and resolvers."
+            },
+            {
+                "file": "zero/src/editor/custom.d.ts",
+                "function": "This file defines a TypeScript module declaration for CSS files, allowing them to be imported and used in TypeScript projects."
+            },
+            {
+                "file": "zero/src/editor/icons.tsx",
+                "function": "The file defines four React components that render SVG icons: `EditIcon`, `ConsoleIcon`, `GithubIcon`, and `VoyagerIcon`. Each icon is styled with a white fill and specific dimensions."
+            },
+            {
+                "file": "zero/src/editor/index.tsx",
+                "function": "The file defines a React-based GraphQL editor (`FakeEditor`) that allows users to edit and save GraphQL schemas, switch between tabs for editing and querying, and interact with a GraphQL API. It includes functionality for fetching and updating schemas, handling unsaved changes, and displaying errors or status messages."
+            },
+            {
+                "file": "zero/src/editor/GraphQLEditor/GraphQLEditor.tsx",
+                "function": "The file defines a React component, `GraphQLEditor`, that integrates CodeMirror for editing GraphQL queries. It provides features like syntax highlighting, linting, autocompletion, and schema-based hints, while allowing customization through props for value, schema, and event handlers."
+            }
+        ],
+        "gt": "[['zero/src/editor/GraphQLEditor/GraphQLEditor.tsx', 'zero/src/editor/index.tsx'], ['zero/src/index.ts'], ['zero/src/fake_definition.ts', 'zero/src/editor/index.tsx'], ['zero/src/editor/custom.d.ts'], ['zero/src/__tests__/resolvers.test.ts'], ['zero/src/editor/index.tsx'], ['zero/src/cli.ts'], ['zero/src/editor/icons.tsx', 'zero/src/editor/index.tsx'], ['zero/src/fake_definition.ts']]"
+    },
+    {
+        "repo": "zoottelkeeper-obsidian-plugin",
+        "description": "An Obsidian plugin that automates the creation and maintenance of index files for organizing notes and folders.",
+        "function": "Automatically generates and updates index files in folders, allowing for easy navigation and organization of notes. Features include customizable templates, folder inclusion/exclusion, and manual indexing triggers.",
+        "files": [
+            {
+                "file": "zoottelkeeper-obsidian-plugin/consts.ts",
+                "function": "The file defines constants for text markers that indicate the beginning and end of an autogenerated index file list created by the Zoottelkeeper tool."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/defaultSettings.ts",
+                "function": "The file defines default settings for a Zoottelkeeper plugin, including index prefix, item style, sorting order, and various boolean options for functionality like tagging, emoji usage, and path cleaning."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/main.ts",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/interfaces/GeneralContentOptions.ts",
+                "function": "The file defines an interface `GeneralContentOptions` for processing a list of Obsidian files (`TAbstractFile`) with an initial value and a function to apply."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/interfaces/IndexItemStyle.ts",
+                "function": "The file defines an enumeration `IndexItemStyle` with three possible values: `List`, `Checkbox`, and `PureLink`, representing different styles for index items."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/interfaces/ZottelkeeperPluginSettings.ts",
+                "function": "The file defines the `ZoottelkeeperPluginSettings` interface, which configures various settings for a plugin, including index file naming, tag handling, emoji usage, folder inclusion/exclusion, sorting order, and template file options."
+            },
+            {
+                "file": "zoottelkeeper-obsidian-plugin/interfaces/index.ts",
+                "function": "The file exports functionality related to plugin settings, general content options, and index item styles."
+            }
+        ],
+        "gt": "[['zoottelkeeper-obsidian-plugin/main.ts'], ['zoottelkeeper-obsidian-plugin/consts.ts'], ['zoottelkeeper-obsidian-plugin/interfaces/IndexItemStyle.ts', 'zoottelkeeper-obsidian-plugin/interfaces/ZottelkeeperPluginSettings.ts'], ['zoottelkeeper-obsidian-plugin/interfaces/GeneralContentOptions.ts'], ['zoottelkeeper-obsidian-plugin/defaultSettings.ts'], ['zoottelkeeper-obsidian-plugin/interfaces/index.ts'], ['zoottelkeeper-obsidian-plugin/interfaces/ZottelkeeperPluginSettings.ts']]"
+    }
+]

@@ -1,0 +1,1440 @@
+[
+    {
+        "repo": "got-your-back",
+        "description": "GYB is a command-line tool for backing up Gmail messages to a local computer.",
+        "function": "Utilizes Gmail's API over HTTPS to securely download and store emails locally, offering installation options for Linux, MacOS, and Windows.",
+        "files": [
+            {
+                "file": "got-your-back/fmbox.py",
+                "function": "This library provides functionality to read and manipulate mbox files sequentially, allowing extraction, modification, and removal of email headers, as well as iterating through messages in an mbox file."
+            },
+            {
+                "file": "got-your-back/gyb.py",
+                "function": "This script is a command-line tool for backing up and restoring Gmail messages. It supports various actions such as backup, restore, count, purge, and label management, and integrates with Google APIs for Gmail and Google Workspace services. The tool uses OAuth 2.0 for authentication and supports both user accounts and service accounts."
+            },
+            {
+                "file": "got-your-back/labellang.py",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['got-your-back/labellang.py', 'got-your-back/gyb.py'], ['got-your-back/fmbox.py', 'got-your-back/gyb.py']]"
+    },
+    {
+        "repo": "SRCNN-pytorch",
+        "description": "An implementation of the SRCNN algorithm for image super-resolution using deep convolutional networks.",
+        "function": "The project allows training and testing of SRCNN models to enhance image resolution by upscaling factors of 2, 3, and 4. It supports custom dataset preparation, training with various hyperparameters, and evaluation using PSNR metrics.",
+        "files": [
+            {
+                "file": "SRCNN-pytorch/datasets.py",
+                "function": "The file defines two PyTorch datasets, `TrainDataset` and `EvalDataset`, for loading and normalizing low-resolution (lr) and high-resolution (hr) image data from HDF5 files during training and evaluation."
+            },
+            {
+                "file": "SRCNN-pytorch/models.py",
+                "function": "The file defines a Super-Resolution Convolutional Neural Network (SRCNN) model using PyTorch, consisting of three convolutional layers with ReLU activations for image super-resolution tasks."
+            },
+            {
+                "file": "SRCNN-pytorch/prepare.py",
+                "function": "The script processes image datasets for training or evaluation by resizing, converting to Y channel, and extracting patches, storing the results in HDF5 files. It supports both training (with patch extraction) and evaluation (storing full images) modes."
+            },
+            {
+                "file": "SRCNN-pytorch/test.py",
+                "function": "This script loads a pre-trained SRCNN model, processes an input image by resizing and converting it to YCbCr format, applies the model to enhance the image quality, and saves the enhanced image along with its PSNR value."
+            },
+            {
+                "file": "SRCNN-pytorch/train.py",
+                "function": "This script trains a Super-Resolution Convolutional Neural Network (SRCNN) model using PyTorch, optimizing it for image super-resolution tasks with Mean Squared Error (MSE) loss and evaluates its performance using PSNR."
+            },
+            {
+                "file": "SRCNN-pytorch/utils.py",
+                "function": "The file provides functions to convert between RGB and YCbCr color spaces, calculate PSNR, and track average values using the `AverageMeter` class."
+            }
+        ],
+        "gt": "[['SRCNN-pytorch/utils.py', 'SRCNN-pytorch/train.py'], ['SRCNN-pytorch/models.py', 'SRCNN-pytorch/train.py'], ['SRCNN-pytorch/datasets.py', 'SRCNN-pytorch/train.py'], ['SRCNN-pytorch/utils.py', 'SRCNN-pytorch/test.py'], ['SRCNN-pytorch/models.py', 'SRCNN-pytorch/test.py'], ['SRCNN-pytorch/utils.py', 'SRCNN-pytorch/prepare.py']]"
+    },
+    {
+        "repo": "ConvLSTM-Pytorch",
+        "description": "A Pytorch implementation of ConvLSTM for designing a Brain-Computer Interface (BCI) decoder.",
+        "function": "The project provides a ConvLSTM model to decode kinematic signals from neural signals, featuring a bidirectional ConvLSTM decoder with configurable layers, kernel sizes, and dropout rates.",
+        "files": [
+            {
+                "file": "ConvLSTM-Pytorch/convlstm.py",
+                "function": "The file defines a ConvLSTM model for sequence modeling with convolutional layers, supporting bidirectional and peephole connections, and includes a ConvLSTMCell for individual time steps."
+            },
+            {
+                "file": "ConvLSTM-Pytorch/convlstm_decoder.py",
+                "function": "The file defines a ConvLSTMNetwork class that implements a convolutional LSTM-based neural network for sequence processing. It includes layers of ConvLSTM cells, a flattening operation, and a linear layer for final output."
+            }
+        ],
+        "gt": "[['ConvLSTM-Pytorch/convlstm.py', 'ConvLSTM-Pytorch/convlstm_decoder.py']]"
+    },
+    {
+        "repo": "php-socks5",
+        "description": "A Socks5 proxy server implementation in PHP.",
+        "function": "Provides a Socks5 proxy server with username/password authentication, built using the Workerman library. Allows for easy configuration, starting, stopping, and monitoring of the proxy server.",
+        "files": [],
+        "gt": "[['repos_otherLanguage/python\\\\php-socks5\\\\config.php', 'repos_otherLanguage/python\\\\php-socks5\\\\start.php']]"
+    },
+    {
+        "repo": "indrnn",
+        "description": "A TensorFlow implementation of Independently Recurrent Neural Networks (IndRNNs), a novel architecture for building deeper and more interpretable RNNs.",
+        "function": "IndRNNs enable efficient stacking of recurrent layers with ReLU activations, prevent gradient issues, and improve interpretability by allowing neurons to be independent. The implementation includes examples for solving the addition problem and classifying sequential MNIST data.",
+        "files": [
+            {
+                "file": "indrnn/ind_rnn_cell.py",
+                "function": "The file implements an IndRNN (Independently Recurrent Neural Network) cell, which processes inputs and states independently using a single recurrent weight per unit. It supports customizable weight initialization, clipping, and activation functions, and is designed for building deeper and longer-term RNN models."
+            },
+            {
+                "file": "indrnn/ind_rnn_cell_test.py",
+                "function": "This file tests the functionality of the IndRNNCell, focusing on basic cell operations and the handling of recurrent weights within specified bounds."
+            },
+            {
+                "file": "indrnn/examples/addition_rnn.py",
+                "function": "This module uses the IndRNNCell to solve the addition problem, where a neural network is trained to predict the sum of two randomly selected numbers from sequences of input data. The model is optimized using mean squared error and the Adam optimizer."
+            },
+            {
+                "file": "indrnn/examples/sequential_mnist.py",
+                "function": "This module uses the IndRNNCell to solve the Sequential MNIST problem, implementing a multi-layer RNN with batch normalization and dynamic dataset switching for training, validation, and testing."
+            }
+        ],
+        "gt": "[['indrnn/ind_rnn_cell.py', 'indrnn/examples/sequential_mnist.py'], ['indrnn/ind_rnn_cell.py', 'indrnn/examples/addition_rnn.py'], ['indrnn/ind_rnn_cell.py', 'indrnn/ind_rnn_cell_test.py']]"
+    },
+    {
+        "repo": "tesla-apiscraper",
+        "description": "A self-hosted API scraper for collecting Tesla vehicle telemetry data and visualizing it on Grafana dashboards.",
+        "function": "Pulls vehicle telemetry from the Tesla Owner API into InfluxDB, allowing visualization on Grafana dashboards. Supports multiple vehicles, extended sleep mode, and includes an API for control via Android app or custom implementation.",
+        "files": [
+            {
+                "file": "tesla-apiscraper/apiconfig.py",
+                "function": "The file defines API credentials and a base URL for accessing Tesla's owner API, enabling interaction with Tesla vehicle data."
+            },
+            {
+                "file": "tesla-apiscraper/apiscraper.py",
+                "function": "The script continuously monitors and logs Tesla vehicle data from the Tesla API to an InfluxDB database, adjusting polling intervals based on vehicle activity. It also provides an HTTP API for querying the current state and controlling scraping behavior."
+            },
+            {
+                "file": "tesla-apiscraper/srtmread.py",
+                "function": "The script retrieves elevation data for a given latitude and longitude using the SRTM dataset, logs the elevation, and writes it to an InfluxDB database if not in dry-run mode. It uses a lock file to prevent concurrent execution."
+            },
+            {
+                "file": "tesla-apiscraper/teslajson.py",
+                "function": "This Python class provides a connection to the Tesla JSON API, allowing users to authenticate, retrieve vehicle data, and send commands to their Tesla vehicles. It supports both data requests and vehicle commands, with optional proxy support."
+            }
+        ],
+        "gt": "[['tesla-apiscraper/teslajson.py', 'tesla-apiscraper/apiscraper.py'], ['tesla-apiscraper/apiconfig.py', 'tesla-apiscraper/teslajson.py', 'tesla-apiscraper/apiscraper.py'], ['tesla-apiscraper/srtmread.py', 'tesla-apiscraper/apiscraper.py']]"
+    },
+    {
+        "repo": "pytorch-made",
+        "description": "A PyTorch implementation of the Masked AutoEncoder for Density Estimation (MADE) model.",
+        "function": "The project allows turning an autoencoder into an autoregressive density model by masking connections in an MLP. It supports training on datasets like binarized MNIST and can handle multiple orderings for improved performance.",
+        "files": [
+            {
+                "file": "pytorch-made/made.py",
+                "function": "The file implements a Masked Autoencoder for Density Estimation (MADE), a neural network that uses masked connections to ensure autoregressive properties. It allows for configurable input-output dependencies and supports multiple mask configurations for ensemble training."
+            },
+            {
+                "file": "pytorch-made/run.py",
+                "function": "The script trains a Masked Autoencoder for Distribution Estimation (MADE) model on the Binarized MNIST dataset using PyTorch. It supports order/connectivity-agnostic training by resampling masks and evaluates the model using binary cross-entropy loss. The training process includes epochs with both training and test phases, and the model is optimized using the Adam optimizer with a learning rate scheduler."
+            }
+        ],
+        "gt": "[['pytorch-made/made.py', 'pytorch-made/run.py']]"
+    },
+    {
+        "repo": "TradingView-data-scraper",
+        "description": "A tool for extracting chart data from user-published TradingView charts.",
+        "function": "Allows users to input the URL of a TradingView chart to extract and export the chart data as a CSV file. Can be run locally or deployed on a server for online usage.",
+        "files": [
+            {
+                "file": "TradingView-data-scraper/app.py",
+                "function": "This script is a Flask web application that scrapes financial data from a given URL, processes it, and returns the data as a downloadable CSV file. It uses Pyppeteer for web scraping and BeautifulSoup for HTML parsing."
+            },
+            {
+                "file": "TradingView-data-scraper/runp-heroku.py",
+                "function": "The file is a script to run a Flask application, starting the app defined in the `app` module."
+            }
+        ],
+        "gt": "[['TradingView-data-scraper/app.py', 'TradingView-data-scraper/runp-heroku.py']]"
+    },
+    {
+        "repo": "rest-api-samples",
+        "description": "A repository providing Python and Java code samples for the Tableau REST API, along with Postman collections for API interaction.",
+        "function": "Offers examples for integrating with Tableau Server or Tableau Online using the REST API, supporting various API versions and including samples for the Metadata API.",
+        "files": [
+            {
+                "file": "rest-api-samples/python/move_datasource_server.py",
+                "function": "This script moves a specified data source from one Tableau Server to another by downloading it, uploading it to the destination server's default project, and then deleting it from the source server."
+            },
+            {
+                "file": "rest-api-samples/python/move_workbook_projects.py",
+                "function": "This script facilitates moving a workbook from one project to another on a Tableau Server using the Tableau REST API. It handles user authentication, retrieves workbook and project IDs, and performs the workbook relocation."
+            },
+            {
+                "file": "rest-api-samples/python/move_workbook_server.py",
+                "function": "This script moves a specified workbook from one Tableau Server to another by downloading it, publishing it to the destination server's 'default' project, and then deleting it from the source server."
+            },
+            {
+                "file": "rest-api-samples/python/move_workbook_sites.py",
+                "function": "This script moves a specified workbook from the server's 'Default' site to a specified site's 'default' project by downloading the workbook in-memory and then publishing it to the new site, while also deleting it from the original site."
+            },
+            {
+                "file": "rest-api-samples/python/publish_workbook.py",
+                "function": "This script uses the Tableau Server REST API to publish a .twbx workbook to the 'default' project of a specified server, handling both small and large files by chunking for files over 64MB."
+            },
+            {
+                "file": "rest-api-samples/python/update_permission.py",
+                "function": "This script manages user permissions on all workbooks in a Tableau Server site, allowing or denying specific permissions for a given user. It handles updating or adding permissions, ensuring that existing permissions with different modes are replaced."
+            },
+            {
+                "file": "rest-api-samples/python/users_by_group.py",
+                "function": "This script connects to a Tableau Server, authenticates with provided credentials, and retrieves and prints users belonging to specified groups or all groups on a given site."
+            },
+            {
+                "file": "rest-api-samples/python/user_permission_audit.py",
+                "function": "This script audits and manages user permissions on a Tableau workbook, allowing or denying specific permissions for a given user. It handles user authentication, permission querying, deletion, and addition or update of permissions."
+            },
+            {
+                "file": "rest-api-samples/python/version.py",
+                "function": "The file defines a version number for a software or project, specifying it as '3.23'."
+            },
+            {
+                "file": "rest-api-samples/python/webhooks.py",
+                "function": "This script manages Tableau Server webhooks by signing in, creating, testing, and deleting webhooks, and then signing out. It interacts with the Tableau Server REST API to perform these operations."
+            }
+        ],
+        "gt": "[['rest-api-samples/python/version.py', 'rest-api-samples/python/users_by_group.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/webhooks.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/publish_workbook.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/update_permission.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/move_workbook_sites.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/move_datasource_server.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/move_workbook_projects.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/user_permission_audit.py'], ['rest-api-samples/python/version.py', 'rest-api-samples/python/move_workbook_server.py']]"
+    },
+    {
+        "repo": "DnCNN-PyTorch",
+        "description": "A PyTorch implementation of the DnCNN image denoising model.",
+        "function": "The project allows training and testing of DnCNN models for image denoising, supporting both known and blind noise levels. It includes scripts for training, testing, and performance evaluation using datasets like BSD68 and Set12.",
+        "files": [
+            {
+                "file": "DnCNN-PyTorch/dataset.py",
+                "function": "The file processes and prepares image data for training and validation by normalizing, resizing, and augmenting images, then storing them in HDF5 files. It also defines a PyTorch Dataset class to load and serve this data during training and validation."
+            },
+            {
+                "file": "DnCNN-PyTorch/models.py",
+                "function": "The file defines a DnCNN (Deep Convolutional Neural Network) model for image denoising, consisting of multiple convolutional layers with ReLU activations and batch normalization, followed by a final convolutional layer to reconstruct the image."
+            },
+            {
+                "file": "DnCNN-PyTorch/test.py",
+                "function": "This script tests a denoising model (DnCNN) on a specified dataset, evaluates the performance using PSNR, and outputs the average PSNR for the test set."
+            },
+            {
+                "file": "DnCNN-PyTorch/train.py",
+                "function": "This script trains a DnCNN model for image denoising using either a known noise level (S) or blind training (B). It includes data preparation, model training with adjustable hyperparameters, and validation with PSNR evaluation."
+            },
+            {
+                "file": "DnCNN-PyTorch/utils.py",
+                "function": "The file provides utility functions for initializing neural network weights using Kaiming initialization, calculating batch-wise Peak Signal-to-Noise Ratio (PSNR), and performing data augmentation on images."
+            }
+        ],
+        "gt": "[['DnCNN-PyTorch/models.py', 'DnCNN-PyTorch/test.py'], ['DnCNN-PyTorch/models.py', 'DnCNN-PyTorch/train.py'], ['DnCNN-PyTorch/utils.py', 'DnCNN-PyTorch/test.py'], ['DnCNN-PyTorch/dataset.py', 'DnCNN-PyTorch/train.py'], ['DnCNN-PyTorch/utils.py', 'DnCNN-PyTorch/dataset.py', 'DnCNN-PyTorch/train.py'], ['DnCNN-PyTorch/utils.py', 'DnCNN-PyTorch/train.py']]"
+    },
+    {
+        "repo": "stable-diffusion-webui-model-toolkit",
+        "description": "A toolkit for managing, editing, and creating Stable Diffusion models.",
+        "function": "Allows users to clean, prune, convert between formats, extract/replace components, and debug model architectures. Features include autopruning, metric analysis, and advanced component manipulation for optimizing and customizing models.",
+        "files": [
+            {
+                "file": "stable-diffusion-webui-model-toolkit/toolkit.py",
+                "function": "The file defines a system for managing and manipulating machine learning models, particularly focusing on components like UNET, VAE, and CLIP. It includes functions for loading, saving, inspecting, and modifying model components, as well as handling metadata and architecture configurations."
+            },
+            {
+                "file": "stable-diffusion-webui-model-toolkit/scripts/toolkit_gui.py",
+                "function": "The file provides functionality for analyzing, pruning, and managing machine learning models, particularly for Stable Diffusion. It includes tools for loading, inspecting, and saving models, as well as handling components like UNET, VAE, and CLIP. The script also supports automatic pruning and exporting of model components, with a user interface powered by Gradio."
+            }
+        ],
+        "gt": "[['stable-diffusion-webui-model-toolkit/toolkit.py', 'stable-diffusion-webui-model-toolkit/scripts/toolkit_gui.py']]"
+    },
+    {
+        "repo": "SupervisedChromeTrex",
+        "description": "A supervised learning project to create an AI that plays the Chrome T-Rex game using a Convolutional Neural Network (CNN).",
+        "function": "The project uses OpenCV to capture game images and Keras with Theano to train a CNN model. It teaches the T-Rex when to jump based on labeled training data, enabling it to play the game autonomously.",
+        "files": [
+            {
+                "file": "SupervisedChromeTrex/actionCNN.py",
+                "function": "This script defines a convolutional neural network (CNN) for image classification, specifically to classify images into two categories (\"JUMP\" and \"NOJUMP\"). It includes functions to load, train, and evaluate the model, as well as to make predictions based on input images."
+            },
+            {
+                "file": "SupervisedChromeTrex/main.py",
+                "function": "The file provides functionality for screen capturing, gesture recognition, and interaction with a Chrome browser game. It allows users to capture screen regions, save images for training, adjust capture coordinates, and use a pre-trained CNN model to predict actions based on captured images."
+            },
+            {
+                "file": "SupervisedChromeTrex/mychrome.py",
+                "function": "The file sets up a Selenium-based automation to open the Chrome Dino game and control the Dino by sending the SPACE key to make it jump."
+            }
+        ],
+        "gt": "[['SupervisedChromeTrex/actionCNN.py', 'SupervisedChromeTrex/main.py'], ['SupervisedChromeTrex/mychrome.py', 'SupervisedChromeTrex/main.py'], ['SupervisedChromeTrex/mychrome.py', 'SupervisedChromeTrex/actionCNN.py', 'SupervisedChromeTrex/main.py']]"
+    },
+    {
+        "repo": "CycleGAN",
+        "description": "A TensorFlow implementation of CycleGAN, a model for image-to-image translation without paired data.",
+        "function": "Enables unpaired image translation between domains, such as converting horses to zebras, using a generator and discriminator architecture. Includes sensitivity to initialization and limitations in shape transformation.",
+        "files": [
+            {
+                "file": "CycleGAN/layers.py",
+                "function": "The file defines utility functions for neural network operations, including leaky ReLU activation, instance normalization, and general 2D convolution and deconvolution layers with optional normalization and activation."
+            },
+            {
+                "file": "CycleGAN/main.py",
+                "function": "The file implements a CycleGAN model for image-to-image translation, specifically converting images between two domains (e.g., horses to zebras). It includes functions for setting up input pipelines, defining the model architecture, calculating losses, training the model, and saving generated images. The model is trained using adversarial and cycle consistency losses to ensure realistic and consistent image translations."
+            },
+            {
+                "file": "CycleGAN/model.py",
+                "function": "The file defines functions to build a generator and discriminator for a Generative Adversarial Network (GAN), including ResNet blocks for the generator and convolutional layers for the discriminator. It supports both 6-block and 9-block ResNet generators and two types of discriminators."
+            }
+        ],
+        "gt": "[['CycleGAN/layers.py', 'CycleGAN/main.py'], ['CycleGAN/model.py', 'CycleGAN/main.py'], ['CycleGAN/layers.py', 'CycleGAN/model.py', 'CycleGAN/main.py']]"
+    },
+    {
+        "repo": "googlemaps-scraper",
+        "description": "A Python-based tool for scraping Google Maps reviews and POI metadata.",
+        "function": "Extracts the most recent reviews from specified Google Maps POI URLs, with options to sort reviews, scrape metadata, and store results in a CSV or MongoDB. Includes a monitoring feature for incremental review storage.",
+        "files": [
+            {
+                "file": "googlemaps-scraper/googlemaps.py",
+                "function": "The script is a web scraper for Google Maps that extracts place and review data using Selenium. It allows sorting search results, retrieving place details, and scraping reviews, saving the data to CSV files."
+            },
+            {
+                "file": "googlemaps-scraper/monitor.py",
+                "function": "This script monitors and scrapes Google Maps reviews from specified URLs, storing new reviews in a MongoDB collection if they meet a specified date threshold."
+            },
+            {
+                "file": "googlemaps-scraper/scraper.py",
+                "function": "This script scrapes Google Maps reviews based on specified sorting criteria and stores the data in a CSV file. It supports options for sorting reviews, scraping place metadata, and adding source URLs to the CSV output."
+            },
+            {
+                "file": "googlemaps-scraper/scrapper_places.py",
+                "function": "The script uses the GoogleMapsScraper to search for places (e.g., \"romantic restaurant\") around specified coordinates and retrieves a specified number of results for each location."
+            }
+        ],
+        "gt": "[['googlemaps-scraper/googlemaps.py', 'googlemaps-scraper/scraper.py'], ['googlemaps-scraper/googlemaps.py', 'googlemaps-scraper/scrapper_places.py'], ['googlemaps-scraper/googlemaps.py', 'googlemaps-scraper/monitor.py']]"
+    },
+    {
+        "repo": "gmm-torch",
+        "description": "An implementation of a Gaussian mixture model (GMM) using Expectation-Maximization in PyTorch.",
+        "function": "Allows fitting and prediction of data using GMM, with support for GPU acceleration. The interface is designed to be similar to sklearn for ease of use.",
+        "files": [
+            {
+                "file": "gmm-torch/example.py",
+                "function": "This script generates synthetic 2D data, fits a Gaussian Mixture Model (GMM) to classify the data, and visualizes the results by plotting the data points with their ground truth and predicted classifications."
+            },
+            {
+                "file": "gmm-torch/gmm.py",
+                "function": "The file defines a `GaussianMixture` class that implements a Gaussian Mixture Model (GMM) using PyTorch. It supports fitting the model to data, predicting cluster assignments, and sampling from the learned distribution, with options for different covariance types and initialization methods."
+            },
+            {
+                "file": "gmm-torch/test.py",
+                "function": "The file contains unit tests for a Gaussian Mixture Model (GMM) implementation, verifying its functionality on both CPU and GPU. Tests ensure that the model correctly handles tensor inputs, predicts class memberships and probabilities, and matches the behavior of `sklearn.mixture.GaussianMixture` for log-probabilities and parameter updates."
+            },
+            {
+                "file": "gmm-torch/utils.py",
+                "function": "The file defines two functions to perform matrix multiplication while reducing memory usage: `calculate_matmul_n_times` computes the product of two matrices by iterating over components, and `calculate_matmul` calculates the product of two matrices with specific shapes using element-wise multiplication and summation."
+            }
+        ],
+        "gt": "[['gmm-torch/utils.py', 'gmm-torch/gmm.py', 'gmm-torch/test.py'], ['gmm-torch/gmm.py', 'gmm-torch/test.py'], ['gmm-torch/gmm.py', 'gmm-torch/example.py'], ['gmm-torch/utils.py', 'gmm-torch/gmm.py', 'gmm-torch/example.py']]"
+    },
+    {
+        "repo": "2048-ai",
+        "description": "An AI-powered game solver for 2048",
+        "function": "Utilizes expectimax optimization with efficient bitboard representation to play 2048. Can control browser-based game and provides both command-line and browser-control versions.",
+        "files": [
+            {
+                "file": "2048-ai/2048.py",
+                "function": "This script automates playing the game 2048 by using an AI to determine the best moves and controlling the game via browser automation."
+            },
+            {
+                "file": "2048-ai/chromectrl.py",
+                "function": "The file provides a class, `ChromeDebuggerControl`, to control Chrome via its debugging socket, enabling interaction with Chrome pages and execution of JavaScript commands. It uses WebSocket communication and threading to manage commands and responses."
+            },
+            {
+                "file": "2048-ai/ffctrl.py",
+                "function": "The file provides two classes for interacting with Firefox browsers: `FirefoxRemoteControl` allows sending commands to a browser with the Remote Control extension, while `FirefoxDebuggerControl` enables interaction with a Firefox browser running with remote debugging enabled, allowing users to attach to specific tabs and execute JavaScript commands."
+            },
+            {
+                "file": "2048-ai/gamectrl.py",
+                "function": "The file defines classes to control and interact with the 2048 game, providing methods to check game status, restart, continue, and execute moves programmatically. It includes three main control classes: `Fast2048Control` for direct manipulation of the game logic, `Keyboard2048Control` for DOM-based interaction via key events, and `Hybrid2048Control` combining both approaches for compatibility and efficiency."
+            }
+        ],
+        "gt": "[['2048-ai/gamectrl.py', '2048-ai/2048.py'], ['2048-ai/chromectrl.py', '2048-ai/2048.py'], ['2048-ai/ffctrl.py', '2048-ai/2048.py']]"
+    },
+    {
+        "repo": "efficient-kan",
+        "description": "An efficient implementation of the Kolmogorov-Arnold Network (KAN) with optimizations for performance and memory usage.",
+        "function": "Reformulates the computation to reduce memory cost and improve efficiency by using matrix multiplication for activation functions. Includes modifications to regularization and initialization methods for better performance, particularly on datasets like MNIST.",
+        "files": [
+            {
+                "file": "efficient-kan/examples/mnist.py",
+                "function": "The script trains a neural network model (KAN) on the MNIST dataset using PyTorch, optimizing with AdamW and adjusting the learning rate with an exponential scheduler. It evaluates the model on a validation set after each epoch and tracks loss and accuracy."
+            },
+            {
+                "file": "efficient-kan/src/efficient_kan/kan.py",
+                "function": "The `KANLinear` class implements a custom linear layer with spline-based interpolation for enhanced flexibility, combining a base linear transformation with spline-based adjustments. The `KAN` class is a neural network module that stacks multiple `KANLinear` layers, allowing for adaptive grid updates and regularization during training."
+            },
+            {
+                "file": "efficient-kan/src/efficient_kan/__init__.py",
+                "function": "The file defines and exports two classes, `KANLinear` and `KAN`, which are likely related to a specific linear model or framework."
+            },
+            {
+                "file": "efficient-kan/tests/test_simple_math.py",
+                "function": "This script tests the functionality of a custom neural network module, KAN, by training it to approximate a specific mathematical function using mean squared error loss and a regularization term."
+            }
+        ],
+        "gt": "[['efficient-kan/src/efficient_kan/kan.py', 'efficient-kan/src/efficient_kan/__init__.py', 'efficient-kan/examples/mnist.py'], ['efficient-kan/src/efficient_kan/__init__.py', 'efficient-kan/examples/mnist.py'], ['efficient-kan/src/efficient_kan/kan.py', 'efficient-kan/src/efficient_kan/__init__.py', 'efficient-kan/tests/test_simple_math.py'], ['efficient-kan/src/efficient_kan/__init__.py', 'efficient-kan/tests/test_simple_math.py']]"
+    },
+    {
+        "repo": "chessboard-recognizer",
+        "description": "A chessboard recognition tool that uses a convolutional neural network to identify chess piece positions from images.",
+        "function": "The project processes chessboard images, predicts the positions of chess pieces, and outputs the board state in FEN notation. It includes tools for training custom models, generating training data, and debugging predictions.",
+        "files": [
+            {
+                "file": "chessboard-recognizer/chessboard_finder.py",
+                "function": "The script detects and returns the corners of a chessboard in an image by analyzing gradients and using a Hough transform to identify consistent sequences of lines. It validates the detected corners to ensure they form a square chessboard and returns the coordinates of the corners."
+            },
+            {
+                "file": "chessboard-recognizer/chessboard_image.py",
+                "function": "The file provides functions to resize a chessboard image to 256x256 pixels and extract 64 individual 32x32 tiles from it, optionally converting them to grayscale."
+            },
+            {
+                "file": "chessboard-recognizer/constants.py",
+                "function": "The file defines constants for a chessboard image processing and neural network training system, including FEN character representation, directories for chessboard images and tiles, grayscale usage, and the path for storing neural network models."
+            },
+            {
+                "file": "chessboard-recognizer/generate_chessboards.py",
+                "function": "The script generates random chessboard images based on FEN (Forsyth-Edwards Notation) strings, using various online templates, and saves them to a specified directory."
+            },
+            {
+                "file": "chessboard-recognizer/generate_tiles.py",
+                "function": "This script processes chessboard images to generate 32x32 PNG tiles for each square, saving them in a structured directory format based on piece positions, for use in building training datasets."
+            },
+            {
+                "file": "chessboard-recognizer/recognize.py",
+                "function": "The script processes chessboard images to predict the FEN (Forsyth-Edwards Notation) representation of the board, using a pre-trained neural network model. It generates a debug HTML file displaying the predicted FEN, confidence levels, and visual representations of the chessboard."
+            },
+            {
+                "file": "chessboard-recognizer/save_chessboard.py",
+                "function": "This script processes a chessboard image and its corresponding FEN notation to save the image in a structured directory for neural network training."
+            },
+            {
+                "file": "chessboard-recognizer/train.py",
+                "function": "This script trains a convolutional neural network (CNN) to classify chess piece images, using a dataset of PNG tiles, and saves the trained model for future use."
+            },
+            {
+                "file": "chessboard-recognizer/utils.py",
+                "function": "The file provides functions to compress and decompress Forsyth-Edwards Notation (FEN) strings by converting sequences of '1's into numerical representations and vice versa."
+            },
+            {
+                "file": "chessboard-recognizer/view_images.py",
+                "function": "The script generates an HTML file (`images.html`) displaying chessboard and tile images, organizing them by rank and file, and annotating each tile with its corresponding FEN character."
+            }
+        ],
+        "gt": "[['chessboard-recognizer/chessboard_finder.py', 'chessboard-recognizer/recognize.py'], ['chessboard-recognizer/train.py', 'chessboard-recognizer/recognize.py'], ['chessboard-recognizer/constants.py', 'chessboard-recognizer/recognize.py'], ['chessboard-recognizer/chessboard_image.py', 'chessboard-recognizer/generate_tiles.py'], ['chessboard-recognizer/chessboard_image.py', 'chessboard-recognizer/recognize.py'], ['chessboard-recognizer/utils.py', 'chessboard-recognizer/save_chessboard.py'], ['chessboard-recognizer/constants.py', 'chessboard-recognizer/generate_tiles.py'], ['chessboard-recognizer/utils.py', 'chessboard-recognizer/recognize.py'], ['chessboard-recognizer/constants.py', 'chessboard-recognizer/generate_chessboards.py'], ['chessboard-recognizer/constants.py', 'chessboard-recognizer/view_images.py'], ['chessboard-recognizer/constants.py', 'chessboard-recognizer/train.py', 'chessboard-recognizer/recognize.py']]"
+    },
+    {
+        "repo": "deep-RL-trading",
+        "description": "A deep reinforcement learning project for optimizing trading strategies.",
+        "function": "Uses deep reinforcement learning to find optimal strategies for momentum and arbitrage trading. Compares performance of various neural networks including GRU/LSTM, CNN, and MLP.",
+        "files": [
+            {
+                "file": "deep-RL-trading/src/agents.py",
+                "function": "The file defines a reinforcement learning agent (`Agent`) and various neural network models (`QModelKeras`, `QModelMLP`, `QModelRNN`, `QModelLSTM`, `QModelGRU`, `QModelConv`, `QModelConvRNN`, `QModelConvLSTM`, `QModelConvGRU`) for Q-learning. The agent can remember experiences, replay them to train the model, and make decisions based on exploration or exploitation. The models include different architectures (MLP, RNN, LSTM, GRU, Conv) for predicting Q-values and are designed to be saved and loaded for reuse."
+            },
+            {
+                "file": "deep-RL-trading/src/emulator.py",
+                "function": "The file defines a `Market` class for simulating trading environments, where the state is represented by moving averages of prices, and actions include opening, keeping, or closing positions. The class includes methods for resetting the environment, getting the current state, determining valid actions, calculating rewards, and stepping through the simulation."
+            },
+            {
+                "file": "deep-RL-trading/src/lib.py",
+                "function": "The file defines functions for creating directories if they do not already exist and sets up constants for output and price data folders."
+            },
+            {
+                "file": "deep-RL-trading/src/main.py",
+                "function": "This script defines a reinforcement learning pipeline for training and testing a model in a market simulation environment, using different model types (MLP, Conv, RNN, ConvRNN) and saving/loading models for further use."
+            },
+            {
+                "file": "deep-RL-trading/src/sampler.py",
+                "function": "The file defines a data sampling framework with two main classes: `PairSampler` and `SinSampler`. `PairSampler` generates synthetic price data with random walks or jumps, while `SinSampler` generates sinusoidal price data with noise. Both classes support loading and building databases of sampled data for machine learning tasks."
+            },
+            {
+                "file": "deep-RL-trading/src/simulators.py",
+                "function": "The `Simulator` class facilitates training and testing of an agent in an environment using reinforcement learning. It includes methods to play episodes, train the agent over multiple episodes with exploration decay, and test the agent's performance, while saving results and visualizations."
+            },
+            {
+                "file": "deep-RL-trading/src/visualizer.py",
+                "function": "The file defines a `Visualizer` class for plotting and visualizing reinforcement learning results, including episode-wise and cumulative rewards, actions, and Q-values. It also includes utility functions for generating tick labels and testing visualizer functionality. Additionally, there are specialized visualizer classes for sequential models and 1D convolutional layers, enabling layer-wise visualization of model outputs."
+            }
+        ],
+        "gt": "[['deep-RL-trading/src/agents.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/visualizer.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/emulator.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/simulators.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/sampler.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/agents.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/simulators.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/sampler.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/emulator.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/visualizer.py', 'deep-RL-trading/src/main.py'], ['deep-RL-trading/src/lib.py', 'deep-RL-trading/src/main.py']]"
+    },
+    {
+        "repo": "Logsensor",
+        "description": "Logsensor is a tool for discovering login panels and performing POST form SQL injection scanning.",
+        "function": "It scans multiple hosts for login panels using multiprocessing for speed, supports proxy compatibility, and can perform targeted SQLi form scanning on specific URLs.",
+        "files": [
+            {
+                "file": "Logsensor/logsensor.py",
+                "function": "This script is a tool for detecting login panels and scanning for SQL injection vulnerabilities in web applications. It supports multi-threading, custom payloads, and error-based SQLi detection."
+            },
+            {
+                "file": "Logsensor/src.py",
+                "function": "The file defines lists of inputs and payloads for potential SQL injection attacks, along with a dictionary of regex patterns to identify database-specific error messages."
+            }
+        ],
+        "gt": "[['Logsensor/src.py', 'Logsensor/logsensor.py']]"
+    },
+    {
+        "repo": "quantum",
+        "description": "A Python library for simulating reverse causality using quantum suicide.",
+        "function": "Allows users to create multiple universes with `quantum.choice()`, selectively destroy universes with `quantum.assert_()` based on conditions, and observe outcomes in the remaining universes. Includes examples for quantum sorting and Sudoku solving.",
+        "files": [
+            {
+                "file": "quantum/examples.py",
+                "function": "The file contains three main functionalities:\n1. A quantum-based sorting function (`qsort`) that sorts a list by choosing a permutation and asserting it is sorted.\n2. A Sudoku solver (`solve`) that fills in empty cells of a Sudoku board using a quantum choice to select valid numbers.\n3. A round-robin tournament scheduler (`roundrobin`) that generates a schedule for an even number of teams, ensuring no team plays the same opponent twice."
+            },
+            {
+                "file": "quantum/quantum.py",
+                "function": "The file provides functions to make a choice between options using forked processes, handle failure conditions, and assert conditions, exiting with a specific failure code if conditions are not met."
+            }
+        ],
+        "gt": "[['quantum/quantum.py', 'quantum/examples.py']]"
+    },
+    {
+        "repo": "contrastive-predictive-coding",
+        "description": "A Keras implementation of Contrastive Predictive Coding (CPC) for unsupervised representation learning.",
+        "function": "CPC uses a contrastive approach to predict future patterns in a latent space, learning meaningful representations of data sequences. The trained encoder can be used for downstream tasks like supervised classification.",
+        "files": [
+            {
+                "file": "contrastive-predictive-coding/benchmark_model.py",
+                "function": "This module evaluates a trained CPC encoder by freezing its weights, adding a classifier, and benchmarking its performance on MNIST data using a supervised learning approach."
+            },
+            {
+                "file": "contrastive-predictive-coding/data_utils.py",
+                "function": "This module provides tools to handle and generate MNIST dataset batches, including resizing, color manipulation, and creating custom data generators for sorted and similar number sequences."
+            },
+            {
+                "file": "contrastive-predictive-coding/train_model.py",
+                "function": "This file implements a Contrastive Predictive Coding (CPC) model using Keras, which includes encoder, autoregressive, and prediction networks. It trains the model on image data to predict future embeddings and saves the trained model and encoder."
+            }
+        ],
+        "gt": "[['contrastive-predictive-coding/data_utils.py', 'contrastive-predictive-coding/benchmark_model.py'], ['contrastive-predictive-coding/data_utils.py', 'contrastive-predictive-coding/train_model.py']]"
+    },
+    {
+        "repo": "PyCNN",
+        "description": "A Python library for image processing using Cellular Neural Networks (CNN).",
+        "function": "Provides tools for various image processing tasks such as edge detection, corner detection, diagonal line detection, and inversion, leveraging configurable feedback and control templates.",
+        "files": [
+            {
+                "file": "PyCNN/example.py",
+                "function": "This script uses the PyCNN library to apply various image processing techniques, including edge detection, grayscale edge detection, corner detection, diagonal line detection, inversion, and optimal edge detection, to input images and save the results."
+            },
+            {
+                "file": "PyCNN/example_lenna.py",
+                "function": "The script uses the PyCNN library to perform edge detection and diagonal line detection on an image, saving the results as new images."
+            },
+            {
+                "file": "PyCNN/pycnn.py",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['PyCNN/pycnn.py', 'PyCNN/example.py'], ['PyCNN/pycnn.py', 'PyCNN/example_lenna.py']]"
+    },
+    {
+        "repo": "Flappy-bird-deep-Q-learning-pytorch",
+        "description": "A Python implementation of Deep Q-learning to train an agent to play Flappy Bird.",
+        "function": "Allows users to train a model from scratch using reinforcement learning and test the trained model. Includes pre-trained models for immediate use.",
+        "files": [
+            {
+                "file": "Flappy-bird-deep-Q-learning-pytorch/test.py",
+                "function": "This script tests a pre-trained Deep Q-Network model to play Flappy Bird by processing game frames and selecting actions based on model predictions."
+            },
+            {
+                "file": "Flappy-bird-deep-Q-learning-pytorch/train.py",
+                "function": "This script trains a Deep Q-Network (DQN) to play Flappy Bird by optimizing the model's actions through reinforcement learning, using a combination of exploration and exploitation strategies."
+            },
+            {
+                "file": "Flappy-bird-deep-Q-learning-pytorch/src/deep_q_network.py",
+                "function": "The file defines a Deep Q-Network (DQN) model using convolutional and fully connected layers for reinforcement learning tasks, with weight initialization and a forward pass implementation."
+            },
+            {
+                "file": "Flappy-bird-deep-Q-learning-pytorch/src/flappy_bird.py",
+                "function": "The file defines a Flappy Bird game environment using Pygame, where the bird's movement, collision detection, and scoring are managed. It supports rendering frames, updating positions, and handling actions for a reinforcement learning agent."
+            },
+            {
+                "file": "Flappy-bird-deep-Q-learning-pytorch/src/utils.py",
+                "function": "The file defines a function `pre_processing` that resizes an image, converts it to grayscale, applies binary thresholding, and returns it as a float32 array."
+            }
+        ],
+        "gt": "[['Flappy-bird-deep-Q-learning-pytorch/src/flappy_bird.py', 'Flappy-bird-deep-Q-learning-pytorch/train.py'], ['Flappy-bird-deep-Q-learning-pytorch/src/utils.py', 'Flappy-bird-deep-Q-learning-pytorch/test.py'], ['Flappy-bird-deep-Q-learning-pytorch/src/utils.py', 'Flappy-bird-deep-Q-learning-pytorch/train.py'], ['Flappy-bird-deep-Q-learning-pytorch/src/deep_q_network.py', 'Flappy-bird-deep-Q-learning-pytorch/test.py'], ['Flappy-bird-deep-Q-learning-pytorch/src/flappy_bird.py', 'Flappy-bird-deep-Q-learning-pytorch/test.py'], ['Flappy-bird-deep-Q-learning-pytorch/src/deep_q_network.py', 'Flappy-bird-deep-Q-learning-pytorch/train.py']]"
+    },
+    {
+        "repo": "DeepInversion",
+        "description": "A PyTorch implementation of DeepInversion for data-free knowledge transfer, presented at CVPR 2020.",
+        "function": "The project allows for inverting images from pretrained models, such as ResNet50, to generate synthetic data and evaluate generalization across different models. It supports customization of inversion parameters and includes features like batch size adjustment, learning rate tuning, and FP16 optimization for efficiency.",
+        "files": [
+            {
+                "file": "DeepInversion/deepinversion.py",
+                "function": "This file implements DeepInversion, a data-free knowledge transfer technique that generates synthetic images by optimizing a loss function combining feature distribution regularization, image prior losses, and classification loss. It uses hooks to track feature statistics and applies various optimization strategies to create high-quality synthetic images for training."
+            },
+            {
+                "file": "DeepInversion/imagenet_inversion.py",
+                "function": "This script implements a data-free knowledge transfer technique using DeepInversion to generate synthetic training data for a student model, optionally evaluating the generated data with a verifier model. It supports various optimization settings and model architectures."
+            },
+            {
+                "file": "DeepInversion/cifar10/deepinversion_cifar10.py",
+                "function": "This script performs ResNet model inversion on CIFAR10 images, generating synthetic images that match the feature statistics of the model. It optimizes input images to minimize a combination of classification loss, feature distribution regularization, and other regularization terms to produce realistic images."
+            },
+            {
+                "file": "DeepInversion/cifar10/resnet_cifar.py",
+                "function": "The file defines a ResNet architecture for image classification, including BasicBlock and Bottleneck building blocks, and provides functions to create ResNet models (e.g., ResNet18, ResNet50) with customizable number of classes."
+            },
+            {
+                "file": "DeepInversion/FLGradientInversion/fl_gradient_inversion.py",
+                "function": "The file defines a class `FLGradientInversion` that reconstructs training images and targets by inverting gradients shared in a federated learning framework. It uses various loss functions and optimization techniques to iteratively refine the reconstructions, leveraging batch normalization statistics and prior images to guide the process."
+            },
+            {
+                "file": "DeepInversion/FLGradientInversion/main.py",
+                "function": "This script performs a gradient inversion attack to reconstruct images from gradient updates, using a configuration file to set up the attack parameters and model architecture."
+            },
+            {
+                "file": "DeepInversion/FLGradientInversion/torchvision_class.py",
+                "function": "The file defines a custom PyTorch model class, `TorchVisionClassificationModel`, which adapts TorchVision models by replacing their final fully-connected layer to accommodate a specified number of classes for classification tasks."
+            },
+            {
+                "file": "DeepInversion/models/resnetv15.py",
+                "function": "This file defines a flexible implementation of the ResNet architecture in PyTorch, allowing for the creation of various ResNet models (e.g., ResNet18, ResNet50) with customizable configurations and block types (BasicBlock or Bottleneck)."
+            },
+            {
+                "file": "DeepInversion/utils/utils.py",
+                "function": "The file provides utility functions for loading PyTorch models, managing folders, setting up distributed training, and implementing learning rate and momentum policies. It also includes functions for normalizing and denormalizing image tensors."
+            }
+        ],
+        "gt": "[['DeepInversion/models/resnetv15.py', 'DeepInversion/imagenet_inversion.py'], ['DeepInversion/deepinversion.py', 'DeepInversion/imagenet_inversion.py'], ['DeepInversion/cifar10/resnet_cifar.py', 'DeepInversion/cifar10/deepinversion_cifar10.py'], ['DeepInversion/FLGradientInversion/torchvision_class.py', 'DeepInversion/FLGradientInversion/main.py'], ['DeepInversion/utils/utils.py', 'DeepInversion/imagenet_inversion.py'], ['DeepInversion/FLGradientInversion/fl_gradient_inversion.py', 'DeepInversion/FLGradientInversion/main.py'], ['DeepInversion/utils/utils.py', 'DeepInversion/deepinversion.py', 'DeepInversion/imagenet_inversion.py']]"
+    },
+    {
+        "repo": "youtube_uploader_selenium",
+        "description": "A Python script for uploading videos to YouTube using Selenium, bypassing the daily upload limit of the YouTube Data API.",
+        "function": "Allows users to upload more than 6 videos per day by leveraging Selenium for browser automation, with support for video metadata and thumbnail uploads.",
+        "files": [
+            {
+                "file": "youtube_uploader_selenium/upload.py",
+                "function": "This script uploads a video to YouTube using Selenium, with options to include metadata, thumbnail, and a Firefox profile."
+            },
+            {
+                "file": "youtube_uploader_selenium/youtube_uploader_selenium/Constant.py",
+                "function": "The file defines a `Constant` class containing various string constants used for interacting with YouTube's upload and management interface, including URLs, element IDs, and labels for video upload, playlist management, and scheduling."
+            },
+            {
+                "file": "youtube_uploader_selenium/youtube_uploader_selenium/__init__.py",
+                "function": "The module automates the process of uploading videos to YouTube using Selenium, extracting metadata such as title, description, and tags from a JSON file, and handling login, video upload, and post-upload configurations."
+            }
+        ],
+        "gt": "[['youtube_uploader_selenium/youtube_uploader_selenium/Constant.py', 'youtube_uploader_selenium/youtube_uploader_selenium/__init__.py', 'youtube_uploader_selenium/upload.py'], ['youtube_uploader_selenium/youtube_uploader_selenium/__init__.py', 'youtube_uploader_selenium/upload.py']]"
+    },
+    {
+        "repo": "llvm-deobfuscator",
+        "description": "A tool to reverse the control flow flattening obfuscation performed by LLVM-Obfuscator.",
+        "function": "Uses BinaryNinja's SSA form to identify and deobfuscate the state variable, restoring the original control flow. Currently supports only control flow flattening, with plans to handle bogus control flow and expression substitution in the future.",
+        "files": [
+            {
+                "file": "llvm-deobfuscator/deflatten.py",
+                "function": "The file defines a class `CFGLink` to represent control flow links between basic blocks, and functions to reverse control flow flattening in obfuscated binaries. It includes methods to generate assembly patches, resolve successors, and reconstruct the original control flow graph (CFG)."
+            },
+            {
+                "file": "llvm-deobfuscator/util.py",
+                "function": "This file provides utility functions for interacting with Binary Ninja's API, including assembling assembly code, analyzing SSA (Static Single Assignment) form, gathering variable definitions, and identifying function calls and function boundaries."
+            },
+            {
+                "file": "llvm-deobfuscator/__init__.py",
+                "function": "The script provides functionality to remove control flow flattening obfuscation in binary code using Binary Ninja. It includes a background task to analyze and modify the control flow, and registers a plugin command to trigger this deobfuscation process."
+            }
+        ],
+        "gt": "[['llvm-deobfuscator/util.py', 'llvm-deobfuscator/__init__.py'], ['llvm-deobfuscator/deflatten.py', 'llvm-deobfuscator/__init__.py']]"
+    },
+    {
+        "repo": "throttled",
+        "description": "A tool to fix CPU throttling issues on Linux systems, particularly affecting Lenovo ThinkPad laptops.",
+        "function": "The tool overrides CPU power limits and temperature thresholds to prevent throttling, supports undervolting, and includes experimental features like HWP override and cTDP configuration.",
+        "files": [
+            {
+                "file": "throttled/mmio.py",
+                "function": "The file defines an `MMIO` class for mapping and accessing physical memory regions, allowing 32-bit read and write operations at specified offsets. It handles memory mapping through `/dev/mem` and ensures proper alignment and bounds checking."
+            },
+            {
+                "file": "throttled/throttled.py",
+                "function": "This script manages CPU power and thermal settings, including undervolting, power limits, and thermal trip points, using MSR (Model-Specific Registers) and other system interfaces. It supports dynamic configuration changes and real-time monitoring of throttling causes."
+            }
+        ],
+        "gt": "[['throttled/mmio.py', 'throttled/throttled.py']]"
+    },
+    {
+        "repo": "ONNX-YOLOv8-Object-Detection",
+        "description": "An implementation of YOLOv8 object detection using ONNX for optimized inference.",
+        "function": "Allows object detection on images, videos, and webcam feeds using the YOLOv8 model. Supports both CPU and GPU inference with ONNX runtime, and provides tools for model conversion and deployment.",
+        "files": [
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/image_object_detection.py",
+                "function": "This script initializes a YOLOv8 object detection model, processes an image from a URL to detect objects, and displays the results with bounding boxes."
+            },
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/video_object_detection.py",
+                "function": "The script captures a YouTube video, skips the first 5 seconds, and processes it using a YOLOv8 object detection model to identify and display detected objects in real-time."
+            },
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/webcam_object_detection.py",
+                "function": "This script captures video from a webcam, uses a YOLOv8 model to detect objects in real-time, and displays the detected objects with bounding boxes on the screen."
+            },
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/yolov8/utils.py",
+                "function": "The file provides functions for object detection, including non-maximum suppression (NMS) for filtering overlapping bounding boxes, converting bounding box formats, and drawing detection results on images with class labels and confidence scores."
+            },
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py",
+                "function": "The file defines a YOLOv8 object detection class that loads a model, processes input images, performs object detection, and visualizes the results. It uses ONNX runtime for inference and applies non-maximum suppression to filter overlapping bounding boxes."
+            },
+            {
+                "file": "ONNX-YOLOv8-Object-Detection/yolov8/__init__.py",
+                "function": "The file defines a YOLOv8 class for object detection tasks, likely providing methods for loading models, making predictions, and processing results."
+            }
+        ],
+        "gt": "[['ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/video_object_detection.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/yolov8/__init__.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/utils.py', 'ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/image_object_detection.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/utils.py', 'ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/video_object_detection.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/utils.py', 'ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/webcam_object_detection.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/utils.py', 'ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/yolov8/__init__.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/image_object_detection.py'], ['ONNX-YOLOv8-Object-Detection/yolov8/YOLOv8.py', 'ONNX-YOLOv8-Object-Detection/webcam_object_detection.py']]"
+    },
+    {
+        "repo": "dockerize",
+        "description": "A tool to package dynamically linked ELF binaries and their dependencies into Docker images.",
+        "function": "Allows users to create Docker images from ELF binaries, including options to add files, manage symlinks, specify users and groups, and customize Docker image tags and commands.",
+        "files": [
+            {
+                "file": "dockerize/setup.py",
+                "function": "The file is a Python setup script for packaging and distributing a tool called \"dockerize.\" It includes dependencies from `requirements.txt`, specifies package data, and defines a console entry point for the tool."
+            },
+            {
+                "file": "dockerize/dockerize/depsolver.py",
+                "function": "The script provides functionality to analyze ELF files, including reading their sections and extracting shared library dependencies. It uses `objdump` to parse ELF sections and identifies dependencies by leveraging the dynamic loader specified in the `.interp` section."
+            },
+            {
+                "file": "dockerize/dockerize/dockerize.py",
+                "function": "The script automates the creation of Docker images by managing file copying, resolving dependencies, generating Dockerfiles, and building the image. It supports adding users, groups, and files to the image, handling symlinks, and using templates for configuration files."
+            },
+            {
+                "file": "dockerize/dockerize/main.py",
+                "function": "This script is a command-line tool for creating Docker images, allowing users to specify tags, entrypoints, files to include, and other Docker-related configurations. It also supports adding users, groups, and common file manipulation tools to the image."
+            },
+            {
+                "file": "dockerize/dockerize/__init__.py",
+                "function": "The tool creates minimal Docker images optimized for running dynamic ELF binaries."
+            }
+        ],
+        "gt": "[['dockerize/dockerize/depsolver.py', 'dockerize/dockerize/dockerize.py'], ['dockerize/dockerize/__init__.py', 'dockerize/setup.py'], ['dockerize/dockerize/__init__.py', 'dockerize/dockerize/main.py']]"
+    },
+    {
+        "repo": "lieer",
+        "description": "A documentation site for a project, likely related to software or a technical tool.",
+        "function": "Provides detailed information, guides, and references for users and developers to understand and utilize the project effectively.",
+        "files": [
+            {
+                "file": "lieer/lieer/gmailieer.py",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "lieer/lieer/__init__.py",
+                "function": "The file provides functionality for interacting with Gmail, likely including importing classes or functions for email management."
+            }
+        ],
+        "gt": "[['lieer/lieer/gmailieer.py', 'lieer/lieer/__init__.py']]"
+    },
+    {
+        "repo": "ComfyUI-Florence2",
+        "description": "A ComfyUI extension integrating the Florence-2 vision foundation model with support for Document Visual Question Answering (DocVQA).",
+        "function": "Allows users to perform tasks like captioning, object detection, segmentation, and DocVQA by interpreting text prompts and analyzing document images to answer questions based on visual and textual content.",
+        "files": [
+            {
+                "file": "ComfyUI-Florence2/nodes.py",
+                "function": "The file provides functionality for downloading, loading, and running Florence-2 models, including support for various tasks such as image captioning, OCR, and document QA. It includes classes for downloading and loading models, applying LoRA fine-tuning, and executing tasks on images with configurable parameters like precision and attention mechanisms."
+            },
+            {
+                "file": "ComfyUI-Florence2/__init__.py",
+                "function": "This file imports and exposes mappings for node classes and their display names, facilitating integration and display in a node-based system."
+            }
+        ],
+        "gt": "[['ComfyUI-Florence2/nodes.py', 'ComfyUI-Florence2/__init__.py']]"
+    },
+    {
+        "repo": "rnn-nlu",
+        "description": "A TensorFlow implementation of attention-based LSTM models for Spoken Language Understanding.",
+        "function": "The project focuses on joint Intent Detection and Slot Filling using attention-based RNN models. It supports bidirectional RNN, attention mechanisms, and sequence classification/labeling tasks.",
+        "files": [
+            {
+                "file": "rnn-nlu/data_utils.py",
+                "function": "This file prepares data for a multi-task RNN model by creating vocabularies, tokenizing sentences, and converting data into token IDs for training, validation, and testing."
+            },
+            {
+                "file": "rnn-nlu/multi_task_model.py",
+                "function": "The file defines a multi-task RNN model with an attention mechanism, capable of performing sequence labeling and intent classification. It supports bidirectional RNN, dropout, and optional attention, and provides methods for training, inference, and batch data preparation."
+            },
+            {
+                "file": "rnn-nlu/run_multi-task_rnn.py",
+                "function": "This file implements a multi-task learning model using TensorFlow, capable of performing intent classification and sequence tagging. It includes data preprocessing, model training, evaluation, and saving checkpoints."
+            },
+            {
+                "file": "rnn-nlu/seq_classification.py",
+                "function": "The file defines a TensorFlow-based single-output decoder with attention mechanism, which processes input states and attention states to generate a single output. It also includes a function to compute the loss using softmax cross-entropy, facilitating training for sequence-to-sequence models."
+            },
+            {
+                "file": "rnn-nlu/seq_labeling.py",
+                "function": "The file implements an attention-based RNN model for sequence generation, allowing for both attention and non-attention mechanisms. It processes encoder outputs and states to generate decoder logits, computes sequence loss, and supports bucketed training for variable-length sequences."
+            }
+        ],
+        "gt": "[['rnn-nlu/seq_classification.py', 'rnn-nlu/multi_task_model.py', 'rnn-nlu/run_multi-task_rnn.py'], ['rnn-nlu/data_utils.py', 'rnn-nlu/multi_task_model.py', 'rnn-nlu/run_multi-task_rnn.py'], ['rnn-nlu/data_utils.py', 'rnn-nlu/run_multi-task_rnn.py'], ['rnn-nlu/seq_labeling.py', 'rnn-nlu/multi_task_model.py', 'rnn-nlu/run_multi-task_rnn.py'], ['rnn-nlu/multi_task_model.py', 'rnn-nlu/run_multi-task_rnn.py']]"
+    },
+    {
+        "repo": "LDAM-DRW",
+        "description": "An official PyTorch implementation of the LDAM-DRW method for handling imbalanced datasets, as described in the paper 'Learning Imbalanced Datasets with Label-Distribution-Aware Margin Loss'.",
+        "function": "The project provides tools to train models on imbalanced datasets like CIFAR using techniques such as LDAM loss and DRW (Decaying Reverse Weighting). It supports baseline training with ERM (Empirical Risk Minimization) and includes utilities for data preprocessing and visualization.",
+        "files": [
+            {
+                "file": "LDAM-DRW/cifar_train.py",
+                "function": "This script trains a deep learning model on CIFAR-10 or CIFAR-100 datasets with options for handling class imbalance, using various loss functions, and supports multi-GPU training. It logs training and validation metrics, and saves the best model checkpoint."
+            },
+            {
+                "file": "LDAM-DRW/imbalance_cifar.py",
+                "function": "This file defines two classes, `IMBALANCECIFAR10` and `IMBALANCECIFAR100`, which extend the CIFAR-10 and CIFAR-100 datasets to create imbalanced datasets by reducing the number of samples per class based on specified imbalance factors."
+            },
+            {
+                "file": "LDAM-DRW/losses.py",
+                "function": "The file defines two custom loss functions for PyTorch: `FocalLoss`, which adjusts the standard cross-entropy loss to focus on hard-to-classify examples, and `LDAMLoss`, which modifies the loss to address class imbalance by scaling the loss based on class frequencies."
+            },
+            {
+                "file": "LDAM-DRW/utils.py",
+                "function": "The file defines a sampler for handling imbalanced datasets, functions for calculating and visualizing confusion matrices, managing directories, saving model checkpoints, and tracking performance metrics like accuracy."
+            },
+            {
+                "file": "LDAM-DRW/models/resnet_cifar.py",
+                "function": "This file implements various ResNet models (ResNet20, ResNet32, ResNet44, ResNet56, ResNet110, ResNet1202) specifically tailored for the CIFAR10 dataset, ensuring correct architecture and parameter counts as described in the original ResNet paper."
+            },
+            {
+                "file": "LDAM-DRW/models/__init__.py",
+                "function": "The file provides functionality related to a ResNet model tailored for CIFAR datasets, likely including model definitions and utilities for training or inference."
+            }
+        ],
+        "gt": "[['LDAM-DRW/models/resnet_cifar.py', 'LDAM-DRW/models/__init__.py', 'LDAM-DRW/cifar_train.py'], ['LDAM-DRW/imbalance_cifar.py', 'LDAM-DRW/cifar_train.py'], ['LDAM-DRW/losses.py', 'LDAM-DRW/cifar_train.py'], ['LDAM-DRW/models/__init__.py', 'LDAM-DRW/cifar_train.py'], ['LDAM-DRW/utils.py', 'LDAM-DRW/cifar_train.py']]"
+    },
+    {
+        "repo": "vimGPT",
+        "description": "vimGPT is an experimental project that enables GPT-4V's vision capabilities to interact with web pages using Vimium for keyboard-based navigation.",
+        "function": "The project allows GPT-4V to browse the web by identifying and interacting with elements using Vimium's keyboard shortcuts. It also supports voice commands for real-time interaction and aims to enhance accessibility and functionality through various planned features.",
+        "files": [
+            {
+                "file": "vimGPT/main.py",
+                "function": "The script initializes a Vimbot driver, navigates to Google, and either captures voice input or accepts manual input to perform actions based on a given objective. It continuously captures the screen, determines actions, and executes them until the objective is met."
+            },
+            {
+                "file": "vimGPT/vimbot.py",
+                "function": "The file defines a `Vimbot` class that automates web browser actions using Playwright, including navigation, typing, clicking, and capturing screenshots with Vim-like bindings."
+            },
+            {
+                "file": "vimGPT/vision.py",
+                "function": "The script encodes and resizes an image, sends it to OpenAI's GPT-4 Vision model to determine actions (navigate, type, click, or done) based on a given objective, and handles invalid JSON responses by attempting to fix them."
+            }
+        ],
+        "gt": "[['vimGPT/vimbot.py', 'vimGPT/main.py'], ['vimGPT/vision.py', 'vimGPT/main.py']]"
+    },
+    {
+        "repo": "speech-to-text-wavenet",
+        "description": "A TensorFlow implementation of speech-to-text recognition using DeepMind's WaveNet architecture.",
+        "function": "The project uses a modified WaveNet model with MFCC features and CTC loss for end-to-end sentence-level English speech recognition. It supports training on multiple datasets, pre-processing audio data, and transforming speech waveforms into English text.",
+        "files": [
+            {
+                "file": "speech-to-text-wavenet/data.py",
+                "function": "This file defines a speech corpus processing pipeline, including functions to convert text to indices and vice versa, load MFCC data, and augment speech data. It also sets up a data loading mechanism for training or evaluation using TensorFlow queues."
+            },
+            {
+                "file": "speech-to-text-wavenet/model.py",
+                "function": "The file defines a function `get_logit` that computes logits for a sequence using atrous (dilated) convolutions and residual blocks. It processes input sequences through multiple dilated convolutional layers and residual connections, followed by final convolutional layers to produce logits for a given vocabulary size."
+            },
+            {
+                "file": "speech-to-text-wavenet/preprocess.py",
+                "function": "The script processes audio datasets (VCTK, LibriSpeech, and TEDLIUM) by extracting MFCC features, converting audio formats, and saving the results to CSV files and `.npy` files for training, validation, and testing. It ensures preprocessing only for new or missing files."
+            },
+            {
+                "file": "speech-to-text-wavenet/recognize.py",
+                "function": "This script processes speech wave files to extract MFCC features, encodes them using a neural network model, and performs CTC decoding to recognize and print the corresponding text labels."
+            },
+            {
+                "file": "speech-to-text-wavenet/test.py",
+                "function": "This script tests a speech recognition model by computing CTC (Connectionist Temporal Classification) loss on audio features, comparing them to target labels, and logging the results."
+            },
+            {
+                "file": "speech-to-text-wavenet/train.py",
+                "function": "The file defines a speech recognition training pipeline using the `sugartensor` library. It processes audio data, computes MFCC features, and trains a model with CTC loss for sequence labeling, leveraging parallel GPU processing."
+            }
+        ],
+        "gt": "[['speech-to-text-wavenet/data.py', 'speech-to-text-wavenet/preprocess.py'], ['speech-to-text-wavenet/model.py', 'speech-to-text-wavenet/train.py'], ['speech-to-text-wavenet/data.py', 'speech-to-text-wavenet/train.py'], ['speech-to-text-wavenet/data.py', 'speech-to-text-wavenet/test.py'], ['speech-to-text-wavenet/model.py', 'speech-to-text-wavenet/recognize.py'], ['speech-to-text-wavenet/data.py', 'speech-to-text-wavenet/recognize.py'], ['speech-to-text-wavenet/model.py', 'speech-to-text-wavenet/test.py']]"
+    },
+    {
+        "repo": "pytorch-es",
+        "description": "A PyTorch implementation of Evolution Strategies, a black-box optimization algorithm for solving Markov Decision Processes.",
+        "function": "The project provides neural networks for simple tasks and Atari games, allowing users to train agents to maximize rewards in environments like CartPole and Pong. It supports parallelized training, checkpoint restoration, and customizable hyperparameters.",
+        "files": [
+            {
+                "file": "pytorch-es/envs.py",
+                "function": "The file provides functions and classes for preprocessing Atari game environments in reinforcement learning. It includes a function to create and preprocess Atari environments, a class to resize and normalize observations to a 42x42 grayscale format, and another class to normalize observations dynamically based on running mean and standard deviation."
+            },
+            {
+                "file": "pytorch-es/main.py",
+                "function": "This script trains or tests an Evolution Strategies (ES) model for reinforcement learning on Atari environments, with options to configure learning rate, noise standard deviation, and other training parameters."
+            },
+            {
+                "file": "pytorch-es/model.py",
+                "function": "The file defines a neural network module for reinforcement learning, specifically for evolutionary strategies (ES). It includes utility functions for weight initialization and a custom activation function (SELU). The `ES` class implements a neural network with two configurations: a small network with fully connected layers and a larger network with convolutional layers and an LSTM cell. The network is designed for actor-critic architectures, with a final linear layer for action selection."
+            },
+            {
+                "file": "pytorch-es/train.py",
+                "function": "The file implements an evolutionary strategy (ES) algorithm for training a neural network to play Atari games. It includes functions for performing rollouts, perturbing model parameters, updating gradients based on fitness shaping, and visualizing training progress. The main training loop manages the generation of perturbed models, evaluation of their performance, and updating the main model based on the results."
+            }
+        ],
+        "gt": "[['pytorch-es/train.py', 'pytorch-es/main.py'], ['pytorch-es/model.py', 'pytorch-es/train.py', 'pytorch-es/main.py'], ['pytorch-es/model.py', 'pytorch-es/main.py'], ['pytorch-es/envs.py', 'pytorch-es/main.py'], ['pytorch-es/envs.py', 'pytorch-es/train.py', 'pytorch-es/main.py']]"
+    },
+    {
+        "repo": "RFR-Inpainting",
+        "description": "A deep learning-based image inpainting project that uses recurrent feature reasoning to reconstruct missing parts of images.",
+        "function": "The project provides tools for training and testing a neural network to fill in missing regions of images using recurrent feature reasoning. It supports multiple datasets and offers pretrained models for quick testing.",
+        "files": [
+            {
+                "file": "RFR-Inpainting/dataset.py",
+                "function": "The file defines a custom dataset class for loading and preprocessing image and mask data, supporting various mask generation and augmentation techniques for training and testing purposes. It also includes functions for resizing, converting images to tensors, and generating random stroke masks."
+            },
+            {
+                "file": "RFR-Inpainting/model.py",
+                "function": "The file defines a model class `RFRNetModel` for image inpainting using a generator network (`RFRNet`) and a VGG16-based feature extractor for loss computation. It supports training, testing, and saving/loading model checkpoints, with functionalities for forward pass, parameter updates, and various loss calculations (L1, style, perceptual, and TV loss)."
+            },
+            {
+                "file": "RFR-Inpainting/run.py",
+                "function": "This script trains or tests a RFRNetModel using specified datasets and parameters, saving results and model checkpoints accordingly."
+            },
+            {
+                "file": "RFR-Inpainting/modules/Attention.py",
+                "function": "The file defines two PyTorch modules: `KnowledgeConsistentAttention` and `AttentionModule`. The former implements a knowledge-consistent attention mechanism for feature propagation and fusion, while the latter combines this attention mechanism with a convolutional layer to refine foreground features using a mask."
+            },
+            {
+                "file": "RFR-Inpainting/modules/partialconv2d.py",
+                "function": "The `PartialConv2d` class extends `nn.Conv2d` to implement partial convolutions, which handle missing or masked input data by updating the mask and scaling the output accordingly. It supports multi-channel masks and returns both the processed output and the updated mask."
+            },
+            {
+                "file": "RFR-Inpainting/modules/RFRNet.py",
+                "function": "The file defines a deep learning model for image inpainting, including a VGG16 feature extractor, a residual feature refinement module (RFRModule), and a main RFRNet model that uses partial convolutions and attention mechanisms to reconstruct missing regions in images."
+            },
+            {
+                "file": "RFR-Inpainting/modules/RFRNet_Smaller_Hole.py",
+                "function": "The file defines a deep learning model for image inpainting, including a VGG16 feature extractor, a residual feature refinement module (RFRModule), and a main RFRNet model that uses partial convolutions and attention mechanisms to reconstruct missing image regions."
+            },
+            {
+                "file": "RFR-Inpainting/utils/io.py",
+                "function": "The file provides functions to save and load PyTorch model and optimizer checkpoints, ensuring model state dictionaries are moved to CPU before saving."
+            }
+        ],
+        "gt": "[['RFR-Inpainting/dataset.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/utils/io.py', 'RFR-Inpainting/model.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/model.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/modules/partialconv2d.py', 'RFR-Inpainting/modules/RFRNet.py', 'RFR-Inpainting/model.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/modules/RFRNet.py', 'RFR-Inpainting/model.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/modules/partialconv2d.py', 'RFR-Inpainting/modules/RFRNet_Smaller_Hole.py'], ['RFR-Inpainting/modules/Attention.py', 'RFR-Inpainting/modules/RFRNet.py', 'RFR-Inpainting/model.py', 'RFR-Inpainting/run.py'], ['RFR-Inpainting/modules/Attention.py', 'RFR-Inpainting/modules/RFRNet_Smaller_Hole.py']]"
+    },
+    {
+        "repo": "depth-map-prediction",
+        "description": "A PyTorch implementation for predicting depth maps from single images using a multi-scale deep network.",
+        "function": "The project utilizes the NYU Depth Dataset V2 for training and evaluation, employing a multi-scale deep network architecture to predict depth maps from RGB images.",
+        "files": [
+            {
+                "file": "depth-map-prediction/data.py",
+                "function": "This file defines a dataset class (`NYUDataset`) for handling RGB and depth image data from the NYU dataset, including transformations for preprocessing depth and RGB images. It also includes a custom transformation (`TransposeDepthInput`) for depth data, which involves resizing, transposing, and applying logarithmic scaling."
+            },
+            {
+                "file": "depth-map-prediction/evaluate.py",
+                "function": "This script evaluates a depth prediction model by loading pre-trained coarse and fine models, processing test data, and generating visual comparisons of predicted and actual depth maps."
+            },
+            {
+                "file": "depth-map-prediction/image_helper.py",
+                "function": "The file defines a function `plot_grid` to visualize paired RGB and depth images in a grid format using matplotlib. It is designed for displaying image data, particularly in the context of computer vision tasks."
+            },
+            {
+                "file": "depth-map-prediction/main.py",
+                "function": "This script trains a two-stage neural network (coarse and fine models) for depth map prediction using PyTorch. It includes data loading, custom loss functions, and training loops for both models, with validation metrics to evaluate performance."
+            },
+            {
+                "file": "depth-map-prediction/model.py",
+                "function": "The file defines two neural network models, `coarseNet` and `fineNet`, both implemented in PyTorch. `coarseNet` processes input images through a series of convolutional and fully connected layers to produce a coarse output, while `fineNet` refines this output by combining it with the original input and applying additional convolutional layers. Both models include weight initialization methods for their layers."
+            },
+            {
+                "file": "depth-map-prediction/test_run.py",
+                "function": "This script loads pre-trained coarse and fine models, processes an input image, predicts depth maps using both models, and visualizes the input image along with the coarse and fine depth predictions."
+            }
+        ],
+        "gt": "[['depth-map-prediction/data.py', 'depth-map-prediction/main.py'], ['depth-map-prediction/model.py', 'depth-map-prediction/main.py'], ['depth-map-prediction/model.py', 'depth-map-prediction/test_run.py'], ['depth-map-prediction/data.py', 'depth-map-prediction/evaluate.py'], ['depth-map-prediction/image_helper.py', 'depth-map-prediction/main.py'], ['depth-map-prediction/model.py', 'depth-map-prediction/evaluate.py'], ['depth-map-prediction/model.py', 'depth-map-prediction/image_helper.py', 'depth-map-prediction/main.py']]"
+    },
+    {
+        "repo": "FFIMe",
+        "description": "A PHP wrapper library for the FFI extension, automating the generation of C structures and function signatures.",
+        "function": "Automatically generates C structures and function signatures from shared objects and header files, providing fully typed wrapper classes. Offers inline and code-generating modes for development and production use.",
+        "files": [],
+        "gt": "[['repo_readmefile/python\\\\FFIMe\\\\README.md', 'repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\02-stdio-codegen\\\\example.php'], ['repo_readmefile/python\\\\FFIMe\\\\README.md', 'repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\00-basic\\\\example.php'], ['repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\02-stdio-codegen\\\\stdio.php', 'repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\02-stdio-codegen\\\\example.php'], ['repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\00-basic\\\\test.php', 'repos_otherLanguage/python\\\\FFIMe\\\\examples\\\\00-basic\\\\example.php']]"
+    },
+    {
+        "repo": "char-rnn-tensorflow",
+        "description": "A character-level language model implemented using multi-layer Recurrent Neural Networks (LSTM, RNN) in TensorFlow.",
+        "function": "Allows training on plain text datasets to generate text sequences. Provides options for sampling from trained models, visualizing training progress with TensorBoard, and tuning hyperparameters for better performance.",
+        "files": [
+            {
+                "file": "char-rnn-tensorflow/model.py",
+                "function": "This file defines a TensorFlow-based RNN model for sequence generation, supporting various RNN cell types (RNN, GRU, LSTM, NAS) with dropout and softmax output layers. It includes training and sampling functionalities for text generation."
+            },
+            {
+                "file": "char-rnn-tensorflow/sample.py",
+                "function": "This script loads a pre-trained model and generates text based on a given prime text or the most frequent character, with options to control the sampling method and the number of characters to generate."
+            },
+            {
+                "file": "char-rnn-tensorflow/train.py",
+                "function": "This script trains a text generation model using an RNN (LSTM, GRU, or NAS) with configurable hyperparameters, saving checkpoints and logging progress for TensorBoard visualization."
+            },
+            {
+                "file": "char-rnn-tensorflow/utils.py",
+                "function": "The `TextLoader` class preprocesses text data by creating character vocabularies and converting text into numerical tensors, then batches the data for training. It supports loading preprocessed data and generating sequential batches for machine learning models."
+            }
+        ],
+        "gt": "[['char-rnn-tensorflow/utils.py', 'char-rnn-tensorflow/train.py'], ['char-rnn-tensorflow/model.py', 'char-rnn-tensorflow/sample.py'], ['char-rnn-tensorflow/model.py', 'char-rnn-tensorflow/train.py']]"
+    },
+    {
+        "repo": "pytorch-drl4vrp",
+        "description": "A deep reinforcement learning implementation for solving the Traveling Salesman Problem (TSP) and Vehicle Routing Problem (VRP).",
+        "function": "Uses a GRU-based decoder and dynamic masking schemes to optimize routes for TSP and VRP. Supports customizable tasks, node counts, and checkpoint restoration for training.",
+        "files": [
+            {
+                "file": "pytorch-drl4vrp/model.py",
+                "function": "The file defines a deep reinforcement learning model (`DRL4TSP`) for solving the Traveling Salesman Problem (TSP) using an encoder-decoder architecture with attention and pointer networks. It encodes static and dynamic inputs, applies attention mechanisms to compute probabilities for selecting the next city, and iteratively updates the dynamic state and mask to generate a tour sequence."
+            },
+            {
+                "file": "pytorch-drl4vrp/trainer.py",
+                "function": "This file defines a trainer for combinatorial optimization problems, specifically for tasks like TSP (Traveling Salesman Problem) and VRP (Vehicle Routing Problem). It includes neural network models for estimating problem complexity (Critic and StateCritic), training and validation functions, and methods for training and testing these models on specified tasks."
+            },
+            {
+                "file": "pytorch-drl4vrp/tasks/tsp.py",
+                "function": "The file defines a `TSPDataset` class for generating and managing datasets for the Traveling Salesman Problem (TSP), including methods for updating the mask, calculating rewards, and rendering tours."
+            },
+            {
+                "file": "pytorch-drl4vrp/tasks/vrp.py",
+                "function": "The file defines a dataset for the Vehicle Routing Problem (VRP), where vehicles must visit cities with specific demands while adhering to capacity constraints. It includes functionality to generate problem instances, update vehicle loads and demands, and calculate rewards based on tour lengths. Additionally, it provides a method to visualize the solution."
+            }
+        ],
+        "gt": "[['pytorch-drl4vrp/tasks/tsp.py', 'pytorch-drl4vrp/trainer.py'], ['pytorch-drl4vrp/tasks/vrp.py', 'pytorch-drl4vrp/trainer.py'], ['pytorch-drl4vrp/model.py', 'pytorch-drl4vrp/trainer.py']]"
+    },
+    {
+        "repo": "checkmate",
+        "description": "Checkmate is a TensorFlow utility for managing and saving the best model checkpoints during training.",
+        "function": "It allows saving the top n best checkpoints based on user-defined metrics, supports ranking by highest or lowest values, and automatically deletes outdated checkpoints.",
+        "files": [
+            {
+                "file": "checkmate/checkmate.py",
+                "function": "The file defines a `BestCheckpointSaver` class that maintains a directory containing only the best n checkpoints based on a specified metric. It also includes a function to retrieve the best checkpoint from the directory."
+            },
+            {
+                "file": "checkmate/__init__.py",
+                "function": "The file provides functionality for saving and retrieving the best checkpoint during model training, using `BestCheckpointSaver` and `get_best_checkpoint`."
+            }
+        ],
+        "gt": "[['checkmate/checkmate.py', 'checkmate/__init__.py']]"
+    },
+    {
+        "repo": "deepfakes_faceswap",
+        "description": "A deep learning-based face-swapping project by deepfakes.",
+        "function": "Enables users to swap faces in images or videos using deep learning models. Requires Python, OpenCV, TensorFlow, and Keras, with a modern GPU for optimal performance. Training can be accelerated by reusing existing models or starting with similar data.",
+        "files": [
+            {
+                "file": "deepfakes_faceswap/image_augmentation.py",
+                "function": "The file provides functions to randomly transform and warp images, including rotation, scaling, translation, and flipping, as well as generating pairs of randomly warped images for aligned face images."
+            },
+            {
+                "file": "deepfakes_faceswap/model.py",
+                "function": "The file defines an autoencoder architecture for image processing, consisting of an encoder and two decoders (A and B). The encoder compresses input images into a lower-dimensional representation, while the decoders reconstruct the images from this representation. The autoencoders are optimized using the Adam optimizer with a mean absolute error loss function."
+            },
+            {
+                "file": "deepfakes_faceswap/pixel_shuffler.py",
+                "function": "The PixelShuffler layer in Keras reshapes and permutes input tensors to upscale spatial dimensions while reducing the number of channels, effectively performing a pixel shuffle operation for super-resolution tasks."
+            },
+            {
+                "file": "deepfakes_faceswap/script.py",
+                "function": "This script loads pre-trained autoencoders and encoders, processes images from two datasets, and converts faces in one dataset to resemble faces in the other using the autoencoders, saving the results to an output directory."
+            },
+            {
+                "file": "deepfakes_faceswap/train.py",
+                "function": "This script trains two autoencoders (A and B) on image datasets, adjusts image intensities, and periodically saves model weights. It also displays and compares reconstructed images during training, allowing the process to be stopped and saved with the 'q' key."
+            },
+            {
+                "file": "deepfakes_faceswap/training_data.py",
+                "function": "The file defines a function `get_training_data` that processes a batch of images by applying random transformations and warping, returning both the warped images and their corresponding target images for training purposes."
+            },
+            {
+                "file": "deepfakes_faceswap/umeyama.py",
+                "function": "The `umeyama` function estimates an N-D similarity transformation matrix between source and destination coordinates, optionally including scaling, using the Umeyama algorithm."
+            },
+            {
+                "file": "deepfakes_faceswap/utils.py",
+                "function": "The file provides functions to retrieve image paths from a directory, load and process images, and stack them into a single array for further use."
+            }
+        ],
+        "gt": "[['deepfakes_faceswap/image_augmentation.py', 'deepfakes_faceswap/training_data.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/training_data.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/model.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/utils.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/pixel_shuffler.py', 'deepfakes_faceswap/model.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/utils.py', 'deepfakes_faceswap/script.py'], ['deepfakes_faceswap/umeyama.py', 'deepfakes_faceswap/image_augmentation.py', 'deepfakes_faceswap/training_data.py', 'deepfakes_faceswap/train.py'], ['deepfakes_faceswap/model.py', 'deepfakes_faceswap/script.py'], ['deepfakes_faceswap/pixel_shuffler.py', 'deepfakes_faceswap/model.py', 'deepfakes_faceswap/script.py']]"
+    },
+    {
+        "repo": "Super-mario-bros-PPO-pytorch",
+        "description": "A Python implementation of the Proximal Policy Optimization (PPO) algorithm to train an agent to play Super Mario Bros.",
+        "function": "The project allows users to train and test a PPO-based agent capable of completing 31 out of 32 levels in Super Mario Bros. It includes Docker support for easier setup and training, and offers flexibility in adjusting learning rates for better performance.",
+        "files": [
+            {
+                "file": "Super-mario-bros-PPO-pytorch/test.py",
+                "function": "The script tests a trained Proximal Policy Optimization (PPO) model on a Super Mario Bros environment, loading the model based on specified world and stage, and executing actions to complete the level."
+            },
+            {
+                "file": "Super-mario-bros-PPO-pytorch/train.py",
+                "function": "This script trains a Proximal Policy Optimization (PPO) model to play Super Mario Bros by interacting with multiple environments, optimizing the policy and value functions, and periodically saving the model."
+            },
+            {
+                "file": "Super-mario-bros-PPO-pytorch/src/env.py",
+                "function": "The file defines a framework for training an AI agent to play Super Mario Bros using OpenAI Gym. It includes custom wrappers for processing game frames, calculating rewards, and skipping frames to optimize training. Additionally, it supports multi-process environments for parallel training."
+            },
+            {
+                "file": "Super-mario-bros-PPO-pytorch/src/model.py",
+                "function": "The file defines a PPO (Proximal Policy Optimization) model using convolutional and linear layers for reinforcement learning tasks. It processes input data through convolutional layers, flattens the output, and then uses linear layers to produce both actor and critic outputs."
+            },
+            {
+                "file": "Super-mario-bros-PPO-pytorch/src/process.py",
+                "function": "This script evaluates a Proximal Policy Optimization (PPO) model for playing Super Mario Bros by selecting actions based on the model's policy and rendering the game environment. It periodically syncs with a global model and resets the environment upon completion or stagnation."
+            }
+        ],
+        "gt": "[['Super-mario-bros-PPO-pytorch/src/env.py', 'Super-mario-bros-PPO-pytorch/src/process.py', 'Super-mario-bros-PPO-pytorch/train.py'], ['Super-mario-bros-PPO-pytorch/src/model.py', 'Super-mario-bros-PPO-pytorch/src/process.py', 'Super-mario-bros-PPO-pytorch/train.py'], ['Super-mario-bros-PPO-pytorch/src/model.py', 'Super-mario-bros-PPO-pytorch/test.py'], ['Super-mario-bros-PPO-pytorch/src/model.py', 'Super-mario-bros-PPO-pytorch/train.py'], ['Super-mario-bros-PPO-pytorch/src/env.py', 'Super-mario-bros-PPO-pytorch/test.py'], ['Super-mario-bros-PPO-pytorch/src/process.py', 'Super-mario-bros-PPO-pytorch/train.py'], ['Super-mario-bros-PPO-pytorch/src/env.py', 'Super-mario-bros-PPO-pytorch/train.py']]"
+    },
+    {
+        "repo": "horrifying-pdf-experiments",
+        "description": "A project exploring the capabilities of PDF files by embedding JavaScript to create interactive content.",
+        "function": "Demonstrates the ability to run JavaScript within a PDF, leveraging limited Chrome PDFium API features to create a playable Breakout game inside a PDF file.",
+        "files": [
+            {
+                "file": "horrifying-pdf-experiments/generate.py",
+                "function": "This script generates a PDF with interactive form fields and embedded JavaScript, allowing dynamic behavior and customization of field appearance and functionality."
+            },
+            {
+                "file": "horrifying-pdf-experiments/generate_breakout.py",
+                "function": "This script generates a PDF file containing a simple Breakout game, using text fields as interactive elements and JavaScript for game logic. It also includes a README file within the same PDF."
+            }
+        ],
+        "gt": "[['horrifying-pdf-experiments/generate.py', 'horrifying-pdf-experiments/generate_breakout.py']]"
+    },
+    {
+        "repo": "CloudFail",
+        "description": "CloudFail is a reconnaissance tool designed to locate servers behind Cloudflare protection.",
+        "function": "The tool uses three attack phases: misconfigured DNS scanning, Crimeflare database scanning, and subdomain bruteforce scanning. It operates over Tor to mask requests and is intended for controlled, authorized testing.",
+        "files": [
+            {
+                "file": "CloudFail/cloudfail.py",
+                "function": "This script is a tool for identifying misconfigured DNS and uncovering real IP addresses behind Cloudflare-protected websites. It performs DNS lookups, checks for subdomains, and scans databases like DNSDumpster and Crimeflare to find potential vulnerabilities."
+            },
+            {
+                "file": "CloudFail/DNSDumpsterAPI.py",
+                "function": "This Python API allows users to retrieve subdomains and DNS records for a given domain from dnsdumpster.com, along with additional information such as IP addresses, reverse DNS, and network mapping images."
+            },
+            {
+                "file": "CloudFail/socks.py",
+                "function": "The file provides a Python module for tunneling connections through SOCKS4, SOCKS5, and HTTP proxies, offering a socket-like interface for proxy-enabled networking. It supports various proxy types, authentication, and includes functionality for binding, sending, and receiving data through the proxy."
+            },
+            {
+                "file": "CloudFail/sockshandler.py",
+                "function": "This script provides a handler for urllib2 to enable HTTP and HTTPS connections through a SOCKS proxy without modifying the original socket. It supports both HTTP and HTTPS protocols and allows configuration of proxy settings."
+            }
+        ],
+        "gt": "[['CloudFail/DNSDumpsterAPI.py', 'CloudFail/cloudfail.py'], ['CloudFail/socks.py', 'CloudFail/sockshandler.py'], ['CloudFail/socks.py', 'CloudFail/cloudfail.py']]"
+    },
+    {
+        "repo": "Tiling",
+        "description": "A tool for constructing and visualizing tilings of regular polygons and their dual tilings.",
+        "function": "Provides a simple API to create, manipulate, and render tilings using regular polygons. Supports automatic pattern repetition and dual tiling generation for visualizing polygon relationships.",
+        "files": [
+            {
+                "file": "Tiling/main.py",
+                "function": "The file defines a function to generate and render geometric patterns based on predefined configurations, saving the output as PNG images. It supports multiple pattern types and can render both single and dual versions of each pattern."
+            },
+            {
+                "file": "Tiling/tile.py",
+                "function": "This file defines a system for creating and rendering geometric shapes using the Cairo graphics library. It includes classes for managing shapes, generating adjacent shapes, and rendering them with customizable properties like colors, margins, and labels. The system also supports creating dual shapes and repeating patterns across a canvas."
+            }
+        ],
+        "gt": "[['Tiling/tile.py', 'Tiling/main.py']]"
+    },
+    {
+        "repo": "Edu-Mail-Generator",
+        "description": "A tool for generating free edu email addresses for educational purposes.",
+        "function": "Automates the process of creating edu emails, bypassing captchas and VPN detection, and installs necessary dependencies automatically. Allows users to create multiple edu emails quickly and efficiently.",
+        "files": [
+            {
+                "file": "Edu-Mail-Generator/bot.py",
+                "function": "This script automates the process of creating accounts and filling out application forms on the OpenCCC website, bypassing security measures and generating random data for fields like names, addresses, and phone numbers."
+            },
+            {
+                "file": "Edu-Mail-Generator/helper.py",
+                "function": "The file defines a class `EduHelper` that interacts with a web service to fetch authentication tokens, manage cookies, and send data to various endpoints for account creation or management. It uses HTTP requests to handle authentication and session management."
+            },
+            {
+                "file": "Edu-Mail-Generator/setup.py",
+                "function": "This script automates the installation of required Python packages and sets up either Chrome or Firefox as the preferred browser for running scripts, based on user input."
+            },
+            {
+                "file": "Edu-Mail-Generator/__banner/myBanner.py",
+                "function": "This script generates a colorful ASCII banner with random text colors, excluding certain colors, and displays it in the terminal."
+            },
+            {
+                "file": "Edu-Mail-Generator/__colors__/colors.py",
+                "function": "This file initializes colorama and defines variables for foreground, background, and style text colors to be used for text formatting in a terminal."
+            },
+            {
+                "file": "Edu-Mail-Generator/__constants/const.py",
+                "function": "The script generates fake personal and educational data, including names, addresses, and dates, for use in testing or educational purposes. It also includes lists of college IDs, college names, and country codes for potential integration into other applications."
+            },
+            {
+                "file": "Edu-Mail-Generator/__dwnldDrivers/versions.py",
+                "function": "The script automates the installation of web drivers (geckodriver for Firefox and chromedriver for Chrome) by detecting the system architecture, browser versions, and downloading the appropriate drivers. It handles platform-specific checks and ensures dependencies are installed if missing."
+            }
+        ],
+        "gt": "[['Edu-Mail-Generator/__colors__/colors.py', 'Edu-Mail-Generator/bot.py'], ['Edu-Mail-Generator/helper.py', 'Edu-Mail-Generator/bot.py'], ['Edu-Mail-Generator/__dwnldDrivers/versions.py', 'Edu-Mail-Generator/setup.py'], ['Edu-Mail-Generator/__colors__/colors.py', 'Edu-Mail-Generator/helper.py', 'Edu-Mail-Generator/bot.py'], ['Edu-Mail-Generator/__banner/myBanner.py', 'Edu-Mail-Generator/bot.py'], ['Edu-Mail-Generator/__constants/const.py', 'Edu-Mail-Generator/bot.py']]"
+    },
+    {
+        "repo": "microsoft-teams-class-attender",
+        "description": "A Python-based bot designed to automatically attend online classes or meetings on Microsoft Teams.",
+        "function": "The bot logs into Microsoft Teams using provided credentials, joins classes based on a given timetable, and can send notifications via Discord webhooks. It requires manual setup of credentials and timezone configuration.",
+        "files": [
+            {
+                "file": "microsoft-teams-class-attender/bot.py",
+                "function": "The script automates joining and leaving Microsoft Teams classes based on a user-defined timetable stored in an SQLite database. It schedules classes for specific days and times, logs into Teams, joins classes, and sends status updates via a Discord webhook."
+            },
+            {
+                "file": "microsoft-teams-class-attender/discord_webhook.py",
+                "function": "The script sends a Discord webhook message with details about a class, including its name, status (joined, left, or no class), and timestamps for joining and leaving."
+            }
+        ],
+        "gt": "[['microsoft-teams-class-attender/discord_webhook.py', 'microsoft-teams-class-attender/bot.py']]"
+    },
+    {
+        "repo": "twitchchess",
+        "description": "A simple chess engine implemented as a livestream project.",
+        "function": "Features a 3-ply full search and a 5-ply beam search, with a neural network value function for board evaluation. Includes a web interface for playing against the engine and supports further improvements like quiescence search and multi-GPU training.",
+        "files": [
+            {
+                "file": "twitchchess/generate_training_set.py",
+                "function": "The script processes chess game data from PGN files, extracts board states and game outcomes, and compiles them into a dataset for machine learning purposes. It serializes board states and assigns corresponding game results, saving the dataset as a NumPy file."
+            },
+            {
+                "file": "twitchchess/play.py",
+                "function": "This file implements a chess engine with a Flask-based web interface, allowing users to play against a computer opponent using either a classic piece-based valuation function or a neural network-based valuator. It supports move input via algebraic notation or coordinates, and provides a self-play mode for testing the engine."
+            },
+            {
+                "file": "twitchchess/state.py",
+                "function": "The file defines a `State` class for representing and manipulating chess game states, including serialization of the board into a binary format and listing legal moves."
+            },
+            {
+                "file": "twitchchess/train.py",
+                "function": "The script defines a neural network model for evaluating chess positions and trains it using a dataset of chess positions and their corresponding values. The model is trained using a mean squared error loss function and saved after each epoch."
+            }
+        ],
+        "gt": "[['twitchchess/state.py', 'twitchchess/generate_training_set.py'], ['twitchchess/train.py', 'twitchchess/play.py'], ['twitchchess/state.py', 'twitchchess/play.py']]"
+    },
+    {
+        "repo": "MapTilesDownloader",
+        "description": "A Python-based GUI tool for downloading map tiles from various providers.",
+        "function": "Provides an easy-to-use web-based map interface for selecting areas, supports multi-threaded downloads, and can save tiles in multiple formats. It also includes a Docker setup for cross-platform use.",
+        "files": [
+            {
+                "file": "MapTilesDownloader/src/file_writer.py",
+                "function": "The `FileWriter` class manages file operations, including ensuring directories exist, adding metadata to JSON files, copying tiles, and checking file existence. It supports concurrent operations using locks for synchronization."
+            },
+            {
+                "file": "MapTilesDownloader/src/mbtiles_writer.py",
+                "function": "The `MbtilesWriter` class manages the creation and modification of MBTiles files, handling metadata insertion, tile data storage, and database updates for map tile data. It ensures directory structure, adds metadata, inserts tile data, checks for existing tiles, and finalizes the MBTiles file with updated metadata."
+            },
+            {
+                "file": "MapTilesDownloader/src/repo_writer.py",
+                "function": "The `RepoWriter` class extends `MbtilesWriter` to manage metadata and tile data in an SQLite database. It provides methods to add metadata (name, description, format, bounds, etc.) and tiles (with zoom, column, row, and tile data) to the database, ensuring proper directory structure and handling concurrent access using a lock."
+            },
+            {
+                "file": "MapTilesDownloader/src/server.py",
+                "function": "This script implements a threaded HTTP server that handles tile downloads and metadata management for map tiles. It supports POST requests to download tiles and manage metadata, and GET requests to serve UI files."
+            },
+            {
+                "file": "MapTilesDownloader/src/utils.py",
+                "function": "The file defines a `Utils` class with methods for generating random strings, calculating tile coordinates, creating quadkeys, converting tile numbers to geographic coordinates, and downloading and merging map tiles. It also includes functionality for scaling and merging tiles based on zoom levels."
+            }
+        ],
+        "gt": "[['MapTilesDownloader/src/repo_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/file_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/utils.py', 'MapTilesDownloader/src/repo_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/mbtiles_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/mbtiles_writer.py', 'MapTilesDownloader/src/repo_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/utils.py', 'MapTilesDownloader/src/mbtiles_writer.py', 'MapTilesDownloader/src/repo_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/utils.py', 'MapTilesDownloader/src/mbtiles_writer.py', 'MapTilesDownloader/src/server.py'], ['MapTilesDownloader/src/utils.py', 'MapTilesDownloader/src/server.py']]"
+    },
+    {
+        "repo": "pytorch_memonger",
+        "description": "A repository showcasing PyTorch models optimized with gradient checkpointing.",
+        "function": "Implements gradient checkpointing to reduce memory usage, enabling training of larger models and larger minibatch sizes. Demonstrates optimization on ResNet, DenseNet, LSTM, and VNet models, with a tutorial on handling special layers like Batch normalization and dropout.",
+        "files": [
+            {
+                "file": "pytorch_memonger/test_memory_baseline.py",
+                "function": "This file contains unit tests for benchmarking the performance of various baseline models (DenseNet, ResNet, VNet, and Word Language Model) using PyTorch, measuring both GPU and CPU execution times during training."
+            },
+            {
+                "file": "pytorch_memonger/test_memory_optimized.py",
+                "function": "The file defines a test suite for benchmarking memory-optimized versions of neural network models (DenseNet, ResNet, VNet, and a Word Language Model) using PyTorch. Each test method evaluates the performance of a specific model by training it on synthetic data, measuring both GPU and CPU timings, and printing the results."
+            },
+            {
+                "file": "pytorch_memonger/models/baseline/densenet.py",
+                "function": "This file defines the DenseNet architecture for deep learning, including various configurations like DenseNet-121, DenseNet-169, and others, with options to load pre-trained models on ImageNet."
+            },
+            {
+                "file": "pytorch_memonger/models/baseline/resnet.py",
+                "function": "This file defines the ResNet architecture in PyTorch, including various ResNet models (e.g., ResNet-18, ResNet-50) and their pre-activation variants, with options to load pre-trained weights on ImageNet."
+            },
+            {
+                "file": "pytorch_memonger/models/baseline/vnet.py",
+                "function": "The file defines a 3D convolutional neural network architecture, specifically the VNet model, for medical image segmentation. It includes custom layers like `ContBatchNorm3d`, `LUConv`, and transition modules for downsampling and upsampling, with optional dropout and ELU/PReLU activation functions. The model processes 3D input volumes through a series of convolutional and transposed convolutional layers to produce a segmentation output."
+            },
+            {
+                "file": "pytorch_memonger/models/baseline/word_language_model.py",
+                "function": "The file defines an RNNModel class for language modeling, consisting of an encoder, an LSTM-based recurrent module, and a decoder. It supports optional weight tying between the encoder and decoder for improved performance."
+            },
+            {
+                "file": "pytorch_memonger/models/optimized/densenet_new.py",
+                "function": "This file defines various DenseNet models (e.g., densenet100, densenet121) and their architecture, including dense layers and transition layers, for image classification tasks."
+            },
+            {
+                "file": "pytorch_memonger/models/optimized/resnet_new.py",
+                "function": "This file defines various ResNet architectures (e.g., ResNet18, ResNet50) for image classification, including basic and bottleneck blocks, and supports both standard and pre-activation ResNet models."
+            },
+            {
+                "file": "pytorch_memonger/models/optimized/vnet_new.py",
+                "function": "The file defines a 3D convolutional neural network architecture, specifically the VNet, for medical image segmentation. It includes modules for input processing, downsampling, upsampling, and output generation, with optional dropout and activation functions."
+            },
+            {
+                "file": "pytorch_memonger/models/optimized/word_language_model_new.py",
+                "function": "The file defines an RNNModel class in PyTorch, which encapsulates an encoder, a recurrent module (LSTM, GRU, or RNN), and a decoder for sequence modeling tasks. It supports checkpointing for memory efficiency and includes functionality for weight tying, custom forward and backward passes, and gradient saving."
+            }
+        ],
+        "gt": "[['pytorch_memonger/models/baseline/word_language_model.py', 'pytorch_memonger/test_memory_baseline.py'], ['pytorch_memonger/models/optimized/word_language_model_new.py', 'pytorch_memonger/test_memory_optimized.py'], ['pytorch_memonger/models/baseline/resnet.py', 'pytorch_memonger/test_memory_baseline.py'], ['pytorch_memonger/models/baseline/vnet.py', 'pytorch_memonger/test_memory_baseline.py'], ['pytorch_memonger/models/optimized/vnet_new.py', 'pytorch_memonger/test_memory_optimized.py'], ['pytorch_memonger/models/baseline/densenet.py', 'pytorch_memonger/test_memory_baseline.py'], ['pytorch_memonger/models/optimized/resnet_new.py', 'pytorch_memonger/test_memory_optimized.py'], ['pytorch_memonger/models/optimized/densenet_new.py', 'pytorch_memonger/test_memory_optimized.py']]"
+    },
+    {
+        "repo": "document-scanner",
+        "description": "A document scanner application built using OpenCV and Python.",
+        "function": "Processes images through various stages including grayscaling, Gaussian blur, edge detection, contour detection, and perspective transformation to accurately scan and transform documents into a flat, readable format.",
+        "files": [
+            {
+                "file": "document-scanner/rect.py",
+                "function": "The function `rectify` reshapes a 4x2 array, calculates sums and differences of its rows, and rearranges the rows based on these calculations to produce a new 4x2 array."
+            },
+            {
+                "file": "document-scanner/scanner.py",
+                "function": "The script processes an image to detect and rectify a document's corners, applies various thresholding techniques to enhance the document, and displays the results in multiple stages for analysis."
+            }
+        ],
+        "gt": "[['document-scanner/rect.py', 'document-scanner/scanner.py']]"
+    },
+    {
+        "repo": "R-BERT",
+        "description": "An unofficial PyTorch implementation of R-BERT for relation classification using pre-trained language models.",
+        "function": "Extracts three vectors from BERT (CLS token, averaged entity vectors) and processes them through fully-connected layers to classify relationships between entities. Supports training, evaluation, and prediction with official F1 score evaluation.",
+        "files": [
+            {
+                "file": "R-BERT/data_loader.py",
+                "function": "This file defines classes and functions for processing and converting SemEval dataset examples into features suitable for sequence classification tasks, including handling input examples, tokenization, and creating TensorDatasets for training, validation, and testing."
+            },
+            {
+                "file": "R-BERT/main.py",
+                "function": "This script initializes and trains a model using specified datasets, tokenizer, and training parameters, and evaluates the model on a test set if required. It supports various configurable options for training and evaluation."
+            },
+            {
+                "file": "R-BERT/model.py",
+                "function": "The file defines a custom neural network model, `RBERT`, built on top of the BERT architecture for relation classification. It includes a fully connected layer (`FCLayer`) with optional dropout and activation, and uses entity-specific and class embeddings to predict relationships between entities."
+            },
+            {
+                "file": "R-BERT/official_eval.py",
+                "function": "The script runs a Perl evaluation script to calculate the macro-averaged F1 score based on proposed answers and answer keys, then reads and formats the result for output."
+            },
+            {
+                "file": "R-BERT/predict.py",
+                "function": "This script loads a pre-trained RBERT model, processes an input text file to extract and tokenize text, and predicts labels for the input data, writing the results to an output file."
+            },
+            {
+                "file": "R-BERT/trainer.py",
+                "function": "The file defines a `Trainer` class for training, evaluating, and saving a fine-tuned BERT-based model (`RBERT`) for a specific task. It includes methods for training the model with gradient accumulation, evaluating performance on test or dev datasets, and saving/loading model checkpoints."
+            },
+            {
+                "file": "R-BERT/utils.py",
+                "function": "The file provides utility functions for a machine learning pipeline, including loading a tokenizer, setting seeds for reproducibility, initializing logging, computing evaluation metrics, and writing predictions to a file. It also includes functions for handling labels and special tokens."
+            }
+        ],
+        "gt": "[['R-BERT/model.py', 'R-BERT/trainer.py', 'R-BERT/main.py'], ['R-BERT/official_eval.py', 'R-BERT/utils.py', 'R-BERT/predict.py'], ['R-BERT/utils.py', 'R-BERT/data_loader.py', 'R-BERT/main.py'], ['R-BERT/trainer.py', 'R-BERT/main.py'], ['R-BERT/utils.py', 'R-BERT/main.py'], ['R-BERT/official_eval.py', 'R-BERT/utils.py', 'R-BERT/main.py'], ['R-BERT/model.py', 'R-BERT/predict.py'], ['R-BERT/utils.py', 'R-BERT/predict.py'], ['R-BERT/official_eval.py', 'R-BERT/utils.py', 'R-BERT/data_loader.py', 'R-BERT/main.py'], ['R-BERT/data_loader.py', 'R-BERT/main.py'], ['R-BERT/utils.py', 'R-BERT/trainer.py', 'R-BERT/main.py'], ['R-BERT/official_eval.py', 'R-BERT/utils.py', 'R-BERT/trainer.py', 'R-BERT/main.py']]"
+    },
+    {
+        "repo": "neural-combinatorial-rl-tensorflow",
+        "description": "A TensorFlow implementation of Neural Combinatorial Optimization with Reinforcement Learning.",
+        "function": "The project trains models to solve combinatorial optimization problems like the Traveling Salesman Problem (TSP) using reinforcement learning techniques. It supports training and testing models with customizable parameters and provides TensorBoard integration for visualization.",
+        "files": [
+            {
+                "file": "neural-combinatorial-rl-tensorflow/config.py",
+                "function": "This file defines a configuration system for a machine learning model, allowing users to specify parameters related to network architecture, data handling, training, and miscellaneous settings via command-line arguments."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/data_loader.py",
+                "function": "This file implements a data loader for the Traveling Salesman Problem (TSP) using TensorFlow, including functions to generate, download, and process TSP datasets, and to create input queues for training and testing."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/download.py",
+                "function": "This script downloads large files from Google Drive by handling confirmation tokens and saving the file in chunks with progress tracking."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/layers.py",
+                "function": "The file defines a decoder RNN with attention mechanisms for sequence-to-sequence tasks, including functions for attention, glimpse, and output generation. It also provides utility functions for creating trainable initial states and converting index matrices to pairs."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/main.py",
+                "function": "This script trains or tests a model for a Traveling Salesman Problem (TSP) task using TensorFlow, based on configuration settings. It initializes a Trainer object, sets up directories and logging, and executes training or testing based on the `is_train` flag."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/model.py",
+                "function": "The file defines a neural network model for sequence-to-sequence tasks, using TensorFlow. It includes an encoder-decoder architecture with LSTM cells, handles training and testing phases, and implements learning rate decay and gradient clipping for optimization."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/trainer.py",
+                "function": "The file defines a `Trainer` class for training and testing a model on the Traveling Salesman Problem (TSP) using TensorFlow. It initializes the model, sets up the training session, and provides methods for training, testing, and logging results."
+            },
+            {
+                "file": "neural-combinatorial-rl-tensorflow/utils.py",
+                "function": "The file provides utility functions for setting up directories, logging, and saving configuration for a TensorFlow-based model. It includes functions to prepare directories and loggers, display model variables, and save model parameters in JSON format."
+            }
+        ],
+        "gt": "[['neural-combinatorial-rl-tensorflow/download.py', 'neural-combinatorial-rl-tensorflow/data_loader.py', 'neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/config.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/data_loader.py', 'neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/utils.py', 'neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/model.py', 'neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/layers.py', 'neural-combinatorial-rl-tensorflow/model.py', 'neural-combinatorial-rl-tensorflow/trainer.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/utils.py', 'neural-combinatorial-rl-tensorflow/main.py'], ['neural-combinatorial-rl-tensorflow/data_loader.py', 'neural-combinatorial-rl-tensorflow/trainer.py']]"
+    },
+    {
+        "repo": "Lazyman.bundle",
+        "description": "A Plex Channel plugin to access Lazyman streams, recaps, and extended highlights.",
+        "function": "Enables streaming of HLS content and playback of MP4 recaps/highlights. Requires a powerful Plex Media Server for transcoding and specific client configurations for optimal performance.",
+        "files": [
+            {
+                "file": "Lazyman.bundle/Contents/Code/game.py",
+                "function": "The file defines classes and functions to manage and retrieve media content for NHL and MLB games, including game recaps, feeds, and highlights. It also provides functionality to generate image URLs and format game summaries."
+            },
+            {
+                "file": "Lazyman.bundle/Contents/Code/__init__.py",
+                "function": "This script provides a video streaming interface for NHL and MLB games, allowing users to select dates, view game schedules, and access live streams or recaps. It fetches game data from APIs, caches results, and dynamically generates video content based on user preferences."
+            }
+        ],
+        "gt": "[['Lazyman.bundle/Contents/Code/game.py', 'Lazyman.bundle/Contents/Code/__init__.py']]"
+    },
+    {
+        "repo": "prefetch_generator",
+        "description": "A Python package that enables generators to run in a background thread for prefetching data.",
+        "function": "Transforms any generator into a background-thread generator that prefetches data batches, allowing computationally heavy processes to run in parallel with data fetching, optimizing resource usage.",
+        "files": [
+            {
+                "file": "prefetch_generator/setup.py",
+                "function": "This file sets up a Python package named \"prefetch_generator,\" which provides a tool to compute arbitrary generators in a background thread. It includes metadata such as version, description, author details, and dependencies."
+            },
+            {
+                "file": "prefetch_generator/prefetch_generator/__init__.py",
+                "function": "The `BackgroundGenerator` class and `prefetch` decorator enable the precomputation of generator elements in a background thread, allowing tasks that release the GIL (e.g., I/O or web requests) to run in parallel with dependent tasks, potentially improving performance."
+            }
+        ],
+        "gt": "[['prefetch_generator/prefetch_generator/__init__.py', 'prefetch_generator/setup.py']]"
+    }
+]

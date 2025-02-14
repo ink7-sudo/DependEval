@@ -1,0 +1,882 @@
+[
+    {
+        "repo": "adp-applistloader",
+        "description": "A repository containing code for an Android app list loader.",
+        "function": "Provides functionality to load and manage lists of apps on Android devices, with all contents licensed under the MIT license.",
+        "files": [
+            {
+                "file": "adp-applistloader/src/com/adp/loadercustom/AppListAdapter.java",
+                "function": "The `AppListAdapter` is a custom `ArrayAdapter` used to display a list of installed applications in a `ListView`, showing each app's icon and label. It also provides a method to update the list with new data."
+            },
+            {
+                "file": "adp-applistloader/src/com/adp/loadercustom/MainActivity.java",
+                "function": "The file defines a `MainActivity` that hosts an `AppListFragment`, which displays a list of installed applications using an `AppListLoader`. The fragment manages the loader lifecycle and updates the list view with application data when the loader finishes loading."
+            },
+            {
+                "file": "adp-applistloader/src/com/adp/loadercustom/loader/AppEntry.java",
+                "function": "The `AppEntry` class represents an application entry in the `AppListLoader`, storing application information, labels, and icons. It dynamically loads and updates the application label and icon based on the APK file's existence and mount status."
+            },
+            {
+                "file": "adp-applistloader/src/com/adp/loadercustom/loader/AppListLoader.java",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['adp-applistloader/src/com/adp/loadercustom/AppListAdapter.java'], ['adp-applistloader/src/com/adp/loadercustom/loader/AppEntry.java'], ['adp-applistloader/src/com/adp/loadercustom/loader/AppListLoader.java'], ['adp-applistloader/src/com/adp/loadercustom/MainActivity.java', 'adp-applistloader/src/com/adp/loadercustom/AppListAdapter.java']]"
+    },
+    {
+        "repo": "Android-DraggableGridViewPager",
+        "description": "An Android library for creating a draggable and rearrangeable grid view pager.",
+        "function": "Supports grid layout with multiple pages, horizontal swipe navigation, long press to drag and rearrange items, customizable column and row count, and various listeners for page changes, item clicks, and rearrangements.",
+        "files": [
+            {
+                "file": "Android-DraggableGridViewPager/DraggableGridViewPager/src/com/coco/draggablegridviewpager/DraggableGridViewPager.java",
+                "function": "The `DraggableGridViewPager` is a custom Android ViewGroup that implements a grid-based view pager with drag-and-drop functionality, allowing users to rearrange items within the grid. It supports smooth scrolling between pages and provides callbacks for item clicks, long clicks, and rearrangements."
+            },
+            {
+                "file": "Android-DraggableGridViewPager/DraggableGridViewPagerTest/src/com/coco/draggablegridviewpager/test/DraggableGridViewPagerTestActivity.java",
+                "function": "This file defines an Android activity that integrates a draggable grid view pager, allowing users to add, remove, and rearrange items in a grid layout, with support for item clicks, long clicks, and page change events."
+            }
+        ],
+        "gt": "[['Android-DraggableGridViewPager/DraggableGridViewPagerTest/src/com/coco/draggablegridviewpager/test/DraggableGridViewPagerTestActivity.java'], ['Android-DraggableGridViewPager/DraggableGridViewPager/src/com/coco/draggablegridviewpager/DraggableGridViewPager.java', 'Android-DraggableGridViewPager/DraggableGridViewPagerTest/src/com/coco/draggablegridviewpager/test/DraggableGridViewPagerTestActivity.java']]"
+    },
+    {
+        "repo": "android-FlipView",
+        "description": "A library for Android that enables flipping animations between views, similar to the Flipboard app.",
+        "function": "Provides smooth flipping animations with realistic lighting effects. Supports vertical and horizontal flipping, over-flip modes (glow and rubber band), and integrates with standard ListAdapters for content management.",
+        "files": [
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/FlipView.java",
+                "function": "The `FlipView` class is a custom Android `FrameLayout` that provides a flipping animation effect for displaying pages of content, similar to a book or card flip. It supports vertical and horizontal flipping, touch-based interaction, and recyclable views for efficient memory usage. The view also includes features like over-flip effects, velocity-based flipping, and listeners for page flip events."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/GlowOverFlipper.java",
+                "function": "The `GlowOverFlipper` class implements the `OverFlipper` interface to handle edge effects (glow) during over-flipping in a `FlipView`. It calculates and draws top and bottom edge effects based on the flip distance and orientation, and resets the effects when over-flipping ends."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/OverFlipMode.java",
+                "function": "The file defines an enum `OverFlipMode` with two possible values: `GLOW` and `RUBBER_BAND`, representing different behaviors for handling over-flipping in a view."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/OverFlipper.java",
+                "function": "The `OverFlipper` interface defines methods for calculating flip distances, drawing on a canvas, handling over-flip events, and retrieving total over-flip distances."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/OverFlipperFactory.java",
+                "function": "The `OverFlipperFactory` class creates and returns specific `OverFlipper` instances based on the provided `OverFlipMode`, such as `GlowOverFlipper` or `RubberBandOverFlipper`."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/Recycler.java",
+                "function": "The `Recycler` class manages a collection of reusable `View` objects (scrap views) organized by view type, allowing efficient retrieval and recycling of views for use in an adapter. It supports multiple view types and maintains a pool of scrap views to optimize view reuse."
+            },
+            {
+                "file": "android-FlipView/library/src/se/emilsjolander/flipview/RubberBandOverFlipper.java",
+                "function": "The `RubberBandOverFlipper` class implements an over-flip effect with a rubber band behavior, calculating the current over-flip distance based on exponential decay and limiting it to a maximum distance. It resets the over-flip state when the flip ends."
+            },
+            {
+                "file": "android-FlipView/sample/src/se/emilsjolander/flipview/FlipAdapter.java",
+                "function": "The `FlipAdapter` class is a custom `BaseAdapter` for an Android application that manages a list of items, each represented by a unique ID. It inflates a layout for each item, displaying its ID and position, and provides buttons to navigate to the first or last page, triggering a callback when clicked."
+            },
+            {
+                "file": "android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java",
+                "function": "The file defines a `MainActivity` that integrates a `FlipView` for paginated content, handling page flipping, over-flipping, and dynamically adding items to the adapter when reaching the end of the content."
+            }
+        ],
+        "gt": "[['android-FlipView/library/src/se/emilsjolander/flipview/FlipView.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/GlowOverFlipper.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/OverFlipMode.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/OverFlipper.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/RubberBandOverFlipper.java'], ['android-FlipView/sample/src/se/emilsjolander/flipview/FlipAdapter.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java'], ['android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/OverFlipperFactory.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/Recycler.java', 'android-FlipView/library/src/se/emilsjolander/flipview/FlipView.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/FlipAdapter.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/FlipView.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/FlipAdapter.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java'], ['android-FlipView/library/src/se/emilsjolander/flipview/Recycler.java', 'android-FlipView/library/src/se/emilsjolander/flipview/FlipView.java', 'android-FlipView/sample/src/se/emilsjolander/flipview/MainActivity.java']]"
+    },
+    {
+        "repo": "BeerSwipeRefresh",
+        "description": "A custom Swipe to Refresh widget for Android with a beer-themed animation.",
+        "function": "Provides a reusable BeerSwipeRefreshLayout that allows users to refresh content with a beer-themed animation. It supports integration with AbsListView and includes an OnRefreshListener for handling refresh events.",
+        "files": [
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BeerSwipeRefreshLayout.java",
+                "function": "The `BeerSwipeRefreshLayout` is a custom Android `ViewGroup` that implements a swipe-to-refresh feature with a beer-themed animation. It integrates sensor data (rotation vector) to enhance the animation and allows users to trigger a refresh action by swiping down, with visual feedback provided by a beer pouring animation."
+            },
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BeerView.java",
+                "function": "The `BeerView` class is a custom Android `View` that animates the pouring of beer from a bottle into a glass, including the creation of froth. It handles the drawing of the bottle, glass, and beer using various paths and paints, and includes animations for the pouring process and froth generation."
+            },
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/Bottle.java",
+                "function": "The file defines a `Bottle` class containing static arrays of float coordinates (`BOTTLE_POINTS`, `BEER_POINTS`, `LABEL_OUTER_CIRCLE_POINTS`, `LABEL_INNER_CIRCLE_POINTS`, `LABEL_RIBBON_POINTS`) to represent geometric shapes for a bottle, beer, and label elements."
+            },
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BottlePath.java",
+                "function": "The `BottlePath` class defines paths for drawing various components of a beer bottle, including the bottle shape, label, and beer content, using cubic curves and lines based on provided points and rotation degrees."
+            },
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/Glass.java",
+                "function": "The file defines a `Glass` class containing static arrays of float coordinates (`GLASS_POINTS`, `GLASS_BEER_POINTS`, and `GLASS_BEER_FROTH_POINTS`) to represent the shape and details of a glass, beer glass, and beer froth, respectively."
+            },
+            {
+                "file": "BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/GlassPath.java",
+                "function": "The `GlassPath` class manages and manipulates paths for drawing a glass, beer, and beer froth in an Android view, allowing for rotation and custom shapes based on provided points and degree values."
+            },
+            {
+                "file": "BeerSwipeRefresh/sample/src/main/java/jp/co/recruit_lifestyle/sample/MainActivity.java",
+                "function": "This file defines a full-screen Android activity with a ListView and a custom swipe-to-refresh layout, which refreshes the view for 7 seconds when triggered."
+            }
+        ],
+        "gt": "[['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BeerView.java', 'BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BottlePath.java'], ['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BeerSwipeRefreshLayout.java'], ['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/GlassPath.java'], ['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/BottlePath.java'], ['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/Bottle.java'], ['BeerSwipeRefresh/sample/src/main/java/jp/co/recruit_lifestyle/sample/MainActivity.java'], ['BeerSwipeRefresh/library/src/main/java/jp/co/recruit_lifestyle/android/widget/Glass.java']]"
+    },
+    {
+        "repo": "collageview",
+        "description": "CollageView is a library for creating photo collages in Android applications.",
+        "function": "Allows developers to easily integrate photo collages into their apps, with customizable layouts, image forms, and click listeners for photo interactions.",
+        "files": [
+            {
+                "file": "collageview/collageview/src/androidTest/java/com/lopei/collageview/ExampleInstrumentedTest.java",
+                "function": "This file is an instrumentation test for an Android application, verifying that the app context's package name matches the expected value."
+            },
+            {
+                "file": "collageview/collageview/src/main/java/com/lopei/collageview/CollageView.java",
+                "function": "The `CollageView` class is an Android custom view that arranges and displays a collection of images in a collage format, supporting various configurations such as image padding, margins, card usage, and click listeners. It uses Picasso for image loading and allows customization of image forms and layouts."
+            },
+            {
+                "file": "collageview/collageview/src/main/java/com/lopei/collageview/RectangleImageView.java",
+                "function": "The `RectangleImageView` class extends `AppCompatImageView` to create a custom image view that adjusts its height based on the specified `ImageForm` and the width, maintaining a rectangular or square aspect ratio."
+            },
+            {
+                "file": "collageview/collageview/src/test/java/com/lopei/collageview/ExampleUnitTest.java",
+                "function": "This file contains a simple unit test that verifies the correctness of an addition operation, asserting that 2 + 2 equals 4."
+            }
+        ],
+        "gt": "[['collageview/collageview/src/test/java/com/lopei/collageview/ExampleUnitTest.java'], ['collageview/collageview/src/androidTest/java/com/lopei/collageview/ExampleInstrumentedTest.java'], ['collageview/collageview/src/main/java/com/lopei/collageview/RectangleImageView.java'], ['collageview/collageview/src/main/java/com/lopei/collageview/CollageView.java', 'collageview/collageview/src/main/java/com/lopei/collageview/RectangleImageView.java']]"
+    },
+    {
+        "repo": "color-thief-java",
+        "description": "A fast Java implementation for extracting dominant colors or color palettes from images.",
+        "function": "This project is a high-performance Java port of Lokesh Dhakar's Color Thief JavaScript library, offering over 40 times faster color extraction compared to other Java ports.",
+        "files": [
+            {
+                "file": "color-thief-java/src/main/java/de/androidpit/colorthief/ColorThief.java",
+                "function": "The file implements a Java library called \"Color Thief\" that extracts the dominant color or a color palette from an image using the median cut algorithm. It provides methods to analyze images and return the most dominant color or a set of colors, with options to adjust quality and ignore white pixels."
+            },
+            {
+                "file": "color-thief-java/src/main/java/de/androidpit/colorthief/MMCQ.java",
+                "function": "The MMCQ class implements a color quantization algorithm to reduce the number of colors in an image while preserving its visual appearance. It uses a median cut algorithm to partition the color space and generate a color palette."
+            },
+            {
+                "file": "color-thief-java/src/main/java/de/androidpit/colorthief/RGBUtil.java",
+                "function": "The file provides utility methods to pack and unpack RGB color values into and from integers, allowing efficient storage and transmission of color data. It also supports packing and unpacking arrays of RGB values."
+            },
+            {
+                "file": "color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefPerformanceTest.java",
+                "function": "This file tests the performance of the `ColorThief` library by repeatedly extracting color maps from images and measuring the time taken."
+            },
+            {
+                "file": "color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefTest.java",
+                "function": "The file defines a test class for extracting and displaying the dominant color and color palette from images using the `ColorThief` library. It generates an HTML report showing the analyzed colors for each image."
+            }
+        ],
+        "gt": "[['color-thief-java/src/main/java/de/androidpit/colorthief/RGBUtil.java'], ['color-thief-java/src/main/java/de/androidpit/colorthief/MMCQ.java', 'color-thief-java/src/main/java/de/androidpit/colorthief/ColorThief.java'], ['color-thief-java/src/main/java/de/androidpit/colorthief/ColorThief.java'], ['color-thief-java/src/main/java/de/androidpit/colorthief/MMCQ.java', 'color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefTest.java'], ['color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefPerformanceTest.java'], ['color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefTest.java'], ['color-thief-java/src/main/java/de/androidpit/colorthief/MMCQ.java', 'color-thief-java/src/test/java/de/androidpit/colorthief/test/ColorThiefPerformanceTest.java']]"
+    },
+    {
+        "repo": "Colours",
+        "description": "Colours is a color library for Android, providing a wide range of predefined colors and color manipulation tools.",
+        "function": "Offers a comprehensive color palette, color space conversions (CMYK, CIE_LAB), color scheme generation, and helper methods for contrasting colors and detecting color differences.",
+        "files": [
+            {
+                "file": "Colours/ColoursLibrary/src/com/mattyork/colours/Colour.java",
+                "function": "The file defines a `Colour` class that extends Android's `Color` class, providing functionality for generating color schemes, converting between color models (RGB, HSV, CMYK, CIE LAB), calculating color distances, and offering predefined color constants for various use cases."
+            },
+            {
+                "file": "Colours/ExampleApp/src/com/mattyork/coloursexample/MainActivity.java",
+                "function": "The file defines an Android activity that generates and displays various color schemes (analogous, monochromatic, triad, complementary) and contrasting colors based on predefined base colors, applying them to UI elements."
+            }
+        ],
+        "gt": "[['Colours/ColoursLibrary/src/com/mattyork/colours/Colour.java', 'Colours/ExampleApp/src/com/mattyork/coloursexample/MainActivity.java'], ['Colours/ExampleApp/src/com/mattyork/coloursexample/MainActivity.java']]"
+    },
+    {
+        "repo": "cordova-plugin-camera-preview",
+        "description": "A Cordova plugin that enables camera interaction from HTML and JavaScript.",
+        "function": "Allows starting a camera preview, taking photos, recording videos, and customizing camera settings such as focus mode, zoom, color effects, and exposure. Supports draggable previews, custom positioning, and maintaining HTML interactivity.",
+        "files": [
+            {
+                "file": "cordova-plugin-camera-preview/src/android/CameraActivity.java",
+                "function": "The `CameraActivity` class provides a camera preview and control interface for capturing photos, taking snapshots, and recording videos. It supports switching between front and rear cameras, setting focus areas, and handling touch gestures for taking pictures or focusing. The captured images can be stored as files or encoded in Base64, and videos can be recorded with optional flash support."
+            },
+            {
+                "file": "cordova-plugin-camera-preview/src/android/CameraPreview.java",
+                "function": "The file defines a Cordova plugin for camera functionality, allowing control over camera settings, preview, picture and video capture, and various camera parameters such as zoom, flash, focus, and exposure. It provides methods to start, stop, and switch cameras, take pictures, record videos, and manage camera settings programmatically."
+            },
+            {
+                "file": "cordova-plugin-camera-preview/src/android/CustomSurfaceView.java",
+                "function": "The file defines a custom `SurfaceView` class named `CustomSurfaceView` that implements `SurfaceHolder.Callback` to handle surface lifecycle events."
+            },
+            {
+                "file": "cordova-plugin-camera-preview/src/android/Preview.java",
+                "function": "The file defines a `Preview` class that manages camera preview functionality in an Android application. It handles setting up the camera, adjusting preview sizes and orientations, and displaying the camera feed on a `SurfaceView`. The class also supports switching cameras and setting focus modes."
+            },
+            {
+                "file": "cordova-plugin-camera-preview/src/android/TapGestureDetector.java",
+                "function": "The file defines a `TapGestureDetector` class that extends `GestureDetector.SimpleOnGestureListener` to handle single tap gestures, overriding methods to detect and confirm single taps."
+            }
+        ],
+        "gt": "[['cordova-plugin-camera-preview/src/android/CameraActivity.java'], ['cordova-plugin-camera-preview/src/android/TapGestureDetector.java'], ['cordova-plugin-camera-preview/src/android/CustomSurfaceView.java'], ['cordova-plugin-camera-preview/src/android/CameraPreview.java'], ['cordova-plugin-camera-preview/src/android/Preview.java', 'cordova-plugin-camera-preview/src/android/CustomSurfaceView.java'], ['cordova-plugin-camera-preview/src/android/Preview.java'], ['cordova-plugin-camera-preview/src/android/Preview.java', 'cordova-plugin-camera-preview/src/android/TapGestureDetector.java'], ['cordova-plugin-camera-preview/src/android/Preview.java', 'cordova-plugin-camera-preview/src/android/CameraPreview.java'], ['cordova-plugin-camera-preview/src/android/Preview.java', 'cordova-plugin-camera-preview/src/android/CameraActivity.java']]"
+    },
+    {
+        "repo": "desertplaceholder",
+        "description": "An animated placeholder library for Android applications.",
+        "function": "Provides a customizable, desert-themed placeholder view with an optional retry button. It supports animations and can be easily integrated into Android layouts.",
+        "files": [
+            {
+                "file": "desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/CloudsView.java",
+                "function": "The `CloudsView` class is a custom Android `View` that displays animated clouds moving across the screen. It initializes and draws multiple cloud images at different positions and speeds, continuously updating their positions to create a scrolling effect."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java",
+                "function": "The `DesertPlaceholder` class is a custom Android `FrameLayout` that displays a placeholder view with a message and an optional button. It allows customization of the message and button text, and supports setting a click listener for the button."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java",
+                "function": "The `TumbleweedView` class is a custom Android `View` that animates a tumbleweed rolling across the screen, with dynamic speed, rotation, and jumping effects. It includes a shadow effect that scales based on the tumbleweed's vertical position."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder-sample/src/androidTest/java/com/jetradar/desertplaceholder/sample/MainActivityTest.java",
+                "function": "This file is an Android instrumentation test for the `MainActivity`, verifying that a placeholder view is displayed and clickable without animation."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder-sample/src/main/java/com/jetradar/desertplaceholder/sample/MainActivity.java",
+                "function": "This file demonstrates a sample Android activity that integrates a custom placeholder view (`DesertPlaceholder`) and sets up a button click listener to display a toast message."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/CloudsView.java",
+                "function": "The `CloudsView` class is a custom Android `View` that displays animated clouds moving across the screen. It initializes and draws multiple cloud images at different positions and speeds, continuously updating their positions to create a scrolling effect."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java",
+                "function": "The file defines a custom `DesertPlaceholder` view that extends `FrameLayout`, allowing customization of a message and button text. It supports XML attributes for setting the message and button text and provides methods to set click listeners and update the message or button visibility."
+            },
+            {
+                "file": "desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java",
+                "function": "The `TumbleweedView` class creates a custom Android view that animates a tumbleweed rolling across the screen, with dynamic speed, rotation, and jumping effects. It also renders a shadow that scales based on the tumbleweed's vertical position."
+            }
+        ],
+        "gt": "[['desertplaceholder/desertplaceholder-sample/src/androidTest/java/com/jetradar/desertplaceholder/sample/MainActivityTest.java'], ['desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/CloudsView.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java', 'desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/CloudsView.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java', 'desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java'], ['desertplaceholder/desertplaceholder-sample/src/main/java/com/jetradar/desertplaceholder/sample/MainActivity.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java'], ['desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java'], ['desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/CloudsView.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java', 'desertplaceholder/desertplaceholder/src/main/java/com/jetradar/desertplaceholder/CloudsView.java'], ['desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/DesertPlaceholder.java', 'desertplaceholder/desertplaceholder-webp/src/main/java/com/jetradar/desertplaceholder/TumbleweedView.java']]"
+    },
+    {
+        "repo": "EasyCamera",
+        "description": "A wrapper library for the Android Camera class, designed to simplify camera usage in Android applications.",
+        "function": "Provides an easy-to-use interface for starting camera previews, capturing pictures, and managing camera actions. Allows for customization of callbacks and preview behavior, and provides access to the raw Camera object.",
+        "files": [
+            {
+                "file": "EasyCamera/src/main/java/net/bozho/easycamera/DefaultCameraActions.java",
+                "function": "The `DefaultCameraActions` class provides default implementations for camera actions in the `EasyCamera` framework, including taking pictures and handling callbacks for shutter, raw data, and JPEG images. It also supports restarting the preview after capturing a picture if specified."
+            },
+            {
+                "file": "EasyCamera/src/main/java/net/bozho/easycamera/DefaultEasyCamera.java",
+                "function": "The `DefaultEasyCamera` class provides an interface to interact with Android's camera hardware, allowing control over camera operations such as preview, focus, zoom, and orientation, while also supporting advanced features like face detection and shutter sound management."
+            },
+            {
+                "file": "EasyCamera/src/main/java/net/bozho/easycamera/EasyCamera.java",
+                "function": "The `EasyCamera` interface simplifies interaction with the Android Camera API by providing methods to control camera operations such as preview, picture taking, and various camera settings, making it easier to manage camera functionality in Android applications."
+            }
+        ],
+        "gt": "[['EasyCamera/src/main/java/net/bozho/easycamera/DefaultEasyCamera.java'], ['EasyCamera/src/main/java/net/bozho/easycamera/EasyCamera.java', 'EasyCamera/src/main/java/net/bozho/easycamera/DefaultEasyCamera.java'], ['EasyCamera/src/main/java/net/bozho/easycamera/DefaultCameraActions.java']]"
+    },
+    {
+        "repo": "ijaas",
+        "description": "A project that enables IntelliJ IDEA to function as a Java server for providing autocompletion features to Vim.",
+        "function": "The project allows IntelliJ to serve autocompletion suggestions to Vim via a plugin. It supports integration with ALE for linting and can be configured to run on different ports for development purposes.",
+        "files": [
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/BaseHandler.java",
+                "function": "The file defines an abstract `BaseHandler` class for handling JSON-based requests and responses, providing validation and background processing with progress tracking."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/IjaasHandler.java",
+                "function": "The file defines an interface `IjaasHandler` for handling JSON requests, requiring an implementation to process a `JsonElement` and return a `JsonElement` response."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/IjaasServer.java",
+                "function": "The file defines an `IjaasServer` class that implements a JSON-based server for handling various Java-related development tasks, such as code completion, source updates, and import candidate retrieval, via a socket-based interface."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/IjaasStartupActivity.java",
+                "function": "This file defines a startup activity for an IntelliJ IDEA plugin that initializes and starts an IjaasServer on a specified port, defaulting to 5800 if no port is provided."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/handlers/EchoHandler.java",
+                "function": "The file defines an `EchoHandler` class that implements the `IjaasHandler` interface, returning the same JSON request it receives without modification."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaCompleteHandler.java",
+                "function": "The file defines a Java code completion handler that processes requests to provide auto-completion suggestions for Java code within an IntelliJ IDE project. It generates and sorts completion options based on the context of the code being edited."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaGetImportCandidatesHandler.java",
+                "function": "The file defines a handler that identifies and suggests import candidates for unresolved Java classes in a given Java file, returning a list of possible import statements."
+            },
+            {
+                "file": "ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaSrcUpdateHandler.java",
+                "function": "The file defines a handler for updating and analyzing Java source files, detecting code smells and inspection issues, and returning a sorted list of problems with their severity and location."
+            }
+        ],
+        "gt": "[['ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaSrcUpdateHandler.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/handlers/EchoHandler.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/BaseHandler.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaCompleteHandler.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/IjaasStartupActivity.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/IjaasServer.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/IjaasHandler.java'], ['ijaas/src/com/google/devtools/intellij/ijaas/handlers/JavaGetImportCandidatesHandler.java']]"
+    },
+    {
+        "repo": "innerbuilder",
+        "description": "An IntelliJ IDEA plugin for generating inner builder classes.",
+        "function": "The plugin adds a 'Builder' action to the Generate menu, allowing users to create or update inner builder classes for JavaBeans, following the builder pattern described in the Effective Java book.",
+        "files": [
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/CheckboxSelectorOption.java",
+                "function": "The `CheckboxSelectorOption` class implements the `SelectorOption` interface to represent a checkbox option with a caption, mnemonic, and optional tooltip, used for configuring inner builder settings."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownListCellRenderer.java",
+                "function": "The file defines a custom renderer for dropdown list cells, displaying the caption of each `DropdownSelectorOptionValue` in a JList."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownSelectorOption.java",
+                "function": "The `DropdownSelectorOption` class represents a selectable option with a caption, tooltip, and a list of possible values, used in the context of an inner builder plugin."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownSelectorOptionValue.java",
+                "function": "The file defines a `DropdownSelectorOptionValue` class with a builder pattern to construct instances, allowing setting an `InnerBuilderOption` and a `String` caption."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderAction.java",
+                "function": "The file defines an IntelliJ IDEA action that generates an inner builder class, as described in Effective Java, using a custom handler to validate and process the action."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderCollector.java",
+                "function": "The `InnerBuilderCollector` class collects fields from a Java class and its superclasses, filtering out static, uppercase, logging, and final fields (unless they are in the same class). It also checks for field accessibility and setters before adding them to the list."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderGenerator.java",
+                "function": "The file defines a Java class `InnerBuilderGenerator` that automates the generation of an inner builder class within a target class, providing methods to create, configure, and build objects using the builder pattern. It supports various customization options and ensures proper code formatting and documentation."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderHandler.java",
+                "function": "The file defines a handler for generating inner builder patterns in Java classes, allowing users to select fields and options to include in the builder. It ensures the file is a valid Java file and collects fields before invoking the builder generation process."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderOption.java",
+                "function": "The file defines an enum `InnerBuilderOption` that represents various configuration options for generating inner builder classes in Java. It includes options for setting properties and boolean flags related to builder generation, and provides a method to find an option by its property value."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderOptionSelector.java",
+                "function": "The file defines a utility for selecting and configuring options related to generating builder methods in Java classes, providing checkboxes and dropdowns for various customization settings."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderUtils.java",
+                "function": "The file provides utility methods for working with Java code in an IntelliJ IDE plugin, including string manipulation, type comparison, and static or top-level class identification."
+            },
+            {
+                "file": "innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/SelectorOption.java",
+                "function": "The file defines an interface `SelectorOption` with methods to retrieve an `InnerBuilderOption`, a caption, and a tooltip."
+            }
+        ],
+        "gt": "[['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderOptionSelector.java', 'innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderHandler.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderHandler.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderCollector.java', 'innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderHandler.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownListCellRenderer.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderAction.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderGenerator.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownSelectorOption.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderOption.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/SelectorOption.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/CheckboxSelectorOption.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/DropdownSelectorOptionValue.java'], ['innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderUtils.java', 'innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderCollector.java', 'innerbuilder/src/main/java/org/jetbrains/plugins/innerbuilder/InnerBuilderHandler.java']]"
+    },
+    {
+        "repo": "jail-monkey",
+        "description": "A library for detecting jail-broken or rooted devices and mocked locations in mobile applications.",
+        "function": "Provides methods to identify jail-broken/rooted devices, detect mocked GPS locations, and check for other security vulnerabilities on both iOS and Android platforms.",
+        "files": [
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java",
+                "function": "The file defines a module for detecting various security-related conditions on an Android device, such as jailbreaking, debugging mode, development settings, and mock locations. It provides methods to check these conditions and returns the results via a Promise or constants."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyPackage.java",
+                "function": "The file defines a React Native package (`JailMonkeyPackage`) that registers a native module (`JailMonkeyModule`) for detecting jailbroken or rooted devices, with an option to load constants asynchronously."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/AdbEnabled/AdbEnabled.java",
+                "function": "The file provides a method to check if ADB (Android Debug Bridge) is enabled on an Android device, returning `true` if enabled and `false` otherwise."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/ExternalStorage/ExternalStorageCheck.java",
+                "function": "This file provides a method to determine if an Android application is installed on external storage, checking both API levels and file paths."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/HookDetection/HookDetectionCheck.java",
+                "function": "The file provides functionality to detect potential hooking or tampering on an Android device by checking for suspicious installed applications, analyzing stack traces for signs of hooking frameworks, and identifying running Frida services."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/MockLocation/MockLocationCheck.java",
+                "function": "The file provides a method to detect if mock locations are enabled on an Android device by checking system settings and permissions for installed applications."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/CheckApiVersion.java",
+                "function": "The file defines an interface `CheckApiVersion` with a method `checkRooted()` to determine if a device is rooted."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/GreaterThan23.java",
+                "function": "This class checks if an Android device is rooted by verifying the existence of specific superuser files or executing a command to locate the `su` binary."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/LessThan23.java",
+                "function": "The file checks if an Android device is rooted by verifying the presence of superuser executables or related files and attempting to execute a command to find the `su` binary."
+            },
+            {
+                "file": "jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java",
+                "function": "The `RootedCheck` class detects if an Android device is rooted by using two methods: one based on the `JailMonkey` library and another using the `RootBeer` library. It provides a boolean result indicating whether the device is jailbroken and a detailed map of detection results."
+            }
+        ],
+        "gt": "[['jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyPackage.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/GreaterThan23.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/ExternalStorage/ExternalStorageCheck.java', 'jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/LessThan23.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/MockLocation/MockLocationCheck.java', 'jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/AdbEnabled/AdbEnabled.java', 'jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/CheckApiVersion.java'], ['jail-monkey/android/src/main/java/com/gantix/JailMonkey/HookDetection/HookDetectionCheck.java', 'jail-monkey/android/src/main/java/com/gantix/JailMonkey/JailMonkeyModule.java']]"
+    },
+    {
+        "repo": "log4j-detector",
+        "description": "A scanner to detect vulnerable Log4J versions in file systems, helping teams assess exposure to critical CVEs.",
+        "function": "Scans for Log4J instances across file systems, including nested archives, and categorizes versions as vulnerable, safe, or old. Works on Linux, Windows, Mac, and other Java environments.",
+        "files": [
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Bytes.java",
+                "function": "The `Bytes` class provides utility methods for converting files and streams into byte arrays, handling UTF-8 encoding, and implementing the Knuth-Morris-Pratt algorithm for pattern matching in byte arrays."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/CRC64.java",
+                "function": "The `CRC64` class provides methods to compute a 64-bit cyclic redundancy check (CRC) hash for byte arrays and strings, handling null inputs by replacing them with a default value."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Java2Json.java",
+                "function": "The `Java2Json` class provides utility methods to convert between Java objects (such as `Map`, `List`, `String`, `Number`, `Boolean`, and `null`) and JSON strings, including parsing JSON into Java objects and formatting Java objects into JSON."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Log4JDetector.java",
+                "function": "The file is a Java program that scans directories and files to detect vulnerable versions of Log4j, specifically targeting known vulnerabilities in Log4j 1.x and 2.x. It identifies vulnerable versions by analyzing file contents and metadata, providing detailed output on whether the detected Log4j versions are safe or vulnerable."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Strings.java",
+                "function": "The `Strings` class provides utility methods for string manipulation, including trimming, parsing, counting characters, stripping leading/trailing characters, and validating string content. It also includes methods for handling SQL and HTML-safe strings, and for interpreting boolean-like values."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Throwables.java",
+                "function": "The `Throwables` class provides a method to rethrow `Error` or `RuntimeException` instances without wrapping them, ensuring only unchecked exceptions are propagated."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Util.java",
+                "function": "The `Util` class provides a utility method to safely close various resources such as `ResultSet`, `Statement`, `Connection`, `Reader`, `Writer`, `InputStream`, `OutputStream`, `JarFile`, `ZipFile`, and `Process`. It handles exceptions during the closing process and aggregates any errors that occur."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/VersionComparator.java",
+                "function": "The file defines a `VersionComparator` class that provides methods to compare and order version numbers in a way that aligns with human expectations, handling various version formats and pre-release tags. It includes functionality to split, normalize, and compare version strings, ensuring accurate ordering based on semantic versioning principles."
+            },
+            {
+                "file": "log4j-detector/src/main/java/com/mergebase/log4j/Zipper.java",
+                "function": "The `Zipper` interface provides methods to obtain a fresh `ZipInputStream` for re-reading and to close resources."
+            }
+        ],
+        "gt": "[['log4j-detector/src/main/java/com/mergebase/log4j/Strings.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Log4JDetector.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/CRC64.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Java2Json.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/VersionComparator.java', 'log4j-detector/src/main/java/com/mergebase/log4j/Log4JDetector.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Throwables.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Util.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Zipper.java'], ['log4j-detector/src/main/java/com/mergebase/log4j/Bytes.java']]"
+    },
+    {
+        "repo": "MaryPopup",
+        "description": "MaryPopup is an Android library for creating customizable and interactive popups.",
+        "function": "Allows developers to easily create popups that can be expanded from a view, centered, draggable, and styled with custom colors and layouts. It also supports back button handling and integration with other libraries like Dragueur for view movement.",
+        "files": [
+            {
+                "file": "MaryPopup/app/src/androidTest/java/com/meetic/poppers/sample/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to test the Android application's functionality."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/MainActivity.java",
+                "function": "This file defines a `MainActivity` that initializes a toolbar and provides click handlers to launch various popup activities with different behaviors."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupActivity.java",
+                "function": "This file defines an Android activity that displays a customizable popup when a card view is clicked. The popup can be dragged, scaled, and faded out, and it handles back button presses to close the popup if it's open."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupCenterActivity.java",
+                "function": "This file defines an Android activity that displays a customizable popup centered on the screen when a card view is clicked. The popup can be dragged, canceled, and fades out when dragged."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupDraggableActivity.java",
+                "function": "This file defines an Android activity that displays a draggable and cancellable popup when a card view is clicked, and handles back button press to close the popup if it's open."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupFadeOutDraggableActivity.java",
+                "function": "This file defines an Android activity that displays a draggable and fade-out popup when a card view is clicked. The popup is cancellable and customizable with background colors."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupImageActivity.java",
+                "function": "This file defines an Android activity that displays a popup image when a view is clicked. The popup is customizable with options like draggability, animation durations, and background colors."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupNotDraggableActivity.java",
+                "function": "This file defines an Android activity that displays a non-draggable popup when a card view is clicked. The popup is customizable with background and overlay colors, and it can be closed by pressing the back button if open."
+            },
+            {
+                "file": "MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupScaleDownDraggableActivity.java",
+                "function": "This file defines an Android activity that displays a customizable popup with draggable and scale-down features when a card view is clicked. The popup can be closed by pressing the back button if it is open."
+            },
+            {
+                "file": "MaryPopup/app/src/test/java/com/meetic/poppers/sample/ExampleUnitTest.java",
+                "function": "This file contains a unit test named `addition_isCorrect` that verifies the correctness of a basic addition operation using the `assertEquals` method."
+            },
+            {
+                "file": "MaryPopup/marypopup/src/main/java/com/meetic/marypopup/DurX.java",
+                "function": "The `DurX` class provides a fluent API for manipulating and animating Android views, allowing for easy setting of properties like alpha, scale, translation, and visibility, as well as chaining animations with listeners for start, end, and update events."
+            },
+            {
+                "file": "MaryPopup/marypopup/src/main/java/com/meetic/marypopup/MaryPopup.java",
+                "function": "The `MaryPopup` class provides functionality to create and manage customizable popup views in an Android application, allowing for animations, draggable behavior, and various visual configurations."
+            }
+        ],
+        "gt": "[['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupFadeOutDraggableActivity.java'], ['MaryPopup/marypopup/src/main/java/com/meetic/marypopup/MaryPopup.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupImageActivity.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupScaleDownDraggableActivity.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupActivity.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/MainActivity.java'], ['MaryPopup/app/src/androidTest/java/com/meetic/poppers/sample/ApplicationTest.java'], ['MaryPopup/app/src/test/java/com/meetic/poppers/sample/ExampleUnitTest.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupCenterActivity.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupDraggableActivity.java'], ['MaryPopup/marypopup/src/main/java/com/meetic/marypopup/DurX.java', 'MaryPopup/marypopup/src/main/java/com/meetic/marypopup/MaryPopup.java'], ['MaryPopup/app/src/main/java/com/meetic/marypopup/sample/PopupNotDraggableActivity.java']]"
+    },
+    {
+        "repo": "Masaccio",
+        "description": "A library for Android that provides a widget to automatically detect and crop images around detected faces for optimal visual results.",
+        "function": "The widget detects faces in an image and crops it to center the face, improving visual appeal. It supports customizations and can offload face detection processing to a background thread to maintain UI performance.",
+        "files": [
+            {
+                "file": "Masaccio/app/src/androidTest/java/it/subito/masaccio/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to test the Android application's functionality."
+            },
+            {
+                "file": "Masaccio/app/src/main/java/it/subito/masaccio/demo/DemoActivity.java",
+                "function": "The file defines a demo Android activity that loads and displays images using `ImageLoader`, with features for rotating images and detecting faces. It includes a custom image downloader using OkHttp and a progress bar to indicate loading status."
+            },
+            {
+                "file": "Masaccio/library/src/androidTest/java/it/subito/masaccio/TestActivity.java",
+                "function": "This file contains unit tests for verifying the functionality of a custom `MasaccioImageView` in an Android application, specifically focusing on image scaling and matrix transformations."
+            },
+            {
+                "file": "Masaccio/library/src/main/java/it/subito/masaccio/MasaccioImageView.java",
+                "function": "The `MasaccioImageView` class extends `ImageView` to provide advanced image cropping and scaling functionalities, including face detection, custom animations, and dynamic scaling based on image dimensions and flags. It supports various scaling types and allows for animated transitions between different image transformations."
+            }
+        ],
+        "gt": "[['Masaccio/app/src/androidTest/java/it/subito/masaccio/ApplicationTest.java'], ['Masaccio/library/src/androidTest/java/it/subito/masaccio/TestActivity.java'], ['Masaccio/library/src/main/java/it/subito/masaccio/MasaccioImageView.java', 'Masaccio/app/src/main/java/it/subito/masaccio/demo/DemoActivity.java'], ['Masaccio/app/src/main/java/it/subito/masaccio/demo/DemoActivity.java'], ['Masaccio/library/src/main/java/it/subito/masaccio/MasaccioImageView.java', 'Masaccio/library/src/androidTest/java/it/subito/masaccio/TestActivity.java']]"
+    },
+    {
+        "repo": "material-calendar-view",
+        "description": "A customizable and visually appealing Material Design calendar view for Android.",
+        "function": "Allows full customization of the calendar's appearance and behavior, supports multi-day selection, and is compatible with Android API 11+.",
+        "files": [
+            {
+                "file": "material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/logic/presenter/MainPresenter.java",
+                "function": "The `MainPresenter` class manages the interaction between the view and the logic for adding a navigation drawer, text view, calendar view, and animations. It ensures these components are prepared and animated through the `MainView` interface."
+            },
+            {
+                "file": "material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/logic/presenter_view/MainView.java",
+                "function": "The `MainView` interface defines methods for preparing and animating UI components, including a text view, calendar view, and navigation drawer."
+            },
+            {
+                "file": "material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/utils/AnimationUtils.java",
+                "function": "The `AnimationUtils` class provides a method to animate a view by translating it from the bottom of the screen and fading it in over 1.5 seconds using a decelerating interpolator."
+            },
+            {
+                "file": "material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/view/MainActivity.java",
+                "function": "The `MainActivity` class sets up a UI with a navigation drawer, calendar view, and text view, allowing users to interact with dates, navigate through months, and display selected dates or the current month in the action bar."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/data/Day.java",
+                "function": "The `Day` class represents a single day with attributes like day, month, and year, and provides methods to convert it to a `Calendar` or `Date` object, check if it is the current day/month/year, or a weekend, and compare it to other `Day` instances."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/utils/CalendarUtils.java",
+                "function": "The `CalendarUtils` class provides utility methods for handling calendar operations, including checking date comparisons, calculating month offsets, generating day lists, and retrieving formatted date titles."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/utils/ScreenUtils.java",
+                "function": "The `ScreenUtils` class provides a method to retrieve the screen height in pixels for an Android device using the `DisplayMetrics` and `WindowManager`."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/CalendarView.java",
+                "function": "The `CalendarView` class is a custom Android view that provides a calendar interface with features like date selection, month navigation, and customizable styles. It supports touch gestures for scrolling and flinging between months, and allows for single or multi-day selection with various event listeners for user interactions."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/DayView.java",
+                "function": "The `DayView` class extends `TextView` to display a calendar day, allowing setting and retrieval of the day's data using the `Day` object."
+            },
+            {
+                "file": "material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/HeaderView.java",
+                "function": "The `HeaderView` class is a custom Android view that provides a header with a title and navigation buttons (next and back). It allows customization of text, colors, and drawables for the buttons, and supports click listeners for the title and buttons."
+            }
+        ],
+        "gt": "[['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/HeaderView.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/DayView.java'], ['material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/logic/presenter_view/MainView.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/CalendarView.java'], ['material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/utils/AnimationUtils.java', 'material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/view/MainActivity.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/utils/CalendarUtils.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/utils/ScreenUtils.java', 'material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/utils/AnimationUtils.java', 'material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/view/MainActivity.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/data/Day.java'], ['material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/logic/presenter/MainPresenter.java'], ['material-calendar-view/app/src/main/java/io/blackbox_vision/materialcalendarview/sample/view/MainActivity.java'], ['material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/internal/utils/ScreenUtils.java', 'material-calendar-view/materialcalendarview/src/main/java/io/blackbox_vision/materialcalendarview/view/CalendarView.java']]"
+    },
+    {
+        "repo": "Material-ViewPagerIndicator",
+        "description": "A page indicator for Android's ViewPager widget with Material Design ink animations.",
+        "function": "Provides an easy-to-use indicator that can be added as a child view of a ViewPager, supporting both XML and programmatic setup. It includes Material Design animations and is available via JitPack for easy integration.",
+        "files": [
+            {
+                "file": "Material-ViewPagerIndicator/app/src/androidTest/java/com/itsronald/materialviewpagerindicatorsample/ExampleInstrumentedTest.java",
+                "function": "This file is an instrumentation test for an Android application, verifying that the app context's package name matches the expected value."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/MainActivity.java",
+                "function": "The file defines a `MainActivity` for an Android app, providing functionality to navigate to different example activities, toggle card expansions, and open URLs for additional resources. It also includes utility methods for toggling button images and text visibility."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/PageFragment.java",
+                "function": "The file defines a simple Android `Fragment` named `PageFragment` that displays a provided text string in a `TextView`. It includes a factory method `newInstance` to create instances of the fragment with the specified text."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/SimpleJavaExampleActivity.java",
+                "function": "This file defines a simple Android activity that sets up a `ViewPager` with a custom `ViewPagerIndicator` and a `FragmentPagerAdapter` to display multiple pages."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/SimpleXmlExampleActivity.java",
+                "function": "This file defines a simple Android activity that sets up a `ViewPager` with a custom `FragmentPagerAdapter` to display multiple fragments, each labeled with a page number."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/app/src/test/java/com/itsronald/materialviewpagerindicatorsample/ExampleUnitTest.java",
+                "function": "This file contains a simple unit test that verifies the correctness of an addition operation, asserting that 2 + 2 equals 4."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/material-viewpagerindicator/src/androidTest/java/com/itsronald/widget/ExampleInstrumentedTest.java",
+                "function": "This file is an instrumentation test for an Android application, verifying that the app context's package name matches the expected value."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotPathView.java",
+                "function": "The `IndicatorDotPathView` class is a custom `ViewGroup` that animates the connection and retreat of two dots, simulating a path formation and shrinking effect. It includes animations for stretching and retreating the path segments between the dots, along with managing their layout and appearance."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotView.java",
+                "function": "The `IndicatorDotView` class is a custom `ImageView` that displays a circular dot, used to indicate a page in a `ViewPager`. It supports customizable dot radius, color, and includes animations for revealing and sliding the dot."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/ViewPagerIndicator.java",
+                "function": "The `ViewPagerIndicator` is a custom view that provides a non-interactive indicator for the current, next, and previous pages of a `ViewPager`. It dynamically updates the indicator dots and their positions based on the `ViewPager`'s current page and adapter changes, with smooth animations for transitions between pages."
+            },
+            {
+                "file": "Material-ViewPagerIndicator/material-viewpagerindicator/src/test/java/com/itsronald/widget/ExampleUnitTest.java",
+                "function": "This file is a simple unit test that verifies the correctness of an addition operation by asserting that 2 + 2 equals 4."
+            }
+        ],
+        "gt": "[['Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/PageFragment.java'], ['Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/SimpleJavaExampleActivity.java'], ['Material-ViewPagerIndicator/app/src/test/java/com/itsronald/materialviewpagerindicatorsample/ExampleUnitTest.java'], ['Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/ViewPagerIndicator.java', 'Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotPathView.java'], ['Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/SimpleXmlExampleActivity.java'], ['Material-ViewPagerIndicator/app/src/androidTest/java/com/itsronald/materialviewpagerindicatorsample/ExampleInstrumentedTest.java'], ['Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotView.java', 'Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotPathView.java'], ['Material-ViewPagerIndicator/material-viewpagerindicator/src/androidTest/java/com/itsronald/widget/ExampleInstrumentedTest.java'], ['Material-ViewPagerIndicator/app/src/main/java/com/itsronald/materialviewpagerindicatorsample/MainActivity.java'], ['Material-ViewPagerIndicator/material-viewpagerindicator/src/test/java/com/itsronald/widget/ExampleUnitTest.java'], ['Material-ViewPagerIndicator/material-viewpagerindicator/src/main/java/com/itsronald/widget/IndicatorDotPathView.java']]"
+    },
+    {
+        "repo": "MaterialLetterIcon",
+        "description": "A customizable Android library for creating material design letter icons with shape backgrounds.",
+        "function": "Allows developers to generate letter icons with various shape types (circle, rectangle, rounded rectangle, etc.) and customize colors, letter size, and initials. Supports both XML and code-based configuration.",
+        "files": [
+            {
+                "file": "MaterialLetterIcon/app/src/main/java/com/github/ivbaranov/mli/example/MainActivity.java",
+                "function": "The file defines an Android activity that displays a list of contacts or countries in a RecyclerView, allowing users to switch between the two lists via a menu. Each list item includes a MaterialLetterIcon and a TextView."
+            },
+            {
+                "file": "MaterialLetterIcon/materiallettericon/src/main/java/com/github/ivbaranov/mli/MaterialLetterIcon.java",
+                "function": "The `MaterialLetterIcon` class is a custom Android `View` that allows the creation of icons with customizable shapes (circle, rectangle, rounded rectangle, triangle) and letters. It supports various attributes such as shape color, border, letter color, size, and typeface, and can display initials or specific letters based on configuration."
+            }
+        ],
+        "gt": "[['MaterialLetterIcon/materiallettericon/src/main/java/com/github/ivbaranov/mli/MaterialLetterIcon.java', 'MaterialLetterIcon/app/src/main/java/com/github/ivbaranov/mli/example/MainActivity.java'], ['MaterialLetterIcon/app/src/main/java/com/github/ivbaranov/mli/example/MainActivity.java']]"
+    },
+    {
+        "repo": "NativeAlphaForAndroid",
+        "description": "Native Alpha is an Android app that allows users to display websites in a borderless, full-screen window using Android System WebView.",
+        "function": "The app enables users to create home screen shortcuts, customize settings for each web app, and supports features like adblocking, dark mode, and sandbox containers for enhanced privacy and performance.",
+        "files": [
+            {
+                "file": "NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/TestUtils.java",
+                "function": "The `TestUtils` class provides utility methods for Android UI testing, including actions like accepting licenses, handling alert dialogs, checking view visibility, performing custom drag actions, waiting for elements, and retrieving the current activity."
+            },
+            {
+                "file": "NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/UITests.java",
+                "function": "This file contains UI tests for an Android application, focusing on functionalities such as adding websites, managing web app settings, handling SSL errors, and reordering web apps."
+            },
+            {
+                "file": "NativeAlphaForAndroid/app/src/main/java/com/cylonid/nativealpha/AboutActivity.java",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['NativeAlphaForAndroid/app/src/main/java/com/cylonid/nativealpha/AboutActivity.java'], ['NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/TestUtils.java', 'NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/UITests.java'], ['NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/UITests.java'], ['NativeAlphaForAndroid/app/src/androidTest/java/com/cylonid/nativealpha/TestUtils.java']]"
+    },
+    {
+        "repo": "RelativePopupWindow",
+        "description": "A library for creating Android PopupWindows that can be positioned relative to an anchor View.",
+        "function": "Allows developers to easily position popups above, below, or aligned with an anchor View using customizable vertical and horizontal positioning options.",
+        "files": [
+            {
+                "file": "RelativePopupWindow/example/src/androidTest/java/com/labo/kaji/relativepopupwindow/example/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to test the functionality of an Android application."
+            },
+            {
+                "file": "RelativePopupWindow/example/src/main/java/com/labo/kaji/relativepopupwindow/example/java/ExampleActivity.java",
+                "function": "The file defines an Android activity that allows users to configure and display a popup window with customizable dimensions, positions, and alignment relative to a button click."
+            },
+            {
+                "file": "RelativePopupWindow/example/src/main/java/com/labo/kaji/relativepopupwindow/example/java/ExampleCardPopup.java",
+                "function": "The file defines a custom `RelativePopupWindow` that displays a card-style popup with a circular reveal animation on devices running Android Lollipop and above."
+            },
+            {
+                "file": "RelativePopupWindow/example/src/test/java/com/labo/kaji/relativepopupwindow/example/ExampleUnitTest.java",
+                "function": "The file contains a unit test for verifying that the addition of 2 and 2 equals 4."
+            },
+            {
+                "file": "RelativePopupWindow/relativepopupwindow/src/androidTest/java/com/labo/kaji/relativepopupwindow/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to perform unit testing on an Android application."
+            },
+            {
+                "file": "RelativePopupWindow/relativepopupwindow/src/main/java/com/labo/kaji/relativepopupwindow/RelativePopupWindow.java",
+                "function": "The `RelativePopupWindow` class extends `PopupWindow` to allow displaying a popup window at various relative positions (above, below, left, right, etc.) to an anchor view, with options for translation and automatic screen fitting."
+            },
+            {
+                "file": "RelativePopupWindow/relativepopupwindow/src/test/java/com/labo/kaji/relativepopupwindow/ExampleUnitTest.java",
+                "function": "This file contains a simple unit test that verifies the correctness of an addition operation, asserting that 2 + 2 equals 4."
+            }
+        ],
+        "gt": "[['RelativePopupWindow/relativepopupwindow/src/androidTest/java/com/labo/kaji/relativepopupwindow/ApplicationTest.java'], ['RelativePopupWindow/example/src/main/java/com/labo/kaji/relativepopupwindow/example/java/ExampleCardPopup.java'], ['RelativePopupWindow/example/src/androidTest/java/com/labo/kaji/relativepopupwindow/example/ApplicationTest.java'], ['RelativePopupWindow/relativepopupwindow/src/main/java/com/labo/kaji/relativepopupwindow/RelativePopupWindow.java', 'RelativePopupWindow/example/src/main/java/com/labo/kaji/relativepopupwindow/example/java/ExampleActivity.java'], ['RelativePopupWindow/relativepopupwindow/src/test/java/com/labo/kaji/relativepopupwindow/ExampleUnitTest.java'], ['RelativePopupWindow/example/src/main/java/com/labo/kaji/relativepopupwindow/example/java/ExampleActivity.java'], ['RelativePopupWindow/example/src/test/java/com/labo/kaji/relativepopupwindow/example/ExampleUnitTest.java']]"
+    },
+    {
+        "repo": "RootShell",
+        "description": "RootShell is a library for rooted Android developers to easily access a root shell in their applications.",
+        "function": "Provides an easy-to-use interface for rooted developers to execute commands with root privileges in Android applications.",
+        "files": [
+            {
+                "file": "RootShell/src/androidTest/java/com/stericson/RootShellTests/NativeJavaClass.java",
+                "function": "The file defines a Java class that lists the contents of a browser cache directory and creates a new file within it, leaving a message as a marker."
+            },
+            {
+                "file": "RootShell/src/androidTest/java/com/stericson/RootShellTests/SanityCheckRootShell.java",
+                "function": "This file is an Android activity that tests the functionality of the RootShell library, verifying root access, executing commands, and switching shell contexts to ensure proper operation on rooted devices."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/RootShell.java",
+                "function": "The file provides a utility for managing root shells and executing commands on Android devices, allowing users to check for root access, manage shells, and perform file and binary existence checks."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/containers/RootClass.java",
+                "function": "The file defines a `RootClass` that handles the loading of a specified class and its arguments, and includes a utility for discovering and processing class annotations, generating a JAR file, and converting it into a DEX file for Android."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/exceptions/RootDeniedException.java",
+                "function": "This file defines a custom exception class, `RootDeniedException`, which is thrown when root access is denied in the RootShell project."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/execution/Command.java",
+                "function": "The `Command` class is designed to execute shell commands in an Android environment, providing constructors for customizing command execution with options like timeout and handler usage. It manages command output, termination, and completion, and supports monitoring for command execution with a timeout mechanism."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/execution/JavaCommand.java",
+                "function": "The `JavaCommand` class extends the `Command` class to execute Java commands within an Android context, providing constructors to handle different execution scenarios and overriding methods to handle command output, termination, and completion."
+            },
+            {
+                "file": "RootShell/src/main/java/com/stericson/RootShell/execution/Shell.java",
+                "function": "The `Shell` class manages the execution of commands in different types of shells (normal, root, or custom) on Android devices. It handles command queuing, execution, and output processing, with support for SELinux contexts and root access management."
+            }
+        ],
+        "gt": "[['RootShell/src/main/java/com/stericson/RootShell/containers/RootClass.java'], ['RootShell/src/main/java/com/stericson/RootShell/exceptions/RootDeniedException.java'], ['RootShell/src/androidTest/java/com/stericson/RootShellTests/SanityCheckRootShell.java'], ['RootShell/src/main/java/com/stericson/RootShell/execution/JavaCommand.java'], ['RootShell/src/main/java/com/stericson/RootShell/execution/Shell.java'], ['RootShell/src/main/java/com/stericson/RootShell/execution/Command.java'], ['RootShell/src/androidTest/java/com/stericson/RootShellTests/NativeJavaClass.java'], ['RootShell/src/main/java/com/stericson/RootShell/RootShell.java', 'RootShell/src/androidTest/java/com/stericson/RootShellTests/SanityCheckRootShell.java'], ['RootShell/src/main/java/com/stericson/RootShell/RootShell.java', 'RootShell/src/main/java/com/stericson/RootShell/execution/Shell.java'], ['RootShell/src/main/java/com/stericson/RootShell/RootShell.java'], ['RootShell/src/main/java/com/stericson/RootShell/RootShell.java', 'RootShell/src/androidTest/java/com/stericson/RootShellTests/NativeJavaClass.java'], ['RootShell/src/main/java/com/stericson/RootShell/RootShell.java', 'RootShell/src/main/java/com/stericson/RootShell/execution/Command.java']]"
+    },
+    {
+        "repo": "sample-bluetooth-le-gattserver",
+        "description": "An Android Things application demonstrating the use of the BluetoothGattServer API.",
+        "function": "The app advertises the Current Time Service, implements the GATT Time Profile server role, and allows clients to read and receive notifications for the Current Time characteristic. It also supports manual time and timezone setting via ADB.",
+        "files": [
+            {
+                "file": "sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/GattServerActivity.java",
+                "function": "The file implements a Bluetooth GATT server that advertises and provides time service updates to connected devices, while also updating a local UI with the current time."
+            },
+            {
+                "file": "sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/TimeProfile.java",
+                "function": "The `TimeProfile` class implements a Bluetooth GATT service for the Current Time Profile, providing functionality to create a time service with characteristics for current time and local time information, and to convert timestamps into Bluetooth-compatible time formats."
+            }
+        ],
+        "gt": "[['sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/TimeProfile.java', 'sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/GattServerActivity.java'], ['sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/GattServerActivity.java'], ['sample-bluetooth-le-gattserver/java/app/src/main/java/com/example/androidthings/gattserver/TimeProfile.java']]"
+    },
+    {
+        "repo": "StaggeredGridViewDemo",
+        "description": "A demo project showcasing a StaggeredGridView for Android.",
+        "function": "Enables the creation of a GridView with uneven rows, similar to Pinterest. Includes custom item click listeners, selector, and fixed position restore functionality.",
+        "files": [
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/MainActivity.java",
+                "function": "The file defines a `MainActivity` that displays a staggered grid of images fetched from URLs, using a custom `StaggeredGridView` and adapter. It adjusts the grid's margins and padding for better layout."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/StaggeredAdapter.java",
+                "function": "The file defines a custom `StaggeredAdapter` for an Android app, which extends `ArrayAdapter<String>` to display images in a staggered grid layout. It uses an `ImageLoader` to asynchronously load and display images in `ScaleImageView` components."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/FileCache.java",
+                "function": "The `FileCache` class manages a directory for caching files, typically images, by storing them in either external storage or the app's internal cache directory. It provides methods to retrieve cached files based on their URL hash and to clear the cache."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/ImageLoader.java",
+                "function": "The `ImageLoader` class manages the loading and caching of images from URLs into `ImageView` components, utilizing both memory and file caching to optimize performance and reduce redundant network requests."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/MemoryCache.java",
+                "function": "The `MemoryCache` class manages a memory cache for storing and retrieving `Bitmap` objects, using a Least Recently Used (LRU) strategy to limit memory usage. It ensures that the cache does not exceed a specified memory limit by removing the least recently used items when necessary."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/Utils.java",
+                "function": "The `Utils` class provides a method `CopyStream` to efficiently copy data from an `InputStream` to an `OutputStream` using a buffer."
+            },
+            {
+                "file": "StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/views/ScaleImageView.java",
+                "function": "The `ScaleImageView` class extends `ImageView` to automatically scale its dimensions based on the image's intrinsic width and height. It supports scaling to either width or height and includes an `ImageChangeListener` to notify when the image changes."
+            }
+        ],
+        "gt": "[['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/StaggeredAdapter.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/Utils.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/FileCache.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/ImageLoader.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/loader/MemoryCache.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/MainActivity.java'], ['StaggeredGridViewDemo/src/com/example/staggeredgridviewdemo/views/ScaleImageView.java']]"
+    },
+    {
+        "repo": "SwipeAwayDialog",
+        "description": "An Android library for creating swipeable DialogFragments.",
+        "function": "Enables DialogFragments to be dismissed by swiping, making it easy to create Tinder-like UI. Supports handling swipe events and preventing dismissal if needed.",
+        "files": [
+            {
+                "file": "SwipeAwayDialog/example/src/androidTest/java/com/labo/kaji/swipeawaydialog/example/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to test the functionality of an Android application."
+            },
+            {
+                "file": "SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleActivity.java",
+                "function": "This file defines an Android activity that allows users to display various types of dialogs (e.g., alert, list, progress, date, time, custom) by clicking corresponding buttons."
+            },
+            {
+                "file": "SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleDialogFragment.java",
+                "function": "This file defines an `ExampleDialogFragment` that creates various types of dialogs (e.g., alert, list, progress, date, time, custom) based on the specified type, allowing for easy dialog creation and customization."
+            },
+            {
+                "file": "SwipeAwayDialog/library/src/androidTest/java/com/labo/kaji/swipeawaydialog/ApplicationTest.java",
+                "function": "The file defines a test class, `ApplicationTest`, which extends `ApplicationTestCase` to perform unit tests on an Android application."
+            },
+            {
+                "file": "SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeableFrameLayout.java",
+                "function": "The `SwipeableFrameLayout` class extends `FrameLayout` to enable swipe-to-dismiss functionality by intercepting touch events and delegating them to a `SwipeDismissTouchListener`."
+            },
+            {
+                "file": "SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeAwayDialogFragment.java",
+                "function": "The `SwipeAwayDialogFragment` class extends `DialogFragment` to enable swipe-to-dismiss functionality for dialogs, with options to control tilt effects and swipe behavior."
+            },
+            {
+                "file": "SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeDismissTouchListener.java",
+                "function": "The file defines a `SwipeDismissTouchListener` class that allows a view to be dismissed by swiping horizontally. It handles touch events, tracks swipe gestures, and animates the view's dismissal, optionally tilting and fading the view during the swipe."
+            },
+            {
+                "file": "SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/support/v4/SwipeAwayDialogFragment.java",
+                "function": "The `SwipeAwayDialogFragment` class extends `DialogFragment` to enable swipe-to-dismiss functionality for dialogs, allowing customization of swipe behavior and tilt effects. It integrates a `SwipeDismissTouchListener` to handle swipe gestures and dismiss the dialog accordingly."
+            }
+        ],
+        "gt": "[['SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleDialogFragment.java', 'SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleActivity.java'], ['SwipeAwayDialog/example/src/androidTest/java/com/labo/kaji/swipeawaydialog/example/ApplicationTest.java'], ['SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/support/v4/SwipeAwayDialogFragment.java'], ['SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeDismissTouchListener.java'], ['SwipeAwayDialog/library/src/androidTest/java/com/labo/kaji/swipeawaydialog/ApplicationTest.java'], ['SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleActivity.java'], ['SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeableFrameLayout.java'], ['SwipeAwayDialog/library/src/main/java/com/labo/kaji/swipeawaydialog/SwipeAwayDialogFragment.java'], ['SwipeAwayDialog/example/src/main/java/com/labo/kaji/swipeawaydialog/example/ExampleDialogFragment.java']]"
+    },
+    {
+        "repo": "web3j-spring-boot-starter",
+        "description": "A Spring Boot starter for integrating web3j into Spring Boot applications.",
+        "function": "Provides dependency injection for web3j instances, allowing easy integration with Ethereum nodes via HTTP or IPC. Supports admin client functionality for account management and configurable HTTP timeouts for Ethereum operations.",
+        "files": [
+            {
+                "file": "web3j-spring-boot-starter/src/main/java/org/web3j/spring/actuate/Web3jHealthIndicator.java",
+                "function": "The `Web3jHealthIndicator` class provides a health check for a Web3j client, verifying network connectivity and retrieving details such as the client version, block number, protocol version, and peer count."
+            },
+            {
+                "file": "web3j-spring-boot-starter/src/main/java/org/web3j/spring/autoconfigure/Web3jAutoConfiguration.java",
+                "function": "This file provides auto-configuration for integrating Web3j with Spring Boot, enabling the creation of Web3j and Admin clients based on configuration properties, and includes a health indicator for monitoring Web3j connectivity."
+            },
+            {
+                "file": "web3j-spring-boot-starter/src/main/java/org/web3j/spring/autoconfigure/Web3jProperties.java",
+                "function": "The file defines a configuration properties class for web3j, allowing Spring Boot applications to configure web3j settings such as client address, admin client status, network ID, and HTTP timeout."
+            },
+            {
+                "file": "web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/Web3jAutoConfigurationTest.java",
+                "function": "The file contains unit tests for the `Web3jAutoConfiguration` class, verifying the configuration and behavior of Web3j client connections, including HTTP, Unix IPC, and Windows IPC, as well as health checks and admin client functionality."
+            },
+            {
+                "file": "web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/Web3jHealthIndicatorTest.java",
+                "function": "The file tests the functionality of a `HealthIndicator` for Web3j, ensuring it correctly reports the health status of a Web3j connection by mocking various Web3j method calls and verifying the resulting health details."
+            },
+            {
+                "file": "web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/context/SpringApplicationTest.java",
+                "function": "This file configures a Spring Boot application test by defining a primary bean for the `Web3j` interface, using Mockito to create a mock with deep stubbing capabilities."
+            }
+        ],
+        "gt": "[['web3j-spring-boot-starter/src/main/java/org/web3j/spring/actuate/Web3jHealthIndicator.java'], ['web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/Web3jHealthIndicatorTest.java'], ['web3j-spring-boot-starter/src/main/java/org/web3j/spring/autoconfigure/Web3jAutoConfiguration.java'], ['web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/context/SpringApplicationTest.java'], ['web3j-spring-boot-starter/src/main/java/org/web3j/spring/autoconfigure/Web3jProperties.java'], ['web3j-spring-boot-starter/src/test/java/org/web3j/spring/autoconfigure/Web3jAutoConfigurationTest.java']]"
+    }
+]

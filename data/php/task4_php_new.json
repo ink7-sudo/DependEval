@@ -1,0 +1,1674 @@
+[
+    {
+        "repo": "alfred-chrome-bookmarks",
+        "description": "An Alfred workflow for searching Chrome bookmarks.",
+        "function": "Directly reads Chrome bookmarks from JSON files without caching, supports searching by bookmark name and URL, and allows filtering by multiple or single profiles.",
+        "files": [
+            {
+                "file": "alfred-chrome-bookmarks/src/alfmarks.php",
+                "function": "The file defines a system for managing and querying bookmark data, allowing bookmarks to be sorted by score, converted to XML, and searched using a scoring algorithm based on term matching. It includes classes for handling bookmark collections, individual bookmarks, queries, and data sources."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/bootstrap.php",
+                "function": "The file defines a `Mock` class for intercepting and modifying the behavior of the `glob` function, allowing for custom handling of file pattern matching during testing."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/Unit.php",
+                "function": "The file defines a `Unit` class extending `PHPUnit_Framework_TestCase`, providing a `subject` method to create instances of the tested class, optionally mocking specified methods."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/src/BookmarkCollectionTest.php",
+                "function": "The file defines a test class `BookmarkCollectionTest` that checks if the `to_xml` method of `BookmarkCollection` returns an empty XML structure when no items are present."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/src/BookmarkModelTest.php",
+                "function": "This file contains unit tests for the `BookmarkModel` class, specifically testing the functionality of converting bookmark data into XML format, including handling URLs with ampersands."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/src/QueryTest.php",
+                "function": "The file contains unit tests for a `Query` class, verifying its ability to set and process search terms by generating corresponding regular expressions."
+            },
+            {
+                "file": "alfred-chrome-bookmarks/tests/src/SourceTest.php",
+                "function": "The file defines a test class for the `Source` class, focusing on testing its functionality related to reading and normalizing bookmark data from JSON profiles. It includes tests for reading bookmarks based on search terms, handling multiple profiles, and normalizing data."
+            }
+        ],
+        "gt": "[['alfred-chrome-bookmarks/tests/src/BookmarkCollectionTest.php'], ['alfred-chrome-bookmarks/tests/bootstrap.php'], ['alfred-chrome-bookmarks/tests/src/SourceTest.php'], ['alfred-chrome-bookmarks/tests/src/BookmarkModelTest.php'], ['alfred-chrome-bookmarks/tests/src/QueryTest.php'], ['alfred-chrome-bookmarks/src/alfmarks.php', 'alfred-chrome-bookmarks/tests/bootstrap.php'], ['alfred-chrome-bookmarks/tests/Unit.php', 'alfred-chrome-bookmarks/tests/bootstrap.php']]"
+    },
+    {
+        "repo": "anti-ddos-lite",
+        "description": "A PHP application designed to protect websites from DDoS attacks and bot crawling.",
+        "function": "Uses JavaScript checks to filter out bot traffic, displaying a blocking page for bots while allowing legitimate visitors to access the site. Can be integrated via Composer or directly into index.php.",
+        "files": [
+            {
+                "file": "anti-ddos-lite/anti-ddos-lite.php",
+                "function": "This PHP file initializes and configures an Anti-DDoS protection system, enabling debug mode, setting secure cookie parameters, and checking for remote IP addresses before applying the protection."
+            },
+            {
+                "file": "anti-ddos-lite/CleantalkAntiDdosLite.php",
+                "function": "The file defines a class `CleantalkAntiDdosLite` with a static method `init()` that includes the functionality of an anti-DDoS script by requiring the `anti-ddos-lite.php` file."
+            },
+            {
+                "file": "anti-ddos-lite/src/anti-ddos-lib.php",
+                "function": "This PHP file provides functions for DDoS protection, including setting secure cookies, checking for trusted visitors, and displaying a blocking screen for suspicious activity. It also includes mechanisms to handle different PHP versions for cookie setting."
+            },
+            {
+                "file": "anti-ddos-lite/src/not_rated_ua.php",
+                "function": "This PHP file defines an array of user agent patterns that are not rated, likely used to identify and exclude certain bots or crawlers from being tracked or analyzed."
+            }
+        ],
+        "gt": "[['anti-ddos-lite/src/anti-ddos-lib.php', 'anti-ddos-lite/anti-ddos-lite.php', 'anti-ddos-lite/CleantalkAntiDdosLite.php'], ['anti-ddos-lite/CleantalkAntiDdosLite.php'], ['anti-ddos-lite/src/not_rated_ua.php', 'anti-ddos-lite/src/anti-ddos-lib.php', 'anti-ddos-lite/anti-ddos-lite.php', 'anti-ddos-lite/CleantalkAntiDdosLite.php'], ['anti-ddos-lite/anti-ddos-lite.php', 'anti-ddos-lite/CleantalkAntiDdosLite.php'], ['anti-ddos-lite/anti-ddos-lite.php']]"
+    },
+    {
+        "repo": "composerpress",
+        "description": "A WordPress plugin that generates a composer.json file for a WordPress site.",
+        "function": "On activation, it creates a composer.json menu in the admin Tools section, allowing users to generate a composer.json file that reflects the current site's configuration. Supports various package sources including packagist, wpackagist, and private repositories.",
+        "files": [
+            {
+                "file": "composerpress/plugin.php",
+                "function": "This plugin generates a `composer.json` file by taking an inventory of installed plugins and themes in a WordPress environment. It requires Composer for dependency management."
+            },
+            {
+                "file": "composerpress/php/composerpress.php",
+                "function": "The file defines a `ComposerPress` class that integrates WordPress plugins with Composer, automatically detecting and managing plugins from various version control systems (HG, Git, SVN) or via WPackagist. It also populates a model with site details and plugin information for Composer usage."
+            },
+            {
+                "file": "composerpress/php/model.php",
+                "function": "The `Model` class manages project metadata and dependencies, allowing the addition of repositories, plugins, and extra data, and generates a JSON manifest for Composer."
+            },
+            {
+                "file": "composerpress/php/toolpage.php",
+                "function": "The file defines a WordPress admin tool page for managing and downloading a `composer.json` file. It includes settings for a fallback vendor, displays the JSON content, and allows users to download the file."
+            },
+            {
+                "file": "composerpress/php/plugin/gitplugin.php",
+                "function": "The file defines a `GitPlugin` class that extends a WordPress plugin class, integrating Git repository functionality. It retrieves version information and repository URLs, and identifies the plugin as using Git for version control."
+            },
+            {
+                "file": "composerpress/php/plugin/hgplugin.php",
+                "function": "The file defines a PHP class `HGPlugin` that extends a WordPress plugin class, providing methods to retrieve version information, determine version requirements, and fetch the URL of the Mercurial (hg) repository."
+            },
+            {
+                "file": "composerpress/php/plugin/plugininterface.php",
+                "function": "This interface defines methods for retrieving metadata about a plugin, including its name, version, and dependencies, as well as information related to its Composer package and version control system."
+            },
+            {
+                "file": "composerpress/php/plugin/svnplugin.php",
+                "function": "The file defines an SVNPlugin class that extends a WordPress plugin class, providing methods to retrieve version information, determine the version control system type, and fetch repository URL and reference details using an SQLite database."
+            },
+            {
+                "file": "composerpress/php/plugin/wordpressplugin.php",
+                "function": "This abstract class defines a WordPress plugin structure, providing methods to retrieve plugin metadata, check for and parse `composer.json` files, and abstract methods for version, dependency, and repository information."
+            },
+            {
+                "file": "composerpress/php/plugin/wpackagistplugin.php",
+                "function": "The file defines a `WPackagistPlugin` class that extends a base WordPress plugin class, providing methods to retrieve plugin versions, determine if it is a Packagist package, and get its VCS type and URL."
+            }
+        ],
+        "gt": "[['composerpress/php/composerpress.php'], ['composerpress/php/plugin/plugininterface.php'], ['composerpress/php/plugin/svnplugin.php'], ['composerpress/plugin.php', 'composerpress/php/composerpress.php'], ['composerpress/php/plugin/hgplugin.php'], ['composerpress/php/plugin/wordpressplugin.php'], ['composerpress/php/model.php'], ['composerpress/php/plugin/gitplugin.php'], ['composerpress/php/toolpage.php'], ['composerpress/php/plugin/wpackagistplugin.php']]"
+    },
+    {
+        "repo": "convertm1m2",
+        "description": "A script to automate the initial conversion of Magento 1 extensions to Magento 2.",
+        "function": "The script handles various aspects of conversion, including configurations, layouts, web files, email templates, i18n, templates, classes, controllers, observers, and PHP code. It automates tasks like ACL keys conversion, block class names, template namespaces, and PHP code optimizations, but requires manual adjustments for full functionality.",
+        "files": [
+            {
+                "file": "convertm1m2/convert.php",
+                "function": "This PHP script converts Magento 1 extensions to Magento 2, handling directory paths and conversion stages via command-line arguments or web requests. It logs the conversion process and execution time."
+            },
+            {
+                "file": "convertm1m2/ConvertM1M2.php",
+                "function": "The file defines a PHP class, `ConvertM1M2`, designed to convert Magento 1.x extensions to Magento 2.x. It handles various aspects of the conversion process, including file structure, class mappings, configuration files, layouts, templates, and more. The class provides methods to read, write, and transform files, ensuring compatibility with Magento 2's architecture and conventions."
+            },
+            {
+                "file": "convertm1m2/SimpleDOM.php",
+                "function": "This PHP file extends the `SimpleXMLElement` class to provide enhanced XML and HTML manipulation capabilities, including loading, modifying, and querying XML/HTML documents, as well as sorting and transforming nodes using XPath and XSLT."
+            },
+            {
+                "file": "convertm1m2/tests/AllcapsTest.php",
+                "function": "This file contains test cases for converting and parsing PHP code, ensuring that class names and methods are correctly processed, especially when dealing with all-caps class names."
+            },
+            {
+                "file": "convertm1m2/tests/ConvertM1M2TestCase.php",
+                "function": "The file defines a PHPUnit test case for ensuring that the test suite runs without errors when no tests are found, by asserting `true`."
+            },
+            {
+                "file": "convertm1m2/tests/FirstTest.php",
+                "function": "The file defines a test class `FirstTest` that extends `ConvertM1M2TestCase` and includes a test method `testSetup` to verify that `-1` equals `-1`."
+            },
+            {
+                "file": "convertm1m2/tests/TestableConvertM1M2.php",
+                "function": "The `TestableConvertM1M2` class extends `ConvertM1M2` and overrides the constructor to initialize a replacement map. It also provides a method to retrieve the current file being processed."
+            }
+        ],
+        "gt": "[['convertm1m2/ConvertM1M2.php', 'convertm1m2/convert.php'], ['convertm1m2/SimpleDOM.php', 'convertm1m2/convert.php'], ['convertm1m2/tests/FirstTest.php'], ['convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/AllcapsTest.php'], ['convertm1m2/tests/AllcapsTest.php'], ['convertm1m2/convert.php'], ['convertm1m2/ConvertM1M2.php', 'convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/AllcapsTest.php'], ['convertm1m2/tests/TestableConvertM1M2.php', 'convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/AllcapsTest.php'], ['convertm1m2/ConvertM1M2.php', 'convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/FirstTest.php'], ['convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/FirstTest.php'], ['convertm1m2/tests/TestableConvertM1M2.php', 'convertm1m2/tests/ConvertM1M2TestCase.php', 'convertm1m2/tests/FirstTest.php'], ['convertm1m2/tests/TestableConvertM1M2.php']]"
+    },
+    {
+        "repo": "Counter",
+        "description": "A hit counter package for Laravel 5.* applications.",
+        "function": "Tracks and displays page views for both static and dynamic pages, provides overall site hit counts, and uses cookies or IP fallback for accurate tracking. Offers options to display or process hits without showing them.",
+        "files": [
+            {
+                "file": "Counter/src/Counter.php",
+                "function": "The file defines a PHP class `Counter` that tracks and manages page views and visitor counts. It provides methods to show, increment, and retrieve view counts for specific pages or all pages, while optionally ignoring bots and honoring Do Not Track requests."
+            },
+            {
+                "file": "Counter/src/CounterServiceProvider.php",
+                "function": "This file defines a Laravel service provider for a counter package, registering a singleton instance of the `Counter` class and publishing migration files. It also loads routes if not cached."
+            },
+            {
+                "file": "Counter/src/routes.php",
+                "function": "This file sets a unique cookie if it doesn't already exist, with a configurable name and expiration time, using Laravel's routing and cookie management features."
+            },
+            {
+                "file": "Counter/src/Facades/CounterFacade.php",
+                "function": "The file defines a facade for accessing the 'counter' component in a Laravel application, simplifying its usage by providing a static interface."
+            },
+            {
+                "file": "Counter/src/migrations/2015_06_21_181359_create_kryptonit3_counter_page_table.php",
+                "function": "This file defines a migration to create a table named `kryptonit3_counter_page` with columns for `id` and a unique `page` string, and provides functionality to drop the table if needed."
+            },
+            {
+                "file": "Counter/src/migrations/2015_06_21_193003_create_kryptonit3_counter_visitor_table.php",
+                "function": "This file defines a migration to create a table named `kryptonit3_counter_visitor` with an auto-incrementing `id` and a unique `visitor` column, and provides functionality to drop the table if needed."
+            },
+            {
+                "file": "Counter/src/migrations/2015_06_21_193059_create_kryptonit3_counter_page_visitor_table.php",
+                "function": "This file defines a migration to create a table that tracks page visits by associating `page_id` and `visitor_id`, with timestamps for each visit."
+            },
+            {
+                "file": "Counter/src/Models/Page.php",
+                "function": "The file defines a `Page` model in a Laravel application, representing pages in a database table. It allows for tracking visitors associated with each page through a many-to-many relationship."
+            },
+            {
+                "file": "Counter/src/Models/Visitor.php",
+                "function": "The file defines a `Visitor` model in an Eloquent ORM structure, mapping to the `kryptonit3_counter_visitor` table. It allows for tracking visitors and their associations with pages through a many-to-many relationship."
+            }
+        ],
+        "gt": "[['Counter/src/CounterServiceProvider.php'], ['Counter/src/Models/Visitor.php'], ['Counter/src/routes.php', 'Counter/src/CounterServiceProvider.php'], ['Counter/src/migrations/2015_06_21_193059_create_kryptonit3_counter_page_visitor_table.php'], ['Counter/src/migrations/2015_06_21_193003_create_kryptonit3_counter_visitor_table.php'], ['Counter/src/Models/Page.php'], ['Counter/src/Facades/CounterFacade.php'], ['Counter/src/migrations/2015_06_21_181359_create_kryptonit3_counter_page_table.php'], ['Counter/src/Counter.php']]"
+    },
+    {
+        "repo": "dmarcts-report-viewer",
+        "description": "A PHP-based web interface for viewing and analyzing parsed DMARC reports stored in a MySQL or PostgreSQL database.",
+        "function": "Provides a user-friendly interface to view, filter, and sort DMARC reports, identify issues with color-coded icons, and display detailed DKIM/SPF information alongside raw XML reports. Uses AJAX for database interaction without external JavaScript libraries.",
+        "files": [
+            {
+                "file": "dmarcts-report-viewer/dmarcts-report-viewer-common.php",
+                "function": "This PHP file configures and provides functionality for a DMARC report viewer, allowing users to filter, sort, and display parsed DMARC reports with customizable options and database integration."
+            },
+            {
+                "file": "dmarcts-report-viewer/dmarcts-report-viewer-options.php",
+                "function": "This PHP script generates a web interface for viewing and managing DMARC reports, allowing users to configure options, filter reports by domain or organization, and customize the display using CSS files."
+            },
+            {
+                "file": "dmarcts-report-viewer/dmarcts-report-viewer-report-data.php",
+                "function": "This PHP script is a DMARC report viewer that fetches and displays parsed DMARC report data from a database, including details like sender IP, host name, message count, and authentication results, with options for sorting and filtering."
+            },
+            {
+                "file": "dmarcts-report-viewer/dmarcts-report-viewer-report-list.php",
+                "function": "This PHP script generates a report list of parsed DMARC reports, allowing users to filter and sort the data based on various criteria such as domain, organization, period, and DMARC result. It connects to a database, retrieves the relevant data, and formats it into an HTML table for display."
+            },
+            {
+                "file": "dmarcts-report-viewer/dmarcts-report-viewer.php",
+                "function": "This PHP script generates a web interface for viewing and filtering parsed DMARC reports, allowing users to select domains, organizations, periods, and other criteria to display relevant reports."
+            }
+        ],
+        "gt": "[['dmarcts-report-viewer/dmarcts-report-viewer.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-report-data.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-options.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-report-list.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-common.php', 'dmarcts-report-viewer/dmarcts-report-viewer.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-common.php', 'dmarcts-report-viewer/dmarcts-report-viewer-report-list.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-common.php', 'dmarcts-report-viewer/dmarcts-report-viewer-options.php'], ['dmarcts-report-viewer/dmarcts-report-viewer-common.php', 'dmarcts-report-viewer/dmarcts-report-viewer-report-data.php']]"
+    },
+    {
+        "repo": "docker-php-yii2",
+        "description": "A Docker image for PHP with extensions and Composer packages tailored for Yii 2.0 Framework applications.",
+        "function": "Provides PHP and Nginx configurations managed by Supervisor, includes CLI tools like Composer, Codeception, and PHPUnit, and supports various PHP extensions for Yii 2.0 development.",
+        "files": [
+            {
+                "file": "docker-php-yii2/test/requirements.php",
+                "function": "This script checks the system requirements for running a Yii framework application, including PHP extensions, database support, and security settings, and provides feedback on their status."
+            },
+            {
+                "file": "docker-php-yii2/test/app/web/index.php",
+                "function": "The file executes the `phpinfo()` function to display detailed information about the PHP configuration and environment."
+            },
+            {
+                "file": "docker-php-yii2/test/requirements/requirements.php",
+                "function": "This file defines the mandatory and optional PHP requirements for running a Yii Framework application, including PHP version, extensions, and specific versions of ICU and Intl for internationalization support."
+            },
+            {
+                "file": "docker-php-yii2/test/requirements/YiiRequirementChecker.php",
+                "function": "The file defines a `YiiRequirementChecker` class that checks if the system meets the requirements for running a Yii application. It evaluates various PHP configurations and extensions, collects the results, and renders a report for both web and console interfaces."
+            },
+            {
+                "file": "docker-php-yii2/test/requirements/views/console/index.php",
+                "function": "This script checks the server's PHP configuration and extensions to ensure it meets the requirements for running a Yii application, providing a summary of errors, warnings, and total checks."
+            },
+            {
+                "file": "docker-php-yii2/test/requirements/views/web/css.php",
+                "function": "This CSS file defines styles for a responsive web layout, including typography, links, tables, alerts, and media queries for different screen sizes. It also includes print-specific styles for better readability."
+            },
+            {
+                "file": "docker-php-yii2/test/requirements/views/web/index.php",
+                "function": "This file generates an HTML page that checks and displays the server's compatibility with Yii application requirements, including PHP version, extensions, and configuration settings. It provides a summary of passed, failed, or warning requirements."
+            }
+        ],
+        "gt": "[['docker-php-yii2/test/requirements/views/web/css.php'], ['docker-php-yii2/test/requirements/requirements.php'], ['docker-php-yii2/test/requirements/views/web/index.php'], ['docker-php-yii2/test/requirements/views/console/index.php'], ['docker-php-yii2/test/requirements.php', 'docker-php-yii2/test/requirements/YiiRequirementChecker.php'], ['docker-php-yii2/test/app/web/index.php'], ['docker-php-yii2/test/requirements/YiiRequirementChecker.php', 'docker-php-yii2/test/requirements.php']]"
+    },
+    {
+        "repo": "DX-Plugin-Base",
+        "description": "A WordPress plugin base that provides best practices and code snippets for creating custom plugins.",
+        "function": "Offers features like enqueueing JS/CSS, registering menu pages, custom post types, taxonomies, meta boxes, and shortcodes. Includes a settings page, custom widget, and AJAX data fetching capabilities.",
+        "files": [
+            {
+                "file": "DX-Plugin-Base/dx-plugin-base.php",
+                "function": "The file defines a WordPress plugin framework that provides a base for building custom plugins. It includes functionality for enqueuing scripts and styles, registering admin pages and meta boxes, creating custom post types and taxonomies, handling shortcodes and widgets, and managing AJAX requests."
+            },
+            {
+                "file": "DX-Plugin-Base/dx-plugin-settings.class.php",
+                "function": "This PHP class manages plugin settings by registering a checkbox for enabling/disabling functionality and a text field for additional input, with validation and helper methods for accessing these settings."
+            },
+            {
+                "file": "DX-Plugin-Base/inc/base-page-template.php",
+                "function": "This file defines a base plugin page for a WordPress plugin, including a form for saving settings, which interacts with the WordPress settings API."
+            },
+            {
+                "file": "DX-Plugin-Base/inc/dx-sample-widget.class.php",
+                "function": "This file defines a WordPress widget named \"DX Sample Widget,\" which displays a customizable title, sample text, and a dropdown menu with continent options. It includes methods for rendering the widget, updating its settings, and displaying its configuration form in the WordPress admin."
+            },
+            {
+                "file": "DX-Plugin-Base/inc/remote-page-template.php",
+                "function": "The file provides a WordPress plugin interface for performing AJAX-based operations, including saving a database option and fetching a URL title via an HTTP request."
+            }
+        ],
+        "gt": "[['DX-Plugin-Base/inc/remote-page-template.php', 'DX-Plugin-Base/dx-plugin-base.php'], ['DX-Plugin-Base/inc/base-page-template.php', 'DX-Plugin-Base/dx-plugin-base.php'], ['DX-Plugin-Base/dx-plugin-base.php'], ['DX-Plugin-Base/dx-plugin-settings.class.php', 'DX-Plugin-Base/dx-plugin-base.php'], ['DX-Plugin-Base/inc/dx-sample-widget.class.php', 'DX-Plugin-Base/dx-plugin-base.php']]"
+    },
+    {
+        "repo": "emailvalidator",
+        "description": "A free JSON API for email validation and verification.",
+        "function": "Provides a simple way to validate email addresses through a web API or a PHP class. Includes support for checking disposable email domains.",
+        "files": [
+            {
+                "file": "emailvalidator/emailvalidator.php",
+                "function": "The `emailvalidator` class provides functionality to validate email addresses by checking their format, domain validity, DNS MX records, and ensuring they are not from banned domains. It also caches banned domains from an external JSON source for efficient validation."
+            },
+            {
+                "file": "emailvalidator/index.php",
+                "function": "The file provides an email validation service via a JSON API. It checks email format, MX records, and disposable addresses, and returns validation results in JSON format. The HTML interface allows users to input an email address for verification."
+            }
+        ],
+        "gt": "[['emailvalidator/index.php'], ['emailvalidator/emailvalidator.php', 'emailvalidator/index.php']]"
+    },
+    {
+        "repo": "extended-template-parts",
+        "description": "A library that extends WordPress template parts with additional functionality.",
+        "function": "Allows passing variables into template parts without polluting globals, supports fragment caching using transients, and organizes templates in subdirectories for better file management.",
+        "files": [
+            {
+                "file": "extended-template-parts/extended-template-parts.php",
+                "function": "This file extends WordPress template functionality by including necessary files for extended template parts, specifically `functions.php` and `src/extended-template-part.php`."
+            },
+            {
+                "file": "extended-template-parts/functions.php",
+                "function": "The `get_extended_template_part` function extends the functionality of `get_template_part` by allowing the passing of variables and additional arguments, such as caching and directory settings, to a template part. It outputs the template part with the provided variables available within it."
+            },
+            {
+                "file": "extended-template-parts/src/extended-template-part.php",
+                "function": "The `Extended_Template_Part` class manages the loading and caching of template parts in WordPress, allowing for dynamic variables and arguments to be passed to the templates. It supports locating, loading, and caching template parts based on a slug and name, with optional caching for performance optimization."
+            }
+        ],
+        "gt": "[['extended-template-parts/functions.php', 'extended-template-parts/extended-template-parts.php'], ['extended-template-parts/extended-template-parts.php'], ['extended-template-parts/src/extended-template-part.php', 'extended-template-parts/extended-template-parts.php'], ['extended-template-parts/src/extended-template-part.php']]"
+    },
+    {
+        "repo": "git-deploy",
+        "description": "A tool for automating Git deployments using POST deploy hooks from GitHub and BitBucket.",
+        "function": "Allows users to configure repositories for automatic deployment upon receiving POST hooks. Supports private repositories via SSH keys and can be integrated with web servers like Apache or Nginx.",
+        "files": [
+            {
+                "file": "git-deploy/bitbucket.php",
+                "function": "This script automates the deployment of BitBucket git repositories by validating and processing incoming POST payloads, then deploying the specified branch if it matches the configured repository and branch."
+            },
+            {
+                "file": "git-deploy/deploy-config.php",
+                "function": "This PHP file configures deployment settings for multiple Git repositories, specifying local paths, branches, and optional callbacks for post-deployment actions. It also defines a log directory for deployment logs."
+            },
+            {
+                "file": "git-deploy/github.php",
+                "function": "This PHP script receives a GitHub webhook payload, validates it, and deploys the specified repository if the branch matches the configured one."
+            },
+            {
+                "file": "git-deploy/index.php",
+                "function": "The file contains the lyrics to the song \"Silent Night.\""
+            },
+            {
+                "file": "git-deploy/inc/class.deploy.php",
+                "function": "This PHP file defines an abstract `Deploy` class for automating Git repository deployments, handling payload validation, logging, and executing deployment commands. It allows registration of repositories and customization of logging settings."
+            },
+            {
+                "file": "git-deploy/inc/index.php",
+                "function": "The file contains the lyrics to the song \"Silent Night\" in PHP format."
+            }
+        ],
+        "gt": "[['git-deploy/inc/class.deploy.php', 'git-deploy/deploy-config.php', 'git-deploy/bitbucket.php'], ['git-deploy/inc/index.php'], ['git-deploy/deploy-config.php', 'git-deploy/bitbucket.php'], ['git-deploy/index.php'], ['git-deploy/bitbucket.php'], ['git-deploy/inc/class.deploy.php', 'git-deploy/deploy-config.php', 'git-deploy/github.php'], ['git-deploy/github.php'], ['git-deploy/deploy-config.php', 'git-deploy/github.php']]"
+    },
+    {
+        "repo": "gutenberg-object-plugin",
+        "description": "A WordPress plugin for saving Gutenberg editor data as an array in the database and exposing it via the REST API.",
+        "function": "Stores Gutenberg editor data in a custom database table, provides REST API endpoints to access and modify this data, and includes hooks and helper functions for customization and integration with other post types.",
+        "files": [
+            {
+                "file": "gutenberg-object-plugin/GutesObjectPlugin.php",
+                "function": "The plugin saves Gutenberg block data as an array into the database and provides an API to access this data. It includes functionality for database management, API endpoints, and hooks for integration."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/API.php",
+                "function": "This file defines a custom API for managing Gutenberg editor data, including routes for retrieving, saving, and fetching revisions of Gutenberg-based post content, along with database operations to store and retrieve this data."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/BlockAPI.php",
+                "function": "The file defines a WordPress REST API endpoint to retrieve all blocks or a specific block from a post or page, requiring the Gutenberg Object Plugin for functionality."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/Database.php",
+                "function": "This file defines a database class for a WordPress plugin that creates and deletes a custom table (`gutes_arrays`) during plugin activation and deactivation, respectively."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/Helpers.php",
+                "function": "The file defines a helper function `get_editor_blocks` that retrieves and decodes the Gutenberg editor blocks for a given post ID using an API class."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/Hooks.php",
+                "function": "This file defines a WordPress plugin hook class that registers a REST API field for retrieving editor block data for posts and custom post types, using a provided API to fetch the data."
+            },
+            {
+                "file": "gutenberg-object-plugin/src/Scripts.php",
+                "function": "The file defines a class that enqueues a custom JavaScript file for the WordPress block editor and localizes it with a nonce for REST API security."
+            }
+        ],
+        "gt": "[['gutenberg-object-plugin/src/API.php'], ['gutenberg-object-plugin/src/BlockAPI.php'], ['gutenberg-object-plugin/src/Helpers.php', 'gutenberg-object-plugin/GutesObjectPlugin.php'], ['gutenberg-object-plugin/src/Hooks.php'], ['gutenberg-object-plugin/src/Scripts.php'], ['gutenberg-object-plugin/src/Database.php'], ['gutenberg-object-plugin/GutesObjectPlugin.php']]"
+    },
+    {
+        "repo": "hierarchy",
+        "description": "A WordPress plugin that improves content management workflow by organizing Custom Post Types (CPTs) within the Pages menu.",
+        "function": "Hierarchy integrates CPT admin links into the Pages menu, providing a more contextual and organized editing experience. It also allows hiding CPT links from the sidebar and supports pagination and customization of menu entries.",
+        "files": [
+            {
+                "file": "hierarchy/hierarchy.php",
+                "function": "The plugin \"Hierarchy\" structures Pages, Posts, and Custom Post Types in WordPress, ensuring proper organization and hierarchy within the admin interface."
+            },
+            {
+                "file": "hierarchy/index.php",
+                "function": "The file is a placeholder or a protective measure, typically used to prevent directory listing or unauthorized access."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy-factory.php",
+                "function": "The file defines a `Hierarchy_Factory` class that builds and manages a hierarchical structure of pages and custom post types (CPTs). It processes pages and CPTs, organizes them into a structured hierarchy, and ensures proper placement based on settings and relationships."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy-i18n.php",
+                "function": "This file defines the internationalization functionality for a plugin, allowing it to load translation files and set the domain for localization."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy-settings.php",
+                "function": "The file defines a `Hierarchy_Settings` class that manages settings for a WordPress plugin, allowing customization of custom post types (CPTs) and their display in the admin menu, including options for hiding CPTs, setting pagination, and ordering CPTs in the hierarchy."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy-table-cpt.php",
+                "function": "The file defines a custom WordPress table class, `Hierarchy_Table_CPT`, which extends `WP_List_Table` to display and manage registered Custom Post Types (CPTs). It includes columns for CPT titles, options to prevent new entries, show entries, omit CPTs, and set order, with functionality to handle and display these columns."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy-table.php",
+                "function": "The file defines a `Hierarchy_Table` class that extends `WP_List_Table` to display hierarchical data in a structured table format within WordPress. It includes functionality to manage columns, handle custom post types, and generate actions for editing, viewing, and adding new posts or post types."
+            },
+            {
+                "file": "hierarchy/includes/class-hierarchy.php",
+                "function": "The file defines a WordPress plugin class, `Hierarchy`, which organizes and manages the display of pages, posts, and custom post types in the WordPress admin menu. It allows hiding specific post types from the admin menu, customizing menu positions, and providing shortcuts for adding new content."
+            },
+            {
+                "file": "hierarchy/includes/index.php",
+                "function": "The file is a placeholder or empty file, often used to prevent directory listing or to indicate that no content should be displayed."
+            },
+            {
+                "file": "hierarchy/languages/index.php",
+                "function": "The file is a placeholder or empty file, often used to prevent directory listing or to indicate that no content should be displayed."
+            }
+        ],
+        "gt": "[['hierarchy/includes/class-hierarchy-i18n.php', 'hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php'], ['hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php'], ['hierarchy/hierarchy.php'], ['hierarchy/includes/index.php'], ['hierarchy/includes/class-hierarchy-settings.php', 'hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php'], ['hierarchy/index.php'], ['hierarchy/includes/class-hierarchy-table-cpt.php', 'hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php'], ['hierarchy/languages/index.php'], ['hierarchy/includes/class-hierarchy-factory.php', 'hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php'], ['hierarchy/includes/class-hierarchy-table.php', 'hierarchy/includes/class-hierarchy.php', 'hierarchy/hierarchy.php']]"
+    },
+    {
+        "repo": "http_build_url",
+        "description": "A PHP library that replicates the functionality of the `http_build_url()` function from pecl_http for environments without it.",
+        "function": "Allows building and manipulating URLs by mimicking the pecl_http function's behavior. Includes a full suite of tests to ensure compatibility with the original function.",
+        "files": [
+            {
+                "file": "http_build_url/src/http_build_url.php",
+                "function": "This PHP file defines constants and a function to build and manipulate URLs by merging parts of one URL into another based on specified flags."
+            },
+            {
+                "file": "http_build_url/tests/bootstrap.php",
+                "function": "This file ensures compatibility with PHPUnit 6 by creating aliases for PHPUnit classes, allowing older test code to run seamlessly with newer PHPUnit versions."
+            },
+            {
+                "file": "http_build_url/tests/HttpBuildUrlTest.php",
+                "function": "The file contains a PHPUnit test class for `http_build_url`, which tests various functionalities of building and modifying URLs, including scheme, host, path, query, and fragment handling, as well as stripping or joining URL components."
+            }
+        ],
+        "gt": "[['http_build_url/src/http_build_url.php', 'http_build_url/tests/bootstrap.php'], ['http_build_url/tests/HttpBuildUrlTest.php'], ['http_build_url/tests/bootstrap.php']]"
+    },
+    {
+        "repo": "iOS-Receipt-Validator-PHP",
+        "description": "A PHP-based tool for validating iOS In-App Purchase (IAP) receipts.",
+        "function": "Validates iOS IAP receipts in either Sandbox or Production environments. Hosted on a PHP-enabled server with outbound web access, it provides a simple way to verify receipt authenticity.",
+        "files": [
+            {
+                "file": "iOS-Receipt-Validator-PHP/itunesReceiptValidator.php",
+                "function": "The `itunesReceiptValidator` class validates iTunes receipts by sending them to Apple's verification endpoints and decoding the response to ensure the receipt is valid."
+            },
+            {
+                "file": "iOS-Receipt-Validator-PHP/doc/example.php",
+                "function": "This script validates an iTunes receipt by determining the appropriate environment (sandbox or production) and using the `itunesReceiptValidator` class to process the receipt, displaying the result or any errors encountered."
+            },
+            {
+                "file": "iOS-Receipt-Validator-PHP/doc/index.php",
+                "function": "This tool allows users to validate iTunes In-App Purchase receipts by submitting them to a PHP script, which verifies the receipt against Apple's servers and displays the result."
+            }
+        ],
+        "gt": "[['iOS-Receipt-Validator-PHP/itunesReceiptValidator.php', 'iOS-Receipt-Validator-PHP/doc/example.php'], ['iOS-Receipt-Validator-PHP/doc/example.php'], ['iOS-Receipt-Validator-PHP/doc/index.php']]"
+    },
+    {
+        "repo": "php-sparkpost",
+        "description": "The official PHP library for interacting with the SparkPost REST API.",
+        "function": "Provides methods to send emails, manage templates, and handle API responses asynchronously or synchronously. It supports various HTTP clients and adapters for flexibility.",
+        "files": [
+            {
+                "file": "php-sparkpost/examples/bootstrap.php",
+                "function": "The file ensures the inclusion of the Composer autoloader, which automatically loads PHP classes and dependencies."
+            },
+            {
+                "file": "php-sparkpost/examples/debug/index.php",
+                "function": "This script initializes a SparkPost client to interact with the SparkPost API, retrieves a list of email templates, and handles the response or exceptions."
+            },
+            {
+                "file": "php-sparkpost/examples/message-events/get_message_events.php",
+                "function": "This script connects to the SparkPost API using an API key, fetches message event data for a specified campaign, and handles the response or errors."
+            },
+            {
+                "file": "php-sparkpost/examples/message-events/get_message_events_with_retry_logic.php",
+                "function": "This script initializes a SparkPost API client, fetches a message event using a specified campaign ID, and handles API responses or errors, including retries for server-side failures."
+            },
+            {
+                "file": "php-sparkpost/examples/templates/create_template.php",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['php-sparkpost/examples/message-events/get_message_events.php'], ['php-sparkpost/examples/message-events/get_message_events_with_retry_logic.php'], ['php-sparkpost/examples/debug/index.php'], ['php-sparkpost/examples/bootstrap.php', 'php-sparkpost/examples/debug/index.php'], ['php-sparkpost/examples/templates/create_template.php'], ['php-sparkpost/examples/bootstrap.php', 'php-sparkpost/examples/message-events/get_message_events_with_retry_logic.php'], ['php-sparkpost/examples/bootstrap.php', 'php-sparkpost/examples/message-events/get_message_events.php']]"
+    },
+    {
+        "repo": "phpsysinfo",
+        "description": "phpSysInfo is a PHP-based system monitoring tool.",
+        "function": "It provides detailed system information such as hardware, memory, CPU, and sensor data across various operating systems. Requires PHP 5.1.3 or later with specific extensions and disables PHP's safe_mode for system access.",
+        "files": [
+            {
+                "file": "phpsysinfo/includes/autoloader.inc.php",
+                "function": "This PHP file implements an autoloader to dynamically load classes and an error handler to manage custom error reporting for the application."
+            },
+            {
+                "file": "phpsysinfo/includes/class.CommonFunctions.inc.php",
+                "function": "The `CommonFunctions` class provides utility methods for various operations, including parsing log files, executing system programs, reading files, and handling directory operations. It also includes functions for checking PHP extensions and managing DMI memory data."
+            },
+            {
+                "file": "phpsysinfo/includes/class.Parser.inc.php",
+                "function": "The `Parser` class provides methods to parse system information from the output of commands like `lspci` and `df`. It extracts hardware device details from `lspci` output and filesystem information from `df` output, organizing the data into structured arrays for further use."
+            },
+            {
+                "file": "phpsysinfo/includes/error/class.PSI_Error.inc.php",
+                "function": "The `PSI_Error` class provides error handling and logging functionality for the `phpsysinfo` application. It allows adding errors, warnings, and config errors to an internal list, which can be converted to XML format for output or integration into an existing XML document."
+            },
+            {
+                "file": "phpsysinfo/includes/interface/class.PSI_Interface_OS.inc.php",
+                "function": "This file defines an interface for operating system classes in phpSysInfo, specifying methods required for retrieving encoding, building OS information, accessing system data, and getting the OS language."
+            },
+            {
+                "file": "phpsysinfo/includes/interface/class.PSI_Interface_Output.inc.php",
+                "function": "This file defines an interface `PSI_Interface_Output` that requires implementing a `run()` method to generate output for the phpSysInfo application."
+            },
+            {
+                "file": "phpsysinfo/includes/interface/class.PSI_Interface_Plugin.inc.php",
+                "function": "This file defines an interface for plugins in the phpSysInfo application, requiring plugins to implement `execute()` for pre-XML tasks and `xml()` to generate XML content."
+            },
+            {
+                "file": "phpsysinfo/includes/interface/class.PSI_Interface_Sensor.inc.php",
+                "function": "This file defines an interface for sensor classes in phpSysInfo, requiring the implementation of methods to build sensor information and retrieve motherboard sensor data."
+            },
+            {
+                "file": "phpsysinfo/includes/interface/class.PSI_Interface_UPS.inc.php",
+                "function": "This file defines an interface for UPS (Uninterruptible Power Supply) classes in phpSysInfo, requiring implementation of methods to build UPS information and retrieve UPSInfo objects."
+            },
+            {
+                "file": "phpsysinfo/includes/js/class.JavaScriptPacker.inc.php",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['phpsysinfo/includes/interface/class.PSI_Interface_Output.inc.php'], ['phpsysinfo/includes/js/class.JavaScriptPacker.inc.php', 'phpsysinfo/includes/autoloader.inc.php'], ['phpsysinfo/includes/error/class.PSI_Error.inc.php'], ['phpsysinfo/includes/interface/class.PSI_Interface_Plugin.inc.php'], ['phpsysinfo/includes/autoloader.inc.php'], ['phpsysinfo/includes/class.Parser.inc.php'], ['phpsysinfo/includes/interface/class.PSI_Interface_UPS.inc.php'], ['phpsysinfo/includes/class.CommonFunctions.inc.php'], ['phpsysinfo/includes/interface/class.PSI_Interface_Sensor.inc.php'], ['phpsysinfo/includes/interface/class.PSI_Interface_OS.inc.php'], ['phpsysinfo/includes/js/class.JavaScriptPacker.inc.php']]"
+    },
+    {
+        "repo": "Mercator",
+        "description": "Mercator is a modern domain mapping plugin for WordPress multisite networks.",
+        "function": "Allows mapping arbitrary domains to individual sites within a WordPress multisite network, enabling seamless access and user authentication across mapped domains.",
+        "files": [
+            {
+                "file": "Mercator/admin.php",
+                "function": "This file provides administrative UI and functionality for managing site aliases in a WordPress multisite network, allowing users to add, edit, activate, deactivate, and delete aliases for specific sites."
+            },
+            {
+                "file": "Mercator/class-mapping.php",
+                "function": "The `Mapping` class manages domain mappings for WordPress sites, allowing the creation, retrieval, update, and deletion of mappings. It handles setting domains as primary, activating or deactivating mappings, and ensures proper caching and error handling."
+            },
+            {
+                "file": "Mercator/class-network-mapping.php",
+                "function": "The `Network_Mapping` class manages domain mappings for a WordPress network, allowing the creation, retrieval, updating, and deletion of mappings. It handles domain validation, activation status, and caching for efficient operations."
+            },
+            {
+                "file": "Mercator/mercator.php",
+                "function": "This file is a WordPress plugin that enables multisite domain mapping, allowing users to map custom domains to their WordPress multisite network sites. It includes functionality for preflight checks, database table creation, domain mapping validation, and URL mangling for mapped domains."
+            },
+            {
+                "file": "Mercator/multinetwork.php",
+                "function": "This file enables cross-domain single-sign-on (SSO) for multinetwork setups in WordPress, allowing domain mappings and handling network and site lookups based on mapped domains. It also ensures URLs are correctly mangled to reflect the mapped domains."
+            },
+            {
+                "file": "Mercator/sso-multinetwork.php",
+                "function": "This file enables and configures cross-domain single sign-on (SSO) for multi-network setups in WordPress, ensuring consistent cookie handling and network identification across overlapping domains."
+            },
+            {
+                "file": "Mercator/sso.php",
+                "function": "This file implements a Single Sign-On (SSO) system for WordPress, enabling cross-domain authentication by managing cookie domains, handling login requests, and facilitating secure user redirection between domains."
+            },
+            {
+                "file": "Mercator/inc/admin/class-alias-list-table.php",
+                "function": "The file defines a class `Alias_List_Table` that extends `WP_List_Table` to display and manage a list of domain aliases for a specific site. It includes functionality to prepare items, define columns, handle bulk actions, and render table rows with options to edit, activate, deactivate, or delete aliases."
+            },
+            {
+                "file": "Mercator/inc/cli/class-mapping-command.php",
+                "function": "The file defines a WP-CLI command class for managing domain mappings, allowing users to list, retrieve, and delete mappings, with options to format the output."
+            },
+            {
+                "file": "Mercator/inc/cli/class-network-mapping-command.php",
+                "function": "The file defines a WP-CLI command class for managing network mappings, allowing users to list, retrieve, and delete mappings, with options to format output."
+            }
+        ],
+        "gt": "[['Mercator/admin.php', 'Mercator/mercator.php'], ['Mercator/sso.php', 'Mercator/mercator.php'], ['Mercator/class-mapping.php', 'Mercator/mercator.php'], ['Mercator/mercator.php'], ['Mercator/multinetwork.php', 'Mercator/mercator.php'], ['Mercator/sso-multinetwork.php', 'Mercator/mercator.php'], ['Mercator/class-network-mapping.php', 'Mercator/mercator.php'], ['Mercator/inc/cli/class-mapping-command.php', 'Mercator/mercator.php'], ['Mercator/inc/admin/class-alias-list-table.php', 'Mercator/mercator.php'], ['Mercator/inc/cli/class-network-mapping-command.php', 'Mercator/mercator.php'], ['Mercator/inc/cli/class-mapping-command.php']]"
+    },
+    {
+        "repo": "modern-images-wp",
+        "description": "A WordPress plugin for specifying default image formats for sub-sized images.",
+        "function": "Allows users to set the default image format for sub-sized images generated by WordPress, enhancing media management and optimization.",
+        "files": [
+            {
+                "file": "modern-images-wp/modern-images-wp.php",
+                "function": "The plugin enables the use of modern image formats (WebP, JPGXL, AVIF) as default for image sub-sizes in WordPress, provided the server supports these formats."
+            },
+            {
+                "file": "modern-images-wp/src/Plugin.php",
+                "function": "This PHP file defines a WordPress plugin class that manages image output formats and MIME types, allowing for the registration and customization of modern image formats like AVIF and JPEG XL."
+            },
+            {
+                "file": "modern-images-wp/src/Setting.php",
+                "function": "This PHP class manages settings for modern image formats (WebP, AVIF, JPEG XL) in WordPress, allowing administrators to configure image output formats and check for server support of these formats."
+            }
+        ],
+        "gt": "[['modern-images-wp/modern-images-wp.php'], ['modern-images-wp/src/Setting.php', 'modern-images-wp/modern-images-wp.php'], ['modern-images-wp/src/Plugin.php', 'modern-images-wp/modern-images-wp.php'], ['modern-images-wp/src/Setting.php']]"
+    },
+    {
+        "repo": "my-eyes-are-up-here",
+        "description": "A WordPress plugin for generating cropped thumbnails centered on detected faces.",
+        "function": "Detects faces in uploaded images and centers the crop on the average position of detected faces, avoiding undesirable crops like crotch shots in portrait images.",
+        "files": [
+            {
+                "file": "my-eyes-are-up-here/my-eyes-are-up-here.php",
+                "function": "The plugin detects faces during thumbnail cropping in WordPress and adjusts the crop position accordingly. It includes admin and AJAX functionality for handling face detection and localization."
+            },
+            {
+                "file": "my-eyes-are-up-here/includes/class-meauh-admin.php",
+                "function": "The file defines a WordPress admin class (`MEAUH_Admin`) that initializes and enqueues JavaScript and CSS assets for the plugin, including localization for AJAX functionality."
+            },
+            {
+                "file": "my-eyes-are-up-here/includes/class-meauh-ajax.php",
+                "function": "The file defines an AJAX handler class, `MEAUH_Ajax`, which manages image-related operations via AJAX in a WordPress plugin. It handles fetching and saving image data, including metadata for faces and hotspots, and ensures compatibility with the WP Offload S3 plugin."
+            },
+            {
+                "file": "my-eyes-are-up-here/includes/class-meauh-attachment.php",
+                "function": "The file defines a class `MEAUH_Attachment` that enhances WordPress image attachments by integrating face detection and hotspots for cropping. It allows for regenerating thumbnails while centering crops around detected faces or user-defined hotspots, and provides an interface for managing these features in the WordPress admin."
+            }
+        ],
+        "gt": "[['my-eyes-are-up-here/includes/class-meauh-ajax.php', 'my-eyes-are-up-here/my-eyes-are-up-here.php'], ['my-eyes-are-up-here/my-eyes-are-up-here.php'], ['my-eyes-are-up-here/includes/class-meauh-admin.php', 'my-eyes-are-up-here/my-eyes-are-up-here.php'], ['my-eyes-are-up-here/includes/class-meauh-attachment.php', 'my-eyes-are-up-here/my-eyes-are-up-here.php']]"
+    },
+    {
+        "repo": "omnipay-example",
+        "description": "An example web application showcasing payment processing using Omnipay.",
+        "function": "Demonstrates integration with various payment gateways supported by Omnipay, allowing users to configure and test different gateways with valid credentials.",
+        "files": [
+            {
+                "file": "omnipay-example/gateways.php",
+                "function": "The file lists various payment gateway options, including Mollie, PayPal, and Stripe."
+            },
+            {
+                "file": "omnipay-example/index.php",
+                "function": "This PHP file sets up a Silex application to manage payment gateway interactions, including configuring gateways, processing payments, and handling credit card operations."
+            }
+        ],
+        "gt": "[['omnipay-example/gateways.php', 'omnipay-example/index.php'], ['omnipay-example/index.php']]"
+    },
+    {
+        "repo": "pg2mysql",
+        "description": "A tool to convert PostgreSQL database dumps to MySQL format.",
+        "function": "Allows users to convert PostgreSQL SQL files to MySQL format via command-line or web interface. Supports configurable auto-increment key types and can be integrated into custom PHP applications.",
+        "files": [
+            {
+                "file": "pg2mysql/pg2mysql.inc.php",
+                "function": "This PHP script converts PostgreSQL SQL files to MySQL format, handling data types, syntax differences, and file processing for large files. It processes SQL statements, adjusts data types, and outputs the converted SQL to a new file."
+            },
+            {
+                "file": "pg2mysql/pg2mysql.php",
+                "function": "This file provides an online tool to convert PostgreSQL database dumps into MySQL-compatible SQL code, allowing users to paste their PostgreSQL dump and receive a converted MySQL version for import."
+            },
+            {
+                "file": "pg2mysql/pg2mysql_cli.php",
+                "function": "This script converts PostgreSQL database dumps to MySQL format, focusing on CREATE TABLE and INSERT INTO statements, while discarding stored procedures and other queries. It supports specifying an output engine and provides usage instructions."
+            }
+        ],
+        "gt": "[['pg2mysql/pg2mysql_cli.php'], ['pg2mysql/pg2mysql.php'], ['pg2mysql/pg2mysql.inc.php', 'pg2mysql/pg2mysql.php'], ['pg2mysql/pg2mysql.inc.php', 'pg2mysql/pg2mysql_cli.php'], ['pg2mysql/pg2mysql.inc.php']]"
+    },
+    {
+        "repo": "php-cli-colors",
+        "description": "A PHP library for adding colors to console output in CLI applications.",
+        "function": "Provides a simple way to use standard colors in PHP CLI apps, enhancing readability and visual appeal. Includes methods to apply colors and reset formatting.",
+        "files": [
+            {
+                "file": "php-cli-colors/rainbow.php",
+                "function": "This script demonstrates the usage of various text colors and styles (regular, bold, light, background) using the `Codedungeon\\PHPCliColors\\Color` library."
+            },
+            {
+                "file": "php-cli-colors/src/Color.php",
+                "function": "The file defines a PHP class for adding ANSI color codes to text, enabling text formatting (bold, underline, etc.) and color customization (foreground and background) for CLI output."
+            }
+        ],
+        "gt": "[['php-cli-colors/rainbow.php'], ['php-cli-colors/src/Color.php', 'php-cli-colors/rainbow.php'], ['php-cli-colors/src/Color.php']]"
+    },
+    {
+        "repo": "php-json-ld",
+        "description": "A PHP library for working with JSON-LD, a lightweight syntax for expressing Linked Data in JSON.",
+        "function": "Provides functionality to compact, expand, flatten, frame, and normalize JSON-LD documents. It also supports custom document loaders and secure HTTPS-only context loading.",
+        "files": [
+            {
+                "file": "php-json-ld/jsonld.php",
+                "function": "This PHP file implements a JSON-LD API, providing functions for compaction, expansion, flattening, framing, normalization, and conversion between JSON-LD and RDF. It supports various JSON-LD operations, including handling contexts, managing blank nodes, and parsing/serializing RDF datasets."
+            },
+            {
+                "file": "php-json-ld/test.php",
+                "function": "This PHP file provides a comprehensive suite of unit tests for JSON-LD functionality, including expansion, compaction, flattening, serialization to RDF, deserialization from RDF, framing, and normalization. It also generates an EARL report for test results."
+            }
+        ],
+        "gt": "[['php-json-ld/test.php'], ['php-json-ld/jsonld.php', 'php-json-ld/test.php']]"
+    },
+    {
+        "repo": "php-pushover",
+        "description": "A PHP wrapper for the Pushover API, enabling push notifications to iOS and Android devices.",
+        "function": "Provides methods to configure and send push notifications, including setting titles, messages, URLs, sounds, priorities, and handling user validation and debugging.",
+        "files": [
+            {
+                "file": "php-pushover/Pushover.php",
+                "function": "This PHP class provides a wrapper for the Pushover API, allowing users to send push notifications with various customizable parameters such as message content, priority, and device targeting."
+            },
+            {
+                "file": "php-pushover/test.php",
+                "function": "This script sends a notification using the Pushover API, configuring various parameters such as title, message, URL, device, priority, and sound, and then prints the response and receipt."
+            }
+        ],
+        "gt": "[['php-pushover/Pushover.php', 'php-pushover/test.php'], ['php-pushover/test.php']]"
+    },
+    {
+        "repo": "PHP-Websockets",
+        "description": "A WebSockets server implementation in PHP compliant with RFC-6455.",
+        "function": "Allows for the creation of a WebSockets server that can be run as a standalone server or integrated with an HTTP server. It supports browser-based WebSockets communication and requires custom implementation of connection handling and data processing.",
+        "files": [
+            {
+                "file": "PHP-Websockets/testwebsock.php",
+                "function": "The file defines an echo server using WebSocketServer, which listens on port 9000 and echoes back any message received from a client."
+            },
+            {
+                "file": "PHP-Websockets/users.php",
+                "function": "The file defines a `WebSocketUser` class to manage WebSocket connections, including properties for socket details, headers, and partial data handling. It also extends this class with `MyUser`, adding a custom `myId` property."
+            },
+            {
+                "file": "PHP-Websockets/websockets.php",
+                "function": "The file defines an abstract WebSocket server class in PHP, providing core functionality for handling WebSocket connections, including socket management, user connection/disconnection, message processing, and handshake protocols. It allows for customization through abstract methods for processing messages, handling connected/disconnected users, and other optional overrides."
+            }
+        ],
+        "gt": "[['PHP-Websockets/websockets.php', 'PHP-Websockets/testwebsock.php'], ['PHP-Websockets/users.php', 'PHP-Websockets/websockets.php', 'PHP-Websockets/testwebsock.php'], ['PHP-Websockets/testwebsock.php'], ['PHP-Websockets/users.php']]"
+    },
+    {
+        "repo": "phpwebsocket",
+        "description": "A PHP implementation of WebSockets for real-time communication.",
+        "function": "Enables full-duplex communication between a web browser and a server using WebSockets. Includes a server-side PHP script and a client-side HTML file for testing and demonstration purposes.",
+        "files": [
+            {
+                "file": "phpwebsocket/chatbot.demo.php",
+                "function": "This script implements a simple chatbot using WebSocket, responding to specific user inputs with predefined messages and system information."
+            },
+            {
+                "file": "phpwebsocket/server.php",
+                "function": "This script implements a WebSocket server that listens on localhost port 12345, handles client connections, and responds to basic text commands like \"hello,\" \"name,\" \"date,\" and \"bye.\""
+            },
+            {
+                "file": "phpwebsocket/websocket.class.php",
+                "function": "This PHP script implements a WebSocket server that listens for client connections, handles handshakes, processes incoming messages, and supports broadcasting messages to all connected clients."
+            },
+            {
+                "file": "phpwebsocket/websocket.demo.php",
+                "function": "This script sets up a basic WebSocket server on localhost at port 12345, which listens for client connections and echoes back any messages received."
+            }
+        ],
+        "gt": "[['phpwebsocket/chatbot.demo.php'], ['phpwebsocket/server.php'], ['phpwebsocket/websocket.class.php', 'phpwebsocket/websocket.demo.php'], ['phpwebsocket/websocket.demo.php'], ['phpwebsocket/websocket.class.php', 'phpwebsocket/chatbot.demo.php']]"
+    },
+    {
+        "repo": "pigeon",
+        "description": "Pigeon is a routing library for CodeIgniter that enhances the framework's basic routing capabilities.",
+        "function": "Provides HTTP method-based routing, RESTful resources, nested routes, and a natural DSL for defining routes. It simplifies the creation of complex routing structures and supports RESTful API design.",
+        "files": [
+            {
+                "file": "pigeon/libraries/pigeon.php",
+                "function": "The `Pigeon` class provides a routing system for CodeIgniter, allowing for flexible and RESTful routing configurations. It supports basic and HTTP verb-specific routing, as well as nested and resource-based routing, enabling dynamic URL parameter handling and namespace support."
+            },
+            {
+                "file": "pigeon/tests/pigeon_test.php",
+                "function": "This file is a PHPUnit test suite for Pigeon, a routing library for CodeIgniter, testing its functionality for defining and managing routes, including basic routes, HTTP verb-specific routes, RESTful resources, and nested resources."
+            }
+        ],
+        "gt": "[['pigeon/libraries/pigeon.php', 'pigeon/tests/pigeon_test.php'], ['pigeon/tests/pigeon_test.php']]"
+    },
+    {
+        "repo": "polyfill-apcu",
+        "description": "A Symfony Polyfill component for the APCu extension.",
+        "function": "Provides `apcu_*` functions and the `APCuIterator` class to support legacy APC extension functionality.",
+        "files": [
+            {
+                "file": "polyfill-apcu/Apcu.php",
+                "function": "This file provides a polyfill for APCu functions, allowing for the addition, storage, existence check, fetching, and deletion of cache entries, supporting both single and multiple key operations."
+            },
+            {
+                "file": "polyfill-apcu/bootstrap.php",
+                "function": "This file provides compatibility for APCu functions in environments where the APC or APCu extensions are not available, ensuring consistent functionality across different PHP versions and configurations."
+            },
+            {
+                "file": "polyfill-apcu/bootstrap80.php",
+                "function": "This file provides compatibility for APCu functions by defining them if they do not already exist, using either the Zend Data Cache extension or the APC extension as a fallback."
+            }
+        ],
+        "gt": "[['polyfill-apcu/Apcu.php'], ['polyfill-apcu/bootstrap.php'], ['polyfill-apcu/bootstrap80.php', 'polyfill-apcu/bootstrap.php'], ['polyfill-apcu/bootstrap80.php']]"
+    },
+    {
+        "repo": "pomf",
+        "description": "Pomf is a file hosting service that has been superseded by Uguu.",
+        "function": "Pomf provides file hosting with identical appearance and functionality to Uguu, allowing users to skip file expiration configuration for similar results.",
+        "files": [
+            {
+                "file": "pomf/static/php/grill.php",
+                "function": "The file initializes and displays grills using the `cuteGrills` class from the `Core` namespace."
+            },
+            {
+                "file": "pomf/static/php/upload.php",
+                "function": "This PHP script handles file uploads, processes them, and returns a response in JSON format. It validates the presence of uploaded files and manages errors during the upload process."
+            },
+            {
+                "file": "pomf/static/php/includes/Core.namespace.php",
+                "function": "The file defines a PHP application with classes for handling settings, database operations, file uploads, and responses. It manages configuration loading, database connection, file duplication checks, blacklist checks, and response formatting for various content types."
+            },
+            {
+                "file": "pomf/static/php/includes/Upload.class.php",
+                "function": "The file defines a PHP class `Upload` that handles file uploads, including processing, validation, and storage. It ensures files are checked against blacklists, generates unique names, and stores them in a specified directory while logging relevant details to a database."
+            }
+        ],
+        "gt": "[['pomf/static/php/includes/Upload.class.php', 'pomf/static/php/includes/Core.namespace.php'], ['pomf/static/php/grill.php'], ['pomf/static/php/includes/Core.namespace.php', 'pomf/static/php/includes/Upload.class.php', 'pomf/static/php/upload.php'], ['pomf/static/php/includes/Core.namespace.php', 'pomf/static/php/grill.php'], ['pomf/static/php/upload.php'], ['pomf/static/php/includes/Upload.class.php', 'pomf/static/php/upload.php'], ['pomf/static/php/includes/Upload.class.php', 'pomf/static/php/includes/Core.namespace.php', 'pomf/static/php/grill.php'], ['pomf/static/php/includes/Core.namespace.php', 'pomf/static/php/includes/Upload.class.php'], ['pomf/static/php/includes/Upload.class.php']]"
+    },
+    {
+        "repo": "qownnotesapi",
+        "description": "QOwnNotesAPI is a Nextcloud/ownCloud app that provides API access for QOwnNotes, a desktop notepad application.",
+        "function": "Enables QOwnNotes to interact with a Nextcloud/ownCloud server for note management, allowing synchronization and other related functionalities.",
+        "files": [
+            {
+                "file": "qownnotesapi/.php-cs-fixer.dist.php",
+                "function": "This file configures PHP-CS-Fixer to enforce coding standards and best practices, including Symfony rules, PHP version migrations, and strict type declarations, while excluding the 'var' directory."
+            },
+            {
+                "file": "qownnotesapi/3rdparty/finediff/finediff.php",
+                "function": "The file provides a PHP class for performing fine-grained text diffs, allowing users to compare two strings and generate a set of instructions to convert one into the other. It supports various granularity levels (character, word, sentence, paragraph) and can render the diff as plain text or HTML."
+            },
+            {
+                "file": "qownnotesapi/appinfo/routes.php",
+                "function": "This file defines API routes for managing notes in Nextcloud/ownCloud, including retrieving note versions, app information, trashed notes, and restoring deleted notes."
+            },
+            {
+                "file": "qownnotesapi/docker/qownnotesapi.config.php",
+                "function": "The file defines a PHP script with strict type checking enabled, ensuring that function arguments and return values adhere to specified data types."
+            },
+            {
+                "file": "qownnotesapi/lib/capabilities.php",
+                "function": "This file defines a class that implements the `ICapability` interface to provide capabilities for the QOwnNotesAPI, specifically indicating support for versioning."
+            },
+            {
+                "file": "qownnotesapi/lib/Controller/NoteApiController.php",
+                "function": "The file defines a PHP controller for managing notes in a Nextcloud/ownCloud environment, providing functionality to retrieve note versions, get server information, fetch trashed notes, and restore deleted notes."
+            },
+            {
+                "file": "qownnotesapi/tests/integration/AppTest.php",
+                "function": "This file is a PHP test class for verifying the installation of the \"QOwnNotesAPI\" app in Nextcloud/ownCloud. It checks if the app is installed using the app manager."
+            },
+            {
+                "file": "qownnotesapi/tests/unit/controller/NoteApiControllerTest.php",
+                "function": "This file contains unit tests for the `NoteApiController` class, verifying functionalities such as retrieving all versions of a file, fetching application information, listing trashed notes, and restoring trashed notes."
+            }
+        ],
+        "gt": "[['qownnotesapi/.php-cs-fixer.dist.php'], ['qownnotesapi/docker/qownnotesapi.config.php'], ['qownnotesapi/lib/capabilities.php'], ['qownnotesapi/tests/integration/AppTest.php'], ['qownnotesapi/appinfo/routes.php'], ['qownnotesapi/tests/unit/controller/NoteApiControllerTest.php'], ['qownnotesapi/3rdparty/finediff/finediff.php', 'qownnotesapi/lib/Controller/NoteApiController.php'], ['qownnotesapi/3rdparty/finediff/finediff.php'], ['qownnotesapi/lib/Controller/NoteApiController.php']]"
+    },
+    {
+        "repo": "radium-one-click-demo-install",
+        "description": "A one-click demo installer for WordPress developers to quickly set up demo content, widgets, and theme options.",
+        "function": "Imports WordPress content, widgets, and theme options with a single click. Supports Radium, Option Tree, and Redux frameworks. Requires specific files and allows customization of menus and theme options.",
+        "files": [
+            {
+                "file": "radium-one-click-demo-install/init.php",
+                "function": "This file defines a class `Radium_Theme_Demo_Data_Importer` that extends a theme data importer to set up demo data, including theme options, widgets, and content, for a WordPress theme. It also assigns menu locations based on imported data."
+            },
+            {
+                "file": "radium-one-click-demo-install/demo-files/index.php",
+                "function": "The file is a placeholder with no functional code, often used to prevent directory listing."
+            },
+            {
+                "file": "radium-one-click-demo-install/importer/parsers.php",
+                "function": "This file provides a parser for WordPress eXtended RSS (WXR) files, allowing the extraction of authors, posts, categories, tags, and terms. It supports parsing via SimpleXML, XML, or regular expressions as a fallback."
+            },
+            {
+                "file": "radium-one-click-demo-install/importer/radium-importer.php",
+                "function": "The `Radium_Theme_Importer` class facilitates the import of demo content, theme options, widgets, and menus into a WordPress site, allowing users to quickly set up the site with pre-configured data."
+            },
+            {
+                "file": "radium-one-click-demo-install/importer/wordpress-importer.php",
+                "function": "The WordPress Importer plugin allows users to import posts, pages, comments, custom fields, categories, tags, and more from a WordPress export (WXR) file into their current WordPress site. It handles the parsing of the WXR file, mapping of authors, and processing of various content types, including attachments."
+            }
+        ],
+        "gt": "[['radium-one-click-demo-install/importer/parsers.php', 'radium-one-click-demo-install/importer/wordpress-importer.php'], ['radium-one-click-demo-install/demo-files/index.php'], ['radium-one-click-demo-install/init.php'], ['radium-one-click-demo-install/importer/radium-importer.php', 'radium-one-click-demo-install/init.php'], ['radium-one-click-demo-install/importer/wordpress-importer.php'], ['radium-one-click-demo-install/importer/parsers.php']]"
+    },
+    {
+        "repo": "unifi-voucher-service",
+        "description": "A customizable voucher system for UniFi networks, designed for simplicity and automation.",
+        "function": "Integrates with UniFi Controller to generate and print Wi-Fi vouchers, automating guest network access. Includes a touchscreen interface, Brother printer support, and a lightweight GUI for Raspberry Pi.",
+        "files": [
+            {
+                "file": "unifi-voucher-service/index.php",
+                "function": "This file is a web interface for generating and displaying Wi-Fi voucher codes for different durations (e.g., 1 day, 1 week, 1 month) with options for both free and paid access."
+            },
+            {
+                "file": "unifi-voucher-service/index_custom.php",
+                "function": "This file is a web interface for generating and customizing Wi-Fi vouchers, allowing users to set parameters such as usage quota, expiration time, bandwidth limits, and byte quota, and then submit the form to create the voucher."
+            },
+            {
+                "file": "unifi-voucher-service/shutdown.php",
+                "function": "The file executes a shutdown command on the system using `sudo shutdown -h now`."
+            },
+            {
+                "file": "unifi-voucher-service/uvs_config.php",
+                "function": "This PHP file configures a UniFi Voucher Service, allowing the creation and customization of Wi-Fi access vouchers with various settings such as expiration times, bandwidth limits, and usage quotas."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-day-fastpass.php",
+                "function": "This PHP script integrates with the UniFi API to generate and print Wi-Fi vouchers, including creating voucher images, fetching voucher details, and sending print commands to a specified printer."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-day-free.php",
+                "function": "This PHP script generates and prints Wi-Fi vouchers for the UniFi network, including creating voucher codes, fetching network details, and generating a printable image of the voucher."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-month-fastpass.php",
+                "function": "This PHP script integrates with the UniFi API to generate and print Wi-Fi vouchers, including creating voucher images and sending print commands to a specified printer."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-month-free.php",
+                "function": "This PHP script integrates with the UniFi API to generate Wi-Fi vouchers, creates a printable image of the voucher, and sends it to a printer. It also reloads the page after the print operation is complete."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-week-fastpass.php",
+                "function": "This PHP script integrates with the UniFi API to generate and print Wi-Fi vouchers, including creating voucher images and sending print commands to a specified printer."
+            },
+            {
+                "file": "unifi-voucher-service/codes/1-week-free.php",
+                "function": "This PHP script integrates with the UniFi API to generate and print Wi-Fi vouchers, including creating voucher images and sending print commands to a specified printer."
+            },
+            {
+                "file": "unifi-voucher-service/codes/custom-voucher.php",
+                "function": "This PHP script generates and prints Wi-Fi vouchers for a UniFi network, fetching parameters via GET requests, creating a voucher image, and sending it to a printer."
+            }
+        ],
+        "gt": "[['unifi-voucher-service/codes/1-week-fastpass.php'], ['unifi-voucher-service/uvs_config.php', 'unifi-voucher-service/index.php'], ['unifi-voucher-service/codes/1-day-fastpass.php'], ['unifi-voucher-service/codes/custom-voucher.php'], ['unifi-voucher-service/shutdown.php'], ['unifi-voucher-service/index_custom.php'], ['unifi-voucher-service/codes/1-week-free.php'], ['unifi-voucher-service/codes/1-month-fastpass.php'], ['unifi-voucher-service/index.php'], ['unifi-voucher-service/codes/1-day-free.php'], ['unifi-voucher-service/codes/1-month-free.php'], ['unifi-voucher-service/uvs_config.php', 'unifi-voucher-service/index_custom.php']]"
+    },
+    {
+        "repo": "vCard-parser",
+        "description": "A simple and user-friendly vCard file parser.",
+        "function": "Parses single and multiple vCards from a file, allowing easy access to vCard elements as object members. Supports both single and multiple vCard modes, with options for collapsing single-value elements.",
+        "files": [
+            {
+                "file": "vCard-parser/test.php",
+                "function": "This file reads and parses a vCard file, then dynamically generates HTML to display the vCard's details, including name, photo, organization, contact information, and addresses."
+            },
+            {
+                "file": "vCard-parser/vCard.php",
+                "function": "The vCard class is designed for parsing and creating vCard files, supporting both single and multiple vCard entries within a file. It provides functionality to handle structured data, encode/decode values, and save embedded files, while also implementing Countable and Iterator interfaces for easy data access and manipulation."
+            },
+            {
+                "file": "vCard-parser/write-test.php",
+                "function": "This script creates and displays a vCard (electronic business card) with personal details such as name, phone numbers, and address."
+            }
+        ],
+        "gt": "[['vCard-parser/write-test.php'], ['vCard-parser/vCard.php', 'vCard-parser/test.php'], ['vCard-parser/vCard.php', 'vCard-parser/write-test.php'], ['vCard-parser/test.php'], ['vCard-parser/vCard.php']]"
+    },
+    {
+        "repo": "vuejs-wordpress-plugin-starter",
+        "description": "A starter plugin for integrating Vue.js with WordPress, facilitating modern frontend development within a WordPress environment.",
+        "function": "Utilizes Browsersync for live reloading and webpack for asset management. Provides a base PHP template for plugin settings UI and a Vue.js template for frontend development, allowing seamless integration of Vue.js components within WordPress plugins.",
+        "files": [
+            {
+                "file": "vuejs-wordpress-plugin-starter/index.php",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "vuejs-wordpress-plugin-starter/vwp-plugin.php",
+                "function": "The plugin integrates Vue.js into WordPress, adding an admin page, enqueuing custom styles and scripts, and providing settings links in the WordPress admin area. It also includes activation and deactivation hooks for setup and cleanup."
+            },
+            {
+                "file": "vuejs-wordpress-plugin-starter/inc/vwp-plugin-activate.php",
+                "function": "The file defines a class `VwpPluginActivate` with a static method `activate()` that flushes rewrite rules when the plugin is activated."
+            },
+            {
+                "file": "vuejs-wordpress-plugin-starter/inc/vwp-plugin-deactivate.php",
+                "function": "The file defines a class `VwpPluginDeactivate` with a static method `deactivate()` that flushes rewrite rules when the plugin is deactivated."
+            },
+            {
+                "file": "vuejs-wordpress-plugin-starter/templates/admin/index.php",
+                "function": "The file integrates Vue.js with WordPress and includes a BrowserSync script for local development."
+            }
+        ],
+        "gt": "[['vuejs-wordpress-plugin-starter/inc/vwp-plugin-deactivate.php', 'vuejs-wordpress-plugin-starter/vwp-plugin.php'], ['vuejs-wordpress-plugin-starter/templates/admin/index.php', 'vuejs-wordpress-plugin-starter/vwp-plugin.php'], ['vuejs-wordpress-plugin-starter/inc/vwp-plugin-activate.php', 'vuejs-wordpress-plugin-starter/vwp-plugin.php'], ['vuejs-wordpress-plugin-starter/vwp-plugin.php'], ['vuejs-wordpress-plugin-starter/index.php'], ['vuejs-wordpress-plugin-starter/inc/vwp-plugin-activate.php']]"
+    },
+    {
+        "repo": "woocommerce-delivery-notes",
+        "description": "A discontinued plugin for WooCommerce to print invoices and delivery notes.",
+        "function": "Allows WooCommerce store owners to generate and print invoices and delivery notes for orders. Provides a platform for community support and contributions via GitHub.",
+        "files": [
+            {
+                "file": "woocommerce-delivery-notes/woocommerce-delivery-notes.php",
+                "function": "This plugin enables WooCommerce stores to print invoices and delivery notes for orders, providing functionality to manage and customize these documents."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/class-wcdn-print.php",
+                "function": "This file defines a class `WooCommerce_Delivery_Notes_Print` that handles the generation and display of print templates for WooCommerce orders, including invoices, delivery notes, and receipts. It sets up endpoints, manages template locations, and ensures proper permissions for accessing order details."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/class-wcdn-settings.php",
+                "function": "This file defines a settings class for WooCommerce Delivery Notes, allowing customization of print templates, shop details, and invoice numbering, and includes functionality to add a settings tab, manage assets, and handle AJAX image loading."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/class-wcdn-theme.php",
+                "function": "This file defines a class that adds print functionality to WooCommerce orders, including print buttons on the 'My Account' and 'View Order' pages, and a print link in customer emails."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/class-wcdn-writepanel.php",
+                "function": "This file defines a class that adds functionality to WooCommerce for managing and printing delivery notes, including hooks for admin actions, scripts, styles, and bulk actions."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/wcdn-template-functions.php",
+                "function": "This file provides functions to manage and display print templates for WooCommerce orders, including retrieving template content, generating print links, displaying company information, and customizing order details for printing."
+            },
+            {
+                "file": "woocommerce-delivery-notes/includes/wcdn-template-hooks.php",
+                "function": "This file defines hooks and actions for customizing the header, navigation, and content sections of a WordPress theme, including adding styles and additional product fields."
+            },
+            {
+                "file": "woocommerce-delivery-notes/templates/print-order/print-content.php",
+                "function": "This file is a template for printing WooCommerce order details, including branding, addresses, order information, items, notes, and additional details like policies and imprint."
+            },
+            {
+                "file": "woocommerce-delivery-notes/templates/print-order/print-footer.php",
+                "function": "This file defines the footer section for printing WooCommerce orders, closing the HTML structure and triggering the `wcdn_after_page` action hook."
+            },
+            {
+                "file": "woocommerce-delivery-notes/templates/print-order/print-header.php",
+                "function": "This file defines the HTML structure for printing an order header in a WooCommerce invoice or delivery note template, including hooks for custom actions and dynamic content."
+            },
+            {
+                "file": "woocommerce-delivery-notes/templates/print-order/print-order.php",
+                "function": "This file is a template for printing WooCommerce orders, including hooks for customizing content before and after the template, loop, and individual order details."
+            }
+        ],
+        "gt": "[['woocommerce-delivery-notes/includes/class-wcdn-print.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/templates/print-order/print-order.php'], ['woocommerce-delivery-notes/templates/print-order/print-content.php'], ['woocommerce-delivery-notes/includes/wcdn-template-functions.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/includes/class-wcdn-theme.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/includes/wcdn-template-hooks.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/includes/class-wcdn-writepanel.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/templates/print-order/print-footer.php'], ['woocommerce-delivery-notes/templates/print-order/print-header.php'], ['woocommerce-delivery-notes/includes/class-wcdn-settings.php', 'woocommerce-delivery-notes/woocommerce-delivery-notes.php'], ['woocommerce-delivery-notes/includes/class-wcdn-theme.php']]"
+    },
+    {
+        "repo": "woocommerce-gateway-lightning",
+        "description": "A WooCommerce plugin for accepting Lightning Network payments.",
+        "function": "Integrates Lightning Charge with WooCommerce to enable Bitcoin Lightning payments. Allows store owners to configure their Lightning Charge server and API token for seamless payment processing.",
+        "files": [
+            {
+                "file": "woocommerce-gateway-lightning/woocommerce-gateway-lightning.php",
+                "function": "This plugin enables WooCommerce stores to accept Bitcoin Lightning payments by integrating a Lightning Network payment gateway. It handles invoice creation, payment processing, and webhook callbacks for real-time payment updates."
+            },
+            {
+                "file": "woocommerce-gateway-lightning/templates/completed.php",
+                "function": "Displays a confirmation page for a completed payment, showing details such as payment completion time, Lightning rhash, invoice amount, and payment request."
+            },
+            {
+                "file": "woocommerce-gateway-lightning/templates/payment.php",
+                "function": "This file generates a Lightning Network payment interface, displaying an invoice with a QR code and payment request, and includes a script to poll for payment confirmation and update the invoice expiration timer."
+            }
+        ],
+        "gt": "[['woocommerce-gateway-lightning/templates/completed.php', 'woocommerce-gateway-lightning/woocommerce-gateway-lightning.php'], ['woocommerce-gateway-lightning/woocommerce-gateway-lightning.php'], ['woocommerce-gateway-lightning/templates/payment.php', 'woocommerce-gateway-lightning/woocommerce-gateway-lightning.php']]"
+    },
+    {
+        "repo": "wp-spider-cache",
+        "description": "WP Spider Cache is a caching solution for WordPress that utilizes Memcached to enhance performance.",
+        "function": "Supports multiple Memcached servers, provides an admin interface for cache management, allows flushing specific keys and groups, and includes drop-in plugins for object and advanced caching.",
+        "files": [
+            {
+                "file": "wp-spider-cache/uninstall.php",
+                "function": "This script uninstalls a WordPress plugin by flushing the cache and deleting specific cache files (`object-cache.php` and `advanced-cache.php`) during the uninstallation process."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache.php",
+                "function": "The file defines a WordPress plugin named \"WP Spider Cache\" that provides a caching solution for WordPress. It includes an admin interface to manage cache groups, keys, and server contents, with features to flush cache groups, remove cache items, and view cached data. The plugin also supports AJAX actions for cache management and integrates with WordPress's object and output caching systems."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/drop-ins/advanced-cache.php",
+                "function": "The plugin \"Spider-Cache\" caches fully rendered pages for faster delivery and includes functions to initialize object and output caches unless caching is skipped."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/drop-ins/object-cache.php",
+                "function": "The plugin \"Spider-Cache\" enhances WordPress performance by storing and serving objects from a persistent cache. It includes necessary files for cache functionality and defines the plugin directory."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-object-base.php",
+                "function": "This PHP class provides a persistent object cache for WordPress, leveraging Memcached or other caching engines. It manages cache operations such as adding, retrieving, deleting, and updating cache items, while supporting global and non-persistent groups, server-specific operations, and BuddyPress integration."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-object-cache.php",
+                "function": "This file initializes an object cache system in a WordPress environment, using Memcached if available, or falling back to an in-memory cache otherwise."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-object-memcached.php",
+                "function": "This file defines a WordPress Object Cache extension using Memcached for persistent caching, enhancing performance by storing cache data in memory and reducing database trips."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-object-memory.php",
+                "function": "The file defines a class `WP_Spider_Cache_Object` that implements an object cache for WordPress, allowing data to be stored in memory to reduce database trips. It provides methods for adding, retrieving, deleting, and managing cached data, with support for global and blog-specific cache groups in a multisite environment."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-object-redis.php",
+                "function": "This file defines a Redis-powered persistent object cache for WordPress, extending the `WP_Spider_Cache_Object_Base` class to store and retrieve cache data using Redis as the backend."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-output-cache.php",
+                "function": "The file defines a WordPress output caching class, `WP_Spider_Cache_Output`, which caches page responses based on various conditions like request frequency, cookies, and headers. It manages cache expiration, headers, and debug information, and supports conditional caching and redirection handling."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/class-var-dump.php",
+                "function": "The file defines a class `WP_Spider_Cache_Var_Dump` that provides methods to visually format and display detailed information about variables, including handling multiple variables, trimming, escaping, and truncating strings, and enhancing the output for better readability."
+            },
+            {
+                "file": "wp-spider-cache/wp-spider-cache/includes/functions.php",
+                "function": "This file provides a comprehensive set of functions for managing cache operations, primarily based on Memcached methods, but designed to be engine-agnostic. It includes functions for adding, retrieving, deleting, and manipulating cache data, as well as managing cache servers and options."
+            }
+        ],
+        "gt": "[['wp-spider-cache/wp-spider-cache/includes/class-var-dump.php', 'wp-spider-cache/wp-spider-cache.php'], ['wp-spider-cache/wp-spider-cache/drop-ins/advanced-cache.php'], ['wp-spider-cache/wp-spider-cache/includes/class-object-cache.php', 'wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/includes/class-object-memcached.php', 'wp-spider-cache/wp-spider-cache/includes/class-object-cache.php', 'wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/includes/class-object-redis.php'], ['wp-spider-cache/uninstall.php'], ['wp-spider-cache/wp-spider-cache/includes/class-object-memory.php', 'wp-spider-cache/wp-spider-cache/includes/class-object-cache.php', 'wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/includes/class-output-cache.php', 'wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/includes/class-object-base.php', 'wp-spider-cache/wp-spider-cache/includes/class-object-cache.php', 'wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/includes/functions.php'], ['wp-spider-cache/wp-spider-cache/drop-ins/object-cache.php'], ['wp-spider-cache/wp-spider-cache.php']]"
+    },
+    {
+        "repo": "yandex-money-sdk-php",
+        "description": "A PHP SDK for integrating with the Yandex.Money API.",
+        "function": "Enables payments from Yandex.Money wallets and bank cards without authorization. Provides methods for obtaining tokens, processing payments, and retrieving account information.",
+        "files": [
+            {
+                "file": "yandex-money-sdk-php/lib/api.php",
+                "function": "The file defines a PHP class for interacting with the Yandex.Money API, providing methods to retrieve account information, manage payments, handle transfers, and authenticate users via OAuth."
+            },
+            {
+                "file": "yandex-money-sdk-php/lib/base.php",
+                "function": "The file defines a base API class for sending HTTP requests to the Yandex.Money service, handling authentication, and processing responses, including error handling based on HTTP status codes."
+            },
+            {
+                "file": "yandex-money-sdk-php/lib/exceptions.php",
+                "function": "This file defines custom exception classes for handling API-related errors, including format errors, scope issues, token problems, and server errors, each with specific error messages and HTTP status codes."
+            },
+            {
+                "file": "yandex-money-sdk-php/lib/external_payment.php",
+                "function": "The file defines a PHP class `ExternalPayment` for handling external bank card payments via the Yandex.Money API, providing methods to register an application instance and process external payment requests."
+            },
+            {
+                "file": "yandex-money-sdk-php/tests/ExternalPaymentTest.php",
+                "function": "The file defines a PHPUnit test class, `ExternalPaymentTest`, which verifies the successful retrieval of an instance ID using the `YandexMoney\\ExternalPayment` class and a client ID."
+            },
+            {
+                "file": "yandex-money-sdk-php/tests/MainTest.php",
+                "function": "This PHP file contains unit tests for the YandexMoney API, covering functionalities such as token management, account information retrieval, operation history, and payment processing."
+            }
+        ],
+        "gt": "[['yandex-money-sdk-php/lib/base.php', 'yandex-money-sdk-php/lib/external_payment.php', 'yandex-money-sdk-php/tests/ExternalPaymentTest.php'], ['yandex-money-sdk-php/lib/external_payment.php', 'yandex-money-sdk-php/tests/ExternalPaymentTest.php'], ['yandex-money-sdk-php/lib/exceptions.php', 'yandex-money-sdk-php/lib/base.php', 'yandex-money-sdk-php/lib/external_payment.php', 'yandex-money-sdk-php/tests/ExternalPaymentTest.php'], ['yandex-money-sdk-php/lib/api.php', 'yandex-money-sdk-php/tests/MainTest.php'], ['yandex-money-sdk-php/tests/ExternalPaymentTest.php'], ['yandex-money-sdk-php/tests/MainTest.php'], ['yandex-money-sdk-php/lib/base.php', 'yandex-money-sdk-php/lib/api.php', 'yandex-money-sdk-php/tests/MainTest.php'], ['yandex-money-sdk-php/lib/exceptions.php', 'yandex-money-sdk-php/lib/base.php', 'yandex-money-sdk-php/lib/api.php', 'yandex-money-sdk-php/tests/MainTest.php']]"
+    },
+    {
+        "repo": "acf-cf7",
+        "description": "A plugin that adds a 'Contact Form 7' field type to the Advanced Custom Fields WordPress plugin.",
+        "function": "Allows users to store and manage one or multiple Contact Form 7 forms within Advanced Custom Fields, with options to disable forms and return Contact Form 7 markup.",
+        "files": [
+            {
+                "file": "acf-cf7/acf-cf7-v4.php",
+                "function": "This PHP file defines a custom field type for Advanced Custom Fields (ACF) that integrates with Contact Form 7 (CF7). It allows users to select and manage CF7 forms within ACF, with options to allow null values, select multiple forms, and disable specific forms from being selected."
+            },
+            {
+                "file": "acf-cf7/acf-cf7-v5.php",
+                "function": "This file defines a custom field type for Advanced Custom Fields (ACF) that integrates with Contact Form 7, allowing users to select and display Contact Form 7 forms within ACF fields."
+            },
+            {
+                "file": "acf-cf7/acf-cf7.php",
+                "function": "This plugin integrates Contact Form 7 with Advanced Custom Fields (ACF), allowing users to add one or more Contact Form 7 forms to ACF fields. It supports both ACF version 4 and version 5."
+            }
+        ],
+        "gt": "[['acf-cf7/acf-cf7-v4.php', 'acf-cf7/acf-cf7.php'], ['acf-cf7/acf-cf7-v5.php', 'acf-cf7/acf-cf7.php'], ['acf-cf7/acf-cf7.php'], ['acf-cf7/acf-cf7-v5.php']]"
+    },
+    {
+        "repo": "Advance_Shopping_cart",
+        "description": "An advanced shopping cart system built with PHP and MySQLi.",
+        "function": "Allows users to manage products in a shopping cart, with features for adding product details such as name, price, and image. Requires initial database setup with predefined product values.",
+        "files": [
+            {
+                "file": "Advance_Shopping_cart/cart.php",
+                "function": "This file manages a shopping cart functionality, allowing users to view and remove products from their cart, and displays the total price of the items in the cart."
+            },
+            {
+                "file": "Advance_Shopping_cart/index.php",
+                "function": "This PHP file manages a shopping cart functionality by adding products to a session-based cart and displaying product data fetched from a database. It includes HTML for rendering a shopping cart page with product listings."
+            },
+            {
+                "file": "Advance_Shopping_cart/php/component.php",
+                "function": "The file defines two PHP functions: `component` generates an HTML product card with details like name, price, image, and an \"Add to Cart\" button, while `cartElement` creates an HTML form for displaying and managing items in a shopping cart, including options to remove or save items."
+            },
+            {
+                "file": "Advance_Shopping_cart/php/CreateDb.php",
+                "function": "The file defines a PHP class `CreateDb` that automates the creation of a MySQL database and table for storing product information. It also includes a method to retrieve product data from the created table."
+            },
+            {
+                "file": "Advance_Shopping_cart/php/header.php",
+                "function": "This file defines a responsive navigation bar for a shopping cart application, featuring a brand logo, a cart icon with a dynamic item count, and a collapsible menu for smaller screens."
+            }
+        ],
+        "gt": "[['Advance_Shopping_cart/php/CreateDb.php', 'Advance_Shopping_cart/index.php'], ['Advance_Shopping_cart/php/header.php', 'Advance_Shopping_cart/index.php'], ['Advance_Shopping_cart/php/header.php', 'Advance_Shopping_cart/cart.php'], ['Advance_Shopping_cart/index.php'], ['Advance_Shopping_cart/php/CreateDb.php', 'Advance_Shopping_cart/cart.php'], ['Advance_Shopping_cart/cart.php'], ['Advance_Shopping_cart/php/component.php', 'Advance_Shopping_cart/cart.php'], ['Advance_Shopping_cart/php/component.php', 'Advance_Shopping_cart/index.php']]"
+    },
+    {
+        "repo": "ASSL",
+        "description": "A project for checking LET (likely an acronym or abbreviation)",
+        "function": "Provides information or functionality related to LET, though the specific purpose is unclear without additional context.",
+        "files": [
+            {
+                "file": "ASSL/web/html/index.php",
+                "function": "This PHP script manages an AutoSSL verification process, allowing users to submit CSR (Certificate Signing Request) data and optional personal information. It handles language selection, form submission, and backend processing to verify and process SSL certificates."
+            },
+            {
+                "file": "ASSL/web/html/lang/en.php",
+                "function": "This PHP file defines a language array (`$LANG`) containing text strings for an SSL certificate request and validation process, including prompts, error messages, and instructions for user interaction."
+            },
+            {
+                "file": "ASSL/web/html/lang/nl.php",
+                "function": "This PHP file defines a set of language variables for a Dutch-language interface, primarily related to SSL certificate requests and validation processes."
+            },
+            {
+                "file": "ASSL/web/html/lang/sv.php",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['ASSL/web/html/lang/en.php'], ['ASSL/web/html/index.php'], ['ASSL/web/html/lang/sv.php', 'ASSL/web/html/index.php'], ['ASSL/web/html/lang/nl.php']]"
+    },
+    {
+        "repo": "basis-data-export",
+        "description": "A utility to export and save Basis Health Tracker sensor data.",
+        "function": "Allows users to download their biometric, sleep, and activity data from Basis in various formats (JSON, CSV, HTML) via interactive mode, command-line arguments, or web browser. Data is saved in a structured format with detailed metrics.",
+        "files": [
+            {
+                "file": "basis-data-export/basisdataexport.php",
+                "function": "This script exports biometric, sleep, and activity data from a Basis device, allowing users to specify credentials, date, and export format via command line, interactive mode, or web browser."
+            },
+            {
+                "file": "basis-data-export/BasisExport.class.php",
+                "function": "The file defines a PHP class, `BasisExport`, which facilitates the export of biometric data (metrics, sleep, and activities) from a Basis device. It authenticates with the Basis server, retrieves data for a specified date, and saves the data in various formats (JSON, CSV, HTML)."
+            }
+        ],
+        "gt": "[['basis-data-export/basisdataexport.php'], ['basis-data-export/BasisExport.class.php', 'basis-data-export/basisdataexport.php']]"
+    },
+    {
+        "repo": "bitcoind-status",
+        "description": "A PHP application to display status and information from a Bitcoin node daemon.",
+        "function": "Connects to a Bitcoin node via RPC to fetch and display statistics, including connection details, peer information, and node uptime. It also supports collecting and visualizing connection statistics using Google Charts.",
+        "files": [
+            {
+                "file": "bitcoind-status/chartdata.php",
+                "function": "This PHP script generates JavaScript data for charts based on the requested statistic ('connection' or 'peer') from a Bitcoin status page, fetching and formatting data from specified JSON files."
+            },
+            {
+                "file": "bitcoind-status/index.php",
+                "function": "This PHP script manages a Bitcoin status page, handling configuration, caching, and data retrieval, and integrates with a template for display."
+            },
+            {
+                "file": "bitcoind-status/peercount.php",
+                "function": "This script collects and stores statistics about Bitcoin peers, categorizing them based on their node types, and allows for viewing or clearing the data via specific HTTP requests."
+            },
+            {
+                "file": "bitcoind-status/stats.php",
+                "function": "This script collects and manages Bitcoin network statistics, allowing authorized users to view or clear the data, and periodically updates the stats while removing outdated entries."
+            },
+            {
+                "file": "bitcoind-status/php/config.sample.php",
+                "function": "This PHP file defines a configuration array for a Bitcoin node status page, specifying settings for RPC connections, UI display options, caching, peer information, and system-related parameters."
+            },
+            {
+                "file": "bitcoind-status/php/config.vagrant.php",
+                "function": "This PHP file defines a configuration array for a Bitcoin node status page, specifying settings for RPC connections, UI display options, caching, peer information, and system-related parameters."
+            },
+            {
+                "file": "bitcoind-status/php/easybitcoin.php",
+                "function": "The file defines a PHP class, `Bitcoin`, that facilitates communication with Bitcoin's API. It allows users to make API calls to a Bitcoin node, handle SSL connections, and manage responses and errors."
+            },
+            {
+                "file": "bitcoind-status/php/functions.php",
+                "function": "This PHP file provides functionality to monitor and display the status of a Bitcoin node, including blockchain and network information, peer details, geolocation data, and system metrics. It caches data to optimize performance and supports various display options configurable through settings."
+            }
+        ],
+        "gt": "[['bitcoind-status/stats.php'], ['bitcoind-status/index.php'], ['bitcoind-status/php/config.vagrant.php'], ['bitcoind-status/peercount.php'], ['bitcoind-status/php/config.sample.php'], ['bitcoind-status/php/functions.php', 'bitcoind-status/index.php'], ['bitcoind-status/php/easybitcoin.php', 'bitcoind-status/stats.php'], ['bitcoind-status/chartdata.php'], ['bitcoind-status/php/easybitcoin.php', 'bitcoind-status/peercount.php'], ['bitcoind-status/php/easybitcoin.php', 'bitcoind-status/php/functions.php', 'bitcoind-status/index.php'], ['bitcoind-status/php/easybitcoin.php', 'bitcoind-status/php/functions.php']]"
+    },
+    {
+        "repo": "blockpage",
+        "description": "PiPass is an extension for Pi-Hole that enhances its functionality with temporary unblocking and a visually appealing blockpage.",
+        "function": "It provides an easy-to-use blockpage with options to temporarily unblock websites, integrates seamlessly with Pi-Hole, and is written in PHP for easy installation and customization.",
+        "files": [
+            {
+                "file": "blockpage/config.php",
+                "function": "This PHP file configures the PiPass system by reading settings from an INI file and providing default values for various configuration options, such as language, technical info display, blockpage URL, unblock settings, and timezone."
+            },
+            {
+                "file": "blockpage/index.php",
+                "function": "This script redirects the current page to a specified blockpage URL from the configuration file, passing the current host as a parameter."
+            },
+            {
+                "file": "blockpage/blockpage/index.php",
+                "function": "This PHP script generates a block page for a website, sanitizes user input, and provides options to navigate to a safe URL, request an unblock, or temporarily unblock the site. It also checks for updates and displays technical information if enabled."
+            },
+            {
+                "file": "blockpage/blockpage/unblock/index.php",
+                "function": "This PHP script handles the display of a blocked webpage interface and provides functionality to temporarily unblock a URL by adding it to a whitelist for a specified duration."
+            },
+            {
+                "file": "blockpage/locale/locale-de.php",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['blockpage/blockpage/index.php'], ['blockpage/index.php'], ['blockpage/config.php', 'blockpage/index.php'], ['blockpage/locale/locale-de.php'], ['blockpage/blockpage/unblock/index.php']]"
+    },
+    {
+        "repo": "blog-extractor",
+        "description": "A tool for extracting individual blogs from a WordPress multisite network.",
+        "function": "Extracts a single blog's data (SQL dump, uploads, plugins, themes, etc.) into a tar file, allowing it to be set up as a standalone site. Includes instructions for setting up the new site, such as updating table prefixes and URLs.",
+        "files": [
+            {
+                "file": "blog-extractor/blog-extractor.php",
+                "function": "The plugin provides a WP-CLI command (`extract`) to extract a single blog from a WordPress multisite network. It utilizes the `Blog_Extract` class for handling the extraction process."
+            },
+            {
+                "file": "blog-extractor/inc/class-blog-extract.php",
+                "function": "This script extracts and archives a WordPress multisite blog's database and files, including uploads, plugins, themes, and other relevant directories, into a compressed archive for migration or backup purposes."
+            }
+        ],
+        "gt": "[['blog-extractor/blog-extractor.php'], ['blog-extractor/inc/class-blog-extract.php', 'blog-extractor/blog-extractor.php']]"
+    },
+    {
+        "repo": "Cart",
+        "description": "A simple PHP library for managing shopping cart functionality.",
+        "function": "Allows adding, updating, and removing items with customizable attributes. Supports session or cookie storage, and provides methods for retrieving cart data, checking cart status, and calculating totals.",
+        "files": [
+            {
+                "file": "Cart/class.Cart.php",
+                "function": "The `Cart` class provides functionality for managing a shopping cart, including adding, updating, and removing items, checking cart status, and calculating totals based on item attributes. It supports session and cookie storage for cart data."
+            },
+            {
+                "file": "Cart/example.php",
+                "function": "The file defines a simple e-commerce shopping cart system, allowing users to add, update, and remove products from their cart, and view the cart contents with total pricing. It also includes a checkout page for reviewing cart items."
+            }
+        ],
+        "gt": "[['Cart/class.Cart.php', 'Cart/example.php'], ['Cart/example.php']]"
+    },
+    {
+        "repo": "cartesian-product",
+        "description": "A PHP library for generating Cartesian products from multi-dimensional arrays.",
+        "function": "Provides a function to compute all possible combinations from a given array, supports closures for dynamic generation, and offers methods to output results as arrays or count combinations efficiently.",
+        "files": [
+            {
+                "file": "cartesian-product/src/CartesianProduct.php",
+                "function": "The `CartesianProduct` class generates the Cartesian product of a multidimensional array or iterable, allowing iteration over all possible combinations of its elements. It also provides methods to convert the result to an array and count the total number of combinations."
+            },
+            {
+                "file": "cartesian-product/src/function.php",
+                "function": "The file defines a function `cartesian_product` that takes a multidimensional array as input and returns a `CartesianProduct` object, enabling the computation of the Cartesian product of the input set."
+            },
+            {
+                "file": "cartesian-product/tests/CountableIterator.php",
+                "function": "The `CountableIterator` class implements `IteratorAggregate` and `Countable` interfaces, allowing iteration over and counting of an array of items."
+            },
+            {
+                "file": "cartesian-product/tests/TestCartesianProduct.php",
+                "function": "This file contains unit tests for a Cartesian product function, verifying its ability to generate all possible combinations from given sets, handle edge cases, and manage different input types."
+            }
+        ],
+        "gt": "[['cartesian-product/src/function.php'], ['cartesian-product/tests/TestCartesianProduct.php'], ['cartesian-product/tests/CountableIterator.php'], ['cartesian-product/src/CartesianProduct.php', 'cartesian-product/src/function.php']]"
+    },
+    {
+        "repo": "cmb2-attached-posts",
+        "description": "A custom field extension for CMB2 that allows attaching and managing post IDs.",
+        "function": "Enables users to attach, rearrange, and search for posts, saving their IDs in an array. Supports customization of post queries, thumbnail display, and search filters.",
+        "files": [
+            {
+                "file": "cmb2-attached-posts/cmb2-attached-posts-field.php",
+                "function": "This file is a loader for the CMB2 Attached Posts Field plugin, ensuring that only the latest version of the library is loaded and used in WordPress."
+            },
+            {
+                "file": "cmb2-attached-posts/example-field-setup.php",
+                "function": "This file sets up a custom meta box in WordPress using CMB2 to allow users to attach and manage posts and users to specific pages, with options for filtering and displaying thumbnails."
+            },
+            {
+                "file": "cmb2-attached-posts/init.php",
+                "function": "The `WDS_CMB2_Attached_Posts_Field` class extends CMB2 functionality to allow the selection and attachment of multiple posts or users to a single page. It provides a custom field interface for managing attached posts or users, including filtering, searching, and displaying thumbnails, and ensures proper sanitization and rendering of the attached items."
+            }
+        ],
+        "gt": "[['cmb2-attached-posts/example-field-setup.php'], ['cmb2-attached-posts/cmb2-attached-posts-field.php'], ['cmb2-attached-posts/init.php', 'cmb2-attached-posts/cmb2-attached-posts-field.php'], ['cmb2-attached-posts/init.php']]"
+    },
+    {
+        "repo": "lemanager",
+        "description": "A containerized web application for managing and issuing SSL certificates from Let's Encrypt.",
+        "function": "Allows users to issue and manage SSL certificates, set up email alerts, and automate certificate renewal. It integrates with web servers like NGiNX for seamless certificate deployment.",
+        "files": [
+            {
+                "file": "lemanager/bin/cli.php",
+                "function": "The file initializes a Symfony Console application named \"LEManager\" and registers two commands: `RenewAllCommand` and `IssueNewCommand`."
+            },
+            {
+                "file": "lemanager/rootfs/etc/cont-init.d/01-create-web-password.php",
+                "function": "This script sets up an Nginx authentication file by generating a `.htpasswd` file with a default or provided username and password. If no password is provided, it exits with an error message."
+            },
+            {
+                "file": "lemanager/rootfs/etc/cont-init.d/02-create-nginx-conf.php",
+                "function": "This script generates an Nginx configuration file by replacing placeholders in a template with environment variables, specifically checking for a required `HOSTNAME` variable."
+            },
+            {
+                "file": "lemanager/rootfs/etc/nginx/nginx.conf.template.php",
+                "function": "This Nginx configuration file sets up HTTP to HTTPS redirection, serves a web application from a specified directory, and includes SSL configuration for secure connections if enabled."
+            },
+            {
+                "file": "lemanager/src/Certificate.php",
+                "function": "The `Certificate` class manages SSL/TLS certificates, providing methods to retrieve certificate paths, domains, expiration dates, and details, as well as check for expiration, pending status, and log availability."
+            },
+            {
+                "file": "lemanager/src/CertificateHandler.php",
+                "function": "The `CertificateHandler` class manages certificate operations, including issuing new certificates, validating domains, retrieving all certificates, finding certificates by domain, and deleting certificates. It handles domain validation, file creation, and directory management for certificate data."
+            },
+            {
+                "file": "lemanager/src/Command/BaseCommand.php",
+                "function": "Unable to read file content."
+            }
+        ],
+        "gt": "[['lemanager/rootfs/etc/nginx/nginx.conf.template.php', 'lemanager/rootfs/etc/cont-init.d/02-create-nginx-conf.php'], ['lemanager/src/Command/BaseCommand.php'], ['lemanager/src/Certificate.php'], ['lemanager/bin/cli.php'], ['lemanager/rootfs/etc/cont-init.d/01-create-web-password.php'], ['lemanager/src/CertificateHandler.php'], ['lemanager/rootfs/etc/cont-init.d/02-create-nginx-conf.php']]"
+    },
+    {
+        "repo": "LightOpenID",
+        "description": "LightOpenID is a lightweight PHP library for OpenID authentication.",
+        "function": "Provides easy integration for OpenID authentication, supports AX and SREG extensions, and works with both OpenID 1.1 and 2.0 protocols.",
+        "files": [
+            {
+                "file": "LightOpenID/openid.php",
+                "function": "The `LightOpenID` class provides a simple interface for OpenID 1.1/2.0 authentication, handling discovery, request building, and validation. It supports both OpenID 1.1 and 2.0 protocols, as well as optional extensions like AX (Attribute Exchange) and SREG (Simple Registration). The class uses cURL or PHP streams for HTTP requests and manages redirection, proxy settings, and attribute retrieval."
+            },
+            {
+                "file": "LightOpenID/examples/example-google.php",
+                "function": "This PHP script facilitates Google account login using OpenID, providing a login button and handling authentication responses."
+            },
+            {
+                "file": "LightOpenID/examples/example-google_apps.php",
+                "function": "This script enables users to log in using their Google accounts via OpenID, handling authentication requests and displaying appropriate messages based on the login status."
+            },
+            {
+                "file": "LightOpenID/examples/example.php",
+                "function": "This PHP script implements an OpenID authentication system, allowing users to log in using their OpenID credentials and optionally retrieve their email, full name, and nickname from the provider."
+            },
+            {
+                "file": "LightOpenID/provider/example-mysql.php",
+                "function": "This PHP script demonstrates an OpenID provider setup using MySQL for authentication, user data storage, and association management. It includes functionality for user login, realm authorization, and handling AX/SREG parameters, while also managing associations and storing them in a MySQL database."
+            },
+            {
+                "file": "LightOpenID/provider/example.php",
+                "function": "The file defines a `BasicProvider` class that extends `LightOpenIDProvider` to implement HTTP Basic Authentication for user verification. It checks user credentials and returns an identity URL if authentication succeeds."
+            },
+            {
+                "file": "LightOpenID/provider/provider.php",
+                "function": "This PHP class provides functionality to set up an OpenID Provider, handling user authentication, association management, and communication with relying parties (RPs). It supports both stateless and stateful modes, handles encryption, and manages user attributes for authentication."
+            }
+        ],
+        "gt": "[['LightOpenID/provider/provider.php', 'LightOpenID/provider/example.php'], ['LightOpenID/examples/example-google.php'], ['LightOpenID/examples/example-google_apps.php'], ['LightOpenID/examples/example.php'], ['LightOpenID/provider/example-mysql.php'], ['LightOpenID/provider/example.php'], ['LightOpenID/openid.php', 'LightOpenID/examples/example-google.php'], ['LightOpenID/provider/provider.php', 'LightOpenID/provider/example-mysql.php'], ['LightOpenID/openid.php', 'LightOpenID/examples/example-google_apps.php'], ['LightOpenID/openid.php', 'LightOpenID/examples/example.php']]"
+    },
+    {
+        "repo": "Login-registration-System-PHP-and-MYSQL",
+        "description": "A user login and registration system built with PHP and MySQL.",
+        "function": "Allows users to register, log in, and manage their accounts securely using PHP for backend logic and MySQL for database storage.",
+        "files": [
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/db_conn.php",
+                "function": "This PHP script establishes a connection to a MySQL database named \"test_db\" using the provided credentials and checks if the connection is successful."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/home.php",
+                "function": "This file checks if a user is logged in by verifying session variables, and if so, displays a welcome message and a logout link. If not logged in, it redirects to the login page."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/index.php",
+                "function": "This HTML file provides a login form with fields for username and password, error handling for login issues, and a link to create a new account."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/login.php",
+                "function": "This PHP script handles user login by validating input, hashing the password, querying the database for matching credentials, and redirecting users to the appropriate page based on authentication success or failure."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/logout.php",
+                "function": "The script clears the current session data and destroys the session, then redirects the user to the \"index.php\" page."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/signup-check.php",
+                "function": "This PHP script handles user registration by validating input, checking for existing usernames, and inserting new user data into a database after hashing the password."
+            },
+            {
+                "file": "Login-registration-System-PHP-and-MYSQL/signup.php",
+                "function": "This HTML file provides a sign-up form for users to enter their name, username, password, and confirm password, with error and success messages displayed dynamically based on server responses."
+            }
+        ],
+        "gt": "[['Login-registration-System-PHP-and-MYSQL/signup-check.php'], ['Login-registration-System-PHP-and-MYSQL/login.php'], ['Login-registration-System-PHP-and-MYSQL/db_conn.php', 'Login-registration-System-PHP-and-MYSQL/signup-check.php'], ['Login-registration-System-PHP-and-MYSQL/db_conn.php', 'Login-registration-System-PHP-and-MYSQL/login.php'], ['Login-registration-System-PHP-and-MYSQL/signup.php'], ['Login-registration-System-PHP-and-MYSQL/index.php'], ['Login-registration-System-PHP-and-MYSQL/logout.php'], ['Login-registration-System-PHP-and-MYSQL/home.php']]"
+    },
+    {
+        "repo": "magento-utils",
+        "description": "A utility collection for Magento developers.",
+        "function": "Provides snippets and scripts to streamline Magento development tasks, enhancing productivity and simplifying common workflows.",
+        "files": [
+            {
+                "file": "magento-utils/shell/apiStress.php",
+                "function": "This script tests various methods of the Magento API, including customer management, cart operations, order processing, and catalog interactions, by making SOAP API calls based on user-provided parameters."
+            },
+            {
+                "file": "magento-utils/shell/betterIndexer.php",
+                "function": "This script is an improved Magento indexer tool that allows users to view indexer information, check status, change modes, and perform reindexing operations, with performance metrics displayed for each task."
+            },
+            {
+                "file": "magento-utils/shell/changeOrderStatus.php",
+                "function": "The script closes all orders with a creation date before a specified date (`16 June 2012`) and a status of \"shipped\" by setting their status to \"complete.\""
+            },
+            {
+                "file": "magento-utils/shell/cleanCache.php",
+                "function": "This script provides a command-line tool to clean various types of caches in a Magento environment, including image, data, stored, merged JS/CSS, and file caches, as well as optional accelerator cache cleaning."
+            },
+            {
+                "file": "magento-utils/shell/magentoCleanup.php",
+                "function": "This script resets file and directory permissions to predefined values (0644 for files, 0755 for directories, and 0775 for .sh scripts) and cleans all caches. It also sets specific permissions for the \"mage\" and \"lib/PEAR\" files."
+            },
+            {
+                "file": "magento-utils/shell/testObserver.php",
+                "function": "This script is a Magento shell tool that allows users to execute specific functions (`method_1` to `method_5`) or display a list of available functions when provided with the appropriate command-line arguments."
+            }
+        ],
+        "gt": "[['magento-utils/shell/changeOrderStatus.php'], ['magento-utils/shell/apiStress.php'], ['magento-utils/shell/betterIndexer.php'], ['magento-utils/shell/cleanCache.php', 'magento-utils/shell/magentoCleanup.php'], ['magento-utils/shell/magentoCleanup.php'], ['magento-utils/shell/testObserver.php']]"
+    },
+    {
+        "repo": "roles-to-taxonomy",
+        "description": "A WordPress plugin that improves performance by storing user roles and levels in a taxonomy.",
+        "function": "Registers shadow taxonomies to associate user objects with role/level terms, enabling faster user lookups and role-based queries. Includes a WP CLI command for synchronizing existing roles and supports batch processing for large user bases.",
+        "files": [
+            {
+                "file": "roles-to-taxonomy/plugin.php",
+                "function": "The plugin \"Roles to Taxonomy\" stores user roles in a taxonomy for improved performance. It includes functionality to bootstrap the plugin and manage user roles within the taxonomy."
+            },
+            {
+                "file": "roles-to-taxonomy/inc/class-cli-command.php",
+                "function": "This file provides a WP-CLI command to synchronize user roles with taxonomy term counts, allowing for batch processing, progress tracking, and optional fast population of term relationships."
+            },
+            {
+                "file": "roles-to-taxonomy/inc/namespace.php",
+                "function": "This file integrates user roles and levels into custom taxonomies (`user_roles` and `user_levels`) to enhance user query performance and functionality, including role-based filtering and optimized counting of users. It also provides CLI commands for managing roles and levels."
+            }
+        ],
+        "gt": "[['roles-to-taxonomy/plugin.php'], ['roles-to-taxonomy/inc/class-cli-command.php', 'roles-to-taxonomy/inc/namespace.php', 'roles-to-taxonomy/plugin.php'], ['roles-to-taxonomy/inc/namespace.php', 'roles-to-taxonomy/plugin.php']]"
+    },
+    {
+        "repo": "SlimMVC",
+        "description": "SlimMVC is a PHP application framework that implements the MVC pattern using the Slim Framework.",
+        "function": "Provides a structured way to build PHP applications with a folder system for models, routers, templates, and public assets. Includes core classes for database connection and configuration, and supports routing for various HTTP methods.",
+        "files": [
+            {
+                "file": "SlimMVC/config.php",
+                "function": "This file configures database connection settings and project path using a configuration class."
+            },
+            {
+                "file": "SlimMVC/configs/local.config.php",
+                "function": "This file configures database and project settings by defining host, port, database name, user, password, and project path using a configuration class."
+            },
+            {
+                "file": "SlimMVC/configs/production.config.php",
+                "function": "This file configures database connection settings and project path using a `Config` class."
+            },
+            {
+                "file": "SlimMVC/lib/Config.php",
+                "function": "The file defines a `Config` class with static methods to read and write configuration values, prioritizing environment-specific settings over local ones."
+            },
+            {
+                "file": "SlimMVC/lib/Core.php",
+                "function": "The file defines a singleton class `Core` that manages a database connection using PDO, with connection details fetched from a configuration class."
+            },
+            {
+                "file": "SlimMVC/models/Stuff.php",
+                "function": "The file defines a PHP class `Stuff` that retrieves all records from the \"stuff\" table in a database and provides a method to return a static string."
+            },
+            {
+                "file": "SlimMVC/models/User.php",
+                "function": "The `User` class provides methods to interact with a user database, including retrieving all users, fetching a user by ID or login credentials, inserting a new user, and updating or deleting user data."
+            },
+            {
+                "file": "SlimMVC/public/index.php",
+                "function": "This file sets up a PHP application environment, configures error display based on the environment, initializes a Slim framework application with Twig templating, and automatically loads router files."
+            },
+            {
+                "file": "SlimMVC/routers/index.router.php",
+                "function": "Handles the root route (`/`) by initializing a `Stuff` model, setting its data, and rendering the `index.html` template with the data."
+            },
+            {
+                "file": "SlimMVC/routers/user.router.php",
+                "function": "This file defines RESTful API endpoints for managing users, including retrieving, creating, and authenticating users, as well as handling PUT and DELETE requests."
+            }
+        ],
+        "gt": "[['SlimMVC/models/User.php'], ['SlimMVC/routers/index.router.php'], ['SlimMVC/public/index.php'], ['SlimMVC/configs/production.config.php', 'SlimMVC/public/index.php'], ['SlimMVC/config.php'], ['SlimMVC/models/Stuff.php'], ['SlimMVC/routers/user.router.php'], ['SlimMVC/lib/Config.php'], ['SlimMVC/lib/Core.php'], ['SlimMVC/configs/local.config.php']]"
+    },
+    {
+        "repo": "smart-media",
+        "description": "A WordPress plugin enhancing media library features for smarter media management.",
+        "function": "Provides justified media library thumbnails with original aspect ratios, an improved image editor with advanced cropping and UX enhancements, and supports updating Gutenberg block attributes based on image selections.",
+        "files": [
+            {
+                "file": "smart-media/plugin.php",
+                "function": "The plugin \"Smart Media\" integrates advanced media tools using Rekognition and Tachyon, enhancing media management capabilities."
+            },
+            {
+                "file": "smart-media/inc/namespace.php",
+                "function": "This file sets up media tools, enabling or disabling a cropper tool and a justified media gallery based on filters. It also provides a function to retrieve asset URLs from a manifest file."
+            },
+            {
+                "file": "smart-media/inc/cropper/media-template.php",
+                "function": "The file defines templates for displaying and editing media attachments in a WordPress admin interface, including details, thumbnails, and image editing options. It handles various media types (images, audio, video, PDFs) and provides functionality for editing, cropping, and managing media files."
+            },
+            {
+                "file": "smart-media/inc/cropper/namespace.php",
+                "function": "This file enhances WordPress media handling by integrating Tachyon for optimized image processing, adding crop and focal point functionality, and ensuring compatibility with responsive images and REST API responses. It also prevents unnecessary thumbnail generation and ensures proper image dimensions and attributes are applied."
+            },
+            {
+                "file": "smart-media/inc/justified-library/namespace.php",
+                "function": "The file sets up a Justified Media Gallery by enqueuing a custom CSS file for styling when the WordPress media library is loaded."
+            }
+        ],
+        "gt": "[['smart-media/inc/justified-library/namespace.php', 'smart-media/inc/namespace.php', 'smart-media/plugin.php'], ['smart-media/plugin.php'], ['smart-media/inc/cropper/media-template.php', 'smart-media/inc/cropper/namespace.php', 'smart-media/inc/namespace.php', 'smart-media/plugin.php'], ['smart-media/inc/cropper/namespace.php', 'smart-media/inc/namespace.php', 'smart-media/plugin.php'], ['smart-media/inc/namespace.php', 'smart-media/plugin.php'], ['smart-media/inc/cropper/media-template.php', 'smart-media/inc/cropper/namespace.php', 'smart-media/inc/namespace.php']]"
+    },
+    {
+        "repo": "SSRF_Vulnerable_Lab",
+        "description": "A lab environment demonstrating Server-Side Request Forgery (SSRF) vulnerabilities in PHP code.",
+        "function": "The project showcases six scenarios of SSRF exploitation, including file fetching, remote host connection, file download, DNS spoofing, DNS rebinding, and HTML to PDF generation. It provides practical examples and guides for each scenario to help understand and exploit SSRF vulnerabilities.",
+        "files": [
+            {
+                "file": "SSRF_Vulnerable_Lab/www/dns-spoofing.php",
+                "function": "This PHP script creates a web interface with buttons for \"Home,\" \"Load File,\" and \"Who we are.\" It allows users to load and read files or remote URLs, with restrictions to prevent accessing localhost and private IP ranges. The \"Who we are\" section displays a list of individuals and groups."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/dns_rebinding.php",
+                "function": "This PHP script fetches and displays the contents of a remote URL, while preventing access to blacklisted IP ranges and localhost. It also includes a form for users to input a URL to fetch content from."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/download.php",
+                "function": "This PHP script provides a web interface for downloading files specified by the user, with functionality to display different sections of a webpage based on user input."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/file_get_content.php",
+                "function": "This PHP script creates a web interface with buttons for \"Home,\" \"Load File,\" and \"Who we are.\" It handles form submissions to display content related to each button, including demonstrating SSRF exploitation, loading and reading files, and displaying a list of people."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/head.php",
+                "function": "This PHP file generates a styled HTML page with a focus on showcasing a SSRF (Server-Side Request Forgery) Vulnerable Lab, featuring custom CSS for layout and design, and includes a JavaScript function for toggling element visibility."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/index.php",
+                "function": "The file is a web page that demonstrates various Server-Side Request Forgery (SSRF) vulnerabilities through interactive exercises, each highlighting different misconfigurations in web applications that can be exploited."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/pdf_ssrf_weasyprint.php",
+                "function": "This PHP script generates a PDF from HTML input, allowing users to enter a handle (username) and create an invoice-like document that is converted into a PDF using WeasyPrint."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/pdf_ssrf_wkhtmltopdf.php",
+                "function": "This PHP script generates a PDF from HTML input, allowing users to enter a handle (username) and create an invoice-like document, which is then converted into a PDF file using wkhtmltopdf."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/sql_connect.php",
+                "function": "This PHP script creates a web interface for connecting to a MySQL database, allowing users to input a host IP, username, and password to attempt a connection."
+            },
+            {
+                "file": "SSRF_Vulnerable_Lab/www/xml_ssrf.php",
+                "function": "This PHP script demonstrates a vulnerable XML External Entity (XXE) injection scenario, allowing users to upload an XML file, which is then parsed and displayed as a table of \"White Beard Pirate crew members.\""
+            }
+        ],
+        "gt": "[['SSRF_Vulnerable_Lab/www/dns_rebinding.php'], ['SSRF_Vulnerable_Lab/www/head.php', 'SSRF_Vulnerable_Lab/www/dns-spoofing.php'], ['SSRF_Vulnerable_Lab/www/head.php', 'SSRF_Vulnerable_Lab/www/download.php'], ['SSRF_Vulnerable_Lab/www/file_get_content.php'], ['SSRF_Vulnerable_Lab/www/index.php'], ['SSRF_Vulnerable_Lab/www/download.php'], ['SSRF_Vulnerable_Lab/www/pdf_ssrf_weasyprint.php'], ['SSRF_Vulnerable_Lab/www/xml_ssrf.php'], ['SSRF_Vulnerable_Lab/www/dns-spoofing.php'], ['SSRF_Vulnerable_Lab/www/pdf_ssrf_wkhtmltopdf.php'], ['SSRF_Vulnerable_Lab/www/head.php', 'SSRF_Vulnerable_Lab/www/file_get_content.php'], ['SSRF_Vulnerable_Lab/www/sql_connect.php']]"
+    }
+]

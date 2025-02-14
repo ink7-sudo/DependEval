@@ -1,0 +1,1274 @@
+[
+    {
+        "repo": "CustomMeshComponent",
+        "description": "A minimal Unreal Engine 4 project demonstrating the creation and usage of a custom deformable mesh component.",
+        "function": "The project includes a UDeformMeshComponent that allows for simple mesh deformation based on a secondary transform. It showcases the implementation of custom mesh components and integrates them into an actor for rendering and deformation.",
+        "files": [
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponent.cpp",
+                "function": "The file defines a custom game module named \"CustomUMeshComponent\" using the `IMPLEMENT_PRIMARY_GAME_MODULE` macro, which integrates a custom UMeshComponent into the game engine."
+            },
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponent.h",
+                "function": "The file serves as a header guard and includes necessary core functionality from the Unreal Engine framework."
+            },
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponentGameModeBase.cpp",
+                "function": "The file defines the base game mode for a project named \"CustomUMeshComponent,\" likely setting up the initial game rules and behavior."
+            },
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponentGameModeBase.h",
+                "function": "The file defines a custom game mode class `ACustomUMeshComponentGameModeBase` that inherits from `AGameModeBase`, serving as the base game mode for a project using custom UMesh components."
+            },
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/Private/DeformMeshActor.cpp",
+                "function": "The file defines a `ADeformMeshActor` class in Unreal Engine, which manages a deformable mesh component. It initializes the mesh and updates its transform every frame based on a controller's transform."
+            },
+            {
+                "file": "CustomMeshComponent/Source/CustomUMeshComponent/Public/DeformMeshActor.h",
+                "function": "The `ADeformMeshActor` class is an actor that utilizes a `DeformMeshComponent` to create and update mesh sections with deform transforms. It includes a static mesh for creating mesh sections and an actor to control the deform transforms."
+            },
+            {
+                "file": "CustomMeshComponent/Source/DeformMesh/DeformMesh.cpp",
+                "function": "The file defines a module named `DeformMesh` that maps a virtual shader source directory to the actual shaders directory on disk during module startup."
+            },
+            {
+                "file": "CustomMeshComponent/Source/DeformMesh/DeformMesh.h",
+                "function": "The file defines the `FDeformMeshModule` class, which implements the `IModuleInterface` for managing the \"DeformMesh\" module, including startup and shutdown functionality."
+            },
+            {
+                "file": "CustomMeshComponent/Source/DeformMesh/Classes/Components/DeformMeshComponent.h",
+                "function": "The `UDeformMeshComponent` is a component that allows dynamic deformation of mesh vertices by applying a secondary transform to mesh sections. It supports creating, updating, and clearing mesh sections, controlling their visibility, and managing their rendering and bounds."
+            },
+            {
+                "file": "CustomMeshComponent/Source/DeformMesh/Private/Components/DeformMeshComponent.cpp",
+                "function": "The file defines a deformable mesh component system for Unreal Engine, enabling dynamic mesh deformation and rendering. It includes a custom vertex factory for handling unlit materials, a scene proxy for managing render thread data, and methods for updating mesh sections, transforms, and visibility. The system uses a structured buffer to store deformation transforms, which are applied to mesh sections during rendering."
+            }
+        ],
+        "gt": "[['CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponent.h', 'CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponent.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponentGameModeBase.cpp'], ['CustomMeshComponent/Source/DeformMesh/DeformMesh.h', 'CustomMeshComponent/Source/DeformMesh/DeformMesh.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponent.cpp'], ['CustomMeshComponent/Source/DeformMesh/Private/Components/DeformMeshComponent.cpp'], ['CustomMeshComponent/Source/DeformMesh/DeformMesh.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/Public/DeformMeshActor.h', 'CustomMeshComponent/Source/CustomUMeshComponent/Private/DeformMeshActor.cpp'], ['CustomMeshComponent/Source/DeformMesh/Classes/Components/DeformMeshComponent.h', 'CustomMeshComponent/Source/CustomUMeshComponent/Public/DeformMeshActor.h', 'CustomMeshComponent/Source/CustomUMeshComponent/Private/DeformMeshActor.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/Private/DeformMeshActor.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponentGameModeBase.h', 'CustomMeshComponent/Source/CustomUMeshComponent/CustomUMeshComponentGameModeBase.cpp'], ['CustomMeshComponent/Source/DeformMesh/Classes/Components/DeformMeshComponent.h', 'CustomMeshComponent/Source/DeformMesh/Private/Components/DeformMeshComponent.cpp'], ['CustomMeshComponent/Source/CustomUMeshComponent/Public/DeformMeshActor.h']]"
+    },
+    {
+        "repo": "ESP-FlexyStepper",
+        "description": "A library for controlling one or more stepper motors with an ESP32 module, offering flexible speed and position control.",
+        "function": "Provides features like acceleration/deceleration, emergency stop, limit switch integration, and both blocking and non-blocking movement functions. Can operate as a background service or require manual calls for movement processing.",
+        "files": [
+            {
+                "file": "ESP-FlexyStepper/src/ESP_FlexyStepper.cpp",
+                "function": "ESP-FlexyStepper is a library for controlling stepper motors, allowing precise movement with acceleration and deceleration. It supports dynamic adjustments to speed, position, and acceleration during motion and integrates with ESP32 for multi-core processing."
+            },
+            {
+                "file": "ESP-FlexyStepper/src/ESP_FlexyStepper.h",
+                "function": "The ESP-FlexyStepper library provides functionality for controlling stepper motors on ESP32 devices, enabling precise movement, speed, and acceleration control, along with support for callbacks, emergency stops, and homing operations."
+            }
+        ],
+        "gt": "[['ESP-FlexyStepper/src/ESP_FlexyStepper.cpp'], ['ESP-FlexyStepper/src/ESP_FlexyStepper.h', 'ESP-FlexyStepper/src/ESP_FlexyStepper.cpp'], ['ESP-FlexyStepper/src/ESP_FlexyStepper.h']]"
+    },
+    {
+        "repo": "MQ135",
+        "description": "An Arduino library for the MQ135 gas sensor.",
+        "function": "Provides functionality to interface with the MQ135 sensor, allowing users to measure and monitor air quality by detecting various gases such as CO2, NH3, and alcohol.",
+        "files": [
+            {
+                "file": "MQ135/MQ135.cpp",
+                "function": "The file provides an Arduino library for the MQ135 gas sensor, enabling measurement of sensor resistance, CO2 ppm, and calibration values, with optional correction for temperature and humidity."
+            },
+            {
+                "file": "MQ135/MQ135.h",
+                "function": "The file defines an Arduino library for the MQ135 gas sensor, providing functions to calculate gas concentration (PPM), sensor resistance, and correction factors for temperature and humidity."
+            }
+        ],
+        "gt": "[['MQ135/MQ135.cpp'], ['MQ135/MQ135.h', 'MQ135/MQ135.cpp']]"
+    },
+    {
+        "repo": "exe_to_dll",
+        "description": "A tool that converts EXE files into DLLs, allowing them to be loaded as DLLs.",
+        "function": "Supports both 32-bit and 64-bit DLLs. Converts an EXE file into a DLL that exports a 'Start' function, which is the original entry point of the application. Can be tested using rundll32.exe.",
+        "files": [
+            {
+                "file": "exe_to_dll/exe_to_dll/exports_block.h",
+                "function": "The `ExportsBlock` class is designed to create and manage an export table for a PE (Portable Executable) file, allowing the addition and relocation of export functions and their associated metadata. It supports appending the export table to a PE module and relocating the table's addresses to a specified RVA (Relative Virtual Address)."
+            },
+            {
+                "file": "exe_to_dll/exe_to_dll/main.cpp",
+                "function": "The program converts a 32-bit or 64-bit executable (EXE) file into a dynamic link library (DLL) by modifying its headers and saving the result to a specified output file."
+            },
+            {
+                "file": "exe_to_dll/exe_to_dll/pe_handler.cpp",
+                "function": "The `PeHandler` class provides functionality to check if a PE file is a DLL, determine if it can be converted, toggle between EXE and DLL characteristics, patch an EXE to behave like a DLL, and save the modified PE file."
+            },
+            {
+                "file": "exe_to_dll/exe_to_dll/pe_handler.h",
+                "function": "The `PeHandler` class manages Portable Executable (PE) files, providing functionality to load, analyze, and modify PE modules, including determining architecture (32-bit or 64-bit), converting between executable and DLL formats, and saving changes."
+            },
+            {
+                "file": "exe_to_dll/tests/test_case1/main.cpp",
+                "function": "The file defines a function to decode a string using XOR operations and another function to retrieve and display the current system date. The main function checks if the date retrieval function returns a specific value and displays a success message if the condition is met."
+            }
+        ],
+        "gt": "[['exe_to_dll/tests/test_case1/main.cpp'], ['exe_to_dll/exe_to_dll/pe_handler.cpp'], ['exe_to_dll/exe_to_dll/exports_block.h', 'exe_to_dll/exe_to_dll/pe_handler.cpp'], ['exe_to_dll/exe_to_dll/pe_handler.h', 'exe_to_dll/exe_to_dll/main.cpp'], ['exe_to_dll/exe_to_dll/pe_handler.h', 'exe_to_dll/exe_to_dll/exports_block.h', 'exe_to_dll/exe_to_dll/pe_handler.cpp'], ['exe_to_dll/exe_to_dll/main.cpp'], ['exe_to_dll/exe_to_dll/pe_handler.h', 'exe_to_dll/exe_to_dll/pe_handler.cpp']]"
+    },
+    {
+        "repo": "obstacle_detector",
+        "description": "The obstacle_detector package is designed to detect and track obstacles using data from 2D laser scanners.",
+        "function": "It processes laser scan data to merge scans, extract obstacles (as line segments or circles), and track them using a Kalman filter. The package includes nodes for merging scans, extracting obstacles, tracking them, and publishing virtual obstacles for testing.",
+        "files": [
+            {
+                "file": "obstacle_detector/include/obstacle_detector/obstacle_extractor.h",
+                "function": "The file defines an `ObstacleExtractor` class that processes laser scan and point cloud data to detect and publish obstacles, including segments and circles, in a ROS environment. It uses various algorithms to group, merge, and detect obstacles based on configurable parameters."
+            },
+            {
+                "file": "obstacle_detector/include/obstacle_detector/obstacle_publisher.h",
+                "function": "The file defines an `ObstaclePublisher` class in ROS, responsible for publishing simulated obstacle data. It includes functionality for updating parameters, calculating obstacle positions, and publishing obstacle information at regular intervals."
+            },
+            {
+                "file": "obstacle_detector/include/obstacle_detector/obstacle_tracker.h",
+                "function": "Unable to read file content."
+            },
+            {
+                "file": "obstacle_detector/include/obstacle_detector/displays/circle_visual.h",
+                "function": "The file defines a `CircleVisual` class for visualizing circle obstacles in a 3D scene using OGRE and rviz. It allows setting obstacle data, frame position and orientation, and customizing colors for the main obstacle and its margin."
+            },
+            {
+                "file": "obstacle_detector/include/obstacle_detector/displays/obstacles_display.h",
+                "function": "The file defines an `ObstaclesDisplay` class in Rviz for visualizing obstacles, including circles and segments, with configurable properties such as color, alpha, and thickness."
+            },
+            {
+                "file": "obstacle_detector/include/obstacle_detector/displays/segment_visual.h",
+                "function": "The file defines a `SegmentVisual` class for visualizing segment obstacles in a 3D scene using OGRE and RViz. It allows setting obstacle data, frame position and orientation, color, and width for the visualization."
+            }
+        ],
+        "gt": "[['obstacle_detector/include/obstacle_detector/obstacle_extractor.h'], ['obstacle_detector/include/obstacle_detector/displays/segment_visual.h', 'obstacle_detector/include/obstacle_detector/displays/obstacles_display.h'], ['obstacle_detector/include/obstacle_detector/displays/obstacles_display.h'], ['obstacle_detector/include/obstacle_detector/obstacle_tracker.h'], ['obstacle_detector/include/obstacle_detector/displays/circle_visual.h', 'obstacle_detector/include/obstacle_detector/displays/obstacles_display.h'], ['obstacle_detector/include/obstacle_detector/obstacle_publisher.h']]"
+    },
+    {
+        "repo": "raspicam_node",
+        "description": "A ROS node for the Raspberry Pi Camera Module, supporting both V1.x and V2.x versions.",
+        "function": "Captures and publishes images, compressed images, and motion vectors from the camera module. Supports dynamic reconfiguration of camera parameters and calibration for improved image quality.",
+        "files": [
+            {
+                "file": "raspicam_node/include/RaspiCamControl.h",
+                "function": "This file defines a library for controlling camera settings on a Raspberry Pi, including exposure, white balance, image effects, and other parameters, using the MMAL (Multimedia Abstraction Layer) interface."
+            },
+            {
+                "file": "raspicam_node/include/mmal_cxx_helper.h",
+                "function": "The file defines custom deleters for managing MMAL (Multimedia Abstraction Layer) components and connections, ensuring proper cleanup and resource management. It also includes a structure for identifying standard camera component ports."
+            },
+            {
+                "file": "raspicam_node/src/RaspiCamControl.cpp",
+                "function": "This file provides functions to control camera settings such as sharpness, contrast, brightness, saturation, exposure mode, white balance, image effects, and more, using the MMAL (Multimedia Abstraction Layer) library on ARM-based systems. It includes mappings for various camera parameters and functions to cycle through and set these parameters programmatically."
+            },
+            {
+                "file": "raspicam_node/src/raspicam_node.cpp",
+                "function": "The file implements a ROS node for capturing and publishing camera images and motion vectors from a Raspberry Pi camera. It supports dynamic reconfiguration, diagnostics, and publishing raw, compressed images, and motion vectors based on user-defined parameters. The node uses the MMAL library for camera control and encoding."
+            }
+        ],
+        "gt": "[['raspicam_node/include/RaspiCamControl.h', 'raspicam_node/src/RaspiCamControl.cpp'], ['raspicam_node/include/RaspiCamControl.h', 'raspicam_node/src/raspicam_node.cpp'], ['raspicam_node/src/RaspiCamControl.cpp'], ['raspicam_node/include/mmal_cxx_helper.h', 'raspicam_node/src/raspicam_node.cpp'], ['raspicam_node/src/raspicam_node.cpp'], ['raspicam_node/include/RaspiCamControl.h']]"
+    },
+    {
+        "repo": "FlexCHOP",
+        "description": "An integration of NVIDIA FleX 1.2 solver into TouchDesigner as a CHOP for fluid particle simulations.",
+        "function": "Supports liquid particles, collisions with primitives (planes, boxes, spheres), and interactions with an animated deforming mesh. Features emitters and handles collisions via CHOPs, with a fixed maximum number of particles.",
+        "files": [
+            {
+                "file": "FlexCHOP/CHOP/Source/CHOP_CPlusPlusBase.h",
+                "function": "This file defines the base class `CHOP_CPlusPlusBase` for creating custom CHOP (Channel Operator) plugins in TouchDesigner, providing methods for handling channel data, output configuration, and plugin metadata."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/CPlusPlus_Common.h",
+                "function": "This file defines a set of classes and enums for creating custom operators in TouchDesigner, including structures for handling inputs, parameters, and data types like textures, channels, and geometry. It provides a framework for integrating custom functionality into TouchDesigner's node-based environment."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/FlexCHOP.cpp",
+                "function": "The file defines a C++ class `FlexCHOP` that implements a custom operator for a simulation system, likely used in a 3D graphics or animation pipeline. It handles particle simulation, collision detection, and emission of particles, with parameters for controlling various simulation properties such as gravity, damping, and collision distances. The class also manages input and output data, including particle positions and velocities, and provides functionality for updating and initializing the simulation based on user-defined parameters."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/FlexCHOP.h",
+                "function": "The file defines a C++ class `FlexCHOP` that extends `CHOP_CPlusPlusBase` to create a custom CHOP node. It processes input data by either modifying the first 'N' samples of an input channel (if connected) or generating a smooth 120Hz sine wave (if no input is connected). The class also includes various methods for handling parameters, updating system states, and managing execution."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/FlexSystem.cpp",
+                "function": "The file defines a FlexSystem class for managing particle simulations using the NvFlex library. It includes functionality for initializing and updating the simulation, handling particle emission, and managing collision shapes and triangle meshes. The SimBuffers class is used to manage and map various simulation buffers, while the VMesh class provides methods for calculating mesh bounds."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/FlexSystem.h",
+                "function": "The file defines a `FlexSystem` class for managing particle-based simulations using the NVIDIA Flex library. It includes structures for mesh data, emitters, volume boxes, and GPU timers, and provides methods for initializing the system, creating particle grids, adding shapes, updating triangle meshes, and managing simulation parameters and buffers."
+            },
+            {
+                "file": "FlexCHOP/CHOP/Source/GL_Extensions.h",
+                "function": "The file provides a stub for simplified usage of CHOP (Channel Operator) functionality, potentially for rendering or processing data, and includes OpenGL headers for related operations."
+            }
+        ],
+        "gt": "[['FlexCHOP/CHOP/Source/FlexSystem.h', 'FlexCHOP/CHOP/Source/FlexSystem.cpp'], ['FlexCHOP/CHOP/Source/FlexCHOP.h', 'FlexCHOP/CHOP/Source/FlexCHOP.cpp'], ['FlexCHOP/CHOP/Source/CPlusPlus_Common.h', 'FlexCHOP/CHOP/Source/CHOP_CPlusPlusBase.h', 'FlexCHOP/CHOP/Source/FlexCHOP.h', 'FlexCHOP/CHOP/Source/FlexCHOP.cpp'], ['FlexCHOP/CHOP/Source/FlexSystem.cpp'], ['FlexCHOP/CHOP/Source/FlexCHOP.cpp'], ['FlexCHOP/CHOP/Source/FlexSystem.h', 'FlexCHOP/CHOP/Source/FlexCHOP.h', 'FlexCHOP/CHOP/Source/FlexCHOP.cpp'], ['FlexCHOP/CHOP/Source/CHOP_CPlusPlusBase.h', 'FlexCHOP/CHOP/Source/FlexCHOP.h', 'FlexCHOP/CHOP/Source/FlexCHOP.cpp'], ['FlexCHOP/CHOP/Source/GL_Extensions.h'], ['FlexCHOP/CHOP/Source/FlexSystem.h']]"
+    },
+    {
+        "repo": "tortellini",
+        "description": "A simple and lightweight INI file reader and writer for C++11 and above.",
+        "function": "Supports reading and writing INI files with case-insensitive keys and section headers. Allows retrieval and assignment of various data types, including strings, integers, floats, and booleans. Preserves source strings and guarantees parsable output.",
+        "files": [
+            {
+                "file": "tortellini/catch2/catch_amalgamated.cpp",
+                "function": "An error occurred: Error code: 400 - {'error': {'message': \"This model's maximum context length is 65536 tokens. However, you requested 100176 tokens (100176 in the messages, 0 in the completion). Please reduce the length of the messages or completion.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+            },
+            {
+                "file": "tortellini/catch2/catch_amalgamated.hpp",
+                "function": "An error occurred: Error code: 400 - {'error': {'message': \"This model's maximum context length is 65536 tokens. However, you requested 134582 tokens (134582 in the messages, 0 in the completion). Please reduce the length of the messages or completion.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+            }
+        ],
+        "gt": "[['tortellini/catch2/catch_amalgamated.cpp'], ['tortellini/catch2/catch_amalgamated.hpp', 'tortellini/catch2/catch_amalgamated.cpp']]"
+    },
+    {
+        "repo": "eos-model-viewer",
+        "description": "A 3D model viewer for the eos Morphable Model library.",
+        "function": "Allows users to interact with and visualize shape and color PCA models, as well as blendshapes. It supports loading specific models and blendshapes via command-line options or GUI file dialogs.",
+        "files": [
+            {
+                "file": "eos-model-viewer/cxxopts.hpp",
+                "function": "The file defines a C++ library for parsing command-line options, providing functionality to handle short and long options, positional arguments, and custom help messages. It supports various types of options, including boolean, integer, and string, and allows for default and implicit values."
+            },
+            {
+                "file": "eos-model-viewer/eos-model-viewer.cpp",
+                "function": "This file implements a 3D Morphable Model viewer that allows users to load and visualize 3D models, adjust PCA coefficients for shape, color, and expression, and generate random samples of faces. It uses OpenGL for rendering and ImGui for interactive controls."
+            }
+        ],
+        "gt": "[['eos-model-viewer/cxxopts.hpp', 'eos-model-viewer/eos-model-viewer.cpp'], ['eos-model-viewer/eos-model-viewer.cpp']]"
+    },
+    {
+        "repo": "LeoSpecial-VEH-Hook",
+        "description": "A Vectored Exception Handling (VEH) hooking class for intercepting and modifying function calls.",
+        "function": "Allows users to hook functions by passing pointers to the original and hook functions, enabling interception and modification of function behavior. Supports unhooking to restore original functionality.",
+        "files": [
+            {
+                "file": "LeoSpecial-VEH-Hook/LeoSpecial.h",
+                "function": "The file defines a class `LeoHook` that provides functionality to hook and unhook functions by leveraging a vectored exception handler (VEH) to intercept and redirect execution flow. It ensures that the original and hooked functions are not in the same memory page to prevent infinite callbacks and uses PAGE_GUARD flags to manage the hooking process."
+            },
+            {
+                "file": "LeoSpecial-VEH-Hook/Main.cpp",
+                "function": "The program hooks the `Sleep` function to bypass its delay, measures the time saved by the hook, and then unhooks it to demonstrate the difference in execution time."
+            }
+        ],
+        "gt": "[['LeoSpecial-VEH-Hook/LeoSpecial.h', 'LeoSpecial-VEH-Hook/Main.cpp'], ['LeoSpecial-VEH-Hook/Main.cpp']]"
+    },
+    {
+        "repo": "modbusino",
+        "description": "Modbusino is a lightweight ISC-licensed library for Arduino to handle Modbus communication as a slave device.",
+        "function": "Supports only two Modbus functions: reading holding registers (0x03) and writing multiple registers (0x10). Designed to minimize memory usage and keep the implementation simple.",
+        "files": [
+            {
+                "file": "modbusino/Modbusino.cpp",
+                "function": "This file implements a Modbus RTU slave for Arduino, handling communication, data integrity checks, and responses for reading holding registers and writing multiple registers."
+            },
+            {
+                "file": "modbusino/Modbusino.h",
+                "function": "The file defines a class `ModbusinoSlave` that implements the Modbus protocol for Arduino-compatible devices, allowing communication with Modbus slaves. It includes setup and loop methods for configuring and processing Modbus communication."
+            }
+        ],
+        "gt": "[['modbusino/Modbusino.cpp'], ['modbusino/Modbusino.h', 'modbusino/Modbusino.cpp']]"
+    },
+    {
+        "repo": "tensorflow-object-detection-cpp",
+        "description": "A C++ implementation for running TensorFlow Object Detection models in real-time.",
+        "function": "Allows users to load and run TensorFlow object detection models on live video streams using C++. Requires TensorFlow .so builds, Eigen3 headers, and OpenCV.",
+        "files": [
+            {
+                "file": "tensorflow-object-detection-cpp/main.cpp",
+                "function": "The program loads a TensorFlow model for object detection, captures video frames from a camera, processes the frames to detect objects, and displays the results with bounding boxes and labels in real-time."
+            },
+            {
+                "file": "tensorflow-object-detection-cpp/utils.cpp",
+                "function": "This file provides functions to load a TensorFlow model, read labels, convert OpenCV images to TensorFlow tensors, draw bounding boxes on images, and filter bounding boxes based on confidence scores and IOU thresholds."
+            },
+            {
+                "file": "tensorflow-object-detection-cpp/utils.h",
+                "function": "This file provides utility functions for loading a TensorFlow graph, processing image data, and drawing bounding boxes on images, along with tools for filtering and evaluating bounding boxes."
+            }
+        ],
+        "gt": "[['tensorflow-object-detection-cpp/utils.cpp'], ['tensorflow-object-detection-cpp/main.cpp'], ['tensorflow-object-detection-cpp/utils.h', 'tensorflow-object-detection-cpp/main.cpp'], ['tensorflow-object-detection-cpp/utils.h', 'tensorflow-object-detection-cpp/utils.cpp']]"
+    },
+    {
+        "repo": "mqtt-ir-transceiver",
+        "description": "An ESP8266-based gateway that bridges MQTT and IR communication.",
+        "function": "Enables receiving IR signals and publishing them as MQTT messages, sending IR signals based on MQTT commands, and supporting multiple IR formats. Includes features like raw IR storage, SSL-secured MQTT, and OTA updates.",
+        "files": [
+            {
+                "file": "mqtt-ir-transceiver/src/common.cpp",
+                "function": "The file provides utility functions for handling IR codes and configuration data, including converting strings to unsigned long, reading/writing IR codes to/from files, converting MAC addresses to strings, and loading default IR data. It also includes a callback for saving configuration and a function to interpret IR encoding types."
+            },
+            {
+                "file": "mqtt-ir-transceiver/src/debug.cpp",
+                "function": "The file defines a function `sendToDebug` that sends a message to the serial monitor if the `useDebug` flag is enabled."
+            },
+            {
+                "file": "mqtt-ir-transceiver/src/globals.cpp",
+                "function": "This file defines global variables and objects for an application, including IR data storage, MQTT configuration, button states, and WiFi/MQTT client setup."
+            },
+            {
+                "file": "mqtt-ir-transceiver/src/globals.h",
+                "function": "This file defines global constants, includes necessary libraries, and declares global variables and functions for an ESP8266-based device, enabling IR communication, MQTT connectivity, and configuration management."
+            },
+            {
+                "file": "mqtt-ir-transceiver/src/main.cpp",
+                "function": "This file implements an MQTT-based IR transceiver for ESP8266, allowing remote control of IR devices via MQTT commands and transmitting IR signals based on stored sequences or manual triggers."
+            },
+            {
+                "file": "mqtt-ir-transceiver/src/mqtt.cpp",
+                "function": "The file defines functionality for handling MQTT messages and connecting to an MQTT broker. It processes various MQTT topics to perform actions such as rebooting the device, wiping configuration, executing commands, updating firmware, and sending IR signals based on received messages."
+            }
+        ],
+        "gt": "[['mqtt-ir-transceiver/src/globals.h', 'mqtt-ir-transceiver/src/debug.cpp'], ['mqtt-ir-transceiver/src/main.cpp'], ['mqtt-ir-transceiver/src/mqtt.cpp'], ['mqtt-ir-transceiver/src/debug.cpp'], ['mqtt-ir-transceiver/src/common.cpp'], ['mqtt-ir-transceiver/src/globals.cpp'], ['mqtt-ir-transceiver/src/globals.h', 'mqtt-ir-transceiver/src/mqtt.cpp'], ['mqtt-ir-transceiver/src/globals.h', 'mqtt-ir-transceiver/src/globals.cpp'], ['mqtt-ir-transceiver/src/globals.h', 'mqtt-ir-transceiver/src/main.cpp'], ['mqtt-ir-transceiver/src/globals.h', 'mqtt-ir-transceiver/src/common.cpp']]"
+    },
+    {
+        "repo": "JQQmlImage",
+        "description": "A QML component designed to replace the standard Image control for faster image loading.",
+        "function": "Improves image loading speed by caching pre-parsed RGBA data locally, reducing load times by up to 75%. Additionally, it supports pre-fetching to further optimize performance, achieving up to 700x faster loading times.",
+        "files": [
+            {
+                "file": "JQQmlImage/demo/qmldemo/cpp/main.cpp",
+                "function": "This file initializes a QML application using Qt, sets up image caching management, and loads a QML file either from resources or a local path."
+            },
+            {
+                "file": "JQQmlImage/sharedlibrary/JQLibrary/include/JQQmlImage/jqqmlimagemanage.h",
+                "function": "The file defines a `JQQmlImageManage` class for managing and caching images in a QML application, providing functionality for preloading, converting, and handling image data, including support for caching and device pixel ratio management."
+            },
+            {
+                "file": "JQQmlImage/sharedlibrary/JQLibrary/src/JQQmlImage/jqqmlimagemanage.cpp",
+                "function": "The file defines a system for managing and optimizing image loading in a Qt-based application. It includes functionality for caching, preloading, and efficiently handling image data, with support for multi-threaded operations to improve performance. The system also provides mechanisms for analyzing image data, detecting primary colors, and converting images to a custom format for storage and retrieval."
+            },
+            {
+                "file": "JQQmlImage/test/benchmark/cpp/jqqmlimage_benchmark.cpp",
+                "function": "This file benchmarks the performance of image decoding using both standard PNG/JPG decoding and a custom JQQmlImage decoding method, comparing decoding times and sizes for various test images."
+            },
+            {
+                "file": "JQQmlImage/test/benchmark/cpp/jqqmlimage_benchmark.h",
+                "function": "The file defines a `JQQmlImageBenchmark` class for benchmarking image decoding performance, including setup, cleanup, and data collection for decode times and sizes."
+            },
+            {
+                "file": "JQQmlImage/test/benchmark/cpp/main.cpp",
+                "function": "The file sets up a Qt application to execute a benchmark test for the `JQQmlImage` library, using `QTest::qExec` to run the `JQQmlImageBenchmark` class."
+            },
+            {
+                "file": "JQQmlImage/test/overalltest/cpp/jqqmlimage_overalltest.cpp",
+                "function": "The file is a test suite for verifying the integrity of image data conversion using `JQQmlImageManage`. It tests the conversion of various image files to a custom data format and back to ensure the resulting image matches the original."
+            },
+            {
+                "file": "JQQmlImage/test/overalltest/cpp/jqqmlimage_overalltest.h",
+                "function": "The file defines a test class `JQQmlImageOverallTest` inheriting from `QObject` to test the integrity of data in a QML image component, with slots for initializing, cleaning up, and running specific test cases."
+            },
+            {
+                "file": "JQQmlImage/test/overalltest/cpp/main.cpp",
+                "function": "The file sets up and runs a test suite for the `JQQmlImageOverallTest` class using Qt's testing framework."
+            }
+        ],
+        "gt": "[['JQQmlImage/test/overalltest/cpp/main.cpp'], ['JQQmlImage/sharedlibrary/JQLibrary/src/JQQmlImage/jqqmlimagemanage.cpp'], ['JQQmlImage/test/benchmark/cpp/jqqmlimage_benchmark.h', 'JQQmlImage/test/benchmark/cpp/main.cpp'], ['JQQmlImage/test/overalltest/cpp/jqqmlimage_overalltest.cpp'], ['JQQmlImage/test/benchmark/cpp/main.cpp'], ['JQQmlImage/demo/qmldemo/cpp/main.cpp'], ['JQQmlImage/test/overalltest/cpp/jqqmlimage_overalltest.h', 'JQQmlImage/test/overalltest/cpp/main.cpp'], ['JQQmlImage/test/benchmark/cpp/jqqmlimage_benchmark.cpp'], ['JQQmlImage/sharedlibrary/JQLibrary/include/JQQmlImage/jqqmlimagemanage.h', 'JQQmlImage/sharedlibrary/JQLibrary/src/JQQmlImage/jqqmlimagemanage.cpp']]"
+    },
+    {
+        "repo": "AMSI-Provider",
+        "description": "A fake AMSI Provider designed for persistence on a host when a specific text is triggered.",
+        "function": "Registers as an AMSI Provider to execute a predefined action (e.g., opening calc.exe) when a specific text (e.g., 'pentestlab') is entered in a PowerShell console.",
+        "files": [
+            {
+                "file": "AMSI-Provider/AmsiProvider.cpp",
+                "function": "The file defines a custom Anti-Malware Scan Interface (AMSI) provider that scans for specific trigger strings (\"pentestlab\") in content. If detected, it spawns a thread to execute a command (launching a calculator). The file also includes COM server registration and unregistration functions."
+            },
+            {
+                "file": "AMSI-Provider/stdafx.cpp",
+                "function": "The file includes the \"stdafx.h\" header, which is typically used in Microsoft Visual Studio projects for precompiled headers to improve build times."
+            },
+            {
+                "file": "AMSI-Provider/stdafx.h",
+                "function": "This file serves as a precompiled header containing frequently used system and project-specific include files, facilitating faster compilation and reducing redundancy."
+            }
+        ],
+        "gt": "[['AMSI-Provider/stdafx.cpp'], ['AMSI-Provider/stdafx.h', 'AMSI-Provider/AmsiProvider.cpp'], ['AMSI-Provider/AmsiProvider.cpp'], ['AMSI-Provider/stdafx.h', 'AMSI-Provider/stdafx.cpp']]"
+    },
+    {
+        "repo": "raspbootin",
+        "description": "A simple boot-over-serial bootloader for the Raspberry Pi.",
+        "function": "Raspbootin installs on the SD card and communicates over serial to load kernels. Raspbootcom runs on a connected computer, serving kernels and providing terminal interaction. It supports automatic reconnection and kernel updates without restarts.",
+        "files": [
+            {
+                "file": "raspbootin/raspbootcom/scope.h",
+                "function": "This file defines a set of utilities for managing scope-based cleanup and control flow, including `ScopeGuard` for executing code on scope exit, and specialized guards for executing code on failure or success."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/archinfo.h",
+                "function": "The file defines a class `ArchInfo` to store architecture-specific information for Raspberry Pi models, including model name, peripherals base address, disk LED GPIO pin, and LED polarity. It also declares an external pointer to an `ArchInfo` instance."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/atag.h",
+                "function": "The file defines a set of classes and enums to handle ARM bootloader tags, providing functionality to find, traverse, and print various tag types, such as memory, video, and command line information."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/kprintf.h",
+                "function": "The file defines kernel-level printf functions (`kprintf`, `snprintf`, `vsnprintf`, `cprintf`, and `vcprintf`) for formatted output, with support for custom callbacks in `cprintf` and `vcprintf`."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/mmio.h",
+                "function": "The file provides functions to read from and write to Memory-Mapped I/O (MMIO) registers, allowing direct access to peripheral devices via specified memory addresses."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/uart.h",
+                "function": "The file defines functions for initializing UART0 and performing basic UART communication, including transmitting and receiving bytes, and printing strings."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/bits/c++config.h",
+                "function": "This file defines macros and configurations for the GNU C++ library, including attributes, visibility, deprecated functions, and namespace versioning, tailored for compatibility across different C++ standards and platforms."
+            },
+            {
+                "file": "raspbootin/raspbootin/include/sys/cdefs.h",
+                "function": "This file defines macros and attributes for C and C++ code, including function attributes, namespace handling, and compiler-specific directives for optimization and compatibility."
+            }
+        ],
+        "gt": "[['raspbootin/raspbootin/include/archinfo.h', 'raspbootin/raspbootin/include/mmio.h'], ['raspbootin/raspbootin/include/kprintf.h', 'raspbootin/raspbootin/include/atag.h', 'raspbootin/raspbootin/include/archinfo.h', 'raspbootin/raspbootin/include/mmio.h'], ['raspbootin/raspbootcom/scope.h'], ['raspbootin/raspbootin/include/bits/c++config.h'], ['raspbootin/raspbootin/include/mmio.h'], ['raspbootin/raspbootin/include/uart.h'], ['raspbootin/raspbootin/include/atag.h', 'raspbootin/raspbootin/include/archinfo.h', 'raspbootin/raspbootin/include/mmio.h'], ['raspbootin/raspbootin/include/sys/cdefs.h', 'raspbootin/raspbootin/include/kprintf.h', 'raspbootin/raspbootin/include/atag.h', 'raspbootin/raspbootin/include/archinfo.h', 'raspbootin/raspbootin/include/mmio.h'], ['raspbootin/raspbootin/include/atag.h', 'raspbootin/raspbootin/include/archinfo.h']]"
+    },
+    {
+        "repo": "latexpp",
+        "description": "A C++ library for generating LaTeX equations and converting them to various formats.",
+        "function": "Supports conversion of LaTeX equations to HTML, JPG, PNG, and SVG formats using KaTeX for HTML rendering and wkhtmltox for image output.",
+        "files": [
+            {
+                "file": "latexpp/latex.cpp",
+                "function": "The file defines a `Latex` class that converts LaTeX expressions into HTML, complete HTML documents, and various image formats (PNG, JPG, SVG) using KaTeX and V8 JavaScript engine. It also handles CSS styling and error/warning behaviors during conversion."
+            },
+            {
+                "file": "latexpp/latex.hpp",
+                "function": "The file defines a `Latex` class that facilitates the conversion of LaTeX snippets into HTML, complete HTML documents, and various image formats (PNG, SVG, JPG). It integrates with the KaTeX library and the V8 JavaScript engine for rendering LaTeX, and uses wkhtmltoimage for image conversion. The class also supports custom CSS and warning behaviors."
+            },
+            {
+                "file": "latexpp/main.cpp",
+                "function": "The file defines a main function that uses the `Latex` class to convert a LaTeX mathematical expression into HTML format and prints the result to the console."
+            },
+            {
+                "file": "latexpp/examples/html/main.cpp",
+                "function": "The program converts a LaTeX equation into an HTML snippet and a complete HTML document with embedded CSS for rendering in a browser."
+            },
+            {
+                "file": "latexpp/examples/image/main.cpp",
+                "function": "The file demonstrates how to use a `Latex` class to convert a LaTeX equation string into PNG and JPG images using two different API methods."
+            },
+            {
+                "file": "latexpp/examples/style/main.cpp",
+                "function": "The file generates a LaTeX-formatted arithmetic series equation, applies custom CSS styling, and converts it into a JPEG image named \"equation.jpg.\""
+            }
+        ],
+        "gt": "[['latexpp/latex.cpp'], ['latexpp/examples/style/main.cpp'], ['latexpp/examples/image/main.cpp'], ['latexpp/latex.hpp', 'latexpp/main.cpp'], ['latexpp/main.cpp'], ['latexpp/examples/html/main.cpp'], ['latexpp/latex.hpp', 'latexpp/latex.cpp']]"
+    },
+    {
+        "repo": "PMS",
+        "description": "An Arduino library for interfacing with Plantower PMS sensors to measure air quality.",
+        "function": "Provides non-blocking, memory-efficient functions to read PM 1.0, 2.5, and 10.0 concentrations in both active and passive modes, supporting various PMS sensor models.",
+        "files": [
+            {
+                "file": "PMS/src/PMS.cpp",
+                "function": "The file defines a class `PMS` for interfacing with a particulate matter sensor, providing methods to control its modes (sleep, wake, active, passive), request data in passive mode, and parse sensor data from the serial stream."
+            },
+            {
+                "file": "PMS/src/PMS.h",
+                "function": "The file defines a `PMS` class for interfacing with a particulate matter sensor, providing methods to control the sensor's modes, request data, and read particulate matter measurements (PM 1.0, 2.5, and 10.0) in both standard and atmospheric conditions."
+            }
+        ],
+        "gt": "[['PMS/src/PMS.cpp'], ['PMS/src/PMS.h', 'PMS/src/PMS.cpp']]"
+    },
+    {
+        "repo": "dbscan_kdtree",
+        "description": "A fast implementation of DBSCAN clustering using Kdtree for acceleration, designed for point cloud data.",
+        "function": "Utilizes Kdtree for efficient clustering of point cloud data, leveraging the PCL library for processing. Provides a command-line tool for running the clustering algorithm.",
+        "files": [
+            {
+                "file": "dbscan_kdtree/DBSCAN_kdtree.h",
+                "function": "The file defines a template class `DBSCANKdtreeCluster` that extends `DBSCANSimpleCluster` to include a `radiusSearch` method for efficient spatial searches using a KD-tree."
+            },
+            {
+                "file": "dbscan_kdtree/DBSCAN_precomp.h",
+                "function": "The file defines a class `DBSCANPrecompCluster` that extends `DBSCANSimpleCluster` to precompute adjacency indexes and distances between points in a point cloud for efficient DBSCAN clustering."
+            },
+            {
+                "file": "dbscan_kdtree/DBSCAN_simple.h",
+                "function": "The file defines a DBSCAN clustering algorithm implementation for point cloud data, allowing the extraction of clusters based on density and proximity, with configurable parameters for cluster size and tolerance."
+            },
+            {
+                "file": "dbscan_kdtree/pcl_cluster.cpp",
+                "function": "The file reads a point cloud from a PCD file, applies filtering and segmentation to remove the largest plane, performs clustering using DBSCAN with a KdTree for acceleration, and visualizes the resulting clusters with different colors."
+            }
+        ],
+        "gt": "[['dbscan_kdtree/DBSCAN_kdtree.h', 'dbscan_kdtree/pcl_cluster.cpp'], ['dbscan_kdtree/DBSCAN_precomp.h', 'dbscan_kdtree/pcl_cluster.cpp'], ['dbscan_kdtree/DBSCAN_simple.h', 'dbscan_kdtree/DBSCAN_precomp.h', 'dbscan_kdtree/pcl_cluster.cpp'], ['dbscan_kdtree/DBSCAN_simple.h', 'dbscan_kdtree/DBSCAN_kdtree.h', 'dbscan_kdtree/pcl_cluster.cpp'], ['dbscan_kdtree/DBSCAN_simple.h', 'dbscan_kdtree/pcl_cluster.cpp'], ['dbscan_kdtree/pcl_cluster.cpp']]"
+    },
+    {
+        "repo": "WinKcp_Launcher",
+        "description": "A Windows-based tool for managing and launching KcpTun and Udp2Raw services for network acceleration.",
+        "function": "Provides a GUI and command-line scripts to configure and manage KcpTun and Udp2Raw for optimizing network traffic, supporting both Windows and Linux environments.",
+        "files": [
+            {
+                "file": "WinKcp_Launcher/src/ipbox_edit.cpp",
+                "function": "This file provides functionality for managing IP addresses in a Windows application, including adding, deleting, saving, and loading IP addresses, as well as handling user interactions and clipboard operations."
+            },
+            {
+                "file": "WinKcp_Launcher/src/ipbox_edit.h",
+                "function": "The file defines functions and constants for managing an IP address management window, including adding, deleting, saving, and loading IP addresses, as well as interacting with the clipboard and setting server IPs."
+            },
+            {
+                "file": "WinKcp_Launcher/src/launcher.cpp",
+                "function": "The file defines a function `mouse_click_signal` that handles mouse clicks on specific coordinates to launch applications or perform actions like opening a YouTube channel or updating an information display. Another function, `read_app_cmd`, reads application paths from a configuration file (`START_APP.cmd`) to determine which applications to launch based on the clicked coordinates."
+            },
+            {
+                "file": "WinKcp_Launcher/src/launcher.h",
+                "function": "The file defines functions for handling mouse click signals and reading application paths from a command file, likely used for launching specific programs based on user interaction."
+            },
+            {
+                "file": "WinKcp_Launcher/src/main.cpp",
+                "function": "The file defines a Windows application with a dialog-based interface that manages network services like KCP, UDP2RAW, and IP address settings. It includes functionality to start, stop, and configure these services, as well as to hide or show processes and manage IP addresses through a GUI."
+            },
+            {
+                "file": "WinKcp_Launcher/src/resource.h",
+                "function": "This file defines various resource identifiers and constants used in a graphical user interface, including dialogs, icons, bitmaps, and control IDs for managing IP settings and application functionalities."
+            }
+        ],
+        "gt": "[['WinKcp_Launcher/src/launcher.cpp'], ['WinKcp_Launcher/src/ipbox_edit.cpp'], ['WinKcp_Launcher/src/resource.h', 'WinKcp_Launcher/src/main.cpp'], ['WinKcp_Launcher/src/main.cpp'], ['WinKcp_Launcher/src/launcher.h', 'WinKcp_Launcher/src/main.cpp'], ['WinKcp_Launcher/src/ipbox_edit.h', 'WinKcp_Launcher/src/main.cpp'], ['WinKcp_Launcher/src/resource.h', 'WinKcp_Launcher/src/ipbox_edit.h', 'WinKcp_Launcher/src/main.cpp'], ['WinKcp_Launcher/src/resource.h', 'WinKcp_Launcher/src/launcher.h', 'WinKcp_Launcher/src/main.cpp']]"
+    },
+    {
+        "repo": "fastcluster",
+        "description": "A fast hierarchical clustering library for Python and R.",
+        "function": "Provides efficient algorithms for hierarchical clustering, supporting single, complete, average, weighted, centroid, median, and Ward linkage methods.",
+        "files": [
+            {
+                "file": "fastcluster/src/fastcluster.cpp",
+                "function": "The file implements fast hierarchical clustering algorithms for both stored matrix and vector data approaches, supporting various linkage methods such as single, complete, average, weighted, Ward, centroid, and median. It includes core algorithms for minimum spanning tree (MST) and nearest-neighbor chain, and handles NaN and infinity values appropriately."
+            },
+            {
+                "file": "fastcluster/src/fastcluster_python.cpp",
+                "function": "This file provides a Python interface for fast hierarchical clustering, supporting various methods and metrics. It includes functionality for clustering on both dissimilarity matrices and vector data, generating dendrograms, and handling different clustering algorithms efficiently."
+            }
+        ],
+        "gt": "[['fastcluster/src/fastcluster.cpp', 'fastcluster/src/fastcluster_python.cpp'], ['fastcluster/src/fastcluster_python.cpp']]"
+    },
+    {
+        "repo": "RAMP",
+        "description": "An Arduino library for managing interpolation between values of various data types.",
+        "function": "Provides a class template to handle interpolation with multiple data types, offering methods to control and monitor the interpolation process, including setting modes, durations, and loop behaviors.",
+        "files": [
+            {
+                "file": "RAMP/src/Ramp.cpp",
+                "function": "The file defines a templated `_ramp` class for Arduino, enabling smooth value transitions (ramping) with customizable modes, durations, and looping behaviors. It supports various easing functions for controlling the rate of change and provides methods for pausing, resuming, and querying the ramp's state."
+            },
+            {
+                "file": "RAMP/src/Ramp.h",
+                "function": "The RAMP library for Arduino provides a flexible framework for creating and managing smooth transitions (ramps) between values using various easing modes, loop behaviors, and automation options. It supports multiple data types and allows precise control over interpolation, duration, and update intervals."
+            }
+        ],
+        "gt": "[['RAMP/src/Ramp.cpp'], ['RAMP/src/Ramp.h', 'RAMP/src/Ramp.cpp']]"
+    },
+    {
+        "repo": "NmraDcc",
+        "description": "A library for interfacing with NMRA DCC track signals and receiving DCC commands.",
+        "function": "Supports AVR ATTiny84/85, ATMega88/168/328/32u4, and Teensy 3.x using hardware interrupts. Provides functionality for handling DCC signals and managing track control.",
+        "files": [
+            {
+                "file": "NmraDcc/NmraDcc.cpp",
+                "function": "The file provides a library for decoding NMRA DCC (Digital Command Control) packets, enabling the creation of DCC mobile and stationary decoders. It includes functionality for handling DCC signals, processing packets, and managing CV (Configuration Variable) operations for model railroading applications."
+            },
+            {
+                "file": "NmraDcc/NmraDcc.h",
+                "function": "The file `NmraDcc.h` provides a simplified interface for decoding NMRA DCC (Digital Command Control) packets and building DCC MultiFunction and Accessory Decoders. It includes functions for initializing the decoder, processing DCC packets, managing CV (Configuration Variable) values, and handling various DCC commands and callbacks for speed, direction, and accessory control."
+            },
+            {
+                "file": "NmraDcc/examples/NmraDccAccessoryDecoder_Pulsed_8/PinPulser.cpp",
+                "function": "The PinPulser class manages a queue of pins to sequentially activate and deactivate them with specified delays. It initializes with timing parameters and processes the queue to toggle pin states based on predefined delays and recharge periods."
+            },
+            {
+                "file": "NmraDcc/examples/NmraDccAccessoryDecoder_Pulsed_8/PinPulser.h",
+                "function": "The file defines a `PinPulser` class for managing timed pin outputs on an Arduino, allowing pins to be added to a queue and controlled with specified on and recharge delays."
+            }
+        ],
+        "gt": "[['NmraDcc/examples/NmraDccAccessoryDecoder_Pulsed_8/PinPulser.h', 'NmraDcc/examples/NmraDccAccessoryDecoder_Pulsed_8/PinPulser.cpp'], ['NmraDcc/NmraDcc.cpp'], ['NmraDcc/examples/NmraDccAccessoryDecoder_Pulsed_8/PinPulser.cpp'], ['NmraDcc/NmraDcc.h', 'NmraDcc/NmraDcc.cpp']]"
+    },
+    {
+        "repo": "ros2-ORB_SLAM2",
+        "description": "A ROS2 node that integrates the ORB_SLAM2 library for visual SLAM.",
+        "function": "Provides ROS2 nodes for monocular, stereo, and RGB-D SLAM, streaming SLAM data through ROS2 topics. Supports integration with ROS2 systems and includes a Dockerfile for easy setup.",
+        "files": [
+            {
+                "file": "ros2-ORB_SLAM2/src/monocular/mono.cpp",
+                "function": "This file initializes and runs a monocular SLAM (Simultaneous Localization and Mapping) system using ROS 2, processing frames for visual odometry and mapping."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/monocular/monocular-slam-node.cpp",
+                "function": "The file defines a ROS 2 node for monocular SLAM using ORB-SLAM2, subscribing to camera images, processing them to track the camera's pose, and saving the keyframe trajectory upon shutdown."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/monocular/monocular-slam-node.hpp",
+                "function": "The file defines a ROS 2 node (`MonocularSlamNode`) for monocular SLAM, subscribing to image messages, processing them using the ORB-SLAM2 system, and integrating with OpenCV for image handling."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.cpp",
+                "function": "The file defines the `RgbdSlamNode` class, which integrates RGB-D SLAM functionality using ORB-SLAM2. It subscribes to RGB and depth image topics, synchronizes them, and processes them to track the camera's trajectory, saving the trajectory upon shutdown."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.hpp",
+                "function": "The file defines a ROS 2 node (`RgbdSlamNode`) for RGB-D SLAM, synchronizing and processing RGB and depth image streams to perform simultaneous localization and mapping using the ORB-SLAM2 system."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/rgbd/rgbd.cpp",
+                "function": "The file initializes an RGB-D SLAM system using ORB-SLAM2, subscribes to RGB and depth image topics, synchronizes the images, and processes them to track the camera's trajectory. It also saves the keyframe trajectory to a file."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/stereo/stereo-slam-node.cpp",
+                "function": "The file defines a `StereoSlamNode` class that initializes and manages a stereo SLAM system, synchronizes and processes stereo image pairs, and optionally rectifies the images before passing them to the SLAM system for tracking."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/stereo/stereo-slam-node.hpp",
+                "function": "The file defines a ROS 2 node, `StereoSlamNode`, for stereo visual SLAM using ORB-SLAM2. It synchronizes and processes stereo image pairs to perform simultaneous localization and mapping."
+            },
+            {
+                "file": "ros2-ORB_SLAM2/src/stereo/stereo.cpp",
+                "function": "This file initializes and runs a stereo SLAM (Simultaneous Localization and Mapping) system using ORB-SLAM2, integrating it with ROS 2 for processing stereo camera frames and visualizing the results."
+            }
+        ],
+        "gt": "[['ros2-ORB_SLAM2/src/stereo/stereo.cpp'], ['ros2-ORB_SLAM2/src/stereo/stereo-slam-node.cpp'], ['ros2-ORB_SLAM2/src/monocular/mono.cpp'], ['ros2-ORB_SLAM2/src/rgbd/rgbd.cpp'], ['ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.cpp'], ['ros2-ORB_SLAM2/src/monocular/monocular-slam-node.hpp', 'ros2-ORB_SLAM2/src/monocular/monocular-slam-node.cpp'], ['ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.hpp', 'ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.cpp'], ['ros2-ORB_SLAM2/src/rgbd/rgbd-slam-node.hpp', 'ros2-ORB_SLAM2/src/rgbd/rgbd.cpp'], ['ros2-ORB_SLAM2/src/monocular/monocular-slam-node.hpp', 'ros2-ORB_SLAM2/src/monocular/mono.cpp'], ['ros2-ORB_SLAM2/src/monocular/monocular-slam-node.cpp'], ['ros2-ORB_SLAM2/src/stereo/stereo-slam-node.hpp', 'ros2-ORB_SLAM2/src/stereo/stereo-slam-node.cpp'], ['ros2-ORB_SLAM2/src/stereo/stereo-slam-node.hpp', 'ros2-ORB_SLAM2/src/stereo/stereo.cpp']]"
+    },
+    {
+        "repo": "Swarmz",
+        "description": "A free, header-only C++ library for simulating swarming (flocking) behavior in real-time applications.",
+        "function": "Allows users to create and configure swarms of boids with customizable parameters such as perception radius, separation, alignment, and cohesion weights. Provides methods to update boid velocities and positions, enabling dynamic swarm behavior in real-time.",
+        "files": [
+            {
+                "file": "Swarmz/swarmz.h",
+                "function": "This file defines a 3D vector class (`Vec3`) and a swarm simulation class (`Swarm`) that implements boid behavior, including separation, alignment, cohesion, and steering towards targets. The `Swarm` class manages a group of `Boid` entities, updating their positions and velocities based on proximity and predefined rules."
+            },
+            {
+                "file": "Swarmz/debugging/main.cpp",
+                "function": "The program initializes and updates a swarm of boids, calculates their accelerations, and measures the performance of swarm updates for varying numbers of boids."
+            },
+            {
+                "file": "Swarmz/debugging/timing.h",
+                "function": "The file provides a cross-platform function `GetTimeMs64()` to retrieve the number of milliseconds elapsed since the UNIX epoch, using platform-specific methods for Windows and Linux."
+            }
+        ],
+        "gt": "[['Swarmz/swarmz.h'], ['Swarmz/debugging/timing.h', 'Swarmz/debugging/main.cpp'], ['Swarmz/debugging/main.cpp'], ['Swarmz/debugging/timing.h']]"
+    },
+    {
+        "repo": "SimplexNoise",
+        "description": "A C++ implementation of simplex noise, offering improved performance and visual quality over Perlin noise.",
+        "function": "Provides functions for generating 1D, 2D, 3D, and 4D simplex noise, including ridged, flow, and cellular/worley noise, with analytical derivatives. Also supports fractal brownian motion sums, curl noise, and custom potential curl approximations.",
+        "files": [
+            {
+                "file": "SimplexNoise/include/Simplex.h",
+                "function": "The file provides a comprehensive implementation of various noise generation functions, including Simplex Noise, Worley Noise, Flow Noise, and their derivatives. It supports 1D, 2D, 3D, and 4D noise generation, with analytical derivatives for many of the functions. The noise functions are used for procedural generation, simulations, and other applications requiring smooth, pseudo-random patterns."
+            },
+            {
+                "file": "SimplexNoise/samples/NoiseGallery/include/Resources.h",
+                "function": "The file defines a preprocessor directive to include Cinder resources and includes a commented-out example for defining a resource path for an image."
+            },
+            {
+                "file": "SimplexNoise/samples/NoiseGallery/src/NoiseGalleryApp.cpp",
+                "function": "The file defines a Cinder application called `NoiseGalleryApp` that visualizes various noise algorithms in a grid format. It updates and displays different types of noise (e.g., simplex noise, flow noise, fractal Brownian motion) in real-time, with each noise type rendered in a separate cell of the grid. The application also labels each cell with the corresponding noise type."
+            }
+        ],
+        "gt": "[['SimplexNoise/samples/NoiseGallery/include/Resources.h'], ['SimplexNoise/include/Simplex.h', 'SimplexNoise/samples/NoiseGallery/src/NoiseGalleryApp.cpp'], ['SimplexNoise/samples/NoiseGallery/src/NoiseGalleryApp.cpp']]"
+    },
+    {
+        "repo": "GhostFart",
+        "description": "A technique for unhooking NTDLL using indirect syscalls to avoid detection by EDRs and process creation events.",
+        "function": "The project leverages NTAPI to load a clean version of NTDLL without triggering process creation events, avoiding detection in Task Manager and bypassing aggressive defense mechanisms like EDRs.",
+        "files": [
+            {
+                "file": "GhostFart/ghostfart.cpp",
+                "function": "The file defines functions to dynamically locate and interact with NTDLL functions, perform process unhooking, and create a rogue process for unhooking NTDLL in a target process. The main functionality involves resolving system service numbers, unhooking NTDLL to bypass security mechanisms, and executing indirect syscalls for stealth."
+            },
+            {
+                "file": "GhostFart/structs.h",
+                "function": "The file defines various Windows-specific data structures and functions, including process and memory management APIs, for interacting with the Windows operating system at a low level. It also includes utility functions for string manipulation and hashing."
+            }
+        ],
+        "gt": "[['GhostFart/ghostfart.cpp'], ['GhostFart/structs.h', 'GhostFart/ghostfart.cpp'], ['GhostFart/structs.h']]"
+    },
+    {
+        "repo": "LIO-SAM-note",
+        "description": "LIO-SAM is a real-time lidar-inertial odometry package designed for accurate and efficient mapping and localization.",
+        "function": "The system uses two factor graphs: one for lidar odometry and GPS optimization, and another for IMU preintegration and bias estimation. It supports various lidar and IMU configurations and provides features like loop closure and GPS integration for enhanced accuracy.",
+        "files": [
+            {
+                "file": "LIO-SAM-note/include/utility.h",
+                "function": "This file defines a parameter server for LiDAR odometry, handling sensor configurations, transformations, and data publishing, while also providing utility functions for converting IMU data and calculating point distances."
+            },
+            {
+                "file": "LIO-SAM-note/src/featureExtraction.cpp",
+                "function": "The file defines a ROS node for feature extraction from LiDAR point clouds, identifying corner and surface features by calculating point smoothness, marking occluded and parallel points, and publishing the extracted features."
+            },
+            {
+                "file": "LIO-SAM-note/src/imageProjection.cpp",
+                "function": "The file defines an `ImageProjection` class that processes LiDAR point cloud data by subscribing to IMU and odometry data, performing point cloud deskewing, and projecting the point cloud into a range image. It also extracts and publishes deskewed point clouds and related information for further processing."
+            },
+            {
+                "file": "LIO-SAM-note/src/imuPreintegration.cpp",
+                "function": "The file defines two main classes: `TransformFusion` and `IMUPreintegration`. `TransformFusion` integrates IMU-based odometry with optimized LiDAR odometry to publish the latest IMU odometry and path for visualization. `IMUPreintegration` handles IMU data, performs preintegration, and optimizes the IMU state using GTSAM, publishing the estimated IMU-based odometry. Together, they enable accurate and continuous odometry estimation by combining IMU and LiDAR data."
+            },
+            {
+                "file": "LIO-SAM-note/src/mapOptmization.cpp",
+                "function": "The file implements a LiDAR-based mapping and optimization system using GTSAM for pose graph optimization. It processes LiDAR data, integrates IMU and GPS information, and performs loop closure detection to create a globally consistent map. The system optimizes the pose estimates, publishes the optimized trajectory, and visualizes the map."
+            }
+        ],
+        "gt": "[['LIO-SAM-note/src/featureExtraction.cpp'], ['LIO-SAM-note/src/imageProjection.cpp'], ['LIO-SAM-note/src/mapOptmization.cpp'], ['LIO-SAM-note/src/imuPreintegration.cpp'], ['LIO-SAM-note/include/utility.h', 'LIO-SAM-note/src/featureExtraction.cpp'], ['LIO-SAM-note/include/utility.h', 'LIO-SAM-note/src/imageProjection.cpp'], ['LIO-SAM-note/include/utility.h', 'LIO-SAM-note/src/mapOptmization.cpp'], ['LIO-SAM-note/include/utility.h', 'LIO-SAM-note/src/imuPreintegration.cpp']]"
+    },
+    {
+        "repo": "PsxNewLib",
+        "description": "An Arduino library for interfacing PlayStation and PlayStation 2 controllers with Arduino boards.",
+        "function": "Provides access to digital buttons, analog sticks, and analog buttons on supported controllers. Also enables vibration motor control and supports a wide range of controller models, including arcade sticks and light guns.",
+        "files": [
+            {
+                "file": "PsxNewLib/examples/GunconAbsMouse/AbsMouse.cpp",
+                "function": "This file defines an absolute mouse HID device for microcontrollers, allowing control of mouse movement, button presses, and reporting via HID protocol."
+            },
+            {
+                "file": "PsxNewLib/examples/GunconAbsMouse/AbsMouse.h",
+                "function": "The file defines an `AbsMouse` class for emulating an absolute-position mouse using HID protocol, allowing control of mouse position, button presses, and reporting."
+            },
+            {
+                "file": "PsxNewLib/src/PsxControllerBitBang.h",
+                "function": "The file defines a class `PsxControllerBitBang` for interfacing with a PlayStation controller using bit-banging techniques. It handles communication via specified pins for attention, command, data, and clock, implementing methods for attention, data transmission, and reception."
+            },
+            {
+                "file": "PsxNewLib/src/PsxControllerHwSpi.h",
+                "function": "The file defines a class `PsxControllerHwSpi` that interfaces with a PlayStation controller using hardware SPI on an Arduino. It handles communication by managing attention signals, SPI transactions, and data transfer between the controller and the Arduino."
+            },
+            {
+                "file": "PsxNewLib/src/PsxNewLib.cpp",
+                "function": "The file appears to be a placeholder or a humorous message indicating the completion of a journey or task."
+            },
+            {
+                "file": "PsxNewLib/src/PsxNewLib.h",
+                "function": "This file defines a library for interfacing with PlayStation controllers on Arduino, supporting digital and analog button inputs, analog stick positions, and rumble functionality. It provides functions to configure the controller, poll for button states, and retrieve analog data."
+            }
+        ],
+        "gt": "[['PsxNewLib/examples/GunconAbsMouse/AbsMouse.h', 'PsxNewLib/examples/GunconAbsMouse/AbsMouse.cpp'], ['PsxNewLib/src/PsxControllerBitBang.h'], ['PsxNewLib/src/PsxControllerHwSpi.h'], ['PsxNewLib/src/PsxNewLib.h', 'PsxNewLib/src/PsxControllerBitBang.h'], ['PsxNewLib/examples/GunconAbsMouse/AbsMouse.cpp'], ['PsxNewLib/src/PsxNewLib.h', 'PsxNewLib/src/PsxControllerHwSpi.h'], ['PsxNewLib/src/PsxNewLib.cpp'], ['PsxNewLib/src/PsxNewLib.h']]"
+    },
+    {
+        "repo": "IridiumSBD",
+        "description": "An Arduino library for interfacing with the Iridium satellite network using the RockBLOCK module.",
+        "function": "Enables Arduino devices to send and receive short text or binary messages (up to 270 bytes received, 340 bytes transmitted) via the Iridium SBD protocol, allowing global communication from any location on Earth.",
+        "files": [
+            {
+                "file": "IridiumSBD/src/IridiumSBD.cpp",
+                "function": "The IridiumSBD library provides an interface for Arduino to communicate with Iridium Short Burst Data (SBD) modems, enabling text and binary message transmission, reception, and signal quality checks. It also supports power management, sleep mode, and configurable timeouts for communication."
+            },
+            {
+                "file": "IridiumSBD/src/IridiumSBD.h",
+                "function": "The IridiumSBD library facilitates communication with Iridium Short Burst Data (SBD) modems, enabling text and binary message transmission, reception, and system time retrieval. It supports power management, signal quality checks, and configurable timeouts for efficient satellite-based communication."
+            }
+        ],
+        "gt": "[['IridiumSBD/src/IridiumSBD.h', 'IridiumSBD/src/IridiumSBD.cpp'], ['IridiumSBD/src/IridiumSBD.cpp'], ['IridiumSBD/src/IridiumSBD.h']]"
+    },
+    {
+        "repo": "blocking-tutorial",
+        "description": "A tutorial by Hazy Research to demonstrate SIMD and cache blocking techniques for high-performance matrix multiplication.",
+        "function": "The project provides implementations of matrix multiplication using SIMD, cache blocking, and multithreading, comparing performance against OpenBLAS. It allows users to compile and run experiments to measure GFLOPS and execution time for different matrix sizes.",
+        "files": [
+            {
+                "file": "blocking-tutorial/compare_blas.cpp",
+                "function": "This file implements single-precision matrix multiplication (SGEMM) with various levels of optimization, including naive iteration, SIMD tiling, blocking, and parallel processing, and compares the performance against OpenBLAS."
+            },
+            {
+                "file": "blocking-tutorial/matrix_kernel_vectorized.cpp",
+                "function": "The file defines macros and functions for performing matrix multiplication using SIMD (Single Instruction, Multiple Data) with AVX2 instructions. It includes operations like loading, storing, and accumulating SIMD float8 values, as well as fused multiply-add operations. The `matmul_dot_inner` and `matmul_dot_inner_block` functions optimize matrix multiplication by leveraging SIMD registers and AVX2 instructions to improve performance."
+            }
+        ],
+        "gt": "[['blocking-tutorial/compare_blas.cpp'], ['blocking-tutorial/matrix_kernel_vectorized.cpp', 'blocking-tutorial/compare_blas.cpp']]"
+    },
+    {
+        "repo": "COMRunner",
+        "description": "A COM server proof-of-concept for running shellcode with registration-free activation.",
+        "function": "Provides a COM object with methods to accept base64-encoded shellcode and execute it. Includes a JScript client for loading the COM server and running the shellcode.",
+        "files": [
+            {
+                "file": "COMRunner/COMRunner/Helpers.h",
+                "function": "The file provides functions for Base64 encoding and decoding, including utility functions for converting between byte arrays and Base64 characters, as well as converting between wide and narrow strings."
+            },
+            {
+                "file": "COMRunner/COMRunner/TestClass.h",
+                "function": "The file defines the interface `ITestClass`, which includes methods to set data (`SetData`) and run a process (`Run`), and it also defines the library `TestClassLib` containing the `TestClass` class."
+            },
+            {
+                "file": "COMRunner/COMRunner/dllmain.cpp",
+                "function": "The file defines a DLL entry point and implements functions for managing the DLL lifecycle, including registration, unregistration, and class object retrieval. It also includes a thread completion flag and handles module initialization."
+            },
+            {
+                "file": "COMRunner/COMRunner/object.cpp",
+                "function": "The file defines a COM-based `TestClass` and `TestClassFactory` for managing and executing shellcode. `TestClass` handles decoding and executing base64-encoded shellcode, while `TestClassFactory` provides methods for creating instances of `TestClass` and managing server locking."
+            },
+            {
+                "file": "COMRunner/COMRunner/object.h",
+                "function": "The file defines a COM-based `TestClass` implementing `IUnknown`, `IDispatch`, and a custom `ITestClass` interface, along with a `TestClassFactory` for creating instances. It also includes a base64 decoding function."
+            }
+        ],
+        "gt": "[['COMRunner/COMRunner/object.cpp'], ['COMRunner/COMRunner/Helpers.h', 'COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/object.cpp'], ['COMRunner/COMRunner/dllmain.cpp'], ['COMRunner/COMRunner/Helpers.h', 'COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/dllmain.cpp'], ['COMRunner/COMRunner/TestClass.h', 'COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/object.cpp'], ['COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/dllmain.cpp'], ['COMRunner/COMRunner/TestClass.h', 'COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/dllmain.cpp'], ['COMRunner/COMRunner/object.h', 'COMRunner/COMRunner/object.cpp'], ['COMRunner/COMRunner/object.h']]"
+    },
+    {
+        "repo": "BasicBitmap",
+        "description": "A compact, high-performance, and platform-independent Bitmap library for C++.",
+        "function": "Supports multiple pixel formats, efficient blitting, blending, scaling, and resampling. Provides methods for loading and saving various image formats, with optimized performance using AVX/SSE2 for faster operations.",
+        "files": [
+            {
+                "file": "BasicBitmap/BasicBitmap.cpp",
+                "function": "An error occurred: Error code: 400 - {'error': {'message': \"This model's maximum context length is 65536 tokens. However, you requested 68130 tokens (68130 in the messages, 0 in the completion). Please reduce the length of the messages or completion.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+            },
+            {
+                "file": "BasicBitmap/BasicBitmap.h",
+                "function": "The file defines a simple, high-performance, and platform-independent bitmap library, providing functionalities for pixel manipulation, image loading, saving, scaling, blending, and drawing operations. It supports various pixel formats, blitting, scaling with different filters, and loading/saving image files like BMP, TGA, and PNG."
+            },
+            {
+                "file": "BasicBitmap/BasicBitmap_SSE2.cpp",
+                "function": "The file provides optimized memory copy, blitting, and drawing routines using SSE2 and AVX instructions to enhance performance, particularly for bitmap operations. It includes functions for fast memory copying, transparent blitting, pixel blending, interpolation, and resampling, leveraging SIMD instructions for speed improvements."
+            }
+        ],
+        "gt": "[['BasicBitmap/BasicBitmap.h', 'BasicBitmap/BasicBitmap.cpp'], ['BasicBitmap/BasicBitmap.cpp'], ['BasicBitmap/BasicBitmap_SSE2.cpp'], ['BasicBitmap/BasicBitmap.h', 'BasicBitmap/BasicBitmap_SSE2.cpp'], ['BasicBitmap/BasicBitmap.h']]"
+    },
+    {
+        "repo": "SpyExternal1337hax",
+        "description": "An external cheat for CSGO (Counter-Strike: Global Offensive)",
+        "function": "Provides enhanced gameplay features such as aim assistance, wallhacks, and other cheats to give players an unfair advantage in the game.",
+        "files": [
+            {
+                "file": "SpyExternal1337hax/cheat1/asm.cpp",
+                "function": "The file defines three naked functions (`GlowNoFlick`, `SkyChange`, and `SlideWalkFastCrouch`) that use inline assembly to manipulate registers and memory for specific in-game behaviors, such as preventing flickering, changing sky properties, and modifying movement commands."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/bsp_parser.h",
+                "function": "The file defines a BSP (Binary Space Partitioning) parser for loading and analyzing map files in a game engine. It includes functionality for parsing various map elements such as vertices, planes, nodes, and brushes, and provides methods for raycasting to determine visibility and collisions within the map."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/cheat.cpp",
+                "function": "The file implements various cheats and hacks for a game, including name stealing, bunny hopping, aimbot, ESP (radar and health bars), skin changing, and other exploits. It manipulates game memory and variables to enable these features, often triggered by specific conditions or user input."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/d3d9.h",
+                "function": "This file provides functions for rendering graphics using DirectX 9, including drawing shapes, text, and a menu interface with customizable colors and borders. It also initializes DirectX and handles window blur effects."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/main.cpp",
+                "function": "The file defines a cheat utility for a game, including functions for loading/saving configurations, managing a menu interface, and initializing various cheat features. It also handles window management and rendering for the cheat overlay."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/main.h",
+                "function": "The file defines a program with various functionalities, including debugging macros, obfuscation techniques, and a class for managing cheat features in a game. It also includes resource handling, Direct3D setup, and a structure for glow effects, along with additional debugging tools for file hashing."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/memory.h",
+                "function": "The file provides functionality for memory manipulation, including reading and writing to another process's memory, pattern scanning, and injecting code into a target process. It also includes utilities for suspending and resuming threads and finding network variables within a process."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/obfuscator.h",
+                "function": "This file provides macros and templates for converting strings to numerical values, calculating Unix timestamps, and obfuscating string literals at compile time using XOR encryption."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/resource1.h",
+                "function": "The file defines resource identifiers (e.g., IDR_WAVE1, IDR_FONT1) and default values for new objects in a Visual C++ project, used by the `cheat1.rc` resource script."
+            },
+            {
+                "file": "SpyExternal1337hax/cheat1/utils.h",
+                "function": "The file contains functions for interacting with a game's memory and processes, including sending commands, manipulating in-game variables, calculating angles, and exploiting vulnerabilities. It also includes functionality for setting clan tags, managing timers, and determining active weapon types."
+            }
+        ],
+        "gt": "[['SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/memory.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/bsp_parser.h', 'SpyExternal1337hax/cheat1/cheat.cpp', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/cheat.cpp', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/d3d9.h'], ['SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/asm.cpp', 'SpyExternal1337hax/cheat1/cheat.cpp', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/utils.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/d3d9.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/obfuscator.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/obfuscator.h', 'SpyExternal1337hax/cheat1/memory.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp'], ['SpyExternal1337hax/cheat1/resource1.h', 'SpyExternal1337hax/cheat1/main.h', 'SpyExternal1337hax/cheat1/main.cpp']]"
+    },
+    {
+        "repo": "PS5_camera_files",
+        "description": "A tool for fixing and optimizing the PS5 camera for use on PC.",
+        "function": "Provides firmware updates, driver installation, and a tweaker tool to resolve issues like dark video output. Ensures compatibility with most webcam software.",
+        "files": [
+            {
+                "file": "PS5_camera_files/source/OrbisEyeCam.cpp",
+                "function": "The OrbisEyeCam library manages USB communication with OrbisEyeCam devices, handling device enumeration, firmware upload, and control transfers. It provides functionality to list connected devices, upload firmware, and perform USB control operations for camera interaction."
+            },
+            {
+                "file": "PS5_camera_files/source/OrbisEyeCam.h",
+                "function": "The OrbisEyeCam library provides functionality to interact with and manage the OrbisEyeCam device, including device enumeration, firmware upload, and control transfer operations for USB communication."
+            },
+            {
+                "file": "PS5_camera_files/source/main.cpp",
+                "function": "The file defines a firmware loader for a USB Boot device using WinUSB, which retrieves the current directory, appends the firmware file path, and uploads the firmware to the connected device."
+            },
+            {
+                "file": "PS5_camera_files/source/pch.h",
+                "function": "The file includes headers for Windows API, USB communication, and a specific camera driver (OrbisEyeCam), suggesting it is part of a program for interfacing with a USB-based camera device on a Windows system."
+            }
+        ],
+        "gt": "[['PS5_camera_files/source/pch.h', 'PS5_camera_files/source/main.cpp'], ['PS5_camera_files/source/main.cpp'], ['PS5_camera_files/source/OrbisEyeCam.cpp'], ['PS5_camera_files/source/OrbisEyeCam.h', 'PS5_camera_files/source/pch.h', 'PS5_camera_files/source/main.cpp'], ['PS5_camera_files/source/OrbisEyeCam.h', 'PS5_camera_files/source/OrbisEyeCam.cpp'], ['PS5_camera_files/source/OrbisEyeCam.h', 'PS5_camera_files/source/main.cpp'], ['PS5_camera_files/source/OrbisEyeCam.h', 'PS5_camera_files/source/pch.h']]"
+    },
+    {
+        "repo": "pitch_detector",
+        "description": "A JUCE module for pitch estimation, providing implementations of the YIN and McLeod Pitch Method algorithms.",
+        "function": "Offers two main pitch detection methods: PitchYIN based on YIN and PitchMPM using FFT for auto-correlation. Allows customization of buffer size and sample rate for processing audio samples.",
+        "files": [
+            {
+                "file": "pitch_detector/pitch_detector.cpp",
+                "function": "The file includes the header `pitch_detector.h` and defines an empty namespace `adamski`."
+            },
+            {
+                "file": "pitch_detector/pitch_detector.h",
+                "function": "The file defines a JUCE module for pitch detection, providing implementations of pitch estimation methods such as MPM and YIN, and includes dependencies on JUCE core, audio basics, and FFT libraries."
+            },
+            {
+                "file": "pitch_detector/source/PitchMPM.h",
+                "function": "The `PitchMPM` class implements a pitch detection algorithm using FFT-based methods to analyze audio buffers and estimate the pitch of the input signal. It calculates the pitch by performing auto-correlation, peak picking, and parabolic interpolation on the frequency domain data, ensuring the estimated pitch meets a specified cutoff threshold."
+            },
+            {
+                "file": "pitch_detector/source/PitchYIN.h",
+                "function": "The `PitchYIN` class implements the YIN algorithm for pitch detection, calculating the pitch of an audio signal in Hz by analyzing the difference and cumulative mean normalized difference functions of the input data."
+            }
+        ],
+        "gt": "[['pitch_detector/pitch_detector.h', 'pitch_detector/pitch_detector.cpp'], ['pitch_detector/source/PitchYIN.h', 'pitch_detector/pitch_detector.h', 'pitch_detector/pitch_detector.cpp'], ['pitch_detector/pitch_detector.cpp'], ['pitch_detector/source/PitchMPM.h', 'pitch_detector/pitch_detector.h', 'pitch_detector/pitch_detector.cpp'], ['pitch_detector/source/PitchMPM.h']]"
+    },
+    {
+        "repo": "HeadPosePnP",
+        "description": "A project for estimating head pose using the PnP algorithm.",
+        "function": "Implements head pose estimation by solving the Perspective-n-Point (PnP) problem with OpenCV. Provides a CMake build system for compilation.",
+        "files": [
+            {
+                "file": "HeadPosePnP/HeadPose.cpp",
+                "function": "The program uses OpenCV and OpenGL to render a 3D head model based on 2D facial feature points, allowing for head pose estimation and visualization. It loads images and corresponding feature points, calculates the pose using solvePnP, and displays the 3D model with axes and reprojected points."
+            },
+            {
+                "file": "HeadPosePnP/OGL_OCV_common.cpp",
+                "function": "This file provides functions to integrate OpenCV images with OpenGL, including rendering OpenCV images in OpenGL, enabling and disabling 2D rendering modes, and converting OpenCV images to OpenGL textures."
+            },
+            {
+                "file": "HeadPosePnP/OGL_OCV_common.h",
+                "function": "The file defines functions and structures to integrate OpenCV images with OpenGL, enabling the conversion of OpenCV images to OpenGL textures and rendering them in a 2D OpenGL context."
+            },
+            {
+                "file": "HeadPosePnP/glm.cpp",
+                "function": "The file provides functionality for reading, writing, and manipulating Wavefront OBJ model files, including generating smooth normals, welding vertices, and handling texture coordinates. It supports operations like unitizing models, calculating dimensions, scaling, and rendering models with various modes such as flat shading, smooth shading, and texture mapping."
+            },
+            {
+                "file": "HeadPosePnP/glm.h",
+                "function": "This file defines a library for reading, writing, and manipulating Wavefront OBJ model files, including functionality for generating normals, texture coordinates, and rendering models in OpenGL. It supports various rendering modes, material handling, and texture mapping."
+            },
+            {
+                "file": "HeadPosePnP/stdafx.cpp",
+                "function": "This file is a source file that includes standard headers and generates a pre-compiled header for faster compilation."
+            },
+            {
+                "file": "HeadPosePnP/stdafx.h",
+                "function": "The file serves as a precompiled header for standard system and frequently used project-specific include files, facilitating faster compilation."
+            },
+            {
+                "file": "HeadPosePnP/targetver.h",
+                "function": "This file defines the minimum required platform for a Windows application, setting the default to Windows Vista using the `_WIN32_WINNT` macro."
+            }
+        ],
+        "gt": "[['HeadPosePnP/targetver.h', 'HeadPosePnP/stdafx.h', 'HeadPosePnP/HeadPose.cpp'], ['HeadPosePnP/OGL_OCV_common.h', 'HeadPosePnP/HeadPose.cpp'], ['HeadPosePnP/glm.h', 'HeadPosePnP/HeadPose.cpp'], ['HeadPosePnP/OGL_OCV_common.cpp'], ['HeadPosePnP/stdafx.cpp'], ['HeadPosePnP/HeadPose.cpp'], ['HeadPosePnP/stdafx.h', 'HeadPosePnP/stdafx.cpp'], ['HeadPosePnP/targetver.h', 'HeadPosePnP/stdafx.h', 'HeadPosePnP/stdafx.cpp'], ['HeadPosePnP/OGL_OCV_common.h', 'HeadPosePnP/OGL_OCV_common.cpp'], ['HeadPosePnP/glm.cpp'], ['HeadPosePnP/glm.h', 'HeadPosePnP/glm.cpp'], ['HeadPosePnP/stdafx.h', 'HeadPosePnP/HeadPose.cpp']]"
+    },
+    {
+        "repo": "Pawn.CMD",
+        "description": "A plugin-powered command processor for SA:MP (San Andreas Multiplayer) servers.",
+        "function": "Allows registration, aliasing, and flag-based access control for commands. Provides callbacks for command handling and emulation, with support for custom permissions and error logging.",
+        "files": [
+            {
+                "file": "Pawn.CMD/src/command.h",
+                "function": "The file defines a `Command` class that encapsulates a public function pointer, flags, and an alias indicator, providing methods to access and modify these attributes."
+            },
+            {
+                "file": "Pawn.CMD/src/main.h",
+                "function": "This file serves as a header file for the PawnCMD library, defining macros, including necessary libraries, and setting up the environment for command handling and scripting in a Pawn-based environment."
+            },
+            {
+                "file": "Pawn.CMD/src/native_param.h",
+                "function": "The file defines a `NativeParam` struct that inherits from `Script::NativeParam` and provides a conversion operator to `CmdArrayPtr`, allowing access to command arrays from raw values."
+            },
+            {
+                "file": "Pawn.CMD/src/plugin.h",
+                "function": "The file defines a plugin class for handling player commands in a game environment, providing functionality for loading, unloading, and configuring the plugin, as well as processing player commands and managing hooks for command handling."
+            },
+            {
+                "file": "Pawn.CMD/src/script.h",
+                "function": "The file defines a `Script` class for managing and manipulating commands and aliases in a scripting environment. It provides functions to register, rename, delete, and check the existence of commands, as well as to handle command flags, aliases, and command arrays."
+            }
+        ],
+        "gt": "[['Pawn.CMD/src/plugin.h', 'Pawn.CMD/src/main.h'], ['Pawn.CMD/src/main.h'], ['Pawn.CMD/src/script.h', 'Pawn.CMD/src/main.h'], ['Pawn.CMD/src/command.h', 'Pawn.CMD/src/main.h'], ['Pawn.CMD/src/native_param.h', 'Pawn.CMD/src/main.h']]"
+    },
+    {
+        "repo": "HCCR-GoogLeNet",
+        "description": "A repository for offline handwritten Chinese character recognition using GoogLeNet and feature maps.",
+        "function": "Contains the source code for the HCCR-GoogLeNet CNN architecture, including prototxt files for Caffe and directional feature extraction methods, designed to improve recognition accuracy and efficiency.",
+        "files": [
+            {
+                "file": "HCCR-GoogLeNet/OfflineGridUBytePicture.h",
+                "function": "The file defines a class `OfflineGridUBytePicture` for storing bitmap images with associated labels, and a structure `gntCharacterHeader` for holding metadata about character images, including sample size, label, width, and height."
+            },
+            {
+                "file": "HCCR-GoogLeNet/gabor.cpp",
+                "function": "The file defines a Gabor filter implementation, generating Gabor kernels and applying them to an input image to extract feature maps, which are then normalized and stored."
+            },
+            {
+                "file": "HCCR-GoogLeNet/gabor.h",
+                "function": "The file defines a function to generate a Gabor kernel (`getMyGabor`) and another function (`gabor_filter`) to apply Gabor filtering to an image, producing feature maps."
+            },
+            {
+                "file": "HCCR-GoogLeNet/gbcodes3755.h",
+                "function": "An error occurred: Error code: 400 - {'error': {'message': \"This model's maximum context length is 65536 tokens. However, you requested 94164 tokens (94164 in the messages, 0 in the completion). Please reduce the length of the messages or completion.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+            },
+            {
+                "file": "HCCR-GoogLeNet/gradient.cpp",
+                "function": "The file defines a function to extract gradient-based feature maps from an image using Sobel operators, decomposing gradient vectors into eight directions and normalizing the results."
+            },
+            {
+                "file": "HCCR-GoogLeNet/gradient.h",
+                "function": "The file defines a function `FeaExtractByGradient` to extract feature maps from an image using gradient information and a template function `Judge` to evaluate gradient areas based on coordinates."
+            },
+            {
+                "file": "HCCR-GoogLeNet/main.cpp",
+                "function": "The file defines functions to read handwritten character data from a binary file, process and resize the characters, and extract features using either gradient or Gabor filters. The main function orchestrates the reading, processing, and feature extraction, saving the results as images."
+            }
+        ],
+        "gt": "[['HCCR-GoogLeNet/gradient.cpp'], ['HCCR-GoogLeNet/main.cpp'], ['HCCR-GoogLeNet/gradient.h', 'HCCR-GoogLeNet/gradient.cpp'], ['HCCR-GoogLeNet/gabor.cpp'], ['HCCR-GoogLeNet/gbcodes3755.h', 'HCCR-GoogLeNet/main.cpp'], ['HCCR-GoogLeNet/OfflineGridUBytePicture.h', 'HCCR-GoogLeNet/gradient.cpp'], ['HCCR-GoogLeNet/gabor.h', 'HCCR-GoogLeNet/gabor.cpp'], ['HCCR-GoogLeNet/gabor.h', 'HCCR-GoogLeNet/main.cpp'], ['HCCR-GoogLeNet/gradient.h', 'HCCR-GoogLeNet/main.cpp'], ['HCCR-GoogLeNet/OfflineGridUBytePicture.h', 'HCCR-GoogLeNet/main.cpp']]"
+    },
+    {
+        "repo": "mod-transmog",
+        "description": "A module for AzerothCore that adds transmogrification functionality.",
+        "function": "Allows players to change the appearance of their gear while retaining the original stats. Requires specific AzerothCore versions and SQL imports for proper setup.",
+        "files": [
+            {
+                "file": "mod-transmog/src/Transmogrification.cpp",
+                "function": "The file defines a system for item transmogrification, allowing players to change the appearance of their equipped items while keeping their original stats. It includes functionality for managing transmogrification presets, handling item appearance changes, and interacting with the database to store and retrieve transmogrification data. The system also supports various configuration options for enabling or disabling specific features, such as allowing mixed armor types, handling costs, and managing item quality restrictions."
+            },
+            {
+                "file": "mod-transmog/src/Transmogrification.h",
+                "function": "The file defines a `Transmogrification` class that manages item transmogrification in a game, allowing players to change the appearance of their gear while keeping the original stats. It includes configurations for enabling or disabling features, handling costs, and managing transmogrification rules and restrictions."
+            },
+            {
+                "file": "mod-transmog/src/cs_transmog.cpp",
+                "function": "This file defines commands for managing transmogrification in a game, allowing players to add, sync, and manage transmogrified items and sets, as well as toggle visibility and access portable transmogrification features."
+            },
+            {
+                "file": "mod-transmog/src/transmog_loader.cpp",
+                "function": "The file defines functions to add scripts related to transmogrification, including the main transmog script and a command script for transmogrification commands."
+            },
+            {
+                "file": "mod-transmog/src/transmog_scripts.cpp",
+                "function": "This script provides functionality for a transmogrification system in a game, allowing players to change the appearance of their equipped items. It includes features such as managing transmogrification sets, removing transmogrifications, and handling item appearance changes through a vendor-like interface. The system supports multiple languages, item validation, and cost calculations for transmogrification."
+            }
+        ],
+        "gt": "[['mod-transmog/src/Transmogrification.cpp'], ['mod-transmog/src/transmog_loader.cpp'], ['mod-transmog/src/cs_transmog.cpp'], ['mod-transmog/src/Transmogrification.h', 'mod-transmog/src/cs_transmog.cpp'], ['mod-transmog/src/transmog_scripts.cpp'], ['mod-transmog/src/Transmogrification.h', 'mod-transmog/src/transmog_scripts.cpp'], ['mod-transmog/src/Transmogrification.h', 'mod-transmog/src/Transmogrification.cpp'], ['mod-transmog/src/Transmogrification.h']]"
+    },
+    {
+        "repo": "promon-reversal",
+        "description": "A reverse engineering analysis of Promon SHIELD, an Android application protection solution.",
+        "function": "The project explores Promon SHIELD's mechanisms to protect apps from static and dynamic attacks, including anti-tampering, anti-debugging, and emulator/rooted device detection. It also provides a proof-of-concept bypass for APK signature authentication.",
+        "files": [
+            {
+                "file": "promon-reversal/include/aarch64hook.hpp",
+                "function": "This file provides functions for hooking and replacing functions in 64-bit ARM applications, allowing for runtime function interception and modification."
+            },
+            {
+                "file": "promon-reversal/include/hooks.hpp",
+                "function": "The file defines hook functions for various system calls (e.g., `sigaction`, `read`, `write`, `openat`) to log their execution and modify behavior, such as replacing a modified APK with an original one during file opening."
+            },
+            {
+                "file": "promon-reversal/include/libc-hooks.hpp",
+                "function": "The file defines hook functions for various system calls and library functions, intercepting and logging their execution while optionally blocking specific operations based on certain conditions."
+            },
+            {
+                "file": "promon-reversal/include/utils.hpp",
+                "function": "This file defines macros and functions for bypassing signature checks in a specific library by modifying memory protection and reverting syscall hooks, while also providing logging and utility macros for memory alignment and manipulation."
+            },
+            {
+                "file": "promon-reversal/src/aarch64hook.cpp",
+                "function": "This file provides functionality for inline hooking in ARM64 architecture, allowing the modification of function pointers to redirect execution to a custom function while preserving the original function's behavior. It includes mechanisms for fixing branch instructions, managing memory protection, and allocating trampolines for backup execution paths."
+            },
+            {
+                "file": "promon-reversal/src/main.cpp",
+                "function": "This file hooks various libc and system functions to intercept and log their calls, while also decrypting and hooking specific functions within a library named \"libshield.\""
+            }
+        ],
+        "gt": "[['promon-reversal/include/hooks.hpp'], ['promon-reversal/src/main.cpp'], ['promon-reversal/include/utils.hpp', 'promon-reversal/include/libc-hooks.hpp', 'promon-reversal/src/main.cpp'], ['promon-reversal/include/libc-hooks.hpp', 'promon-reversal/src/main.cpp'], ['promon-reversal/include/utils.hpp', 'promon-reversal/include/hooks.hpp'], ['promon-reversal/include/aarch64hook.hpp', 'promon-reversal/src/aarch64hook.cpp'], ['promon-reversal/include/aarch64hook.hpp', 'promon-reversal/src/main.cpp'], ['promon-reversal/src/aarch64hook.cpp'], ['promon-reversal/include/utils.hpp', 'promon-reversal/src/main.cpp']]"
+    },
+    {
+        "repo": "gym_ped_sim",
+        "description": "A ROS package for Gazebo that simulates socially compliant pedestrian navigation using actors.",
+        "function": "The plugin integrates the Social Force Model for actor interactions, collects depth and RGB data for dataset creation, and provides tools for visualization and data collection in a socially compliant environment.",
+        "files": [
+            {
+                "file": "gym_ped_sim/actor_plugin/include/json.hpp",
+                "function": "An error occurred: Error code: 400 - {'error': {'message': \"This model's maximum context length is 65536 tokens. However, you requested 116599 tokens (116599 in the messages, 0 in the completion). Please reduce the length of the messages or completion.\", 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+            },
+            {
+                "file": "gym_ped_sim/data_collection/include/data_collection.h",
+                "function": "The file defines a data collection framework for ROS, enabling the subscription to and storage of sensor data such as laser scans, RGB images, and depth images. It includes a service for handling data collection requests and organizes the collected data into vectors."
+            },
+            {
+                "file": "gym_ped_sim/data_collection/src/data_collection.cpp",
+                "function": "The file defines a data collection system using ROS, subscribing to various topics (force, scan, RGB image, depth image) and storing their latest messages in vectors. It also provides a service to retrieve the most recent data from these vectors."
+            },
+            {
+                "file": "gym_ped_sim/data_collection/src/main.cpp",
+                "function": "The file initializes a ROS node named \"data_collection\" and starts an asynchronous spinner with 4 threads to handle data collection tasks, waiting for the ROS system to shut down."
+            }
+        ],
+        "gt": "[['gym_ped_sim/data_collection/include/data_collection.h', 'gym_ped_sim/data_collection/src/main.cpp'], ['gym_ped_sim/data_collection/src/data_collection.cpp'], ['gym_ped_sim/actor_plugin/include/json.hpp'], ['gym_ped_sim/data_collection/src/main.cpp'], ['gym_ped_sim/data_collection/include/data_collection.h', 'gym_ped_sim/data_collection/src/data_collection.cpp']]"
+    },
+    {
+        "repo": "esp8266",
+        "description": "A library and demo application for the ESP8266 module, enabling serial-to-WiFi communication.",
+        "function": "The library allows the ESP8266 to connect to WiFi networks, start TCP servers or clients, and handle data transmission via callbacks. It also supports a UDP beacon for device discovery and IP address broadcasting.",
+        "files": [
+            {
+                "file": "esp8266/EEPROMAnything.h",
+                "function": "The file provides functions to read and write integers, floats, and strings to and from EEPROM memory on an Arduino."
+            },
+            {
+                "file": "esp8266/ESP8266.cpp",
+                "function": "The file defines an ESP8266 class for managing WiFi connectivity on an Arduino platform, supporting server, client, and beacon modes. It includes functions for initializing WiFi, connecting to an access point, starting a server or client, sending data, and enabling/disabling beacon functionality."
+            },
+            {
+                "file": "esp8266/ESP8266.h",
+                "function": "This file provides a class for interacting with the ESP8266 module, offering functions for initializing, connecting, and disconnecting Wi-Fi, starting servers or clients, sending data, and handling Wi-Fi messages."
+            }
+        ],
+        "gt": "[['esp8266/EEPROMAnything.h'], ['esp8266/ESP8266.cpp'], ['esp8266/ESP8266.h', 'esp8266/ESP8266.cpp']]"
+    },
+    {
+        "repo": "WFMPMC",
+        "description": "WFMPMC is a wait-free, zero-copy multiple producer multiple consumer queue template in C++11, suitable for shared memory IPC in Linux.",
+        "function": "Provides wait-free operations for writing and reading with zero-copy, supporting both detailed and simplified APIs. Includes performance optimizations for low-latency IPC and shared memory usage.",
+        "files": [
+            {
+                "file": "WFMPMC/WFMPMC.h",
+                "function": "The file defines a wait-free, multi-producer, multi-consumer (MPMC) queue template class `WFMPMC` that supports zero-copy operations for efficient data passing between threads. It provides methods for pushing and popping elements, with support for both direct and visitor-based operations, ensuring thread safety and high performance."
+            },
+            {
+                "file": "WFMPMC/test/cpupin.h",
+                "function": "The function `cpupin` sets the scheduling policy and priority of the current process and binds it to a specified CPU core."
+            },
+            {
+                "file": "WFMPMC/test/shm_common.h",
+                "function": "The file defines a function `shmmap` to map shared memory objects into the address space and initializes them. It also provides a function `getQ` to retrieve a shared memory-mapped queue of `Entry` objects and an inline function `now` to get the current timestamp."
+            },
+            {
+                "file": "WFMPMC/test/timestamp.h",
+                "function": "The file provides functions to measure time in nanoseconds using `getns()` and CPU cycles using `rdtsc()` and `rdtscp()`, along with overhead calculation functions for each timing method."
+            }
+        ],
+        "gt": "[['WFMPMC/test/cpupin.h'], ['WFMPMC/test/timestamp.h', 'WFMPMC/test/shm_common.h'], ['WFMPMC/WFMPMC.h'], ['WFMPMC/test/shm_common.h'], ['WFMPMC/test/timestamp.h']]"
+    },
+    {
+        "repo": "Arduino_Vcc",
+        "description": "An Arduino library for measuring VCC supply voltage without external components.",
+        "function": "Allows Arduino boards to read their own VCC supply voltage, providing a way to monitor power levels without additional hardware.",
+        "files": [
+            {
+                "file": "Arduino_Vcc/Vcc.cpp",
+                "function": "The file defines a library for measuring supply voltage (Vcc) on Arduino boards, providing functions to read the voltage in volts and convert it to a percentage within a specified range."
+            },
+            {
+                "file": "Arduino_Vcc/Vcc.h",
+                "function": "The Vcc library measures and reports the supply voltage of an Arduino, providing functions to read the voltage in volts or as a percentage of a specified range, with an optional correction factor for accuracy."
+            }
+        ],
+        "gt": "[['Arduino_Vcc/Vcc.h', 'Arduino_Vcc/Vcc.cpp'], ['Arduino_Vcc/Vcc.cpp']]"
+    },
+    {
+        "repo": "I2C",
+        "description": "An enhanced I2C master library for Arduino, designed for efficient communication with I2C slave devices.",
+        "function": "Provides comprehensive I2C communication functionalities, including start/stop conditions, address sending, data transmission/reception, and error handling. Supports various data sizes and includes low-level methods for custom I2C operations.",
+        "files": [
+            {
+                "file": "I2C/I2C.cpp",
+                "function": "This library provides an enhanced I2C (TWI) communication interface for Arduino, supporting features like repeated starts, timeout recovery, and extended data transfer capabilities. It allows for both reading and writing data to I2C devices, with support for various data sizes and 16-bit register addresses."
+            },
+            {
+                "file": "I2C/I2C.h",
+                "function": "This library provides an I2C communication interface for Arduino, supporting master-only operations with enhanced functionality such as repeated starts, timeout handling, and bus scanning. It includes various write and read methods for different data types and sizes, as well as low-level I2C operations."
+            }
+        ],
+        "gt": "[['I2C/I2C.cpp'], ['I2C/I2C.h', 'I2C/I2C.cpp'], ['I2C/I2C.h']]"
+    },
+    {
+        "repo": "dstar-lite",
+        "description": "An implementation of the D*-Lite pathfinding algorithm for robot navigation in unknown terrain.",
+        "function": "Provides a pathfinding solution that dynamically updates paths when obstacles change or goals move. Includes optimizations like Open Hash and Lazy Remove, Euclidean Path Optimization, and handling goal changes.",
+        "files": [
+            {
+                "file": "dstar-lite/Dstar.cpp",
+                "function": "The file implements the D* Lite pathfinding algorithm, providing functionality for initializing the algorithm, computing the shortest path, updating cell costs, and managing the open and closed lists. It supports dynamic changes to the environment and efficiently re-plans paths when obstacles are encountered."
+            },
+            {
+                "file": "dstar-lite/Dstar.h",
+                "function": "The file defines a D* (D-star) pathfinding algorithm implementation, including classes for states, cell information, and a priority queue for managing open list states. The Dstar class provides methods for initializing the algorithm, updating cell costs, planning paths, and managing the pathfinding process."
+            },
+            {
+                "file": "dstar-lite/DstarDraw.cpp",
+                "function": "This file implements a visualization tool for the D* pathfinding algorithm using OpenGL and GLUT. It allows users to interactively modify the environment, trigger replanning, and visualize the pathfinding process."
+            }
+        ],
+        "gt": "[['dstar-lite/Dstar.cpp'], ['dstar-lite/Dstar.h', 'dstar-lite/Dstar.cpp'], ['dstar-lite/Dstar.h', 'dstar-lite/DstarDraw.cpp'], ['dstar-lite/DstarDraw.cpp'], ['dstar-lite/Dstar.h']]"
+    },
+    {
+        "repo": "libvisio2svg",
+        "description": "A library and utilities to convert Microsoft Visio documents and stencils (VSS and VSD) to SVG format.",
+        "function": "Enables conversion of Visio files to SVG, allowing reuse in non-Microsoft programs like yEd, Inkscape, and Dia. It integrates with librevenge, libvisio, libemf2svg, and libwmf for handling different file formats and enhancing compatibility.",
+        "files": [
+            {
+                "file": "libvisio2svg/deps/memstream-0.1/memstream.h",
+                "function": "This file checks for POSIX compliance and includes functionality to open a memory stream for writing, if the system supports it."
+            },
+            {
+                "file": "libvisio2svg/inc/visio2svg/TitleGenerator.h",
+                "function": "The `TitleGenerator` class in the `visio2svg` namespace implements the `librevenge::RVNGDrawingInterface` to generate titles for a document, handling various drawing and text elements, and storing the titles in a provided `RVNGStringVector`."
+            },
+            {
+                "file": "libvisio2svg/inc/visio2svg/Visio2Svg.h",
+                "function": "The file defines a class `Visio2Svg` that converts Visio drawing files (`.vss` and `.vsd`) into SVG format, with options for scaling and output customization."
+            },
+            {
+                "file": "libvisio2svg/src/conv/vsd2svg.cpp",
+                "function": "The file defines a program, `vsd2svg`, that converts Microsoft Visio `.vsd` files into SVG format. It supports command-line options for specifying input and output directories, scaling factors, and version information. The program reads a `.vsd` file, processes it using the `Visio2Svg` converter, and writes the resulting SVG files to the specified output directory."
+            },
+            {
+                "file": "libvisio2svg/src/conv/vss2svg.cpp",
+                "function": "The file defines a program, `vss2svg`, that converts Microsoft Visio stencil files (`.vss`) into SVG format. It supports command-line arguments for specifying input and output directories, scaling factors, and version information. The program reads a `.vss` file, processes it using the `Visio2Svg` converter, and writes the resulting SVG files to the specified output directory."
+            },
+            {
+                "file": "libvisio2svg/src/lib/visio2svg/TitleGenerator.cpp",
+                "function": "The file defines a `TitleGenerator` class that extracts and stores page titles from a document's property list, ignoring other document elements and formatting."
+            },
+            {
+                "file": "libvisio2svg/src/lib/visio2svg/Visio2Svg.cpp",
+                "function": "The file provides functionality to convert Visio (.vss and .vsd) files into SVG format, handling embedded EMF and WMF images by converting them to SVG and integrating them into the output. It also includes scaling and post-processing of the generated SVG content."
+            }
+        ],
+        "gt": "[['libvisio2svg/src/lib/visio2svg/TitleGenerator.cpp'], ['libvisio2svg/inc/visio2svg/TitleGenerator.h', 'libvisio2svg/src/lib/visio2svg/Visio2Svg.cpp'], ['libvisio2svg/src/lib/visio2svg/Visio2Svg.cpp'], ['libvisio2svg/inc/visio2svg/Visio2Svg.h', 'libvisio2svg/src/conv/vsd2svg.cpp'], ['libvisio2svg/src/conv/vss2svg.cpp'], ['libvisio2svg/src/conv/vsd2svg.cpp'], ['libvisio2svg/deps/memstream-0.1/memstream.h'], ['libvisio2svg/inc/visio2svg/TitleGenerator.h', 'libvisio2svg/src/lib/visio2svg/TitleGenerator.cpp'], ['libvisio2svg/inc/visio2svg/Visio2Svg.h', 'libvisio2svg/src/lib/visio2svg/Visio2Svg.cpp'], ['libvisio2svg/inc/visio2svg/Visio2Svg.h', 'libvisio2svg/src/conv/vss2svg.cpp']]"
+    },
+    {
+        "repo": "kwin-effects-blur-respect-rounded-decorations",
+        "description": "A modified KWin blur effect that respects rounded window corners.",
+        "function": "This effect addresses the 'plasma kornerbug' by ensuring rounded corners are not blurred, working with various window decorations and handling maximized windows appropriately.",
+        "files": [
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/blur.cpp",
+                "function": "The file implements a blur effect for windows in a graphical environment, allowing for configurable blurring of window backgrounds and decorations. It handles the initialization, configuration, and rendering of the blur effect, supporting both X11 and Wayland protocols, and includes features like noise addition and adaptive blur strength based on window properties."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/blur.h",
+                "function": "The file defines a `BlurEffect` class for KWin, implementing a blur effect for windows and the screen. It handles window and screen painting, manages blur regions, and uses OpenGL for rendering, including downsampling and upsampling textures to achieve the blur effect."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/blurshader.cpp",
+                "function": "The file defines a `BlurShader` class that manages and applies various fragment and vertex shaders for different blur effects, including downsampling, upsampling, texture copying, and noise tiling, within the KWin environment."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/blurshader.h",
+                "function": "The file defines a `BlurShader` class in the KWin namespace, which manages different types of GL shaders for blurring effects. It provides methods to bind, unbind, and configure shaders with various parameters like matrices, texture sizes, and offsets."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/plugin.cpp",
+                "function": "The file defines a factory for the BlurEffect in the KWin window manager, enabling and checking support for a blur effect on windows."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/kcm/blur_config.cpp",
+                "function": "The file defines a configuration interface for the KWin blur effect, allowing users to adjust settings and save changes, which trigger a reconfiguration of the blur effect via D-Bus."
+            },
+            {
+                "file": "kwin-effects-blur-respect-rounded-decorations/src/kcm/blur_config.h",
+                "function": "The file defines a configuration module for the Blur effect in the KWin window manager, allowing users to customize blur settings and save them."
+            }
+        ],
+        "gt": "[['kwin-effects-blur-respect-rounded-decorations/src/plugin.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blurshader.h', 'kwin-effects-blur-respect-rounded-decorations/src/blurshader.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/kcm/blur_config.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blur.h', 'kwin-effects-blur-respect-rounded-decorations/src/plugin.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blurshader.h', 'kwin-effects-blur-respect-rounded-decorations/src/blur.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blur.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/kcm/blur_config.h', 'kwin-effects-blur-respect-rounded-decorations/src/kcm/blur_config.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blurshader.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blur.h', 'kwin-effects-blur-respect-rounded-decorations/src/blur.cpp'], ['kwin-effects-blur-respect-rounded-decorations/src/blur.h']]"
+    }
+]
