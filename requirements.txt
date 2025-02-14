@@ -1,0 +1,11 @@
+datasets==3.0.2
+fire==0.7.0
+huggingface_hub==0.26.2
+matplotlib==3.10.0
+numpy==2.2.1
+openai==1.58.1
+pandas==2.2.3
+torch==2.5.1
+tqdm==4.66.5
+transformers==4.46.2
+
