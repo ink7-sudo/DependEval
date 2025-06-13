@@ -5,3 +5,5 @@ The repository contains the data and evaluation code for ACL 2025 Findings paper
 ## Introduction
 
 We introduce **DependEval**, a hierarchical benchmark for evaluating LLMs on repository-level code understanding, including dependency recognition, repository construction, and multi-file editing across 8 programming languages. 
+
+<img width="1432" alt="abs" src="https://github.com/ink7-sudo/DependEval/blob/finalversion/assets/taskcase.png">
