@@ -6,7 +6,7 @@ The repository contains the data and evaluation code for ACL 2025 Findings paper
 
 We introduce **DependEval**, a hierarchical benchmark for evaluating LLMs on repository-level code understanding across 8 programming languages. 
 
-DependEval comprises 2,683 curated repositories across 8 programming languages, and evaluates models on three hierarchical tasks: ***Dependency Recognition***, ***Repository Construction***, and ***Multi-file Editing***. These tasks simulate core challenges faced in large-scale software development, such as resolving inter-file dependencies, generating structured project layouts, and maintaining cross-file consistency during edits.
+DependEval comprises 2,683 curated repositories across 8 programming languages, and evaluates models on three hierarchical tasks: ***Dependency Recognition***, ***Repository Construction***, and ***Multi-file Editing***. 
 
 <img width="1432" alt="abs" src="https://github.com/ink7-sudo/DependEval/blob/finalversion/assets/taskcase.png?raw=true">
 
@@ -24,4 +24,22 @@ conda create -n dependeval python=3.10 -y
 conda activate dependeval
 pip install -r requirements.txt
 bash run.sh
+```
+
+## Citation
+Feel free to cite us
+```bibtex
+@misc{du2025dependevalbenchmarkingllmsrepository,
+      title={DependEval: Benchmarking LLMs for Repository Dependency Understanding}, 
+      author={Junjia Du and Yadi Liu and Hongcheng Guo and Jiawei Wang and Haojian Huang and Yunyi Ni and Zhoujun Li},
+      year={2025},
+      eprint={2503.06689},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2503.06689}, 
+}
+```
+
+## Contact
+If you meet any question during running please contact junjia001@e.ntu.edu.sg
 
