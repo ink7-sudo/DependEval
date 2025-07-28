@@ -3,6 +3,7 @@ import json
 import re
 import os
 import pandas as pd
+import argparse
 
 def task2_match(text: str):
     match = re.search(r"\[.*?\]", str(text))
@@ -146,7 +147,15 @@ def process_all_files_in_directory(directory_path, output_csv_path):
 
 # 使用示例
 
-directory_path = '/home/test/test/rag/Codebench_exp/results/task2'
-name = directory_path.split('/')[-1]
-output_csv_path = directory_path  + "_result.csv"
-process_all_files_in_directory(directory_path, output_csv_path)
+def main():
+    parser = argparse.ArgumentParser(description="Process JSONL files and compute scores.")
+    parser.add_argument("--input_dir", required=True, help="Directory containing JSONL files.")
+    args = parser.parse_args()
+
+    directory_path = args.input_dir
+    name = directory_path.rstrip('/').split('/')[-1]
+    output_csv_path = directory_path + "_result.csv"
+    process_all_files_in_directory(directory_path, output_csv_path)
+
+if __name__ == "__main__":
+    main()
