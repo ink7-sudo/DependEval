@@ -230,10 +230,8 @@ def process_jsonl_file(filepath, weights):
 
 # 主程序入口
 def main():
-    # 设置命令行参数
     parser = argparse.ArgumentParser(description="Process JSONL files and compute scores.")
-    parser.add_argument("--input", required=True, help="Path to the input JSONL file.")
-    
+    parser.add_argument("--input_dir", required=True, help="Directory containing JSONL files.")
     args = parser.parse_args()
 
     # 加载权重
